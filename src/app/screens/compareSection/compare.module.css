@@ -1,0 +1,117 @@
+.wrapper {
+  background-color: #e3fbff;
+}
+.howcontainer {
+  justify-content: space-around;
+  align-items: flex-end;
+  margin-top: 8rem;
+}
+.headings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin-left: 16rem;
+  margin-top: 10rem;
+}
+.headings > h3 {
+  color: #05c8e8;
+  margin-top: 8rem;
+}
+.headings > h1 {
+  color: #1a4048;
+  font-weight: 600;
+  font-size: 3rem;
+  margin-top: -0.8rem;
+}
+.wrapper > span {
+  display: flex;
+  justify-content: flex-end;
+  margin: 3rem 8rem 2rem 0;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.boxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.box1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 65%;
+  border: 1px solid #bdbdbd;
+  border-radius: 23px;
+
+}
+.box1>span{
+    font-size: 20px;
+    color: #828282;
+}
+.box2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    width: 65%;
+    border: 1px solid #bdbdbd;
+    border-radius: 23px;
+    background-color: #fff;
+}
+.div1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div2{
+    border-left: 1px solid #bdbdbd;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.div2>span{
+    color: #828282;
+    font-size: 13px;
+}
+.div2>div>span{
+    font-weight: bolder;
+    color: #1a4048;
+}
+.div3{
+    border-left: 1px solid #bdbdbd;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.div3>span{
+    color: #1a4048;
+    font-weight: bolder;
+}
+.div4{
+    border-left: 1px solid #bdbdbd;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.div4>span{
+    color: #1a4048;
+    font-weight: bolder;
+}
+.div5>button{
+    color: #fff;
+    background-color: #05c8e8;
+    font-weight: 500;
+    padding: 0.6rem 0.6rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+}
+
+

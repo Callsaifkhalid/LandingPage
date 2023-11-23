@@ -1,0 +1,88 @@
+.wrapper {
+  background-color: #fff;
+  margin-bottom: 15rem;
+}
+.howcontainer {
+  justify-content: space-around;
+  align-items: flex-end;
+  margin-top: 8rem;
+}
+.headings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin-left: 16rem;
+  margin-top: 2rem;
+}
+.headings > h3 {
+  color: #05c8e8;
+  margin-top: 8rem;
+}
+.headings > h1 {
+  color: #1a4048;
+  font-weight: 600;
+  font-size: 3rem;
+  margin-top: -0.8rem;
+}
+.contactsection {
+  width: 80%;
+  height: 200px;
+  padding: 3rem;
+  background-color: #f4fdff;
+  margin: 30px auto;
+  border-radius: 20px;
+}
+.findmyratesection {
+  width: 80%;
+  height: 120px;
+  padding: 3rem;
+  background-color: #05c8e8;
+  margin: 30px auto;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: -4rem;
+}
+.findmyratesection > div > button {
+  color: #05c8e8;
+  background-color: #fff;
+  font-weight: 500;
+  padding: 0.6rem 0.6rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  width: 150px;
+ 
+}
+.contactcontent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.mailandnumber {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 3rem;
+}
+.mail {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  width: 30%;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 15px;
+}
+.number {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  width: 20%;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 15px;
+}

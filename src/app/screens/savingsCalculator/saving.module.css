@@ -1,0 +1,220 @@
+.wrapper {
+  background-color: #fff;
+}
+.howcontainer {
+  justify-content: space-around;
+  align-items: flex-end;
+  margin-top: 8rem;
+}
+.headings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin-left: 16rem;
+  margin-top: 10rem;
+}
+.headings > h3 {
+  color: #05c8e8;
+  margin-top: 8rem;
+}
+.headings > h1 {
+  color: #1a4048;
+  font-weight: 600;
+  font-size: 3rem;
+  margin-top: -0.8rem;
+}
+.calculator {
+  display: flex;
+  justify-content: center;
+}
+.calculatorstuff {
+  width: 700px;
+  height: 920px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 3rem;
+  margin-bottom: 3rem;
+}
+.calculatorheading {
+  margin-left: 1rem;
+}
+.calculatorheading > span {
+  color: #8b8b8b;
+  font-size: 13px;
+}
+.boxes {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+}
+.box {
+  display: flex;
+  width: 200px;
+  border: 1px solid #8b8b8b;
+  border-radius: 5px;
+  padding: 5px;
+  justify-content: space-around;
+}
+.boxx {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  border: 1px solid #8b8b8b;
+  border-radius: 5px;
+  padding: 5px;
+}
+.box > input {
+ border: none;
+ outline: none;
+ border-bottom: 2px solid #1a4048;
+ font-size: 16px;
+ width: 29%;
+ height: 30%;
+ margin-top: 22px;
+}
+.box > input:focus {
+  border: none;
+}
+
+.box>span{
+  font-size: 25px;
+  margin-top: 16px;
+  color: #05c8e8;
+}
+.box>h5{
+  color: #05c8e8;
+}
+
+.box > img {
+  height: 30%;
+  width: 10%;
+  margin-top: 22px;
+}
+.boxes2 {
+  display: flex;
+  padding: 5px;
+  margin-top: 1rem;
+}
+.boxes2 > div {
+  margin-right: 1.5rem;
+}
+.barbox {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.moneysignbox {
+  border: 1px solid #d8d8d8;
+  width: 250px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin-top: 4rem;
+}
+.moneysignbox > span {
+  color: #8b8b8b;
+  font-size: 24px;
+  font-weight: 600;
+  margin-left: 2rem;
+}
+.moneysignbox > p {
+  color: #8b8b8b;
+  font-size: 13px;
+}
+.interestbox {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  margin-left: -2rem;
+}
+.colorboxes {
+  display: flex;
+}
+.colorboxes > img {
+  margin-right: 0.5rem;
+}
+.colorboxes > span {
+  margin-right: 1rem;
+}
+.colorbarboxes > span {
+  margin-right: 1rem;
+}
+.footer {
+  display: flex;
+  margin-top: 3rem;
+  justify-content: space-between;
+}
+.footer > span {
+  color: #8b8b8b;
+  font-size: 12px;
+}
+.footer >button {
+  color: #fff;
+  background-color: #05c8e8;
+  font-weight: 500;
+  padding: 0.6rem 0.6rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  width: 200px;
+}
+.colorbar{
+  width: 80%;
+  background-color: #d8d8d8;
+  height: 8px;
+  z-index: -1;
+  border-radius: 100px;
+  margin-left: 5rem;
+  margin-top: -0.7rem;
+}
+.currentcolorfill{
+  background: #1a4048;
+  height: 8px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 30px;
+  overflow: hidden;
+}
+.currentloan{
+  animation: currentloan 2s;
+  width: 50%;
+}
+@keyframes currentloan {
+  from{
+    width: 0;
+  }
+  to{
+    width: 50%;
+  }
+}
+.newcolorfill{
+  background: #05c8e8;
+  height: 8px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 30px;
+  overflow: hidden;
+}
+.newloan{
+  animation: newloan 2s ;
+  width: 80%;
+}
+@keyframes newloan {
+  from{
+    width: 0;
+  }
+  to{
+    width: 80%;
+  }
+}
+
+

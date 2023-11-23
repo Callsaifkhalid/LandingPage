@@ -1,0 +1,43 @@
+.footer{
+    background-color: #1A4048;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.images{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto 0 auto;
+}
+.images>div>img{
+    margin-left: 1rem;
+    margin-top: 4rem;
+}
+.content{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: 30px auto 0 auto;
+}
+.content1{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+.content1>span{
+    color: #8B8B8B;
+    font-size: 13px;
+}
+.content1>button{
+    color: #1F1F39;
+    background-color: #fff;
+    font-weight: bolder;
+    padding: 0.9rem 0.6rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    width: 120px;
+    margin-top: 5px;
+}

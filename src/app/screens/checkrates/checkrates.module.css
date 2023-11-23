@@ -1,0 +1,107 @@
+.calculator {
+    display: flex;
+    justify-content: center;
+  }
+  .calculatorScreens {
+    min-width: 600px;
+    min-height: 400px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    border-radius: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .calculatorScreensheading > h1 {
+    color: #333;
+    font-weight: bolder;
+  }
+  .calculatorScreensheading > span {
+    color: #8b8b8b;
+    font-size: 15px;
+    margin-left: 7rem;
+  }
+  .inputfield {
+    height: 70px;
+    width: 270px;
+    border: 1px solid #05c8e8;
+    display: flex;
+  }
+  .dollarsignbox {
+    background-color: #b0b0b0;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dollarsignbox > span {
+    color: white;
+    font-size: 20px;
+  }
+  .inputfieldbox {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    gap: 2px;
+  }
+  .inputfieldbox > span {
+    color: #05c8e8;
+    font-size: 13px;
+  }
+  .inputfieldbox > input {
+    height: 40px;
+    font-size: 18px;
+    width: 100px;
+    border: none;
+    outline: none;
+  }
+  .pricebuttons {
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .pricebuttons2 {
+    width: 380px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .pricebuttons > button {
+    background-color: white;
+    color: #3e3e3e;
+    border: 1px solid #8b8b8b;
+    outline: none;
+    border-radius: 5px;
+    padding: 7px;
+    width: 100px;
+    font-size: 17px;
+  }
+  .pricebuttons > button:hover{
+    cursor: pointer;
+    background-color: #b0b0b0;
+  }
+  .pricebuttons2 > button {
+    background-color: white;
+    color: #3e3e3e;
+    border: 1px solid #8b8b8b;
+    outline: none;
+    border-radius: 5px;
+    padding: 7px;
+    width: 100px;
+    font-size: 17px;
+  }
+  .pricebuttons2 > button:hover{
+    cursor: pointer;
+    background-color: #b0b0b0;
+  }
+  .continuebutton {
+    background-color: #05c8e8;
+    color: white;
+    outline: none;
+    border: none;
+    padding: 1rem 8rem;
+    border-radius: 9px;
+  }
+  

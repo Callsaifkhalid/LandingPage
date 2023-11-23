@@ -1,0 +1,43 @@
+.headerwrapper {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #c6f7ff;
+  width: 100%;
+}
+.logo {
+  margin-top: 2rem;
+  margin-right: 20rem;
+}
+.loginbutton {
+  font-weight: 500;
+  padding: 0.6rem 0.6rem;
+  color: #1a4048;
+  background: white;
+  border-radius: 10.33px;
+  margin-right: 10px;
+  border: none;
+  margin-top: 2rem;
+  cursor: pointer;
+  margin-left: 12rem;
+}
+.getstartedbutton {
+  font-weight: 500;
+  padding: 0.6rem 0.6rem;
+  color: white;
+  background: #05c8e8;
+  border-radius: 10.33px;
+  border: none;
+  cursor: pointer;
+}
+.headermenu {
+  margin-top: 2rem;
+}
+.menuLinks {
+  text-decoration: none;
+  color: #1a4048;
+  margin-left: 30px;
+  font-size: 13px;
+  cursor: pointer;
+}

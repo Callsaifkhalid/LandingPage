@@ -1,0 +1,72 @@
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.flexColStart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.wrapper {
+  background-color: #e3fbff;
+}
+.howcontainer {
+  justify-content: space-around;
+  align-items: flex-end;
+  margin-top: 8rem;
+}
+.headings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin-left: 16rem;
+  margin-top: 15rem;
+}
+.headings > h3 {
+  color: #05c8e8;
+  margin-top: 8rem;
+}
+.headings > h1 {
+  color: #1a4048;
+  font-weight: 600;
+  font-size: 3rem;
+  margin-top: -0.8rem;
+}
+/* left side */
+.imagecontainer > img {
+  width: 100%;
+  height: 100%;
+  margin-top: 3.4rem;
+}
+.imagecontainer2 > img {
+  width: 20%;
+  height: 20%;
+  margin-left: 25rem;
+  margin-top: -7rem;
+  margin-bottom: 8rem;
+ 
+}
+
+/* right side */
+.paragraphs {
+  max-width: 35%;
+}
+.paragraph {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5rem;
+  margin-top: -4.5rem;
+  margin-bottom: 2rem;
+}
+.paragraph > h3 {
+  color: #05c8e8;
+}
+.paragraph > span {
+  color: #8b8b8b;
+  font-size: 13px;
+}
