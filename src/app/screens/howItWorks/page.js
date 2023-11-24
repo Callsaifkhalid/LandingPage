@@ -25,6 +25,12 @@ const HowItWorks = () => {
         </div>
         {/* right side */}
         <div className={styles.flexColStart + " " + styles.paragraphs}>
+          <img
+            src="./howline.png"
+            alt=""
+            height={600}
+            style={{ marginBottom: "-40rem", marginLeft:'2rem' }}
+          />
           <div>
             <img src="./how1.png" alt="" />
             <div className={styles.paragraph}>

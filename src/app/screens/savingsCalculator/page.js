@@ -23,7 +23,7 @@ const SavingsCalculator = () => {
 
   const Styles = {
     control: (style) => ({
-      
+      ...styles,
       backgroundColor: "white",
       width: "120px",
       height: "40px",
