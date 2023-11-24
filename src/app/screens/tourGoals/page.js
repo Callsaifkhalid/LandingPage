@@ -3,6 +3,11 @@ import styles from "./tour.module.css";
 const TourGoals = () => {
   return (
     <div className={styles.wrapper}>
+      <img
+        src="./howcircle.png"
+        width={200}
+        style={{ marginTop: "-10rem", marginLeft: "72rem" }}
+      />
       <div className={styles.headings}>
         <h3>For all tour goals</h3>
         <h1>

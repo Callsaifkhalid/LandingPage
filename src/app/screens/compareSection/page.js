@@ -30,8 +30,8 @@ const CompareSection = () => {
           </div>
           <div className={styles.div3}>
             <span style={{color:'#828282',fontSize:'13px'}}>Rate from (APR)</span>
-            <span>%</span>
-            <span>-</span>
+            <span style={{fontWeight:'bolder'}}>%</span>
+            <span style={{fontWeight:'bolder'}}>-</span>
           </div>
           <div className={styles.div4}>
             <span style={{color:'#828282',fontSize:'13px'}}>Loan Term</span>
@@ -58,8 +58,8 @@ const CompareSection = () => {
           </div>
           <div className={styles.div3}>
             <span style={{color:'#828282',fontSize:'13px'}}>Rate from (APR)</span>
-            <span>%</span>
-            <span>-</span>
+            <span style={{fontWeight:'bolder'}}>%</span>
+            <span style={{fontWeight:'bolder'}}>-</span>
           </div>
           <div className={styles.div4}>
             <span style={{color:'#828282',fontSize:'13px'}}>Loan Term</span>
@@ -86,8 +86,8 @@ const CompareSection = () => {
           </div>
           <div className={styles.div3}>
             <span style={{color:'#828282',fontSize:'13px'}}>Rate from (APR)</span>
-            <span>%</span>
-            <span>-</span>
+            <span style={{fontWeight:'bolder'}}>%</span>
+            <span style={{fontWeight:'bolder'}}>-</span>
           </div>
           <div className={styles.div4}>
             <span style={{color:'#828282',fontSize:'13px'}}>Loan Term</span>
@@ -114,8 +114,8 @@ const CompareSection = () => {
           </div>
           <div className={styles.div3}>
             <span style={{color:'#828282',fontSize:'13px'}}>Rate from (APR)</span>
-            <span>%</span>
-            <span>-</span>
+            <span style={{fontWeight:'bolder'}}>%</span>
+            <span style={{fontWeight:'bolder'}}>-</span>
           </div>
           <div className={styles.div4}>
             <span style={{color:'#828282',fontSize:'13px'}}>Loan Term</span>

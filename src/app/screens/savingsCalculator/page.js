@@ -10,7 +10,6 @@ const SavingsCalculator = () => {
   const [inputValueLoan, setInputValueLoan] = useState("");
   const [inputValueLoanCompare, setInputValueLoanCompare] = useState("");
   const [inputValueInterest, setInputValueInterest] = useState("");
-  const [currentView, setCurrentView] = useState("initial");
 
   const options = [
     { value: "", label: "Loan Term", isDisabled: true },
@@ -24,17 +23,22 @@ const SavingsCalculator = () => {
 
   const Styles = {
     control: (style) => ({
-      ...styles,
+      
       backgroundColor: "white",
-      width: "200px",
+      width: "120px",
       height: "40px",
       borderRadius: "5px",
       display: "flex",
       marginTop: "3px",
+      position: 'relative',
     }),
-  };
-  const handleContinueClick = () => {
-    setCurrentView("next");
+    dropdownIndicator: base => ({
+      ...base,
+      color: "#05c8e8",
+      ':hover':{
+        color:"#05c8e8"
+      } 
+    }),
   };
 
   const handleInputChange = (e) => {
@@ -78,6 +82,7 @@ const SavingsCalculator = () => {
                 maxLength="7"
                 value={inputValueLoan}
                 onChange={handleInputChange}
+                placeholder="$0"
               />
               <span>$</span>
             </div>
@@ -88,25 +93,23 @@ const SavingsCalculator = () => {
                 maxLength="3"
                 value={inputValueInterest}
                 onChange={handleInputChangeInterest}
+                placeholder="0%"
               />
               <span>%</span>
             </div>
             <div className={styles.boxx}>
-              <span
+              <h5
                 style={{
-                  fontSize: "12px",
                   color: "#05c8e8",
-                  marginLeft: "12px",
-                  fontWeight: "bold",
                 }}
               >
                 Loan Term
-              </span>
-              <Select options={options} styles={Styles} />
+              </h5>
+              <Select options={options} styles={Styles} menuPosition="absolute"/>
             </div>
           </div>
           <div className={styles.calculatorheading}>
-            <h4>Choose a rate to compare</h4>
+            <h4 style={{marginTop:'3rem'}}>Choose a rate to compare</h4>
             <span>
               Our lender rates vary from{" "}
               <span style={{ color: "#1A4048" }}>5.20%</span> to{" "}
@@ -121,25 +124,23 @@ const SavingsCalculator = () => {
                 maxLength="7"
                 value={inputValueLoanCompare}
                 onChange={handleInputChangeCompare}
+                placeholder="$0"
               />
               <span>$</span>
             </div>
             <div className={styles.boxx}>
-              <span
+              <h5
                 style={{
-                  fontSize: "12px",
                   color: "#05c8e8",
-                  marginLeft: "12px",
-                  fontWeight: "bold",
                 }}
               >
                 Loan Term
-              </span>
+              </h5>
               <Select options={options} styles={Styles} />
             </div>
           </div>
           <div className={styles.calculatorheading}>
-            <h4>Check the results</h4>
+            <h4 style={{marginTop:'4rem'}}>Check the results</h4>
             <span>
               With an interest rate o{" "}
               <span style={{ color: "#1A4048" }}>12.00%</span> over 5 Year, you
@@ -156,7 +157,8 @@ const SavingsCalculator = () => {
                   <FaArrowDown
                     style={{
                       color: "#1a4048",
-                      marginLeft: "1rem",
+                      marginLeft: "0.5rem",
+                      marginBottom:'-0.4rem',
                       color: "green",
                     }}
                   />
@@ -209,7 +211,8 @@ const SavingsCalculator = () => {
                   <FaArrowUp
                     style={{
                       color: "#1a4048",
-                      marginLeft: "1rem",
+                      marginLeft: "0.5rem",
+                      marginBottom:'-0.2rem',
                       color: "crimson",
                     }}
                   />
@@ -257,8 +260,7 @@ const SavingsCalculator = () => {
           <div className={styles.footer}>
             <span>
               Checking rates won’t affect your credit score. Calculator results
-              are for
-              <br /> illustrative purposes only.
+              are for illustrative purposes only.
             </span>
             <button>
               <Link

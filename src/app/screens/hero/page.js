@@ -32,7 +32,21 @@ const Hero = () => {
         {/* right side */}
         <div className={styles.flexCenter + " " + styles.heroright}>
           <div className={styles.imagecontainer}>
-            <img src="./herogirl.png" alt="" />
+            <img
+              src="./herocircle.png"
+              alt=""
+              style={{
+                height: "80%",
+                width: "80%",
+                marginLeft: "4rem",
+                marginTop: "7rem",
+              }}
+            />
+            <img src="./herogirl.png" alt="" style={{
+                height: "100%",
+                width: "100%",
+                marginTop: "-31.7rem",
+              }}/>
           </div>
         </div>
       </div>

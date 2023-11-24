@@ -3,6 +3,7 @@ import styles from "./why.module.css";
 const WhySection = () => {
   return (
     <div className={styles.wrapper}>
+      <img src="./whycircle.png" width={300}/>
       <div className={styles.headings}>
         <h3>EASY, SIMPLE, FREE</h3>
         <h1>Why Clear Credit AI?</h1>
@@ -14,8 +15,8 @@ const WhySection = () => {
           </div>
           <h3>
             Find a Loan from
-            <br /> Reputable Lenders in
-            <br /> Minutes
+             Reputable Lenders in
+             Minutes
           </h3>
           <span>
             Description: Whether you're seeking to consolidate debt or address
@@ -30,7 +31,7 @@ const WhySection = () => {
             <img src="./card2.png" alt="" />
           </div>
           <h3>
-            We Are Unbiased and <br />
+            We Are Unbiased and 
             Transparent
           </h3>
           <span>
@@ -47,7 +48,7 @@ const WhySection = () => {
           </div>
           <h3>
             Your Data Is Safe
-            <br />& Secure
+            & Secure
           </h3>
           <span>
             At Clear Credit AI, we don't play favorites or accept payments to

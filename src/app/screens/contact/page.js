@@ -6,8 +6,8 @@ const Contact = () => {
       <div className={styles.headings}>
         <h3>Questions?</h3>
         <h1>
-          Our Client Success team is
-          <br /> always here to help
+          Our Client Success team
+          <br /> is always here to help
         </h1>
       </div>
       <div className={styles.contactsection}>
@@ -46,28 +46,25 @@ const Contact = () => {
         </div>
       </div>
       <div className={styles.findmyratesection}>
-        <div>
-          <span
-            style={{ color: "white", fontSize: "3rem", fontWeight: "bolder" }}
-          >
+        <img
+          src="./contactcircle1.png"
+          height={200}
+          style={{ marginTop: "-2.8rem", marginLeft: "-8.3rem" }}
+        />
+        <div className={styles.findmyrate}>
+          <span style={{ color: "white", fontSize: "3rem", fontWeight: "900"}}>
             Find a personal
-            <br /> loan today.
+            <br /> <span>loan today.</span>
           </span>
         </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "2rem",
-            marginTop: "2rem",
-            alignItems: "flex-end",
-          }}
-        >
+        <div className={styles.checkingrates}>
           <button>Find my Rate</button>
           <span style={{ color: "#1A4048", fontSize: "13px" }}>
             Checking rates won’t affect your credit score
           </span>
         </div>
+        <img src="./contactcircle2.png" height={200}
+          style={{ marginTop: "-2.8rem", marginRight: "-8.3rem" }}/>
       </div>
     </div>
   );

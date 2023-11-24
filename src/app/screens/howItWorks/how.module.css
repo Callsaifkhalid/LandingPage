@@ -24,8 +24,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  margin-left: 16rem;
-  margin-top: 15rem;
+  margin-left: 13rem;
+  margin-top: -20rem;
 }
 .headings > h3 {
   color: #05c8e8;
@@ -33,34 +33,36 @@
 }
 .headings > h1 {
   color: #1a4048;
-  font-weight: 600;
+  font-weight: 900;
   font-size: 3rem;
   margin-top: -0.8rem;
 }
 /* left side */
+
 .imagecontainer > img {
   width: 100%;
   height: 100%;
-  margin-top: 3.4rem;
+  margin-bottom: 18rem;
 }
 .imagecontainer2 > img {
   width: 20%;
   height: 20%;
-  margin-left: 25rem;
-  margin-top: -7rem;
-  margin-bottom: 8rem;
+  margin-left: 23rem;
+  margin-top: -30rem;
+  margin-bottom: 17rem;
  
 }
 
 /* right side */
 .paragraphs {
   max-width: 35%;
+  margin-bottom: 0rem;
 }
 .paragraph {
   display: flex;
   flex-direction: column;
   margin-left: 5rem;
-  margin-top: -4.5rem;
+  margin-top: -4.7rem;
   margin-bottom: 2rem;
 }
 .paragraph > h3 {
@@ -69,4 +71,38 @@
 .paragraph > span {
   color: #8b8b8b;
   font-size: 13px;
+}
+
+@media (max-width:400px){
+  .wrapper{
+    width: 420px;
+  }
+  .howcontainer{
+    margin-top: 3rem;
+  }
+  .headings{
+    margin-left: 1rem;
+    margin-top: 3rem;
+  }
+  .imagecontainer{
+    padding: 0.6rem;
+  }
+  .imagecontainer > img {
+    margin-bottom: 4rem;
+  }
+  .imagecontainer2 > img {
+    width: 20%;
+    height: 20%;
+    margin-left: 17rem;
+    margin-top: -18rem;
+    margin-bottom: 8rem;
+   
+  }
+  .paragraphs{
+    max-width: 400px;
+    margin-bottom: 3rem;
+  }
+  .wrapper > img {
+    display: none;
+  }
 }
