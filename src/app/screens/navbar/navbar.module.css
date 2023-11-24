@@ -5,6 +5,7 @@
   align-items: center;
   background-color: #c6f7ff;
   width: 100%;
+  z-index: 1000;
 }
 .logo {
   margin-top: 1rem;

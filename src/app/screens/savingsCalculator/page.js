@@ -22,15 +22,16 @@ const SavingsCalculator = () => {
   ];
 
   const Styles = {
-    control: (style) => ({
-      ...styles,
+    control: (provided,state) => ({
+      
       backgroundColor: "white",
       width: "120px",
       height: "40px",
       borderRadius: "5px",
       display: "flex",
       marginTop: "3px",
-      position: 'relative',
+      position: 'static',
+      zIndex: state.isFocused ? 9999 : 1,
     }),
     dropdownIndicator: base => ({
       ...base,
