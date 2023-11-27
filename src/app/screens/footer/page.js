@@ -3,46 +3,31 @@ import styles from "./footer.module.css";
 const Footer = () => {
   return (
     <div className={styles.footer}>
-      <div className={styles.halfcurvecontainer}>
-        <div className={styles.halfcurvecontent}>{/* Your content goes here */}</div>
-      </div>
       <div className={styles.images}>
-        <div>
-          <img src="./logo2.png" alt="" width={200} />
+        <div className={styles.logo}>
+          <img src="./logo2.png" alt="" width={250} />
         </div>
-        <div>
+        <div className={styles.socials}>
           <img src="./Facebook.png" />
           <img src="./Twitter.png" />
           <img src="./Instagram.png" />
         </div>
       </div>
-      <div className={styles.Content}>
-        <div className={styles.content}>
-          <div className={styles.content1}>
-            <span>hello@onirapp.com</span>
-            <span>+1-800-123 4567</span>
-          </div>
-          <div className={styles.content1}>
-            <span>About</span>
-            <span>Services</span>
-            <span>Careers</span>
-            <span>Blog</span>
-            <span>Pricing</span>
-          </div>
+
+      <div className={styles.content}>
+        <div className={styles.content1}>
+          <span>hello@onirapp.com</span>
+          <span>+1-800-123 4567</span>
         </div>
-        <div className={styles.content}>
-          <div className={styles.content1}>
-            <span>Help</span>
-            <span>FAQ's</span>
-            <span>Press</span>
-            <span>Teams and Conditions</span>
-            <span>Partners</span>
-          </div>
-          <div className={styles.content1}>
-            <span style={{ color: "white" }}>Let's try out</span>
-            <button>App Store</button>
-            <button>Play Store</button>
-          </div>
+        <div className={styles.content1}>
+          <span>About</span>
+          <span>Careers</span>
+          <span>Blog</span>
+        </div>
+        <div className={styles.content1}>
+          <span>FAQ's</span>
+          <span>Terms and Conditions</span>
+          <span>Privacy Policy</span>
         </div>
       </div>
     </div>

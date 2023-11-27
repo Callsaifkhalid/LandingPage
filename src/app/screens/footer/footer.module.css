@@ -4,23 +4,27 @@
   border-top-right-radius: 50px;
 }
 .images {
-  width: 87%;
+  width: 77%;
   display: flex;
   justify-content: space-between;
-  margin: 30px auto 0 auto;
+  margin-left: 4.5rem;
 }
 .images > div > img {
   margin-left: 1rem;
   margin-top: 4rem;
 }
-.Content {
-  display: flex;
+.socials > img {
+  width: 30px;
+  transition: all ease-in 50ms;
+}
+.socials > img:hover {
+  transform: scale(1.08);
 }
 .content {
   display: flex;
-  justify-content: space-around;
-  width: 90%;
-  margin: 30px auto 0 auto;
+  justify-content: space-between;
+  width: 85%;
+  margin: -2rem auto 0 90px;
 }
 .content1 {
   display: flex;
@@ -31,7 +35,12 @@
 }
 .content1 > span {
   color: #8b8b8b;
-  font-size: 18px;
+  font-size: 24px;
+  transition: all ease-in 100ms;
+}
+.content1 > span:hover {
+  transform: scale(1.03);
+  color: white;
 }
 .content1 > button {
   color: #1f1f39;
@@ -43,6 +52,10 @@
   cursor: pointer;
   width: 120px;
   margin-top: 5px;
+  transition: all ease-in 100ms;
+}
+.content1 > button:hover {
+  transform: scale(1.08);
 }
 
 @media (max-width: 400px) {
@@ -50,28 +63,42 @@
     width: 420px;
   }
   .images {
-    width: 400px;
-    margin: 0;
+    width: 380px;
+    margin: -2rem 0 0 1rem;
   }
   .images > div > img {
-    margin-left: 0.5rem;
     margin-top: 2rem;
+    margin-left: 0.5rem;
   }
-  .Content {
-    flex-direction: column;
+  .socials > img {
+    width: 25px;
+    transition: all ease-in 50ms;
+    margin-left: 0rem;
+    margin-bottom: -3rem;
+  }
+  .logo> img {
+    margin-left: 0rem;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    width: 200px;
   }
   .content {
     display: flex;
-    gap: 3rem;
+    flex-direction: column;
+    gap: 0rem;
     width: 90%;
+    margin: 0px;
   }
   .content1 {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    margin-top: 1rem;
+    align-items: flex-start;
+    gap: 0rem;
+    margin-top: 0rem;
     margin-bottom: 3rem;
+    margin-left: 1.6rem;
+  }
+  .content1 > span {
+    font-size: 18px;
   }
 }
-

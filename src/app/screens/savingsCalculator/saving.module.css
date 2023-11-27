@@ -162,6 +162,11 @@
   border: none;
   cursor: pointer;
   width: 200px;
+  transition: all ease-in 200ms;
+}
+.footer > button:hover {
+  transform: scale(1.1);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .colorbar {
   width: 80%;
@@ -221,12 +226,21 @@
     width: 420px;
   }
   .headings {
-    margin-left: 1rem;
+    margin-left: 0rem;
     margin-top: 0rem;
+    padding: 2rem;
   }
   .headings > h3 {
     color: #05c8e8;
     margin-top: 5rem;
+    font-size: 1rem;
+  }
+  .headings > h1 {
+    color: #1a4048;
+    font-weight: 900;
+    font-size: 2rem;
+    margin-top: -0.3rem;
+    
   }
   .calculatorstuff {
     max-width: 300px;
@@ -268,6 +282,6 @@
     gap: 1rem;
   }
   .footer > span {
-    text-align: center;
+    margin-left: 10px;
   }
 }

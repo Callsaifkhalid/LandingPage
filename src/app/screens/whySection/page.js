@@ -24,7 +24,7 @@ const WhySection = () => {
             of finding a personal loan tailored to your unique circumstances. We
             connect you with reputable lenders quickly and effortlessly.
           </span>
-          <button>Learn More</button>
+          <button style={{ marginTop: "1.3rem" }}>Learn More</button>
         </div>
         <div className={styles.card}>
           <div>
@@ -57,7 +57,7 @@ const WhySection = () => {
             Before selecting a lender, you'll know precisely how your loan
             breaks down, with no hidden fees or surprises.
           </span>
-          <button>Learn More</button>
+          <button style={{ marginTop: "1.5rem" }}>Learn More</button>
         </div>
       </div>
     </div>

@@ -35,11 +35,11 @@ const CompareSection = () => {
           </div>
           <div className={styles.div4}>
             <span style={{color:'#828282',fontSize:'13px'}}>Loan Term</span>
-            <span>2-5 Years</span>
+            <span style={{fontWeight:'bolder'}}>2-5 Years</span>
           </div>
           <div className={styles.div4}>
             <span style={{color:'#828282',fontSize:'13px'}}>Loan Term</span>
-            <span>up to $35k</span>
+            <span style={{fontWeight:'bolder'}}>up to $35k</span>
           </div>
           <div className={styles.div5}>
             <button>Find my Rate</button>
@@ -63,11 +63,11 @@ const CompareSection = () => {
           </div>
           <div className={styles.div4}>
             <span style={{color:'#828282',fontSize:'13px'}}>Loan Term</span>
-            <span>2-5 Years</span>
+            <span style={{fontWeight:'bolder'}}>2-5 Years</span>
           </div>
           <div className={styles.div4}>
             <span style={{color:'#828282',fontSize:'13px'}}>Loan Term</span>
-            <span>up to $35k</span>
+            <span style={{fontWeight:'bolder'}}>up to $35k</span>
           </div>
           <div className={styles.div5}>
             <button>Find my Rate</button>
@@ -91,11 +91,11 @@ const CompareSection = () => {
           </div>
           <div className={styles.div4}>
             <span style={{color:'#828282',fontSize:'13px'}}>Loan Term</span>
-            <span>2-5 Years</span>
+            <span style={{fontWeight:'bolder'}}>2-5 Years</span>
           </div>
           <div className={styles.div4}>
             <span style={{color:'#828282',fontSize:'13px'}}>Loan Term</span>
-            <span>up to $35k</span>
+            <span style={{fontWeight:'bolder'}}>up to $35k</span>
           </div>
           <div className={styles.div5}>
             <button>Find my Rate</button>
@@ -119,11 +119,11 @@ const CompareSection = () => {
           </div>
           <div className={styles.div4}>
             <span style={{color:'#828282',fontSize:'13px'}}>Loan Term</span>
-            <span>2-5 Years</span>
+            <span style={{fontWeight:'bolder'}}>2-5 Years</span>
           </div>
           <div className={styles.div4}>
             <span style={{color:'#828282',fontSize:'13px'}}>Loan Term</span>
-            <span>up to $35k</span>
+            <span style={{fontWeight:'bolder'}}>up to $35k</span>
           </div>
           <div className={styles.div5}>
             <button>Find my Rate</button>

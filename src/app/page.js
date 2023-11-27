@@ -1,6 +1,7 @@
 import styles from "./page.module.css";
 import CompareSection from "./screens/compareSection/page";
 import Contact from "./screens/contact/page";
+import FAQS from "./screens/faqs/page";
 import Footer from "./screens/footer/page";
 import Hero from "./screens/hero/page";
 import HowItWorks from "./screens/howItWorks/page";
@@ -19,6 +20,7 @@ export default function Home() {
       <SavingsCalculator />
       <CompareSection />
       <TourGoals />
+      <FAQS/>
       <Contact />
       <Footer />
     </main>

@@ -35,6 +35,9 @@
   margin: 7px;
   border-radius: 30.12px;
 }
+.card:hover{
+  box-shadow: rgba(12, 94, 36, 0.356) 0px 5px 15px;
+}
 .card > h3 {
   color: #333;
   font-weight: 900;
@@ -47,20 +50,16 @@
 .card > button {
   color: #05c8e8;
   background-color: #fff;
-  font-weight: 500;
+  font-weight: 700;
   padding: 0.6rem 2.5rem;
   border-radius: 10.33px;
-
   border: none;
   cursor: pointer;
+  transition: all ease-in 100ms;
 }
-
-.vector {
-  position: absolute;
-  width: 351.1px;
-  height: 673.8px;
-  border-radius: 999px;
-  background: rgba(5, 200, 232, 0.1);
+.card > button:hover{
+  transform: scale(0.98);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 @media (max-width: 400px) {
@@ -68,17 +67,29 @@
     width: 420px;
   }
   .headings {
-    margin-left: 1rem;
+    margin-left: 0rem;
     margin-top: 4rem;
+    padding: 2rem;
+  }
+  .headings > h3 {
+    color: #05c8e8;
+    margin-bottom: -1rem;
+    font-size: 1rem;
+  }
+  .headings > h1 {
+    color: #1a4048;
+    font-weight: 900;
+    font-size: 2rem;
   }
   .cards {
     flex-direction: column;
     padding: 1rem;
     margin-top: 2rem;
+    align-items: center;
   }
   .card {
-    max-width: 400px;
-    align-items: center;
+    max-width: 280px;
+   
   }
   .wrapper > img {
     display: none;

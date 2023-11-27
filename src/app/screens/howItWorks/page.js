@@ -28,8 +28,8 @@ const HowItWorks = () => {
           <img
             src="./howline.png"
             alt=""
-            height={600}
-            style={{ marginBottom: "-40rem", marginLeft:'2rem' }}
+            height={650}
+            style={{ marginBottom: "-43rem", marginLeft:'2rem' }}
           />
           <div>
             <img src="./how1.png" alt="" />

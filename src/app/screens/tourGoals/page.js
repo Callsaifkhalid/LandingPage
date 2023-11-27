@@ -22,23 +22,17 @@ const TourGoals = () => {
               <img src="./tourgoal1.png" />
             </div>
             <div className={styles.card1box1content}>
-              <span
-                style={{
-                  color: "#333",
-                  fontWeight: "bolder",
-                  fontSize: "20px",
-                }}
-              >
+              <h3>
                 Find a Loan from
                 <br /> Reputable Lenders in <br />
                 Minutes
-              </span>
+              </h3>
               <span style={{ color: "#8B8B8B", fontSize: "12px" }}>
                 Description: Whether you're seeking to
                 <br /> consolidate debt or address an unexpected <br />
                 financial need,
               </span>
-              <span
+              <h4
                 style={{
                   color: "#05C8E8",
                   fontSize: "13px",
@@ -46,7 +40,7 @@ const TourGoals = () => {
                 }}
               >
                 Learn More
-              </span>
+              </h4>
             </div>
           </div>
           <div className={styles.card1box1}>
@@ -54,23 +48,17 @@ const TourGoals = () => {
               <img src="./tourgoal2.png" />
             </div>
             <div className={styles.card1box1content}>
-              <span
-                style={{
-                  color: "#333",
-                  fontWeight: "bolder",
-                  fontSize: "20px",
-                }}
-              >
+              <h3>
                 Find a Loan from
                 <br /> Reputable Lenders in <br />
                 Minutes
-              </span>
+              </h3>
               <span style={{ color: "#8B8B8B", fontSize: "12px" }}>
                 Description: Whether you're seeking to
                 <br /> consolidate debt or address an unexpected <br />
                 financial need,
               </span>
-              <span
+              <h4
                 style={{
                   color: "#05C8E8",
                   fontSize: "13px",
@@ -78,7 +66,7 @@ const TourGoals = () => {
                 }}
               >
                 Learn More
-              </span>
+              </h4>
             </div>
           </div>
           <div className={styles.card1box1}>
@@ -86,23 +74,17 @@ const TourGoals = () => {
               <img src="./tourgoal3.png" />
             </div>
             <div className={styles.card1box1content}>
-              <span
-                style={{
-                  color: "#333",
-                  fontWeight: "bolder",
-                  fontSize: "20px",
-                }}
-              >
+              <h3>
                 Find a Loan from
                 <br /> Reputable Lenders in <br />
                 Minutes
-              </span>
+              </h3>
               <span style={{ color: "#8B8B8B", fontSize: "12px" }}>
                 Description: Whether you're seeking to
                 <br /> consolidate debt or address an unexpected <br />
                 financial need,
               </span>
-              <span
+              <h4
                 style={{
                   color: "#05C8E8",
                   fontSize: "13px",
@@ -110,7 +92,7 @@ const TourGoals = () => {
                 }}
               >
                 Learn More
-              </span>
+              </h4>
             </div>
           </div>
         </div>
@@ -120,23 +102,17 @@ const TourGoals = () => {
               <img src="./tourgoal4.png" />
             </div>
             <div className={styles.card1box1content}>
-              <span
-                style={{
-                  color: "#333",
-                  fontWeight: "bolder",
-                  fontSize: "20px",
-                }}
-              >
+              <h3>
                 Find a Loan from
                 <br /> Reputable Lenders in <br />
                 Minutes
-              </span>
+              </h3>
               <span style={{ color: "#8B8B8B", fontSize: "12px" }}>
                 Description: Whether you're seeking to
                 <br /> consolidate debt or address an unexpected <br />
                 financial need,
               </span>
-              <span
+              <h4
                 style={{
                   color: "#05C8E8",
                   fontSize: "13px",
@@ -144,7 +120,7 @@ const TourGoals = () => {
                 }}
               >
                 Learn More
-              </span>
+              </h4>
             </div>
           </div>
           <div className={styles.card1box1}>
@@ -152,23 +128,17 @@ const TourGoals = () => {
               <img src="./tourgoal5.png" />
             </div>
             <div className={styles.card1box1content}>
-              <span
-                style={{
-                  color: "#333",
-                  fontWeight: "bolder",
-                  fontSize: "20px",
-                }}
-              >
+              <h3>
                 Find a Loan from
                 <br /> Reputable Lenders in <br />
                 Minutes
-              </span>
+              </h3>
               <span style={{ color: "#8B8B8B", fontSize: "12px" }}>
                 Description: Whether you're seeking to
                 <br /> consolidate debt or address an unexpected <br />
                 financial need,
               </span>
-              <span
+              <h4
                 style={{
                   color: "#05C8E8",
                   fontSize: "13px",
@@ -176,7 +146,7 @@ const TourGoals = () => {
                 }}
               >
                 Learn More
-              </span>
+              </h4>
             </div>
           </div>
           <div className={styles.card1box1}>
@@ -184,23 +154,17 @@ const TourGoals = () => {
               <img src="./tourgoal6.png" />
             </div>
             <div className={styles.card1box1content}>
-              <span
-                style={{
-                  color: "#333",
-                  fontWeight: "bolder",
-                  fontSize: "20px",
-                }}
-              >
+              <h3>
                 Find a Loan from
                 <br /> Reputable Lenders in <br />
                 Minutes
-              </span>
+              </h3>
               <span style={{ color: "#8B8B8B", fontSize: "12px" }}>
                 Description: Whether you're seeking to
                 <br /> consolidate debt or address an unexpected <br />
                 financial need,
               </span>
-              <span
+              <h4
                 style={{
                   color: "#05C8E8",
                   fontSize: "13px",
@@ -208,7 +172,7 @@ const TourGoals = () => {
                 }}
               >
                 Learn More
-              </span>
+              </h4>
             </div>
           </div>
         </div>

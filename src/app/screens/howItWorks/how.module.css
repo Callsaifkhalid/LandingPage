@@ -81,11 +81,26 @@
     margin-top: 3rem;
   }
   .headings{
-    margin-left: 1rem;
+    margin-left: 0rem;
     margin-top: 3rem;
+    padding: 2rem;
+  }
+  .headings > h3 {
+    color: #05c8e8;
+    margin-top: 8rem;
+    font-size: 1rem;
+  }
+  .headings > h1 {
+    color: #1a4048;
+    font-weight: 900;
+    font-size: 2rem;
+    margin-top: -0.8rem;
+  }
+  .headings > h1 > br {
+    display: none;
   }
   .imagecontainer{
-    padding: 0.6rem;
+    padding: 1.5rem;
   }
   .imagecontainer > img {
     margin-bottom: 4rem;
@@ -99,10 +114,17 @@
    
   }
   .paragraphs{
-    max-width: 400px;
+    max-width: 350px;
     margin-bottom: 3rem;
   }
   .wrapper > img {
     display: none;
+  }
+  .paragraphs > div > img {
+    width: 65px;
+  }
+  .paragraph {
+    margin-top: -4.5rem;
+   
   }
 }
