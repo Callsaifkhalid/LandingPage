@@ -6,17 +6,20 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import Backtotop from "@/components/backtoTopButton/backtotop";
 import OutsideClickHandler from "react-outside-click-handler";
 import { RxCross2 } from "react-icons/rx";
+import dynamic from "next/dynamic";
 
 const Navbar = () => {
   const [currentSection, setCurrentSection] = useState("");
   const [menuOpen, setmenuopen] = useState(false);
+  
 
   const getMenuStyles = (menuOpen)=>{
+    if(typeof window ){
     if(document.documentElement.clientWidth <= 800){
       {
         return { right: !menuOpen && '-100%'}
       }
-    }
+    }}
   }
   useEffect(() => {
     const handleScroll = () => {
