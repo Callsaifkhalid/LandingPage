@@ -14,7 +14,7 @@ const Navbar = () => {
   
 
   const getMenuStyles = (menuOpen)=>{
-    if(typeof window ){
+    if (typeof window !== "undefined") {
     if(document.documentElement.clientWidth <= 800){
       {
         return { right: !menuOpen && '-100%'}
