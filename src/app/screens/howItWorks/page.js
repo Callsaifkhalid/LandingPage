@@ -6,7 +6,7 @@ const HowItWorks = () => {
       <img
         src="./howcircle.png"
         width={200}
-        style={{ marginTop: "-10rem", marginLeft: "86%rem" }}
+        style={{ marginTop: "-10rem", marginLeft: "86%" }}
       />
       <div className={styles.headings}>
         <h3>Our process</h3>
