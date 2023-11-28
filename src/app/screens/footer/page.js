@@ -15,7 +15,7 @@ const Footer = () => {
       </div>
 
       <div className={styles.content}>
-        <div className={styles.content1}>
+        <div className={styles.contentt1}>
           <span>hello@onirapp.com</span>
           <span>+1-800-123 4567</span>
         </div>

@@ -24,6 +24,9 @@
   font-size: 13px;
   cursor: pointer;
 }
+.menuLinks>span{
+  padding-bottom: 3px;
+}
 .menuLinks>span:hover{
   color: #05c8e8;
 }

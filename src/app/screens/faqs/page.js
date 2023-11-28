@@ -44,11 +44,9 @@ const FAQS = () => {
               <div className={styles.questioncontent}>
                 A bank is a financial institution licensed to receive deposits
                 and make loans. Banks may also provide financial services such
-                as
-                <br /> wealth management, currency exchange, and safe deposit
-                boxes. There are several different kinds of banks including
-                retail banks, commercial or corporate banks, and investment
-                banks.
+                as wealth management, currency exchange, and safe deposit boxes.
+                There are several different kinds of banks including retail
+                banks, commercial or corporate banks, and investment banks.
               </div>
             )}
           </div>
@@ -71,11 +69,9 @@ const FAQS = () => {
               <div className={styles.questioncontent}>
                 A bank is a financial institution licensed to receive deposits
                 and make loans. Banks may also provide financial services such
-                as
-                <br /> wealth management, currency exchange, and safe deposit
-                boxes. There are several different kinds of banks including
-                retail banks, commercial or corporate banks, and investment
-                banks.
+                as wealth management, currency exchange, and safe deposit boxes.
+                There are several different kinds of banks including retail
+                banks, commercial or corporate banks, and investment banks.
               </div>
             )}
           </div>
@@ -98,11 +94,9 @@ const FAQS = () => {
               <div className={styles.questioncontent}>
                 A bank is a financial institution licensed to receive deposits
                 and make loans. Banks may also provide financial services such
-                as
-                <br /> wealth management, currency exchange, and safe deposit
-                boxes. There are several different kinds of banks including
-                retail banks, commercial or corporate banks, and investment
-                banks.
+                as wealth management, currency exchange, and safe deposit boxes.
+                There are several different kinds of banks including retail
+                banks, commercial or corporate banks, and investment banks.
               </div>
             )}
           </div>
@@ -125,11 +119,9 @@ const FAQS = () => {
               <div className={styles.questioncontent}>
                 A bank is a financial institution licensed to receive deposits
                 and make loans. Banks may also provide financial services such
-                as
-                <br /> wealth management, currency exchange, and safe deposit
-                boxes. There are several different kinds of banks including
-                retail banks, commercial or corporate banks, and investment
-                banks.
+                as wealth management, currency exchange, and safe deposit boxes.
+                There are several different kinds of banks including retail
+                banks, commercial or corporate banks, and investment banks.
               </div>
             )}
           </div>

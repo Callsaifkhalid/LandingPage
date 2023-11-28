@@ -63,6 +63,7 @@ const Navbar = () => {
             style={{
               color: currentSection === "home" ? "#05c8e8" : "#1a4048",
               textDecoration: currentSection === "home" ? "underline" : "none",
+              textUnderlineOffset: currentSection === "home" ? '5px' : 'none',
             }}
             className={styles.menuLinks}
           >
@@ -80,6 +81,7 @@ const Navbar = () => {
               color: currentSection === "saving" ? "#05c8e8" : "#1a4048",
               textDecoration:
                 currentSection === "saving" ? "underline" : "none",
+                textUnderlineOffset: currentSection === "saving" ? '5px' : 'none',
             }}
           >
             <span>Savings Calculator</span>
@@ -96,6 +98,7 @@ const Navbar = () => {
               color: currentSection === "compare" ? "#05c8e8" : "#1a4048",
               textDecoration:
                 currentSection === "compare" ? "underline" : "none",
+                textUnderlineOffset: currentSection === "compare" ? '5px' : 'none',
             }}
           >
             <span>Compare Landers</span>
@@ -112,6 +115,7 @@ const Navbar = () => {
               color: currentSection === "contact" ? "#05c8e8" : "#1a4048",
               textDecoration:
                 currentSection === "contact" ? "underline" : "none",
+                textUnderlineOffset: currentSection === "contact" ? '5px' : 'none',
             }}
           >
             <span>Contact Us</span>

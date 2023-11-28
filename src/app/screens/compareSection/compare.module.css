@@ -27,8 +27,9 @@
 .wrapper > span {
   display: flex;
   justify-content: flex-end;
-  margin: 3rem 8rem 2rem 0;
+  margin: 3rem 15rem 2rem 0rem;
   text-decoration: underline;
+  text-underline-offset: 4px;
   font-weight: bold;
 }
 .boxes {

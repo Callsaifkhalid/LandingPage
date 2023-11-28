@@ -56,7 +56,7 @@
   transition: all ease-in 200ms;
 }
 .checknow > button:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .checknow > span {

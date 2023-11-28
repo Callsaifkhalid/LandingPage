@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import styles from "./hero.module.css";
+import { motion } from "framer-motion";
 const Hero = () => {
   return (
     <section className={styles.herowrapper} id="hero">
@@ -7,10 +9,14 @@ const Hero = () => {
         {/* left side */}
         <div className={styles.flexColStart + " " + styles.heroleft}>
           <div className={styles.herotitle}>
-            <h2>
+            <motion.h2
+              initial={{ x: "7rem", opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 2, type: "spring" }}
+            >
               Debt Consolidation
               <br /> Made Easy.
-            </h2>
+            </motion.h2>
             <div className={styles.flexColStart + " " + styles.herodes}>
               <span>
                 Compare Rates From <br />
@@ -31,7 +37,12 @@ const Hero = () => {
         </div>
         {/* right side */}
         <div className={styles.flexCenter + " " + styles.heroright}>
-          <div className={styles.imagecontainer}>
+          <motion.div
+            className={styles.imagecontainer}
+            initial={{ y: "7rem", opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 2, type: "spring" }}
+          >
             <img
               src="./herocircle.png"
               alt=""
@@ -42,12 +53,16 @@ const Hero = () => {
                 marginTop: "7rem",
               }}
             />
-            <img src="./herogirl.png" alt="" style={{
+            <img
+              src="./herogirl.png"
+              alt=""
+              style={{
                 height: "100%",
                 width: "100%",
                 marginTop: "-31.7rem",
-              }}/>
-          </div>
+              }}
+            />
+          </motion.div>
         </div>
       </div>
     </section>
