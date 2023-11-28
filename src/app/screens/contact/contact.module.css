@@ -1,6 +1,7 @@
 .wrapper {
   background-color: #fff;
   margin-bottom: 15rem;
+  min-width: 1440px;
 }
 
 .headings {

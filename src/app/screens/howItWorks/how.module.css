@@ -13,6 +13,7 @@
 }
 .wrapper {
   background-color: #e3fbff;
+  min-width: 1440px;
 }
 .howcontainer {
   justify-content: space-around;

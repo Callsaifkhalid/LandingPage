@@ -18,6 +18,8 @@
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   position: static;
+  min-width: 1440px;
+  
 }
 .herocontainer {
   justify-content: center;

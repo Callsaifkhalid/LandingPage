@@ -1,5 +1,6 @@
 .wrapper {
   background-color: #fff;
+  min-width: 1440px;
 }
 .headings {
   display: flex;
@@ -35,6 +36,9 @@
   margin: 7px;
   border-radius: 30.12px;
 }
+.card:hover{
+  box-shadow: rgba(12, 94, 36, 0.356) 0px 5px 15px;
+}
 .card > h3 {
   color: #333;
   font-weight: 900;
@@ -55,8 +59,9 @@
   transition: all ease-in 100ms;
 }
 .card > button:hover{
-  transform: scale(0.98);
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transform: scale(1.03);
+  color: #fff;
+  background-color: #05c8e8;
 }
 
 @media (max-width: 400px) {
