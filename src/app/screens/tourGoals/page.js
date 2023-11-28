@@ -6,7 +6,7 @@ const TourGoals = () => {
       <img
         src="./howcircle.png"
         width={200}
-        style={{ marginTop: "-10rem", marginLeft: "72rem" }}
+        style={{ marginTop: "-10rem", marginLeft: "86%" }}
       />
       <div className={styles.headings}>
         <h3>For all tour goals</h3>
