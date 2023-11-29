@@ -18,8 +18,6 @@
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   position: static;
-  
-  
 }
 .herocontainer {
   justify-content: center;
@@ -39,32 +37,63 @@
   color: #05c8e8;
 }
 .herodes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 308px;
+  color: #1a4048;
+  margin-bottom: 10px;
+}
+.herodes2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 354px;
   color: #1a4048;
 }
 .herodes > span {
-  font-size: 20px;
+  font-size: 18px;
 }
-
-.checknow > button {
-  font-weight: 500;
-  padding: 0.6rem 2.5rem;
-  color: #05c8e8;
-  background: #1a4048;
-  border-radius: 10.33px;
-  margin-right: 10px;
+.herodes2 > span {
+  font-size: 18px;
+}
+.findmyrate {
+  width: 500px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: #05c8e8 1px solid;
+}
+.findmyrate > input {
+  width: 350px;
+  height: 58px;
+  outline: none;
   border: none;
-  margin-top: 2rem;
+  font-size: 18px;
+  padding-left: 1rem;
+}
+.findmyrate > button {
+  width: 150px;
+  height: 60px;
+  border: none;
+  outline: none;
+  background-color: #1a4048;
+  color: #05c8e8;
+  font-size: 18px;
+  font-weight: 700;
   cursor: pointer;
-  transition: all ease-in 200ms;
 }
-.checknow > button:hover {
-  transform: scale(1.05);
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+.thumbsup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  color: #1a4048;
+  margin-top: -2.4rem;
 }
-.checknow > span {
-  color: #8b8b8b;
+.thumbsup>span{
   font-size: 13px;
-  font-weight: bold;
 }
 .ovals {
   display: flex;
@@ -108,18 +137,61 @@
     color: #05c8e8;
   }
 
-  .herodes > span {
-    font-size: 16px;
-    margin-top: 3rem;
+  .herodes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 308px;
+    color: #1a4048;
+    margin-bottom: 10px;
   }
-  .checknow {
-    
+  .herodes2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 354px;
+    color: #1a4048;
+  }
+  .herodes > span {
+    font-size: 18px;
+  }
+  .herodes2 > span {
+    font-size: 18px;
+  }
+  .findmyrate {
+    width: 380px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #05c8e8 1px solid;
+  }
+  .findmyrate > input {
+    width: 250px;
+    height: 58px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    padding-left: 1rem;
+  }
+  .findmyrate > button {
+    width: 130px;
+    height: 60px;
+    border: none;
+    outline: none;
+    background-color: #1a4048;
+    color: #05c8e8;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .heroright {
+    display: none;
   }
 
   .imagecontainer {
     display: none;
   }
   .ovals {
-  
   }
 }

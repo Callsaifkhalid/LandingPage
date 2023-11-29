@@ -2,6 +2,9 @@
 import React from "react";
 import styles from "./hero.module.css";
 import { motion } from "framer-motion";
+import { IoCheckmark } from "react-icons/io5";
+import CurrencyInput from "react-currency-input-field";
+import { IoMdThumbsUp } from "react-icons/io";
 const Hero = () => {
   return (
     <section className={styles.herowrapper} id="hero">
@@ -17,16 +20,31 @@ const Hero = () => {
               Debt Consolidation
               <br /> Made Easy.
             </motion.h2>
-            <div className={styles.flexColStart + " " + styles.herodes}>
+            <div className={styles.herodes}>
+              <IoCheckmark />
               <span>
-                Compare Rates From <br />
-                Multiple Lenders in Minutes
+                Rates from 5.20% - 35.99% APR<sup>1</sup>
               </span>
             </div>
+            <div className={styles.herodes2}>
+              <IoCheckmark />
+              <span>Loan amounts from $600 to $200,000</span>
+            </div>
           </div>
-          <div className={styles.checknow}>
-            <button>Check Now</button>
-            <span>Your Personalized Rates</span>
+          <div className={styles.findmyrate}>
+            <CurrencyInput
+              id="input-example"
+              name="input-name"
+              placeholder="Enter amount ($600 to $200,000)"
+              prefix="$"
+              decimalsLimit={2}
+              maxLength={5}
+            />
+            <button>Find My Rate</button>
+          </div>
+          <div className={styles.thumbsup}>
+            <IoMdThumbsUp />
+            <span>Checking rates won’t affect your credit score</span>
           </div>
           <div className={styles.ovals}>
             <img src="./Oval1.png" alt="" />

@@ -22,23 +22,22 @@ const SavingsCalculator = () => {
   ];
 
   const Styles = {
-    control: (provided,state) => ({
-      
+    control: (provided, state) => ({
       backgroundColor: "white",
       width: "120px",
       height: "40px",
       borderRadius: "5px",
       display: "flex",
       marginTop: "3px",
-      position: 'static',
+      position: "static",
       zIndex: state.isFocused ? 9999 : 1,
     }),
-    dropdownIndicator: base => ({
+    dropdownIndicator: (base) => ({
       ...base,
       color: "#05c8e8",
-      ':hover':{
-        color:"#05c8e8"
-      } 
+      ":hover": {
+        color: "#05c8e8",
+      },
     }),
   };
 
@@ -73,7 +72,7 @@ const SavingsCalculator = () => {
       <div className={styles.calculator}>
         <div className={styles.calculatorstuff}>
           <div className={styles.calculatorheading}>
-            <h4>Enter your loan details</h4>
+            <h3>1. Enter your loan details</h3>
           </div>
           <div className={styles.boxes}>
             <div className={styles.box}>
@@ -98,6 +97,7 @@ const SavingsCalculator = () => {
               />
               <span>%</span>
             </div>
+
             <div className={styles.boxx}>
               <h5
                 style={{
@@ -106,11 +106,15 @@ const SavingsCalculator = () => {
               >
                 Loan Term
               </h5>
-              <Select options={options} styles={Styles} menuPosition="absolute"/>
+              <Select
+                options={options}
+                styles={Styles}
+                menuPosition="absolute"
+              />
             </div>
           </div>
           <div className={styles.calculatorheading}>
-            <h4 style={{marginTop:'3rem'}}>Choose a rate to compare</h4>
+            <h3 style={{ marginTop: "3rem" }}>2. Choose a rate to compare</h3>
             <span>
               Our lender rates vary from{" "}
               <span style={{ color: "#1A4048" }}>5.20%</span> to{" "}
@@ -141,7 +145,7 @@ const SavingsCalculator = () => {
             </div>
           </div>
           <div className={styles.calculatorheading}>
-            <h4 style={{marginTop:'4rem'}}>Check the results</h4>
+            <h3 style={{ marginTop: "4rem" }}>3. Check the results</h3>
             <span>
               With an interest rate o{" "}
               <span style={{ color: "#1A4048" }}>12.00%</span> over 5 Year, you
@@ -159,7 +163,7 @@ const SavingsCalculator = () => {
                     style={{
                       color: "#1a4048",
                       marginLeft: "0.5rem",
-                      marginBottom:'-0.4rem',
+                      marginBottom: "-0.4rem",
                       color: "green",
                     }}
                   />
@@ -213,7 +217,7 @@ const SavingsCalculator = () => {
                     style={{
                       color: "#1a4048",
                       marginLeft: "0.5rem",
-                      marginBottom:'-0.2rem',
+                      marginBottom: "-0.2rem",
                       color: "crimson",
                     }}
                   />
@@ -259,10 +263,6 @@ const SavingsCalculator = () => {
             </div>
           </div>
           <div className={styles.footer}>
-            <span>
-              Checking rates won’t affect your credit score. Calculator results
-              are for illustrative purposes only.
-            </span>
             <button>
               <Link
                 href={"./screens/checkrates"}
@@ -271,6 +271,10 @@ const SavingsCalculator = () => {
                 Check Rates
               </Link>
             </button>
+            <span>
+              Checking rates won’t affect your credit score. Calculator results
+              are for illustrative purposes only.
+            </span>
           </div>
         </div>
       </div>

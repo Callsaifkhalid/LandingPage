@@ -50,7 +50,6 @@
   align-items: center;
   margin: 0px auto;
   margin-left: 3rem;
-  
 }
 .questionn {
   display: flex;
@@ -60,7 +59,6 @@
   align-items: center;
   margin: 0px auto;
   cursor: pointer;
-  
 }
 .questioncontent {
   width: 85%;
@@ -72,12 +70,13 @@
   font-size: 15px;
   margin-left: 2rem;
 }
-
-
-
+.howcircle {
+  margin-top: -10rem;
+  margin-left: 85%;
+}
 @media (max-width: 400px) {
   .wrapper {
-    display: none;
+    width: 420px;
   }
   .wrapper > img {
     display: none;
@@ -101,13 +100,68 @@
   .headings > h1 > br {
     display: none;
   }
+  .questionn {
+    display: flex;
+    width: 85%;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px auto;
+    cursor: pointer;
+  }
   .question {
-    width: 70%;
+    display: flex;
+    width: 88%;
+    height: 150px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px auto;
+    margin-left: 2rem;
+  }
+  .questioncontent {
+    font-size: 14px;
+    width: 85%;
+    height: 150px;
+    margin: 0px;
+    color: #333;
+    padding: 1rem;
+    line-height: 1.6em;
+    margin-left: 1rem;
+    margin-top: -4rem;
   }
   .question > h2 {
-    font-size: 14px;
+    font-size: 16px;
+    margin-top: -2rem;
   }
   .question > img {
-    width: 30px;
+    margin-top: -3rem;
+  }
+  .questionn > h2 {
+    font-size: 16px;
+  }
+  .paragraph {
+    width: 90%;
+    min-height: 80px;
+    margin: 0 auto 0 auto;
+    border: 1px solid #05c8e8;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+}
+@media (min-width: 1440px) {
+  .howcircle {
+    margin-top: -10rem;
+    margin-left: 85.8%;
+  }
+}
+@media (min-width: 1536px) {
+  .howcircle {
+    margin-top: -10rem;
+    margin-left: 86.7%;
   }
 }

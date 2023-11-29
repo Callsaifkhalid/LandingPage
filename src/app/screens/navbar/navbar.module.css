@@ -1,7 +1,7 @@
 .headerwrapper {
   position: fixed;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: #c6f7ff;
   width: 100%;
@@ -10,7 +10,8 @@
 .logo {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  margin-right: 20rem;
+  margin-right: 0rem;
+  margin-left: 2rem;
 }
 
 .headermenu {
@@ -24,41 +25,54 @@
   font-size: 13px;
   cursor: pointer;
 }
-.menuLinks>span{
-  padding-bottom: 3px;
-}
-.menuLinks>span:hover{
+
+.menuLinks > span:hover {
   color: #05c8e8;
 }
-.menuicon{
+.menuicon {
   display: none;
 }
-@media (max-width:400px){
-  .headerwrapper{
+.loginbutton {
+  font-weight: 800;
+  height: 40px;
+  width: 170px;
+  color: #05c8e8;
+  background: #1a4048;
+  border-radius: 10.33px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+@media (max-width: 400px) {
+  .headerwrapper {
     position: fixed;
-    width: 420px;
+    width: 430px;
     justify-content: space-between;
-  
   }
-  .headermenu{
+  .headerwrapper > div > button {
     display: none;
   }
-  .logo{
+  
+  .logo {
     margin-right: 0;
   }
-  .logo>img{
+  .logo > img {
     width: 200px;
-    margin-left: 1.7rem;
+    margin-left: -0.7rem;
   }
-  .menuicon{
-    margin-right: 1rem;
+  .menuicon {
+    margin-left: 7rem;
   }
 }
-@media (max-width:768px){
-  .menuicon{
+@media (max-width: 768px) {
+  .menuicon {
     display: block;
   }
-  .headermenu{
+  .headermenu {
     position: absolute;
     top: 2rem;
     right: 2rem;
@@ -67,16 +81,16 @@
     flex-direction: column;
     gap: 2rem;
     padding: 1rem;
-    align-items: flex-start;
+    align-items: center;
     font-weight: 500;
     border-radius: 10px;
     transition: all 300ms ease-in;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
-  .menuLinks{
+  .menuLinks {
     margin: 0;
   }
-  .menuLinks>span:hover{
+  .menuLinks > span:hover {
     color: #05c8e8;
   }
 }

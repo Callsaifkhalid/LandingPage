@@ -79,14 +79,14 @@
     margin: -2rem 0 0 1rem;
   }
   .images > div > img {
-    margin-top: 2rem;
+    margin-top: 3rem;
     margin-left: 0.5rem;
   }
   .socials > img {
     width: 25px;
     transition: all ease-in 50ms;
     margin-left: 0rem;
-    margin-bottom: -3rem;
+    margin-bottom: -2.5rem;
   }
   .logo> img {
     margin-left: 0rem;
@@ -106,11 +106,23 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 0rem;
-    margin-top: 0rem;
+    margin-top: -1rem;
     margin-bottom: 3rem;
     margin-left: 1.6rem;
   }
   .content1 > span {
+    font-size: 18px;
+  }
+  .contentt1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0rem;
+    margin-top: 0.3rem;
+    margin-bottom: 3rem;
+    margin-left: 1.6rem;
+  }
+  .contentt1 > span {
     font-size: 18px;
   }
 }

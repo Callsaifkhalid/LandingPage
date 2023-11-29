@@ -73,6 +73,10 @@
   color: #8b8b8b;
   font-size: 13px;
 }
+.howcircle{
+  margin-top: -10rem;
+  margin-left: 85%;
+}
 
 @media (max-width:400px){
   .wrapper{
@@ -127,5 +131,17 @@
   .paragraph {
     margin-top: -4.5rem;
    
+  }
+}
+@media (min-width: 1440px) {
+  .howcircle{
+    margin-top: -10rem;
+    margin-left: 85.8%;
+  }
+}
+@media (min-width: 1536px) {
+  .howcircle{
+    margin-top: -10rem;
+    margin-left: 86.7%;
   }
 }

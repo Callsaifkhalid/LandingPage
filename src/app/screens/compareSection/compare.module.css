@@ -1,11 +1,9 @@
 .wrapper {
   background-color: #e3fbff;
-
 }
 .howcontainer {
   justify-content: space-around;
   align-items: flex-end;
-  margin-top: 8rem;
 }
 .headings {
   display: flex;
@@ -25,13 +23,26 @@
   font-size: 3rem;
   margin-top: -0.8rem;
 }
-.wrapper > span {
+.divs > span {
+  visibility: hidden;
+}
+.boxesborder > span {
   display: flex;
   justify-content: flex-end;
-  margin: 3rem 15rem 2rem 0rem;
+  margin: 0rem 10% 2rem 0rem;
   text-decoration: underline;
   text-underline-offset: 4px;
   font-weight: bold;
+}
+.boxesborder{
+  width: 80%;
+  height: 700px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 30px auto 30px auto;
+  padding: 3rem 0 3rem 0;
+  border-radius: 50px;
+  
 }
 .boxes {
   display: flex;
@@ -44,9 +55,10 @@
   justify-content: center;
   align-items: center;
   height: 80px;
-  width: 65%;
+  width: 85%;
   border: 1px solid #bdbdbd;
   border-radius: 23px;
+  background-color: #e3fbff;
 }
 .box1:hover{
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -60,10 +72,10 @@
   justify-content: space-around;
   align-items: center;
   height: 100px;
-  width: 65%;
+  width: 85%;
   border: 1px solid #bdbdbd;
   border-radius: 23px;
-  background-color: #fff;
+  background-color: whitesmoke;
 }
 .box2:hover{
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -147,12 +159,22 @@
   .headings > h1 > br {
     display: none;
   }
+  .boxesborder{
+    width: 90%;
+    height: 700px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 30px auto 30px auto;
+    padding: 3rem 0 3rem 0;
+    border-radius: 50px;
+    
+  }
   .box1 {
-    width: 340px;
+    width: 87%;
     padding: 10px;
   }
   .box1 > span {
-    font-size: 17px;
+    font-size: 16px;
     color: #828282;
     padding: 5px;
   }
@@ -161,10 +183,10 @@
     justify-content: space-between;
     align-items: center;
     min-height: 100px;
-    width: 85%;
+    width: 93%;
     border: 1px solid #bdbdbd;
     border-radius: 23px;
-    background-color: #fff;
+    background-color: whitesmoke;
   }
   .div1 {
     display: flex;
@@ -186,5 +208,8 @@
   }
   .div5 > button {
    margin-right: 10px;
+  }
+  .wrapper>span{
+    margin: 3rem 3rem 2rem 0rem;
   }
 }

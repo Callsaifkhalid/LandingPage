@@ -6,11 +6,11 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import Backtotop from "@/components/backtoTopButton/backtotop";
 import OutsideClickHandler from "react-outside-click-handler";
 import { RxCross2 } from "react-icons/rx";
-import dynamic from "next/dynamic";
+import { FaPhone } from "react-icons/fa";
 
 const Navbar = () => {
   const [currentSection, setCurrentSection] = useState("");
-  const [menuOpen, setmenuopen] = useState(false);
+  const [menuOpen, setmenuopen] = useState(true);
   
 
   const getMenuStyles = (menuOpen)=>{
@@ -67,7 +67,7 @@ const Navbar = () => {
             }}
             className={styles.menuLinks}
           >
-            <span>Home</span>
+            <span style={{marginLeft:'-2rem'}}>Home</span>
           </Link>
           <Link
             activeClass="active"
@@ -126,13 +126,13 @@ const Navbar = () => {
           className={styles.menuicon}
           onClick={() => setmenuopen((prev) => !prev)}
         >
-          {!menuOpen && <GiHamburgerMenu size={25}/>}
-          {menuOpen &&<RxCross2  size={25}/>}
+          {!menuOpen && <GiHamburgerMenu size={28} style={{marginRight:'0.5rem'}}/>}
+          {menuOpen &&<RxCross2  size={28} style={{marginRight:'0.5rem'}}/>}
         </div>
-        {/* <div>
-          <button className={styles.loginbutton}>Log In</button>
-          <button className={styles.getstartedbutton}>Get Started</button>
-        </div> */}
+        <div>
+          <button className={styles.loginbutton}><FaPhone/>111-222-333-444</button>
+          {/* <button className={styles.getstartedbutton}>Get Started</button> */}
+        </div>
       </section>
     </div>
   );

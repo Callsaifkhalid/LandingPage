@@ -12,6 +12,7 @@
     "framer-motion": "^10.16.5",
     "next": "14.0.2",
     "react": "^18",
+    "react-currency-input-field": "^3.6.12",
     "react-date-picker": "^10.5.2",
     "react-date-range": "^1.4.0",
     "react-datepicker": "^4.23.0",

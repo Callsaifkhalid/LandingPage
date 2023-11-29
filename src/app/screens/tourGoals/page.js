@@ -6,7 +6,7 @@ const TourGoals = () => {
       <img
         src="./howcircle.png"
         width={200}
-        style={{ marginTop: "-10rem", marginLeft: "86%" }}
+        className={styles.howcircle}
       />
       <div className={styles.headings}>
         <h3>For all tour goals</h3>
@@ -69,32 +69,6 @@ const TourGoals = () => {
               </h4>
             </div>
           </div>
-          <div className={styles.card1box1}>
-            <div className={styles.card1box1img}>
-              <img src="./tourgoal3.png" />
-            </div>
-            <div className={styles.card1box1content}>
-              <h3>
-                Find a Loan from
-                <br /> Reputable Lenders in <br />
-                Minutes
-              </h3>
-              <span style={{ color: "#8B8B8B", fontSize: "12px" }}>
-                Description: Whether you're seeking to
-                <br /> consolidate debt or address an unexpected <br />
-                financial need,
-              </span>
-              <h4
-                style={{
-                  color: "#05C8E8",
-                  fontSize: "13px",
-                  textDecoration: "underline",
-                }}
-              >
-                Learn More
-              </h4>
-            </div>
-          </div>
         </div>
         <div className={styles.card1}>
           <div className={styles.card1box1}>
@@ -126,32 +100,6 @@ const TourGoals = () => {
           <div className={styles.card1box1}>
             <div className={styles.card1box1img}>
               <img src="./tourgoal5.png" />
-            </div>
-            <div className={styles.card1box1content}>
-              <h3>
-                Find a Loan from
-                <br /> Reputable Lenders in <br />
-                Minutes
-              </h3>
-              <span style={{ color: "#8B8B8B", fontSize: "12px" }}>
-                Description: Whether you're seeking to
-                <br /> consolidate debt or address an unexpected <br />
-                financial need,
-              </span>
-              <h4
-                style={{
-                  color: "#05C8E8",
-                  fontSize: "13px",
-                  textDecoration: "underline",
-                }}
-              >
-                Learn More
-              </h4>
-            </div>
-          </div>
-          <div className={styles.card1box1}>
-            <div className={styles.card1box1img}>
-              <img src="./tourgoal6.png" />
             </div>
             <div className={styles.card1box1content}>
               <h3>

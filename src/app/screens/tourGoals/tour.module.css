@@ -57,6 +57,11 @@
 .card1box1content > h4:hover {
   transform: scale(0.98);
 }
+.howcircle{
+  margin-top: -10rem;
+  margin-left: 85%;
+}
+
 
 @media (max-width: 400px) {
   .wrapper {
@@ -102,7 +107,7 @@
   }
   .card1box1img > img {
     width: 120px;
-    height: 160px;
+    height: 155px;
   }
   .card1box1content {
     display: flex;
@@ -120,5 +125,17 @@
   }
   .wrapper > img {
     display: none;
+  }
+}
+@media (min-width: 1440px) {
+  .howcircle{
+    margin-top: -10rem;
+    margin-left: 85.8%;
+  }
+}
+@media (min-width: 1536px) {
+  .howcircle{
+    margin-top: -10rem;
+    margin-left: 86.7%;
   }
 }

@@ -14,7 +14,7 @@ const FAQS = () => {
       <img
         src="./faqscircle.png"
         width={200}
-        style={{ marginTop: "-10rem", marginLeft: "86%" }}
+        s  className={styles.howcircle}
       />
       <div className={styles.headings}>
         <h3>Asked Questions</h3>
@@ -144,11 +144,9 @@ const FAQS = () => {
               <div className={styles.questioncontent}>
                 A bank is a financial institution licensed to receive deposits
                 and make loans. Banks may also provide financial services such
-                as
-                <br /> wealth management, currency exchange, and safe deposit
-                boxes. There are several different kinds of banks including
-                retail banks, commercial or corporate banks, and investment
-                banks.
+                as wealth management, currency exchange, and safe deposit boxes.
+                There are several different kinds of banks including retail
+                banks, commercial or corporate banks, and investment banks.
               </div>
             )}
           </div>

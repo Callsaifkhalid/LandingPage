@@ -6,7 +6,7 @@ const HowItWorks = () => {
       <img
         src="./howcircle.png"
         width={200}
-        style={{ marginTop: "-10rem", marginLeft: "86%" }}
+        className={styles.howcircle}
       />
       <div className={styles.headings}>
         <h3>Our process</h3>
@@ -29,7 +29,7 @@ const HowItWorks = () => {
             src="./howline.png"
             alt=""
             height={650}
-            style={{ marginBottom: "-43rem", marginLeft:'2rem' }}
+            style={{ marginBottom: "-43rem", marginLeft: "2rem" }}
           />
           <div>
             <img src="./how1.png" alt="" />
@@ -48,10 +48,13 @@ const HowItWorks = () => {
             <div className={styles.paragraph}>
               <h3>Compare Rates</h3>
               <span>
-                We'll ask you a few questions to better understand your
-                financial situation and preferences. This helps us narrow down
-                your lender and rate eligibility. What you receive are real
-                rates, not mere estimates.
+                Once you've provided your information and preferences, the next
+                step is to compare rates from a variety of reputable lenders.
+                You'll have the opportunity to shop for personal loans from a
+                diverse selection of lending partners.
+                <br />
+                You get to choose the lender, interest rates, and loan term that
+                aligns best with your financial goals
               </span>
             </div>
           </div>
