@@ -54,22 +54,35 @@
   font-size: 24px;
 }
 
-.content1 > button {
-  color: #1f1f39;
-  background-color: #fff;
-  font-weight: bolder;
-  padding: 0.9rem 0.6rem;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  width: 120px;
-  margin-top: 5px;
-  transition: all ease-in 100ms;
-}
 .content1 > button:hover {
   transform: scale(1.08);
 }
-
+@media screen and (min-width: 600px) and (max-width: 870px) {
+  .footer {
+    width: 100%;
+  }
+  .images {
+    width: 80%;
+    margin-left: 2rem;
+    justify-content: space-between;
+  }
+  .images > div > img {
+    margin-left: 1rem;
+    margin-top: 4rem;
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+    width: 88%;
+    margin: -2rem auto 0 3rem;
+  }
+  .content1 > span {
+    font-size: 20px;
+  }
+  .contentt1 > span {
+    font-size: 20px;
+  }
+}
 @media (max-width: 430px) {
   .footer {
     width: 430px;
@@ -88,7 +101,7 @@
     margin-left: 0rem;
     margin-bottom: -2.5rem;
   }
-  .logo> img {
+  .logo > img {
     margin-left: 0rem;
     margin-top: 0rem;
     margin-bottom: 2rem;

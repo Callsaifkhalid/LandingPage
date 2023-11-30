@@ -3,12 +3,8 @@ import styles from "./tour.module.css";
 const TourGoals = () => {
   return (
     <div className={styles.wrapper}>
-     <div className={styles.howcircle}>
-        <img
-          src="./howcircle.png"
-          width={200}
-          style={{ marginTop: "-10rem" }}
-        />
+      <div className={styles.howcircle}>
+        <img src="./howcircle.png" />
       </div>
       <div className={styles.headings}>
         <h3>For all tour goals</h3>
@@ -17,6 +13,7 @@ const TourGoals = () => {
           <br /> financial needs
         </h1>
       </div>
+      <div className={styles.Cards}>
       <div className={styles.cards}>
         <div className={styles.card1}>
           <div className={styles.card1box1}>
@@ -126,6 +123,7 @@ const TourGoals = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

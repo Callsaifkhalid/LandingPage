@@ -132,7 +132,7 @@
 }
 /* Responsivness */
 
-/* @media (max-width: 860px) {
+@media screen and (min-width: 600px) and (max-width: 870px){
   .herowrapper {
     width: 100%;
   }
@@ -201,7 +201,7 @@
     font-weight: 400;
     cursor: pointer;
   }
-} */
+}
 @media (max-width: 430px) {
   .herowrapper {
     width: 430px;

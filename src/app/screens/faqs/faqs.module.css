@@ -70,11 +70,42 @@
   font-size: 15px;
   margin-left: 2rem;
 }
-.howcircle{
+.howcircle {
   display: flex;
   justify-content: flex-end;
- }
- 
+}
+.howcircle > img {
+  margin-top: -10rem;
+  width: 200px;
+}
+@media screen and (min-width: 600px) and (max-width: 870px) {
+  .wrapper {
+    width: 100%;
+  }
+  .headings {
+    margin-left: 4rem;
+    margin-top: -5rem;
+    padding: 2rem;
+  }
+  .headings > h3 {
+    color: #05c8e8;
+    margin-top: 5rem;
+    font-size: 1rem;
+  }
+  .headings > h1 {
+    color: #1a4048;
+    font-weight: 900;
+    font-size: 2.5rem;
+    margin-top: -0.3rem;
+  }
+  .howcircle > img {
+    margin-top: -7rem;
+    width: 150px;
+  }
+  .questioncontent{
+    margin-bottom: 1.5rem;
+  }
+}
 @media (max-width: 430px) {
   .wrapper {
     width: 430px;
@@ -82,7 +113,7 @@
   .wrapper > img {
     display: none;
   }
-  .howcircle{
+  .howcircle {
     display: none;
   }
   .headings {
@@ -158,14 +189,4 @@
     margin-top: 1rem;
   }
 }
-@media (max-width:1040px){
-  .howcircle{
-    margin-top: -10rem;
-    margin-left: 80.2%;
-  }
-}
-@media (max-width:870px){
-  .howcircle{
-    
-  }
-}
+

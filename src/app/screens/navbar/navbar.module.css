@@ -98,7 +98,7 @@
     color: #05c8e8;
   }
 }
-/* @media (max-width: 870px) {
+@media  screen and (min-width: 600px) and (max-width: 870px) {
   .logo {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -126,4 +126,4 @@
     margin-left: 15px;
     font-size: 12px;
   }
-} */
+}

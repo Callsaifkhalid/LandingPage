@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { Link } from "react-scroll/modules";
 import React, { useEffect, useState } from "react";
 import styles from "./navbar.module.css";
@@ -10,16 +10,16 @@ import { FaPhone } from "react-icons/fa";
 
 const Navbar = () => {
   const [currentSection, setCurrentSection] = useState("");
-  const [menuOpen, setmenuopen] = useState(false);
-  
+  const [menuOpen, setmenuopen] = useState(true);
+
   const getMenuStyles = (menuOpen) => {
-   
+    if (typeof window !== "undefined") {
       if (document.documentElement.clientWidth <= 800) {
         {
           return { right: !menuOpen && "-100%" };
         }
       }
-    
+    }
   };
   useEffect(() => {
     const handleScroll = () => {
