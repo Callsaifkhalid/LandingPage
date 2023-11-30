@@ -168,7 +168,7 @@
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 540px) {
   .wrapper {
     width: 430px;
   }

@@ -1,4 +1,3 @@
-import styles from "./page.module.css";
 import CompareSection from "./screens/compareSection/page";
 import Contact from "./screens/contact/page";
 import FAQS from "./screens/faqs/page";

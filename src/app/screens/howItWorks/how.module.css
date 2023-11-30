@@ -132,7 +132,7 @@
     margin-left: 2rem;
   }
 }
-@media (max-width: 430px) {
+@media (max-width: 540px) {
   .wrapper {
     width: 430px;
   }
@@ -193,13 +193,3 @@
     margin-left: 2rem;
   }
 }
-/* @media (max-width: 1040px) {
-  .howcircle {
-    margin-top: -10rem;
-    margin-left: 80.2%;
-  }
-}
-@media (max-width: 870px) {
-  .howcircle {
-  }
-} */
