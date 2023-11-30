@@ -13,7 +13,6 @@
 }
 .wrapper {
   background-color: #e3fbff;
-
 }
 .howcontainer {
   justify-content: space-around;
@@ -51,7 +50,6 @@
   margin-left: 23rem;
   margin-top: -30rem;
   margin-bottom: 17rem;
- 
 }
 
 /* right side */
@@ -73,19 +71,70 @@
   color: #8b8b8b;
   font-size: 13px;
 }
-.howcircle{
- display: flex;
- justify-content: flex-end;
+.howcircle {
+  display: flex;
+  justify-content: flex-end;
 }
-
-@media (max-width:430px){
-  .wrapper{
+.howline {
+  height: 650px;
+  margin-bottom: -41rem;
+  margin-left: 2rem;
+}
+.wrapper > img {
+  width: 300px;
+  margin-top: -10rem;
+  margin-bottom: -20rem;
+}
+/* @media (max-width: 870px) {
+  .wrapper {
+    width: 100%;
+  }
+  .wrapper > img {
+    width: 200px;
+    margin-bottom: -15rem;
+  }
+  .flexCenter {
+    flex-wrap: nowrap;
+  }
+  .howcontainer {
+    padding: 2rem;
+  }
+  .imagecontainer2 > img {
+    width: 20%;
+    height: 20%;
+    margin-left: 18rem;
+    margin-top: -30rem;
+    margin-bottom: 17rem;
+  }
+  .headings {
+    margin-left: 4rem;
+    margin-top: -15rem;
+    padding: 2rem;
+  }
+  .headings > h3 {
+    color: #05c8e8;
+    margin-top: 8rem;
+    font-size: 1rem;
+  }
+  .headings > h1 {
+    color: #1a4048;
+    font-weight: 900;
+    font-size: 2.5rem;
+    margin-top: -0.8rem;
+  }
+  .paragraphs {
+    max-width: 40%;
+    margin-bottom: 0rem;
+  }
+} */
+@media (max-width: 430px) {
+  .wrapper {
     width: 430px;
   }
-  .howcontainer{
+  .howcontainer {
     margin-top: 3rem;
   }
-  .headings{
+  .headings {
     margin-left: 0rem;
     margin-top: 3rem;
     padding: 2rem;
@@ -104,7 +153,7 @@
   .headings > h1 > br {
     display: none;
   }
-  .imagecontainer{
+  .imagecontainer {
     padding: 1.5rem;
   }
   .imagecontainer > img {
@@ -116,13 +165,12 @@
     margin-left: 17rem;
     margin-top: -18rem;
     margin-bottom: 8rem;
-   
   }
-  .paragraphs{
+  .paragraphs {
     max-width: 350px;
     margin-bottom: 3rem;
   }
-  .howcircle{
+  .howcircle {
     display: none;
   }
   .wrapper > img {
@@ -133,17 +181,20 @@
   }
   .paragraph {
     margin-top: -4.5rem;
-   
+  }
+  .howline {
+    height: 700px;
+    margin-bottom: -47rem;
+    margin-left: 2rem;
   }
 }
-@media (max-width:1040px){
-  .howcircle{
+/* @media (max-width: 1040px) {
+  .howcircle {
     margin-top: -10rem;
     margin-left: 80.2%;
   }
 }
-@media (max-width:870px){
-  .howcircle{
-
+@media (max-width: 870px) {
+  .howcircle {
   }
-}
+} */

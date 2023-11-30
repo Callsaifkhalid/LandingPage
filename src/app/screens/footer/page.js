@@ -8,9 +8,9 @@ const Footer = () => {
           <img src="./logo2.png" alt="" width={250} />
         </div>
         <div className={styles.socials}>
-          <img src="./Facebook.png" />
-          <img src="./Twitter.png" />
-          <img src="./Instagram.png" />
+          <img src="./Facebook.svg" />
+          <img src="./Twitter.svg" />
+          <img src="./Instagram.svg" />
         </div>
       </div>
 

@@ -61,25 +61,8 @@ const Hero = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 2, type: "spring" }}
           >
-            <img
-              src="./herocircle.png"
-              alt=""
-              style={{
-                height: "80%",
-                width: "80%",
-                marginLeft: "4rem",
-                marginTop: "7rem",
-              }}
-            />
-            <img
-              src="./herogirl.png"
-              alt=""
-              style={{
-                height: "100%",
-                width: "100%",
-                marginTop: "-31.7rem",
-              }}
-            />
+            <img src="./herocircle.png" alt="" className={styles.herocircle} />
+            <img src="./herogirl.png" alt="" className={styles.herogirl} />
           </motion.div>
         </div>
       </div>

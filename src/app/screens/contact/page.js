@@ -50,7 +50,7 @@ const Contact = () => {
           </div>
           <div className={styles.checkingrates}>
             <button>Find my Rate</button>
-            <span style={{ color: "#1A4048", fontSize: "13px" }}>
+            <span>
               Checking rates won’t affect your credit score
             </span>
           </div>

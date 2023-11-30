@@ -27,12 +27,7 @@ const HowItWorks = () => {
         </div>
         {/* right side */}
         <div className={styles.flexColStart + " " + styles.paragraphs}>
-          <img
-            src="./howline.png"
-            alt=""
-            height={675}
-            style={{ marginBottom: "-42.5rem", marginLeft: "2rem" }}
-          />
+          <img src="./howline.png" alt="" className={styles.howline} />
           <div>
             <img src="./how1.png" alt="" />
             <div className={styles.paragraph}>
@@ -95,11 +90,7 @@ const HowItWorks = () => {
           </div>
         </div>
       </div>
-      <img
-        src="./whycircle.png"
-        width={300}
-        style={{ marginTop: "-10rem", marginBottom: "-20rem" }}
-      />
+      <img src="./whycircle.png" />
     </div>
   );
 };

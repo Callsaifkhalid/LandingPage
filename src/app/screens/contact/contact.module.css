@@ -130,6 +130,10 @@
   align-items: flex-end;
   margin-right: -11rem;
 }
+.checkingrates > span {
+  color: #1a4048;
+  font-size: 15px;
+}
 .findmyrate > span {
   color: white;
   font-size: 3rem;
@@ -230,6 +234,22 @@
   }
   .contactcenter{
     justify-content: center;
+  }
+  .findmyratesection > div > button {
+    color: #05c8e8;
+    background-color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 0.8rem 0.6rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    transition: all ease-in 200ms;
+  }
+  .checkingrates > span {
+    color: #1a4048;
+    font-size: 13px;
   }
 }
 /* @media (min-width:770px){
