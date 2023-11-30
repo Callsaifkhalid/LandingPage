@@ -227,9 +227,9 @@
     width: 80%;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 430px) {
   .wrapper {
-    width: 420px;
+    width: 430px;
   }
   .headings {
     margin-left: 0rem;

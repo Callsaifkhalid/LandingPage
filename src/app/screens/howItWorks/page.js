@@ -3,11 +3,13 @@ import styles from "./how.module.css";
 const HowItWorks = () => {
   return (
     <div className={styles.wrapper}>
-      <img
-        src="./howcircle.png"
-        width={200}
-        className={styles.howcircle}
-      />
+      <div className={styles.howcircle}>
+        <img
+          src="./howcircle.png"
+          width={200}
+          style={{ marginTop: "-10rem" }}
+        />
+      </div>
       <div className={styles.headings}>
         <h3>Our process</h3>
         <h1>How Clear Credit AI Works</h1>
@@ -28,8 +30,8 @@ const HowItWorks = () => {
           <img
             src="./howline.png"
             alt=""
-            height={650}
-            style={{ marginBottom: "-43rem", marginLeft: "2rem" }}
+            height={675}
+            style={{ marginBottom: "-42.5rem", marginLeft: "2rem" }}
           />
           <div>
             <img src="./how1.png" alt="" />
@@ -48,13 +50,10 @@ const HowItWorks = () => {
             <div className={styles.paragraph}>
               <h3>Compare Rates</h3>
               <span>
-                Once you've provided your information and preferences, the next
-                step is to compare rates from a variety of reputable lenders.
-                You'll have the opportunity to shop for personal loans from a
-                diverse selection of lending partners.
-                <br />
-                You get to choose the lender, interest rates, and loan term that
-                aligns best with your financial goals
+                We'll ask you a few questions to better understand your
+                financial situation and preferences. This helps us narrow down
+                your lender and rate eligibility. What you receive are real
+                rates, not mere estimates.
               </span>
             </div>
           </div>

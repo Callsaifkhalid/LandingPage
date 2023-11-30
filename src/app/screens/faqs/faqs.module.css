@@ -70,15 +70,19 @@
   font-size: 15px;
   margin-left: 2rem;
 }
-.howcircle {
-  margin-top: -10rem;
-  margin-left: 85%;
-}
-@media (max-width: 400px) {
+.howcircle{
+  display: flex;
+  justify-content: flex-end;
+ }
+ 
+@media (max-width: 430px) {
   .wrapper {
-    width: 420px;
+    width: 430px;
   }
   .wrapper > img {
+    display: none;
+  }
+  .howcircle{
     display: none;
   }
   .headings {
@@ -153,15 +157,14 @@
     margin-top: 1rem;
   }
 }
-@media (min-width: 1440px) {
-  .howcircle {
+@media (max-width:1040px){
+  .howcircle{
     margin-top: -10rem;
-    margin-left: 85.8%;
+    margin-left: 80.2%;
   }
 }
-@media (min-width: 1536px) {
-  .howcircle {
-    margin-top: -10rem;
-    margin-left: 86.7%;
+@media (max-width:870px){
+  .howcircle{
+    
   }
 }

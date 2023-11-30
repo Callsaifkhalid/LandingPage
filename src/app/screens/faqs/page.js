@@ -11,11 +11,13 @@ const FAQS = () => {
 
   return (
     <div className={styles.wrapper}>
-      <img
-        src="./faqscircle.png"
-        width={200}
-        s  className={styles.howcircle}
-      />
+      <div className={styles.howcircle}>
+        <img
+          src="./howcircle.png"
+          width={200}
+          style={{ marginTop: "-10rem" }}
+        />
+      </div>
       <div className={styles.headings}>
         <h3>Asked Questions</h3>
         <h1>

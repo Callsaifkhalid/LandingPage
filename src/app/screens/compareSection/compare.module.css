@@ -136,9 +136,9 @@
   box-shadow: rgba(38, 230, 255, 0.2) 0px 7px 29px 0px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 430px) {
   .wrapper{
-    width: 420px;
+    width: 430px;
   }
   .headings {
     margin-left: 0rem;

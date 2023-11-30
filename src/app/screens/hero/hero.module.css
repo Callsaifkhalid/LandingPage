@@ -17,7 +17,6 @@
   background-color: #c6f7ff;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
-  position: static;
 }
 .herocontainer {
   justify-content: center;
@@ -92,7 +91,7 @@
   color: #1a4048;
   margin-top: -2.4rem;
 }
-.thumbsup>span{
+.thumbsup > span {
   font-size: 13px;
 }
 .ovals {
@@ -123,9 +122,14 @@
 
 /* Responsivness */
 
-@media (max-width: 400px) {
+@media (max-width:1040px){
+  .herowrapper{
+    width: 100%;
+  }
+}
+@media (max-width: 430px) {
   .herowrapper {
-    width: 420px;
+    width: 430px;
   }
   .herotitle {
     margin-top: 4rem;
@@ -191,7 +195,5 @@
 
   .imagecontainer {
     display: none;
-  }
-  .ovals {
   }
 }
