@@ -82,6 +82,11 @@
   font-size: 18px;
   font-weight: 700;
   cursor: pointer;
+  transition: all ease-in 300ms;
+}
+.findmyrate > button:hover {
+  color: white;
+  transform: scale(1.05);
 }
 .thumbsup {
   display: flex;
@@ -142,7 +147,7 @@
   }
   .flexCenter {
     flex-wrap: nowrap;
-    justify-content: flex-end;
+    justify-content: center;
   }
   .herogirl {
     margin-top: -28rem;

@@ -130,8 +130,9 @@
   transition: all ease-in 200ms;
 }
 .div5 > button:hover {
-  transform: scale(0.98);
+  transform: scale(1.04);
   box-shadow: rgba(38, 230, 255, 0.2) 0px 7px 29px 0px;
+  font-weight: 600;
 }
 
 @media screen and (min-width: 600px) and (max-width: 920px) {
