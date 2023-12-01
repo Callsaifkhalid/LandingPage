@@ -33,6 +33,7 @@
   padding: 0;
   margin-bottom: 1rem;
   margin-top: 1rem;
+  
 }
 .questions {
   display: flex;
@@ -50,6 +51,10 @@
   align-items: center;
   margin: 0px auto;
   margin-left: 3rem;
+}
+.questionn:hover{
+  text-shadow: 2px 2px 10px #05c8e8;
+  filter: dropshadow(color= #1a4048, offx=2, offy=2);
 }
 .questionn {
   display: flex;
