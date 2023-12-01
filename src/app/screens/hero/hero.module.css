@@ -137,7 +137,7 @@
     width: 100%;
   }
   .imagecontainer {
-    width: 25rem;
+    width: 21rem;
     height: 30rem;
   }
   .flexCenter {
@@ -274,9 +274,10 @@
   }
   .flexCenter {
     flex-wrap: nowrap;
+    
   }
   .imagecontainer {
-    width: 29rem;
+    width: 25rem;
     height: 35rem;
   }
 }

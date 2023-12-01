@@ -112,12 +112,12 @@
     margin-left: 1rem;
   }
   .logo > img {
-    width: 200px;
+    width: 180px;
   }
   .loginbutton {
-    font-weight: 600;
+    font-weight: 400;
     height: 40px;
-    width: 150px;
+    width: 130px;
     color: #05c8e8;
     background: #1a4048;
     border-radius: 10.33px;
@@ -126,7 +126,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-right: 1rem;
+    margin-right: 0.7rem;
   }
   .menuLinks {
     margin-left: 15px;
