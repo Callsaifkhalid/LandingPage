@@ -328,4 +328,16 @@
   .findmyratesection {
     width: 75%;
   }
+  .findmyratesection > img {
+    display: none;
+  }
+  .findmyrate > span {
+    margin-left: 0rem;
+  }
+  .findmyrate > span > span {
+    margin-left: 0rem;
+  }
+  .checkingrates {
+    margin-right: 0rem;
+  }
 }
