@@ -341,3 +341,8 @@
     margin-right: 0rem;
   }
 }
+@media  screen and (min-width: 540px) and (max-width: 590px) {
+  .wrapper{
+    width: 100%;
+  }
+  }

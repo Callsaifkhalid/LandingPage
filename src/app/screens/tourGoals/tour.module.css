@@ -230,3 +230,8 @@
     height: 200px;
   }
 }
+@media  screen and (min-width: 540px) and (max-width: 590px) {
+  .wrapper{
+    width: 100%;
+  }
+  }

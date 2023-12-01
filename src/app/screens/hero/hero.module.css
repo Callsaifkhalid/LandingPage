@@ -287,3 +287,8 @@
     height: 35rem;
   }
 }
+@media  screen and (min-width: 540px) and (max-width: 590px) {
+.herowrapper{
+  width: 100%;
+}
+}

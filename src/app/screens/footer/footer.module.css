@@ -149,3 +149,14 @@
     justify-content: space-between;
   }
 }
+
+@media  screen and (min-width: 540px) and (max-width: 590px) {
+  .footer{
+    width: 100%;
+  }
+  .images {
+    width: 85%;
+    margin-left: 2rem;
+    justify-content: space-between;
+  }
+  }
