@@ -65,6 +65,7 @@
 
   .logo {
     margin-right: 0;
+    margin-left: 1.5rem;
   }
   .logo > img {
     width: 200px;
