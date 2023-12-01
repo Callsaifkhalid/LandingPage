@@ -50,13 +50,14 @@
 .findmyratesection > div > button {
   color: #05c8e8;
   background-color: #fff;
-  font-weight: 500;
+  font-weight: 600;
   padding: 0.6rem 0.6rem;
   border-radius: 8px;
   border: none;
   cursor: pointer;
   width: 150px;
   transition: all ease-in 200ms;
+  font-size: 15px;
 }
 .findmyratesection > div > button:hover {
   transform: scale(1.1);

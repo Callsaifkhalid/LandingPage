@@ -11,7 +11,7 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
   margin-right: 0rem;
-  margin-left: 2rem;
+  margin-left: 4rem;
 }
 
 .headermenu {
@@ -46,7 +46,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-right: 2rem;
+  margin-right: 4rem;
   transition: all ease-in 300ms;
 }
 .loginbutton:hover{

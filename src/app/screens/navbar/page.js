@@ -65,10 +65,11 @@ const Navbar = () => {
                 textDecoration:
                   currentSection === "home" ? "underline" : "none",
                 textUnderlineOffset: currentSection === "home" ? "5px" : "none",
+                fontWeight: currentSection === "home" ? "bolder" : "",
               }}
               className={styles.menuLinks}
             >
-              <span style={{ marginLeft: "-2rem" }}>Home</span>
+              <span style={{ marginLeft: "-4rem" }}>Home</span>
             </Link>
             <Link
               activeClass="active"
@@ -84,6 +85,7 @@ const Navbar = () => {
                   currentSection === "saving" ? "underline" : "none",
                 textUnderlineOffset:
                   currentSection === "saving" ? "5px" : "none",
+                  fontWeight: currentSection === "saving" ? "bolder" : "",
               }}
             >
               <span>Savings Calculator</span>
@@ -102,6 +104,7 @@ const Navbar = () => {
                   currentSection === "compare" ? "underline" : "none",
                 textUnderlineOffset:
                   currentSection === "compare" ? "5px" : "none",
+                  fontWeight: currentSection === "compare" ? "bolder" : "",
               }}
             >
               <span>Compare Landers</span>
@@ -120,6 +123,7 @@ const Navbar = () => {
                   currentSection === "contact" ? "underline" : "none",
                 textUnderlineOffset:
                   currentSection === "contact" ? "5px" : "none",
+                  fontWeight: currentSection === "contact" ? "bolder" : "",
               }}
             >
               <span>Contact Us</span>
