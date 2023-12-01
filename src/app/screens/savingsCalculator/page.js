@@ -106,11 +106,7 @@ const SavingsCalculator = () => {
               >
                 Loan Term
               </h5>
-              <Select
-                options={options}
-                styles={Styles}
-                menuPosition="absolute"
-              />
+              <Select options={options} styles={Styles} />
             </div>
           </div>
           <div className={styles.calculatorheading}>

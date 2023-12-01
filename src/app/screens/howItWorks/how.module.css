@@ -85,7 +85,7 @@
   margin-top: -10rem;
   margin-bottom: -20rem;
 }
-@media screen and (min-width: 600px) and (max-width: 870px) {
+@media screen and (min-width: 600px) and (max-width: 920px) {
   .wrapper {
     width: 100%;
   }
@@ -192,4 +192,10 @@
     margin-bottom: -47rem;
     margin-left: 2rem;
   }
+}
+@media  screen and (min-width: 921px) and (max-width: 1200px) {
+.howline{
+  height: 720px;
+  margin-bottom: -48rem;
+}
 }

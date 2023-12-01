@@ -134,12 +134,12 @@
   box-shadow: rgba(38, 230, 255, 0.2) 0px 7px 29px 0px;
 }
 
-@media screen and (min-width: 600px) and (max-width: 870px) {
+@media screen and (min-width: 600px) and (max-width: 920px) {
   .wrapper {
     width: 100%;
   }
   .headings {
-    margin-left: 4rem;
+    margin-left: 2rem;
     margin-top: 0rem;
     padding: 2rem;
   }
@@ -242,5 +242,32 @@
   }
   .wrapper > span {
     margin: 3rem 3rem 2rem 0rem;
+  }
+}
+@media  screen and (min-width: 921px) and (max-width: 1200px) {
+  .headings {
+    margin-left: 11rem;
+    margin-top: 0rem;
+    padding: 2rem;
+  }
+  .headings > h3 {
+    color: #05c8e8;
+    margin-top: 5rem;
+    font-size: 1rem;
+  }
+  .headings > h1 {
+    color: #1a4048;
+    font-weight: 900;
+    font-size: 2.5rem;
+    margin-top: -0.3rem;
+  }
+  .boxesborder {
+    width: 90%;
+  }
+  .box1 {
+    width: 90%;
+  }
+  .box2 {
+    width: 90%;
   }
 }

@@ -132,7 +132,7 @@
 }
 /* Responsivness */
 
-@media screen and (min-width: 600px) and (max-width: 870px){
+@media screen and (min-width: 600px) and (max-width: 920px){
   .herowrapper {
     width: 100%;
   }
@@ -267,6 +267,16 @@
   .heroright {
     display: none;
   }
-
- 
+}
+@media  screen and (min-width: 921px) and (max-width: 1200px) {
+  .herowrapper {
+    width: 100%;
+  }
+  .flexCenter {
+    flex-wrap: nowrap;
+  }
+  .imagecontainer {
+    width: 29rem;
+    height: 35rem;
+  }
 }

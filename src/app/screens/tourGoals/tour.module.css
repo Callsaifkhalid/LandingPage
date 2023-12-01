@@ -66,7 +66,7 @@
   margin-top: -10rem;
   width: 200px;
 }
-@media screen and (min-width: 600px) and (max-width: 870px) {
+@media screen and (min-width: 600px) and (max-width: 920px) {
   .wrapper {
     width: 100%;
   }
@@ -90,7 +90,7 @@
     margin-top: -7rem;
     width: 150px;
   }
-  .Cards{
+  .Cards {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -183,5 +183,48 @@
   }
   .howcircle {
     display: none;
+  }
+}
+@media screen and (min-width: 921px) and (max-width: 1200px) {
+  .headings {
+    margin-left: 11rem;
+    margin-top: 0rem;
+    padding: 2rem;
+  }
+  .headings > h3 {
+    color: #05c8e8;
+    margin-top: 5rem;
+    font-size: 1rem;
+  }
+  .headings > h1 {
+    color: #1a4048;
+    font-weight: 900;
+    font-size: 2.5rem;
+    margin-top: -0.3rem;
+  }
+  .Cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .cards {
+    width: 90%;
+  }
+  .card1box1content{
+    gap: 0.5rem;
+  }
+  .card1box1content > h3 {
+    font-size: 1.2rem;
+    margin-top: 7px;
+  }
+  .card1box1content > h3 > br {
+    display: none;
+  }
+  .card1box1content > span > br {
+    display: none;
+  }
+  .card1box1img > img {
+    width: 150px;
+    height: 200px;
   }
 }

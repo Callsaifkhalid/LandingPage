@@ -57,7 +57,7 @@
 .content1 > button:hover {
   transform: scale(1.08);
 }
-@media screen and (min-width: 600px) and (max-width: 870px) {
+@media screen and (min-width: 600px) and (max-width: 920px) {
   .footer {
     width: 100%;
   }
@@ -137,5 +137,15 @@
   }
   .contentt1 > span {
     font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 921px) and (max-width: 1200px) {
+  .footer {
+    width: 100%;
+  }
+  .images {
+    width: 75%;
+    margin-left: 4rem;
+    justify-content: space-between;
   }
 }

@@ -63,7 +63,7 @@
   color: #fff;
   background-color: #05c8e8;
 }
-@media screen and (min-width: 600px) and (max-width: 870px) {
+@media screen and (min-width: 600px) and (max-width: 920px) {
   .wrapper {
     width: 100%;
   }
