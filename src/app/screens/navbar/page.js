@@ -10,7 +10,8 @@ import { FaPhone } from "react-icons/fa";
 
 const Navbar = () => {
   const [currentSection, setCurrentSection] = useState("");
-  const [menuOpen, setmenuopen] = useState(true);
+  const [menuOpen, setmenuopen] = useState(false);
+  const [click, setClick] = useState(false);
 
   const getMenuStyles = (menuOpen) => {
     if (typeof window !== "undefined") {
@@ -52,7 +53,7 @@ const Navbar = () => {
           <img src="./logo.png" alt="logo" />
         </div>
         <OutsideClickHandler onOutsideClick={() => setmenuopen(false)}>
-          <div className={styles.headermenu} style={getMenuStyles(menuOpen)}>
+          <div className={click? styles.headermenuu : styles.headermenu} style={getMenuStyles(menuOpen)}>
             <Link
               activeClass="active"
               to="hero"
@@ -85,7 +86,7 @@ const Navbar = () => {
                   currentSection === "saving" ? "underline" : "none",
                 textUnderlineOffset:
                   currentSection === "saving" ? "5px" : "none",
-                  fontWeight: currentSection === "saving" ? "bolder" : "",
+                fontWeight: currentSection === "saving" ? "bolder" : "",
               }}
             >
               <span>Savings Calculator</span>
@@ -104,7 +105,7 @@ const Navbar = () => {
                   currentSection === "compare" ? "underline" : "none",
                 textUnderlineOffset:
                   currentSection === "compare" ? "5px" : "none",
-                  fontWeight: currentSection === "compare" ? "bolder" : "",
+                fontWeight: currentSection === "compare" ? "bolder" : "",
               }}
             >
               <span>Compare Landers</span>
@@ -123,7 +124,7 @@ const Navbar = () => {
                   currentSection === "contact" ? "underline" : "none",
                 textUnderlineOffset:
                   currentSection === "contact" ? "5px" : "none",
-                  fontWeight: currentSection === "contact" ? "bolder" : "",
+                fontWeight: currentSection === "contact" ? "bolder" : "",
               }}
             >
               <span>Contact Us</span>
@@ -135,7 +136,11 @@ const Navbar = () => {
           onClick={() => setmenuopen((prev) => !prev)}
         >
           {!menuOpen && (
-            <GiHamburgerMenu size={28} style={{ marginRight: "0.5rem" }} />
+            <GiHamburgerMenu
+              size={28}
+              style={{ marginRight: "0.5rem" }}
+              onClick={() => setClick(true)}
+            />
           )}
           {menuOpen && <RxCross2 size={28} style={{ marginRight: "0.5rem" }} />}
         </div>

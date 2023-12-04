@@ -68,7 +68,7 @@
     margin-left: 1.5rem;
   }
   .logo > img {
-    width: 200px;
+    width: 160px;
     margin-left: 0rem;
   }
   .menuicon {
@@ -79,9 +79,12 @@
   .menuicon {
     display: block;
   }
-  .headermenu {
+  .headermenu{
+    display: none;
+  }
+  .headermenuu {
     position: absolute;
-    top: 2rem;
+    top: 3rem;
     right: 2rem;
     background: white;
     display: flex;
@@ -94,6 +97,7 @@
     transition: all 300ms ease-in;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     min-height: 200px;
+    width: 200px;
     justify-content: center;
   }
   .menuLinks {
