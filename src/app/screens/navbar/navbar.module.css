@@ -72,10 +72,13 @@
     margin-left: 0rem;
   }
   .menuicon {
-    margin-left: 7rem;
+    margin-left: 10rem;
   }
 }
 @media (max-width: 550px) {
+  .headerwrapper{
+    width: 430px;
+  }
   .menuicon {
     display: block;
   }
@@ -94,11 +97,11 @@
     align-items: center;
     font-weight: 800;
     border-radius: 10px;
-    transition: all 300ms ease-in;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     min-height: 200px;
     width: 200px;
     justify-content: center;
+    transition: all ease-in-out 300ms;
   }
   .menuLinks {
     margin: 0;

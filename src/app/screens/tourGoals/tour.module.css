@@ -58,7 +58,6 @@
 .card1box1content > h4:hover {
   text-shadow: 2px 2px 10px #05c8e8;
   cursor: pointer;
-  
 }
 .howcircle {
   display: flex;
@@ -183,6 +182,9 @@
   .card1box1content > h3 > br {
     display: none;
   }
+  .card1box1content > span > br {
+    display: none;
+  }
   .howcircle {
     display: none;
   }
@@ -212,7 +214,7 @@
   .cards {
     width: 90%;
   }
-  .card1box1content{
+  .card1box1content {
     gap: 0.5rem;
   }
   .card1box1content > h3 {
@@ -230,8 +232,8 @@
     height: 200px;
   }
 }
-@media  screen and (min-width: 540px) and (max-width: 590px) {
-  .wrapper{
+@media screen and (min-width: 540px) and (max-width: 590px) {
+  .wrapper {
     width: 100%;
   }
-  }
+}

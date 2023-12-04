@@ -249,14 +249,18 @@
   }
   .contactcontent {
     display: flex;
-    align-items: start;
+    align-items: center;
     justify-content: center;
-    margin-left: 1rem;
+    margin-left: 0rem;
     gap: 1rem;
   }
   .contactcontent1 > span {
+    font-size: 16px;
+  }
+  .contactcontent2 > span {
     font-size: 15px;
   }
+
   .findmyratesection {
     height: 150px;
     display: flex;
@@ -303,7 +307,7 @@
   }
   .checkingrates > span {
     color: #1a4048;
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 @media screen and (min-width: 921px) and (max-width: 1200px) {

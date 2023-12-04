@@ -26,7 +26,7 @@ const Screen1 = () => {
     setCurrentView(currentView + 1);
   };
   return (
-    <div style={{ background: "#e3fbff" }}>
+    <div className={styles.wrapper}>
       <Link href={"/"}>
         <FaRegArrowAltCircleLeft
           style={{ fontSize: "2rem", color: "#1a4048", padding: "2rem" }}

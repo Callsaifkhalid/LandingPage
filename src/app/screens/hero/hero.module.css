@@ -228,7 +228,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 308px;
+    width: 303px;
     color: #1a4048;
     margin-bottom: 10px;
   }
@@ -236,7 +236,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 354px;
+    width: 349px;
     color: #1a4048;
   }
   .herodes > span {
@@ -259,7 +259,7 @@
     outline: none;
     border: none;
     font-size: 16px;
-    padding-left: 1rem;
+    padding-left: 0.5rem;
   }
   .findmyrate > button {
     width: 130px;
@@ -268,8 +268,8 @@
     outline: none;
     background-color: #1a4048;
     color: #05c8e8;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 17px;
+    font-weight: 600;
     cursor: pointer;
   }
   .heroright {

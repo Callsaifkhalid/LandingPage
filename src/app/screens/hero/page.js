@@ -21,13 +21,13 @@ const Hero = () => {
               <br /> Made Easy.
             </motion.h2>
             <div className={styles.herodes}>
-              <IoCheckmark />
+              <IoCheckmark style={{fontSize:'20px'}}/>
               <span>
                 Rates from 5.20% - 35.99% APR<sup>1</sup>
               </span>
             </div>
             <div className={styles.herodes2}>
-              <IoCheckmark />
+              <IoCheckmark style={{fontSize:'20px'}}/>
               <span>Loan amounts from $600 to $200,000</span>
             </div>
           </div>
