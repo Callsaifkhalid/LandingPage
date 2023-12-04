@@ -12,14 +12,12 @@ const Hero = () => {
         {/* left side */}
         <div className={styles.flexColStart + " " + styles.heroleft}>
           <div className={styles.herotitle}>
-            <motion.h2
-              initial={{ x: "7rem", opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 2, type: "spring" }}
+            <h2
+             
             >
               Debt Consolidation
               <br /> Made Easy.
-            </motion.h2>
+            </h2>
             <div className={styles.herodes}>
               <IoCheckmark style={{fontSize:'20px'}}/>
               <span>

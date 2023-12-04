@@ -17,6 +17,7 @@
   background-color: #c6f7ff;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+  width: 100%;
 }
 .herocontainer {
   justify-content: center;
