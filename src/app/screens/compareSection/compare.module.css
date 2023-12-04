@@ -36,7 +36,7 @@
 }
 .boxesborder {
   width: 80%;
-  height: 700px;
+  min-height: 700px;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   margin: 30px auto 30px auto;
@@ -81,8 +81,15 @@
 }
 .div1 {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.div1 > button{
+  border: none;
+  outline: none;
+  color: #828282;
+  text-decoration: underline;
+  cursor: pointer;
 }
 .div2 {
   border-left: 1px solid #bdbdbd;
@@ -134,7 +141,33 @@
   box-shadow: rgba(31, 229, 255, 0.2) 0px 7px 29px 0px;
   font-weight: 510;
 }
-
+.viewdetailsbox{
+  border: 1px solid #bdbdbd;
+  border-radius: 23px;
+  background-color: whitesmoke;
+  width: 85%;
+  padding: 1rem;
+  margin-top: -2rem;
+}
+.details{
+  display: flex;
+  justify-content: space-between;
+}
+.detailscontent{
+  display: flex;
+  flex-direction: column;
+}
+.detailsanswers{
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  margin-top: -1.5rem;
+ 
+}
+.detailsanswers > span {
+ 
+  font-size: 13px;
+}
 @media screen and (min-width: 600px) and (max-width: 920px) {
   .wrapper {
     width: 100%;
@@ -167,6 +200,15 @@
   .div5 > button {
     margin-right: 0.5rem;
   }
+  .div1 > img {
+    width: 90px;
+    margin-left: 0.5rem;
+  }
+  .details{
+    flex-direction: column;
+    gap: 2rem;
+  }
+
 }
 
 @media (max-width: 540px) {
@@ -194,7 +236,7 @@
   }
   .boxesborder {
     width: 90%;
-    height: 700px;
+    min-height: 700px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin: 30px auto 30px auto;
@@ -226,10 +268,11 @@
     align-items: center;
   }
   .div1 > img {
-    width: 150px;
+    width: 90px;
+    margin-left: 1rem;
   }
   .div2 {
-    margin-left: -2.5rem;
+    margin-left: 0rem;
     border-right: 1px solid #bdbdbd;
   }
   .div3 {
@@ -244,6 +287,19 @@
   .wrapper > span {
     margin: 3rem 3rem 2rem 0rem;
   }
+  .details{
+    flex-direction: column;
+  }
+  .detailsanswers{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0rem;
+    margin-top: 0rem;
+  }
+  .detailsanswers > span{
+    margin-top: -1rem;
+  }
+
 }
 @media  screen and (min-width: 921px) and (max-width: 1200px) {
   .headings {
@@ -270,6 +326,9 @@
   }
   .box2 {
     width: 90%;
+  }
+  .details{
+    width: 100%;
   }
 }
 @media  screen and (min-width: 540px) and (max-width: 590px) {

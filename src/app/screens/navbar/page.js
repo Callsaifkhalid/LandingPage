@@ -69,7 +69,7 @@ const Navbar = () => {
               }}
               className={styles.menuLinks}
             >
-              <span style={{ marginLeft: "-4rem" }}>Home</span>
+              <span>Home</span>
             </Link>
             <Link
               activeClass="active"
