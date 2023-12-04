@@ -139,7 +139,12 @@
   }
 }
 @media  screen and (min-width: 921px) and (max-width: 1200px) {
-
+  .logo{
+    margin-left: 2rem;
+  }
+  .loginbutton{
+    margin-right: 2rem;
+  }
   .menuLinks >span {
     font-size: 14px;
   }
