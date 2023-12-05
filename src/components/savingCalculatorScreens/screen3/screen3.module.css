@@ -49,7 +49,11 @@
     display: flex;
     justify-content: space-between;
   }
- 
+  .backbutton{
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 100%;
+   }
   @media (max-width: 540px) {
     
     .calculatorScreens {

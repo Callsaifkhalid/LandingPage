@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import styles from "./screen7.module.css";
 import { IoIosArrowForward } from "react-icons/io";
 import { FaCheckCircle } from "react-icons/fa";
-import { IoMdCheckmark } from "react-icons/io";
+import { IoMdArrowRoundBack } from "react-icons/io";
 import Link from "next/link";
-const Screen7 = ({onContinue,progress}) => {
+const Screen7 = ({onContinue,onBack,progress}) => {
   const [value, setvalue] = useState("");
   const [toggle, settoggle] = useState(false);
   const handleClick = (e) => {
@@ -15,6 +15,7 @@ const Screen7 = ({onContinue,progress}) => {
   return (
     <div className={styles.calculator}>
       <div className={styles.calculatorScreens}>
+      <IoMdArrowRoundBack onClick={onBack} className={styles.backbutton}/>
         <div className={styles.calculatorScreensImg}>
           <img src="../keyicon.png" alt="" width={100} />
         </div>

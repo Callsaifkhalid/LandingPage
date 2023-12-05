@@ -211,15 +211,9 @@
     cursor: pointer;
   }
 }
-@media (max-width: 540px) {
+@media screen and (max-width: 540px) {
   .herowrapper {
-    display: flex;
-    justify-content: center;
     padding-left: 2rem;
-  }
-  .flexCenter {
-    flex-wrap: nowrap;
-    justify-content: center;
   }
   .herotitle {
     margin-top: 4rem;

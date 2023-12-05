@@ -4,15 +4,17 @@ import DatePicker from "react-date-picker";
 import "react-date-picker/dist/DatePicker.css";
 import "react-calendar/dist/Calendar.css";
 import { IoMdCheckmark } from "react-icons/io";
+import { IoMdArrowRoundBack } from "react-icons/io";
 import { FaLock } from "react-icons/fa";
 import Link from "next/link";
-const Screen5 = ({ onContinue, progress }) => {
+const Screen5 = ({ onContinue,onBack, progress }) => {
   let ValuePiece = Date | null;
   let Value = ValuePiece | [ValuePiece, ValuePiece];
   const [value, onChange] = useState(new Date());
   return (
     <div className={styles.calculator}>
       <div className={styles.calculatorScreens}>
+        <IoMdArrowRoundBack onClick={onBack} className={styles.backbutton} />
         <div className={styles.calculatorScreensImg}>
           <img src="../dob.png" alt="" width={100} />
         </div>

@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import styles from "./screen10.module.css";
 import { IoMdCheckmark } from "react-icons/io";
 import { FaLock } from "react-icons/fa";
+import { IoMdArrowRoundBack } from "react-icons/io";
 import Link from "next/link";
-const Screen10 = ({ onContinue, progress }) => {
+const Screen10 = ({ onBack, progress }) => {
   const [phonenumber, setphonenumber] = useState("");
   return (
     <div className={styles.calculator}>
       <div className={styles.calculatorScreens}>
+      <IoMdArrowRoundBack onClick={onBack} className={styles.backbutton}/>
         <div className={styles.calculatorScreensImg}>
           <img src="../telephone.png" alt="" width={100} />
         </div>

@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import styles from "./screen9.module.css";
 import { IoMdCheckmark } from "react-icons/io";
 import { FaLock } from "react-icons/fa";
+import { IoMdArrowRoundBack } from "react-icons/io";
 import Link from "next/link";
-const Screen9 = ({ onContinue, progress }) => {
+const Screen9 = ({ onContinue, onBack,progress }) => {
   const [securitynum, setSecuritynum] = useState("");
   return (
     <div className={styles.calculator}>
       <div className={styles.calculatorScreens}>
+      <IoMdArrowRoundBack onClick={onBack} className={styles.backbutton}/>
         <div className={styles.calculatorScreensImg}>
           <img src="../securitynumber.png" alt="" width={100} />
         </div>

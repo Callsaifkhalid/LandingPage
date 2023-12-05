@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import styles from "./screen4.module.css";
 import { IoMdCheckmark } from "react-icons/io";
+import { IoMdArrowRoundBack } from "react-icons/io";
 import { FaLock } from "react-icons/fa";
 import Link from "next/link";
-const Screen4 = ({onContinue,progress}) => {
+const Screen4 = ({onContinue,onBack,progress}) => {
   const [firstname, setFirstName] = useState("");
   const [lastname, setLastName] = useState("");
 
   return (
     <div className={styles.calculator}>
       <div className={styles.calculatorScreens}>
+      <IoMdArrowRoundBack onClick={onBack} className={styles.backbutton}/>
         <div className={styles.calculatorScreensImg}>
           <img src="../infophoto.png" alt="" width={100} />
         </div>

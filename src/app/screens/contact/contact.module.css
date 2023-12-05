@@ -118,7 +118,7 @@
 .number:hover {
   transform: scale(1.06);
 }
-.number > span {
+.number > div {
   color: #333;
   font-size: 20px;
   font-weight: bolder;
@@ -178,7 +178,7 @@
     width: 150px;
     margin-left: 1rem;
   }
-  .number > span {
+  .number > div {
     font-size: 13px;
   }
   .findmyratesection > img {
@@ -226,7 +226,7 @@
   }
   .mail {
     height: 60px;
-    width: 250px;
+    min-width: 250px;
     margin: 0;
   }
   .mail > span {
@@ -234,11 +234,11 @@
   }
   .number {
     height: 60px;
-    width: 250px;
+    min-width: 250px;
     margin-left: 0rem;
     justify-content: flex-start;
   }
-  .number > span {
+  .number > div {
     font-size: 17px;
   }
   .number > img {
@@ -252,11 +252,19 @@
     margin-left: 0rem;
     gap: 1rem;
   }
+  .contactcontent1{
+    display: flex;
+  }
+  .contactcontent2{
+    display: flex;
+  }
   .contactcontent1 > span {
     font-size: 16px;
+    text-align: center;
   }
   .contactcontent2 > span {
     font-size: 15px;
+    text-align: center;
   }
 
   .findmyratesection {
@@ -306,6 +314,7 @@
   .checkingrates > span {
     color: #1a4048;
     font-size: 14px;
+    text-align: center;
   }
 }
 @media screen and (min-width: 921px) and (max-width: 1200px) {

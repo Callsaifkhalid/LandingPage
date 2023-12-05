@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import styles from "./screen6.module.css";
 import { IoMdCheckmark } from "react-icons/io";
+import { IoMdArrowRoundBack } from "react-icons/io";
 import { FaLock } from "react-icons/fa";
 import Link from "next/link";
-const Screen6 = ({ onContinue, progress }) => {
+const Screen6 = ({ onContinue,onBack, progress }) => {
   const [address, setAddress] = useState("");
   const [unit, setUnit] = useState("");
   return (
     <div className={styles.calculator}>
       <div className={styles.calculatorScreens}>
+      <IoMdArrowRoundBack onClick={onBack} className={styles.backbutton}/>
         <div className={styles.calculatorScreensImg}>
           <img src="../houseicon.png" alt="" width={100} />
         </div>

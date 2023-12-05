@@ -1,10 +1,12 @@
 import React from "react";
 import styles from "./screen3.module.css";
 import { IoIosArrowForward } from "react-icons/io";
-const Screen3 = ({onContinue,progress}) => {
+import { IoMdArrowRoundBack } from "react-icons/io";
+const Screen3 = ({onContinue, onBack,progress}) => {
   return (
     <div className={styles.calculator}>
       <div className={styles.calculatorScreens}>
+      <IoMdArrowRoundBack onClick={onBack} className={styles.backbutton}/>
         <div className={styles.calculatorScreensImg}>
           <img src="../dollarphoto.png" alt="" width={100} />
         </div>

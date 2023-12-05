@@ -67,6 +67,11 @@
   color: #9f9f9f;
   font-size: 14px;
 }
+.backbutton{
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: 100%;
+ }
 @media (max-width: 540px) {
   .calculatorScreens {
     width: 65%;

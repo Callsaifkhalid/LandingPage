@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import styles from "./screen2.module.css";
 import { IoIosArrowForward } from "react-icons/io";
 import { FaCheckCircle } from "react-icons/fa";
-const Screen2 = ({ onContinue, progress }) => {
+import { IoMdArrowRoundBack } from "react-icons/io";
+const Screen2 = ({ onContinue, onBack, progress }) => {
   const [value, setvalue] = useState("");
   const [toggle, settoggle] = useState(false);
   const handleClick = (e) => {
@@ -14,6 +15,7 @@ const Screen2 = ({ onContinue, progress }) => {
   return (
     <div className={styles.calculator}>
       <div className={styles.calculatorScreens}>
+        <IoMdArrowRoundBack onClick={onBack} className={styles.backbutton}/>
         <div className={styles.calculatorScreensImg}>
           <img src="../dollarphoto.png" alt="" width={100} />
         </div>

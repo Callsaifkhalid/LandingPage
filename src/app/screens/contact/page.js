@@ -19,7 +19,7 @@ const Contact = () => {
             </div>
             <div className={styles.number}>
               <img src="./housepic.png" alt="" width={20} />
-              <span>111-222-333-444</span>
+              <div>111-222-333-444</div>
             </div>
           </div>
           <div className={styles.contactcontent}>

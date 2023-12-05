@@ -25,6 +25,9 @@ const Screen1 = () => {
   const handleContinueClick = () => {
     setCurrentView(currentView + 1);
   };
+  const handleback = () => {
+    setCurrentView(currentView - 1);
+  };
   return (
     <div className={styles.wrapper}>
       <Link href={"/"}>
@@ -34,7 +37,7 @@ const Screen1 = () => {
       </Link>
       {currentView === 1 && (
         <div className={styles.calculator}>
-          <div className={styles.calculatorScreens}>
+          <div className={styles.calculatorScreens} >
             <div className={styles.calculatorScreensImg}>
               <img src="../dollarphoto.png" alt="" width={100} />
             </div>
@@ -114,31 +117,67 @@ const Screen1 = () => {
         </div>
       )}
       {currentView === 2 && (
-        <Screen2 onContinue={handleContinueClick} progress={progress} />
+        <Screen2
+          onContinue={handleContinueClick}
+          onBack={handleback}
+          progress={progress}
+        />
       )}
       {currentView === 3 && (
-        <Screen3 onContinue={handleContinueClick} progress={progress} />
+        <Screen3
+          onContinue={handleContinueClick}
+          onBack={handleback}
+          progress={progress}
+        />
       )}
       {currentView === 4 && (
-        <Screen4 onContinue={handleContinueClick} progress={progress} />
+        <Screen4
+          onContinue={handleContinueClick}
+          onBack={handleback}
+          progress={progress}
+        />
       )}
       {currentView === 5 && (
-        <Screen5 onContinue={handleContinueClick} progress={progress} />
+        <Screen5
+          onContinue={handleContinueClick}
+          onBack={handleback}
+          progress={progress}
+        />
       )}
       {currentView === 6 && (
-        <Screen6 onContinue={handleContinueClick} progress={progress} />
+        <Screen6
+          onContinue={handleContinueClick}
+          onBack={handleback}
+          progress={progress}
+        />
       )}
       {currentView === 7 && (
-        <Screen7 onContinue={handleContinueClick} progress={progress} />
+        <Screen7
+          onContinue={handleContinueClick}
+          onBack={handleback}
+          progress={progress}
+        />
       )}
       {currentView === 8 && (
-        <Screen8 onContinue={handleContinueClick} progress={progress} />
+        <Screen8
+          onContinue={handleContinueClick}
+          onBack={handleback}
+          progress={progress}
+        />
       )}
       {currentView === 9 && (
-        <Screen9 onContinue={handleContinueClick} progress={progress} />
+        <Screen9
+          onContinue={handleContinueClick}
+          onBack={handleback}
+          progress={progress}
+        />
       )}
       {currentView === 10 && (
-        <Screen10 onContinue={handleContinueClick} progress={progress} />
+        <Screen10
+          onContinue={handleContinueClick}
+          onBack={handleback}
+          progress={progress}
+        />
       )}
     </div>
   );

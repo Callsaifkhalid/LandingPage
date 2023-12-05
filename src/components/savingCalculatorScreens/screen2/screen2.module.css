@@ -1,6 +1,7 @@
 .calculator {
     display: flex;
     justify-content: center;
+    
   }
   .calculatorScreens {
     width: 600px;
@@ -53,7 +54,11 @@
     cursor: pointer;
     background-color: #f4f4f4;
   }
- 
+ .backbutton{
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: 100%;
+ }
   @media (max-width: 540px) {
     .calculator{
       width: 100%;
