@@ -22,7 +22,7 @@ const Screen7 = ({onContinue,progress}) => {
           <h1>Do you rent or own your home?</h1>
         </div>
         <div className={styles.optionbuttons}>
-          <button className="button" value={"Rent"} onClick={handleClick}>
+          <button className={styles.button} value={"Rent"} onClick={handleClick}>
             Rent{" "}
             {toggle ? (
               <FaCheckCircle style={{ color: "green" }} />
@@ -30,13 +30,13 @@ const Screen7 = ({onContinue,progress}) => {
               <IoIosArrowForward />
             )}
           </button>
-          <button className="button">
+          <button className={styles.button}>
             Own - with mortgage <IoIosArrowForward />
           </button>
-          <button className="button">
+          <button className={styles.button}>
             Own- without mortage <IoIosArrowForward />
           </button>
-          <button className="button">
+          <button className={styles.button}>
             Other <IoIosArrowForward />
           </button>
         </div>

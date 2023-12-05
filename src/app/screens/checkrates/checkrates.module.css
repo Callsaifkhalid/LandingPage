@@ -1,4 +1,5 @@
 .wrapper {
+  width: 100%;
   background-color: #e3fbff;
 }
 .calculator {
@@ -107,8 +108,9 @@
   padding: 1rem 8rem;
   border-radius: 9px;
 }
-@media (max-width: 430px) {
+@media (max-width: 540px) {
   .wrapper{
+    width: 100%;
     min-height:930px ;
   }
   .calculatorScreens {

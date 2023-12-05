@@ -1,32 +1,32 @@
 import React from "react";
-import "./screen3.css";
+import styles from "./screen3.module.css";
 import { IoIosArrowForward } from "react-icons/io";
 const Screen3 = ({onContinue,progress}) => {
   return (
-    <div className="calculator">
-      <div className="calculatorScreens">
-        <div className="calculatorScreensImg">
+    <div className={styles.calculator}>
+      <div className={styles.calculatorScreens}>
+        <div className={styles.calculatorScreensImg}>
           <img src="../dollarphoto.png" alt="" width={100} />
         </div>
-        <div className="calculatorScreensheading">
+        <div className={styles.calculatorScreensheading}>
           <h1>Tell us why you’re looking for a loan</h1>
           <span>It’s okay to estimate how much you need</span>
         </div>
-        <div className="optionbuttons">
-          <button className="button">
+        <div className={styles.optionbuttons}>
+          <button className={styles.button}>
             Full- time empolyed <IoIosArrowForward />
           </button>
-          <button className="button">
+          <button className={styles.button}>
             Part-time employed <IoIosArrowForward />
           </button>
-          <button className="button">
+          <button className={styles.button}>
             Self-employed <IoIosArrowForward />
           </button>
-          <button className="button">
+          <button className={styles.button}>
             Retired <IoIosArrowForward />
           </button>
         </div>
-        <button className="continuebutton" onClick={onContinue}>Continue</button>
+        <button className={styles.continuebutton} onClick={onContinue}>Continue</button>
         <span style={{ color: "#8B8B8B", fontSize: "14px" }}>
           Check rates won’t affect your credit score
         </span>

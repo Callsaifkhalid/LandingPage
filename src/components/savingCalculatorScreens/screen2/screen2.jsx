@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./screen2.css";
+import styles from "./screen2.module.css";
 import { IoIosArrowForward } from "react-icons/io";
 import { FaCheckCircle } from "react-icons/fa";
 const Screen2 = ({ onContinue, progress }) => {
@@ -12,18 +12,18 @@ const Screen2 = ({ onContinue, progress }) => {
   };
 
   return (
-    <div className="calculator">
-      <div className="calculatorScreens">
-        <div className="calculatorScreensImg">
+    <div className={styles.calculator}>
+      <div className={styles.calculatorScreens}>
+        <div className={styles.calculatorScreensImg}>
           <img src="../dollarphoto.png" alt="" width={100} />
         </div>
-        <div className="calculatorScreensheading">
+        <div className={styles.calculatorScreensheading}>
           <h1>Tell us why you’re looking for a loan</h1>
           <span>It’s okay to estimate how much you need</span>
         </div>
-        <div className="optionbuttons">
+        <div className={styles.optionbuttons}>
           <button
-            className="button"
+            className={styles.button}
             value={"Debt Consolidation"}
             onClick={handleClick}
           >
@@ -34,17 +34,17 @@ const Screen2 = ({ onContinue, progress }) => {
               <IoIosArrowForward />
             )}
           </button>
-          <button className="button">
+          <button className={styles.button}>
             Pay off credit cards <IoIosArrowForward />
           </button>
-          <button className="button">
+          <button className={styles.button}>
             Home improvement <IoIosArrowForward />
           </button>
-          <button className="button">
+          <button className={styles.button}>
             Major purchase <IoIosArrowForward />
           </button>
         </div>
-        <button className="continuebutton" onClick={onContinue}>
+        <button className={styles.continuebutton} onClick={onContinue}>
           Continue
         </button>
         <span style={{ color: "#8B8B8B", fontSize: "14px" }}>

@@ -3,7 +3,7 @@
     justify-content: center;
   }
   .calculatorScreens {
-    min-width: 600px;
+    width: 600px;
     min-height: 400px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -50,4 +50,27 @@
     justify-content: space-between;
   }
  
-  
+  @media (max-width: 540px) {
+    
+    .calculatorScreens {
+      width: 65%;
+      min-height: 400px;
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      padding: 3rem;
+      margin-bottom: 3rem;
+      border-radius: 45px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    .calculatorScreensheading > h1 {
+      font-weight: bolder;
+      font-size: 15px;
+    }
+    .calculatorScreensheading > span {
+      font-size: 12px;
+      margin-left: 0rem;
+    }
+  }
