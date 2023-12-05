@@ -99,7 +99,8 @@
 }
 @media (max-width: 540px) {
   .wrapper {
-    width: 100%;
+   
+    
   }
   .headings {
     margin-left: 0rem;

@@ -47,7 +47,7 @@ const Navbar = () => {
   }, []);
   return (
     <div>
-      {/* <Backtotop /> */}
+      <Backtotop />
       <section className={styles.headerwrapper}>
         <div className={styles.logo}>
           <img src="./logo.png" alt="logo" />
