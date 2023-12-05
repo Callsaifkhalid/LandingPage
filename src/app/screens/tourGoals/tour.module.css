@@ -120,9 +120,7 @@
 }
 
 @media (max-width: 540px) {
-  .wrapper {
-    width: 430px;
-  }
+  
   .wrapper > img {
     display: none;
   }

@@ -1,4 +1,6 @@
 .wrapper {
+  display: flex;
+  flex-direction: column;
   background-color: #fff;
 }
 .headings {
@@ -97,7 +99,7 @@
 }
 @media (max-width: 540px) {
   .wrapper {
-    width: 430px;
+    width: 100%;
   }
   .headings {
     margin-left: 0rem;

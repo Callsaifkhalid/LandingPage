@@ -11,7 +11,7 @@ import WhySection from "./screens/whySection/page";
 
 export default function Home() {
   return (
-    <main>
+    <main >
       <Navbar />
       <Hero />
       <WhySection />

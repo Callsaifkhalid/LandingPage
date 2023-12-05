@@ -133,9 +133,7 @@
   }
 }
 @media (max-width: 540px) {
-  .wrapper {
-    width: 430px;
-  }
+  
   .howcontainer {
     margin-top: 3rem;
   }

@@ -12,20 +12,18 @@ const Hero = () => {
         {/* left side */}
         <div className={styles.flexColStart + " " + styles.heroleft}>
           <div className={styles.herotitle}>
-            <h2
-             
-            >
+            <h2>
               Debt Consolidation
               <br /> Made Easy.
             </h2>
             <div className={styles.herodes}>
-              <IoCheckmark style={{fontSize:'20px'}}/>
+              <IoCheckmark style={{ fontSize: "20px" }} />
               <span>
                 Rates from 5.20% - 35.99% APR<sup>1</sup>
               </span>
             </div>
             <div className={styles.herodes2}>
-              <IoCheckmark style={{fontSize:'20px'}}/>
+              <IoCheckmark style={{ fontSize: "20px" }} />
               <span>Loan amounts from $600 to $200,000</span>
             </div>
           </div>

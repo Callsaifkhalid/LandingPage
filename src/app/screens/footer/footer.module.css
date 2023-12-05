@@ -84,9 +84,7 @@
   }
 }
 @media (max-width: 540px) {
-  .footer {
-    width: 430px;
-  }
+  
   .images {
     width: 380px;
     margin: -2rem 0 0 1rem;
@@ -94,6 +92,10 @@
   .images > div > img {
     margin-top: 3rem;
     margin-left: 0.5rem;
+  }
+  .socials{
+    margin-right: 1rem;
+    margin-top: 0.3rem ;
   }
   .socials > img {
     width: 25px;

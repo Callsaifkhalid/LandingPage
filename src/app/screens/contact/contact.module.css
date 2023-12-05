@@ -200,9 +200,7 @@
   }
 }
 @media (max-width: 540px) {
-  .wrapper {
-    width: 430px;
-  }
+ 
   .headings {
     margin-left: 0rem;
     padding: 2rem;
