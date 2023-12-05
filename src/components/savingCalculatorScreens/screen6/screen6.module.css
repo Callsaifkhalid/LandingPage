@@ -97,4 +97,7 @@
     margin-left: 0rem;
     text-align: center;
   }
+  .securityheading > h4 {
+    font-size: 14px;
+  }
 }
