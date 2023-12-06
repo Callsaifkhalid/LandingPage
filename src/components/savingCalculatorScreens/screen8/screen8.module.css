@@ -113,6 +113,13 @@
     margin-left: 0rem;
   }
   .securityheading > h4 {
-    font-size: 14px;
+    font-size: 12.4px;
+  }
+ 
+  .learnmore > span {
+    font-size: 13px;
+  }
+  .privacypolicy > span {
+    font-size: 13px;
   }
 }

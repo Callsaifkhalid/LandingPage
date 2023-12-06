@@ -28,11 +28,11 @@ const Navbar = () => {
 
       if (scrollPosition < 300) {
         setCurrentSection("home");
-      } else if (scrollPosition > 2800 && scrollPosition < 4100) {
+      } else if (scrollPosition > 2800 && scrollPosition < 4200) {
         setCurrentSection("saving");
-      } else if (scrollPosition > 4200 && scrollPosition < 5300) {
+      } else if (scrollPosition > 4300 && scrollPosition < 7000) {
         setCurrentSection("compare");
-      } else if (scrollPosition > 7800 && scrollPosition < 9000) {
+      } else if (scrollPosition > 7800) {
         setCurrentSection("contact");
       } else {
         setCurrentSection("nothing");
