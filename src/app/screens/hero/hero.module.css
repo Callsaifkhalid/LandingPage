@@ -213,7 +213,7 @@
 }
 @media screen and (max-width: 540px) {
   .herowrapper {
-    padding-left: 2rem;
+    padding-left: 1rem;
   }
   .herotitle {
     margin-top: 4rem;

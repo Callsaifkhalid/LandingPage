@@ -226,7 +226,7 @@
   }
   .mail {
     height: 60px;
-    min-width: 250px;
+    min-width: 260px;
     margin: 0;
   }
   .mail > span {
@@ -259,11 +259,11 @@
     display: flex;
   }
   .contactcontent1 > span {
-    font-size: 16px;
+    font-size: 15px;
     text-align: center;
   }
   .contactcontent2 > span {
-    font-size: 15px;
+    font-size: 14px;
     text-align: center;
   }
 
@@ -288,7 +288,8 @@
   }
   .findmyrate > span {
     margin-left: 0rem;
-    font-size: 19px;
+    font-size: 17px;
+    text-align: center;
   }
   .findmyrate > span > span {
     margin-left: 0rem;
