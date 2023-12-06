@@ -72,6 +72,7 @@
     .calculatorScreensheading > h1 {
       font-weight: bolder;
       font-size: 15px;
+      text-align: center;
     }
     .calculatorScreensheading > span {
       font-size: 12px;

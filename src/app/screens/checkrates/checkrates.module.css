@@ -130,6 +130,7 @@
   .calculatorScreensheading > h1 {
     font-weight: bolder;
     font-size: 15px;
+    text-align: center;
   }
   .calculatorScreensheading > span {
     font-size: 12px;
@@ -159,13 +160,13 @@
 @media screen and (min-width: 600px) and (max-width: 920px) {
   .wrapper{
     width: 100%;
-    min-height:1000px ;
+    min-height:1400px ;
   }
 }
 @media screen and (min-width: 921px) and (max-width: 1300px) {
   .wrapper{
     width: 100%;
-    min-height:1000px ;
+    min-height:1500px ;
   }
 }
 @media (min-width: 1400px) {

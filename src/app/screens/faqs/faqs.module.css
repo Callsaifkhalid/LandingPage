@@ -110,7 +110,7 @@
     margin-bottom: 3rem;
   }
 }
-@media (max-width: 540px) {
+@media screen and (max-width: 540px) {
   
   .wrapper > img {
     display: none;
