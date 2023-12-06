@@ -40,7 +40,7 @@ const Screen8 = ({ onContinue,onBack, progress }) => {
         <button className={styles.continuebutton} onClick={onContinue}>
           Continue
         </button>
-        <span style={{ color: "#8B8B8B", fontSize: "14px" }}>
+        <span style={{ color: "#8B8B8B", fontSize: "14px", textAlign:'center'}}>
           Check rates won’t affect your credit score
         </span>
         <div className={styles.securityheading}>
