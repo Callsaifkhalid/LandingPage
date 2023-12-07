@@ -144,7 +144,10 @@
 .findmyrate > span > span {
   margin-left: -12rem;
 }
-
+.Link{
+  text-decoration: none;
+  color: #05c8e8;
+}
 @media screen and (min-width: 600px) and (max-width: 920px) {
   .footer {
     width: 100%;

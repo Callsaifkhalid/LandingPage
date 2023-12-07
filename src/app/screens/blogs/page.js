@@ -8,6 +8,7 @@ import { CiClock2} from "react-icons/ci";
 import { GrPowerCycle } from "react-icons/gr";
 import { BsArrowUpRightCircle } from "react-icons/bs";
 import Footer from "../footer/page";
+import BlogNavbar from "@/components/blogNavbar/blogNavbar";
 
 const Blogs = () => {
   const router = useRouter();
@@ -87,6 +88,7 @@ const Blogs = () => {
   ];
   return (
     <div className={styles.wrapper}>
+      <BlogNavbar/>
       <div className={styles.BlogListMainContainer}>
         <div className={styles.HeadingStyleBlogList}>
           Stories about financial wellness and newtech products to make your

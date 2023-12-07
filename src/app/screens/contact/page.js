@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./contact.module.css";
+import Link from "next/link";
 const Contact = () => {
   return (
     <div className={styles.wrapper} id="contact">
@@ -49,7 +50,11 @@ const Contact = () => {
             </span>
           </div>
           <div className={styles.checkingrates}>
-            <button>Find my Rate</button>
+            <button>
+              <Link href={"./screens/checkrates"} className={styles.Link}>
+                Find My Rate{" "}
+              </Link>
+            </button>
             <span>Checking rates won’t affect your credit score</span>
           </div>
           <img

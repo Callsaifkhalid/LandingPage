@@ -2,9 +2,11 @@ import React from "react";
 import styles from "./blogdetails.module.css";
 import Footer from "../footer/page";
 import Image from "next/image";
+import BlogNavbar from "@/components/blogNavbar/blogNavbar";
 export default function BlogDetail() {
   return (
     <div className={styles.wrapper}>
+      <BlogNavbar/>
       <div className={styles.BlogDetailMainContainer}>
         <div className={styles.HeadingStyleBlogDetail}>
           ABHI and LIPTON Teas &quot;&&quot; Infusions Pakistan Collaborate to

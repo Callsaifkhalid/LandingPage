@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { IoCheckmark } from "react-icons/io5";
 import CurrencyInput from "react-currency-input-field";
 import { IoMdThumbsUp } from "react-icons/io";
+import Link from "next/link";
 const Hero = () => {
   return (
     <section className={styles.herowrapper} id="hero">
@@ -36,7 +37,15 @@ const Hero = () => {
               decimalsLimit={2}
               maxLength={5}
             />
-            <button>Find My Rate</button>
+
+        
+              <Link
+                href={"./screens/checkrates"}
+                className={styles.Link}
+              >
+             Find My Rate{" "}
+              </Link>
+   
           </div>
           <div className={styles.thumbsup}>
             <IoMdThumbsUp />
