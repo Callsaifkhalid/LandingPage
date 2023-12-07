@@ -29,7 +29,7 @@
   }
   .BlogListingCardStyle {
     width: 26%;
-    height: 32vh;
+    height: 35vh;
     margin: 2% 1%;
     background-position: center;
     background-repeat: no-repeat;
@@ -147,7 +147,7 @@
     }
     .BlogCardsTitleStyle {
       font-size: 1.1rem;
-      margin-top: 10%;
+      margin-top: 30%;
     }
     .TitleAndBottomContainer {
       width: 75%;
@@ -173,4 +173,8 @@
       font-size: 0.95rem;
     }
   }
-  
+  @media  screen and (min-width: 800px) and (max-width: 1200px) {
+    .BlogListingCardStyle {
+        width: 35%;
+    }
+  }
