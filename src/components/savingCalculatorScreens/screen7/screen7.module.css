@@ -97,4 +97,8 @@
     font-size: 12px;
     margin-left: 0rem;
   }
+  .continuebutton {
+    width: 200px;
+    padding: 1rem 0rem;
+  }
 }

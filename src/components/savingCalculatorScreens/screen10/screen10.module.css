@@ -111,4 +111,8 @@
   .privacypolicy > span {
     font-size: 13px;
   }
+  .continuebutton {
+    width: 200px;
+    padding: 1rem 0rem;
+  }
 }

@@ -158,6 +158,10 @@
     width: 70px;
     font-size: 12px;
   }
+  .continuebutton {
+    width: 200px;
+    padding: 1rem 0rem;
+  }
 }
 @media screen and (min-width: 600px) and (max-width: 920px) {
   .wrapper{

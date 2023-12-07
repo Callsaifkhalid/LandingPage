@@ -22,16 +22,7 @@ const SavingsCalculator = () => {
   ];
 
   const Styles = {
-    control: (provided, state) => ({
-      backgroundColor: "white",
-      width: "120px",
-      height: "40px",
-      borderRadius: "5px",
-      display: "flex",
-      marginTop: "3px",
-      position: "static",
-      zIndex: state.isFocused ? 9999 : 1,
-    }),
+    control: (provided, state) => ({}),
     dropdownIndicator: (base) => ({
       ...base,
       color: "#05c8e8",
@@ -106,7 +97,12 @@ const SavingsCalculator = () => {
               >
                 Loan Term
               </h5>
-              <Select options={options} styles={Styles} />
+              <Select
+                options={options}
+                className="customSelect"
+                classNamePrefix="select"
+                styles={Styles}
+              />
             </div>
           </div>
           <div className={styles.calculatorheading}>
@@ -137,7 +133,12 @@ const SavingsCalculator = () => {
               >
                 Loan Term
               </h5>
-              <Select options={options} styles={Styles} />
+              <Select
+                options={options}
+                className="customSelect"
+                classNamePrefix="select"
+                styles={Styles}
+              />
             </div>
           </div>
           <div className={styles.calculatorheading}>

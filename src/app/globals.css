@@ -14,3 +14,19 @@ input::-webkit-inner-spin-button {
 }
 
 
+.customSelect .select__control{
+    width: 120px;
+    background-color: white;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    margin-top: 3px;
+    position: static;
+    outline: none;
+    border: none;
+  }
+@media screen and (max-width:540px){
+    .customSelect .select__control{
+        width: 155px;
+    }
+}

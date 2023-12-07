@@ -196,6 +196,7 @@
   animation: currentloan 2s;
   width: 50%;
 }
+
 @keyframes currentloan {
   from {
     width: 0;
