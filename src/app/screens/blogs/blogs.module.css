@@ -1,0 +1,176 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 15%;
+}
+.BlogListMainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 0px;
+  }
+  
+  .mobileNavBarWrapper {
+    display: none;
+  }
+  .HeadingStyleBlogList {
+    font-weight: 900;
+    font-size: 3rem;
+    color: #1a4048;
+    max-width: 80%;
+    text-align: center;
+    margin-top: 10%;
+  }
+  .BlogCardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3%;
+    justify-content: center;
+  }
+  .BlogListingCardStyle {
+    width: 26%;
+    height: 32vh;
+    margin: 2% 1%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+  }
+  .OverImageContainerWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+    padding: 10px 20px;
+    border-radius: 20px;
+  }
+  .OverImageContainerWrapper:hover {
+    background: rgba(48, 203, 214, 0.8);
+  }
+  .ArrowStyling {
+    font-size: 2rem;
+    color: #05c8e8;
+    background-color: white;
+    align-self: flex-end;
+    border-radius: 100%;
+  }
+  .ArrowStyling1 {
+    font-size: 2rem;
+    color: white;
+    background-color: #05c8e8;
+    align-self: flex-end;
+    border-radius: 100%;
+  }
+  .BlogCardsTitleStyle {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 20%;
+  }
+  .TitleAndBottomContainer {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 5%;
+    bottom: 7px;
+    width: 80%;
+    left: 0;
+  }
+  .DtateTimeContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 38%;
+    font-weight: 500;
+    color: white;
+    font-size: 0.8rem;
+  }
+  .clockStyle {
+    font-size: 1rem;
+    margin-top: 1%;
+  }
+  .updateContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 28%;
+    font-weight: 500;
+    color: white;
+    font-size: 0.8rem;
+  }
+  .updateStyle {
+    width: 18%;
+    margin-top: 1%;
+  }
+  .onHoverTitleStyle {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 500;
+    position: absolute;
+    top: 15px;
+  }
+  .onHoverDescription {
+    color: white;
+    margin-top: 17%;
+    font-size: 0.95rem;
+  }
+  
+  @media screen and (max-width: 787px) {
+    .wrapper{
+        gap: 5%;
+    }
+    .BlogListMainContainer {
+      padding: 20% 5%;
+    }
+    .HeadingStyleBlogList {
+      font-size: 1.5rem;
+      max-width: 100%;
+      margin-top: 0;
+    }
+    .BlogCardContainer {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      width: 80vw;
+      
+    }
+    .BlogListingCardStyle {
+      width: 100%;
+      margin: 5% 0;
+    }
+    .OverImageContainerWrapper {
+      padding: 2% 4%;
+    }
+    .ArrowStyling {
+     
+    }
+    .BlogCardsTitleStyle {
+      font-size: 1.1rem;
+      margin-top: 10%;
+    }
+    .TitleAndBottomContainer {
+      width: 75%;
+    }
+    .DtateTimeContainer {
+      width: 52%;
+    }
+    .clockStyle {
+      margin-top: 0;
+    }
+    .updateContainer {
+      width: 36%;
+    }
+    .updateStyle {
+      margin-top: 0;
+    }
+    .onHoverTitleStyle {
+      font-size: 1.15rem;
+      width: 74%;
+    }
+    .onHoverDescription {
+      margin-top: 25%;
+      font-size: 0.95rem;
+    }
+  }
+  

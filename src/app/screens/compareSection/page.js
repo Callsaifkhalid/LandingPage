@@ -1,11 +1,15 @@
-'use client'
+"use client";
 import React, { useState } from "react";
 import styles from "./compare.module.css";
+
 const CompareSection = () => {
-  const [click,setClick]=useState(false);
-  const [click1,setClick1]=useState(false);
-  const [click2,setClick2]=useState(false);
-  const [click3,setClick3]=useState(false);
+  const [click, setClick] = useState(false);
+  const [click1, setClick1] = useState(false);
+  const [click2, setClick2] = useState(false);
+  const [click3, setClick3] = useState(false);
+
+ 
+
   return (
     <div className={styles.wrapper} id="compare">
       <div className={styles.headings}>
@@ -28,7 +32,9 @@ const CompareSection = () => {
           <div className={styles.box2}>
             <div className={styles.div1}>
               <img src="./div1photo.svg" alt="" />
-              <button onClick={()=>setClick((pre)=>!pre)}>View Details</button>
+              <button onClick={() => setClick((pre) => !pre)}>
+                View Details
+              </button>
             </div>
             <div className={styles.div2}>
               <span>Credible rating</span>
@@ -60,59 +66,65 @@ const CompareSection = () => {
               <button>Find my Rate</button>
             </div>
           </div>
-          {click && <div className={styles.viewdetailsbox}>
-            <div>
-              <h3>ClearDebt Personal Loans</h3>
+          {click && (
+            <div className={styles.viewdetailsbox}>
+              <div>
+                <h3>ClearDebt Personal Loans</h3>
+              </div>
+              <div className={styles.details}>
+                <div className={styles.detailscontent}>
+                  <div className={styles.detailsanswers}>
+                    <h5>Prepayment penalty:</h5>
+                    <span>None</span>
+                  </div>
+                  <div className={styles.detailsanswers}>
+                    <h5>Origination Fee:</h5>
+                    <span>0% to 12%</span>
+                  </div>
+                  <div className={styles.detailsanswers}>
+                    <h5>Late fee:</h5>
+                    <span>
+                      5% of late payment or $15(whichever is greater){" "}
+                    </span>
+                  </div>
+                </div>
+                <div className={styles.detailscontent}>
+                  <div className={styles.detailsanswers}>
+                    <h5>Unsuccessful payment fee:</h5>
+                    <span>$15</span>
+                  </div>
+                  <div className={styles.detailsanswers}>
+                    <h5>Check processing fee:</h5>
+                    <span>None</span>
+                  </div>
+                  <div className={styles.detailsanswers}>
+                    <h5>Time to fund:</h5>
+                    <span>As soon as 1 - 3 business days</span>
+                  </div>
+                </div>
+                <div className={styles.detailscontent}>
+                  <div className={styles.detailsanswers}>
+                    <h5>Minimum Credit Score:</h5>
+                    <span>620</span>
+                  </div>
+                  <div className={styles.detailsanswers}>
+                    <h5>Do they allow a cosigner:</h5>
+                    <span>No</span>
+                  </div>
+                  <div className={styles.detailsanswers}>
+                    <h5>Best for:</h5>
+                    <span>Fast personal loans for bad credit</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className={styles.details}>
-              <div className={styles.detailscontent}>
-                <div className={styles.detailsanswers}>
-                  <h5>Prepayment penalty:</h5>
-                  <span>None</span>
-                </div>
-                <div className={styles.detailsanswers}>
-                  <h5>Origination Fee:</h5>
-                  <span>0% to 12%</span>
-                </div>
-                <div className={styles.detailsanswers}>
-                  <h5>Late fee:</h5>
-                  <span>5% of late payment or $15(whichever is greater) </span>
-                </div>
-              </div>
-              <div className={styles.detailscontent}>
-                <div className={styles.detailsanswers}>
-                  <h5>Unsuccessful payment fee:</h5>
-                  <span>$15</span>
-                </div>
-                <div className={styles.detailsanswers}>
-                  <h5>Check processing fee:</h5>
-                  <span>None</span>
-                </div>
-                <div className={styles.detailsanswers}>
-                  <h5>Time to fund:</h5>
-                  <span>As soon as 1 - 3 business days</span>
-                </div>
-              </div>
-              <div className={styles.detailscontent}>
-                <div className={styles.detailsanswers}>
-                  <h5>Minimum Credit Score:</h5>
-                  <span>620</span>
-                </div>
-                <div className={styles.detailsanswers}>
-                  <h5>Do they allow a cosigner:</h5>
-                  <span>No</span>
-                </div>
-                <div className={styles.detailsanswers}>
-                  <h5>Best for:</h5>
-                  <span>Fast personal loans for bad credit</span>
-                </div>
-              </div>
-            </div>
-          </div>}
+          )}
           <div className={styles.box2}>
             <div className={styles.div1}>
               <img src="./div2photo.png" alt="" />
-              <button onClick={()=>setClick1((pre)=>!pre)}>View Details</button>
+              <button onClick={() => setClick1((pre) => !pre)}>
+                View Details
+              </button>
             </div>
             <div className={styles.div2}>
               <span>Credible rating</span>
@@ -144,59 +156,65 @@ const CompareSection = () => {
               <button>Find my Rate</button>
             </div>
           </div>
-          {click1 && <div className={styles.viewdetailsbox}>
-            <div>
-              <h3>ClearDebt Personal Loans</h3>
+          {click1 && (
+            <div className={styles.viewdetailsbox}>
+              <div>
+                <h3>ClearDebt Personal Loans</h3>
+              </div>
+              <div className={styles.details}>
+                <div className={styles.detailscontent}>
+                  <div className={styles.detailsanswers}>
+                    <h5>Prepayment penalty:</h5>
+                    <span>None</span>
+                  </div>
+                  <div className={styles.detailsanswers}>
+                    <h5>Origination Fee:</h5>
+                    <span>0% to 12%</span>
+                  </div>
+                  <div className={styles.detailsanswers}>
+                    <h5>Late fee:</h5>
+                    <span>
+                      5% of late payment or $15(whichever is greater){" "}
+                    </span>
+                  </div>
+                </div>
+                <div className={styles.detailscontent}>
+                  <div className={styles.detailsanswers}>
+                    <h5>Unsuccessful payment fee:</h5>
+                    <span>$15</span>
+                  </div>
+                  <div className={styles.detailsanswers}>
+                    <h5>Check processing fee:</h5>
+                    <span>None</span>
+                  </div>
+                  <div className={styles.detailsanswers}>
+                    <h5>Time to fund:</h5>
+                    <span>As soon as 1 - 3 business days</span>
+                  </div>
+                </div>
+                <div className={styles.detailscontent}>
+                  <div className={styles.detailsanswers}>
+                    <h5>Minimum Credit Score:</h5>
+                    <span>620</span>
+                  </div>
+                  <div className={styles.detailsanswers}>
+                    <h5>Do they allow a cosigner:</h5>
+                    <span>No</span>
+                  </div>
+                  <div className={styles.detailsanswers}>
+                    <h5>Best for:</h5>
+                    <span>Fast personal loans for bad credit</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className={styles.details}>
-              <div className={styles.detailscontent}>
-                <div className={styles.detailsanswers}>
-                  <h5>Prepayment penalty:</h5>
-                  <span>None</span>
-                </div>
-                <div className={styles.detailsanswers}>
-                  <h5>Origination Fee:</h5>
-                  <span>0% to 12%</span>
-                </div>
-                <div className={styles.detailsanswers}>
-                  <h5>Late fee:</h5>
-                  <span>5% of late payment or $15(whichever is greater) </span>
-                </div>
-              </div>
-              <div className={styles.detailscontent}>
-                <div className={styles.detailsanswers}>
-                  <h5>Unsuccessful payment fee:</h5>
-                  <span>$15</span>
-                </div>
-                <div className={styles.detailsanswers}>
-                  <h5>Check processing fee:</h5>
-                  <span>None</span>
-                </div>
-                <div className={styles.detailsanswers}>
-                  <h5>Time to fund:</h5>
-                  <span>As soon as 1 - 3 business days</span>
-                </div>
-              </div>
-              <div className={styles.detailscontent}>
-                <div className={styles.detailsanswers}>
-                  <h5>Minimum Credit Score:</h5>
-                  <span>620</span>
-                </div>
-                <div className={styles.detailsanswers}>
-                  <h5>Do they allow a cosigner:</h5>
-                  <span>No</span>
-                </div>
-                <div className={styles.detailsanswers}>
-                  <h5>Best for:</h5>
-                  <span>Fast personal loans for bad credit</span>
-                </div>
-              </div>
-            </div>
-          </div>}
+          )}
           <div className={styles.box2}>
             <div className={styles.div1}>
               <img src="./div3photo.svg" alt="" />
-              <button onClick={()=>setClick2((pre)=>!pre)}>View Details</button>
+              <button onClick={() => setClick2((pre) => !pre)}>
+                View Details
+              </button>
             </div>
             <div className={styles.div2}>
               <span>Credible rating</span>
@@ -228,59 +246,65 @@ const CompareSection = () => {
               <button>Find my Rate</button>
             </div>
           </div>
-          {click2 && <div className={styles.viewdetailsbox}>
-            <div>
-              <h3>ClearDebt Personal Loans</h3>
+          {click2 && (
+            <div className={styles.viewdetailsbox}>
+              <div>
+                <h3>ClearDebt Personal Loans</h3>
+              </div>
+              <div className={styles.details}>
+                <div className={styles.detailscontent}>
+                  <div className={styles.detailsanswers}>
+                    <h5>Prepayment penalty:</h5>
+                    <span>None</span>
+                  </div>
+                  <div className={styles.detailsanswers}>
+                    <h5>Origination Fee:</h5>
+                    <span>0% to 12%</span>
+                  </div>
+                  <div className={styles.detailsanswers}>
+                    <h5>Late fee:</h5>
+                    <span>
+                      5% of late payment or $15(whichever is greater){" "}
+                    </span>
+                  </div>
+                </div>
+                <div className={styles.detailscontent}>
+                  <div className={styles.detailsanswers}>
+                    <h5>Unsuccessful payment fee:</h5>
+                    <span>$15</span>
+                  </div>
+                  <div className={styles.detailsanswers}>
+                    <h5>Check processing fee:</h5>
+                    <span>None</span>
+                  </div>
+                  <div className={styles.detailsanswers}>
+                    <h5>Time to fund:</h5>
+                    <span>As soon as 1 - 3 business days</span>
+                  </div>
+                </div>
+                <div className={styles.detailscontent}>
+                  <div className={styles.detailsanswers}>
+                    <h5>Minimum Credit Score:</h5>
+                    <span>620</span>
+                  </div>
+                  <div className={styles.detailsanswers}>
+                    <h5>Do they allow a cosigner:</h5>
+                    <span>No</span>
+                  </div>
+                  <div className={styles.detailsanswers}>
+                    <h5>Best for:</h5>
+                    <span>Fast personal loans for bad credit</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className={styles.details}>
-              <div className={styles.detailscontent}>
-                <div className={styles.detailsanswers}>
-                  <h5>Prepayment penalty:</h5>
-                  <span>None</span>
-                </div>
-                <div className={styles.detailsanswers}>
-                  <h5>Origination Fee:</h5>
-                  <span>0% to 12%</span>
-                </div>
-                <div className={styles.detailsanswers}>
-                  <h5>Late fee:</h5>
-                  <span>5% of late payment or $15(whichever is greater) </span>
-                </div>
-              </div>
-              <div className={styles.detailscontent}>
-                <div className={styles.detailsanswers}>
-                  <h5>Unsuccessful payment fee:</h5>
-                  <span>$15</span>
-                </div>
-                <div className={styles.detailsanswers}>
-                  <h5>Check processing fee:</h5>
-                  <span>None</span>
-                </div>
-                <div className={styles.detailsanswers}>
-                  <h5>Time to fund:</h5>
-                  <span>As soon as 1 - 3 business days</span>
-                </div>
-              </div>
-              <div className={styles.detailscontent}>
-                <div className={styles.detailsanswers}>
-                  <h5>Minimum Credit Score:</h5>
-                  <span>620</span>
-                </div>
-                <div className={styles.detailsanswers}>
-                  <h5>Do they allow a cosigner:</h5>
-                  <span>No</span>
-                </div>
-                <div className={styles.detailsanswers}>
-                  <h5>Best for:</h5>
-                  <span>Fast personal loans for bad credit</span>
-                </div>
-              </div>
-            </div>
-          </div>}
+          )}
           <div className={styles.box2}>
             <div className={styles.div1}>
               <img src="./div4photo.svg" alt="" />
-              <button onClick={()=>setClick3((pre)=>!pre)}>View Details</button>
+              <button onClick={() => setClick3((pre) => !pre)}>
+                View Details
+              </button>
             </div>
             <div className={styles.div2}>
               <span>Credible rating</span>
@@ -312,55 +336,59 @@ const CompareSection = () => {
               <button>Find my Rate</button>
             </div>
           </div>
-          {click3 && <div className={styles.viewdetailsbox}>
-            <div>
-              <h3>ClearDebt Personal Loans</h3>
+          {click3 && (
+            <div className={styles.viewdetailsbox}>
+              <div>
+                <h3>ClearDebt Personal Loans</h3>
+              </div>
+              <div className={styles.details}>
+                <div className={styles.detailscontent}>
+                  <div className={styles.detailsanswers}>
+                    <h5>Prepayment penalty:</h5>
+                    <span>None</span>
+                  </div>
+                  <div className={styles.detailsanswers}>
+                    <h5>Origination Fee:</h5>
+                    <span>0% to 12%</span>
+                  </div>
+                  <div className={styles.detailsanswers}>
+                    <h5>Late fee:</h5>
+                    <span>
+                      5% of late payment or $15(whichever is greater){" "}
+                    </span>
+                  </div>
+                </div>
+                <div className={styles.detailscontent}>
+                  <div className={styles.detailsanswers}>
+                    <h5>Unsuccessful payment fee:</h5>
+                    <span>$15</span>
+                  </div>
+                  <div className={styles.detailsanswers}>
+                    <h5>Check processing fee:</h5>
+                    <span>None</span>
+                  </div>
+                  <div className={styles.detailsanswers}>
+                    <h5>Time to fund:</h5>
+                    <span>As soon as 1 - 3 business days</span>
+                  </div>
+                </div>
+                <div className={styles.detailscontent}>
+                  <div className={styles.detailsanswers}>
+                    <h5>Minimum Credit Score:</h5>
+                    <span>620</span>
+                  </div>
+                  <div className={styles.detailsanswers}>
+                    <h5>Do they allow a cosigner:</h5>
+                    <span>No</span>
+                  </div>
+                  <div className={styles.detailsanswers}>
+                    <h5>Best for:</h5>
+                    <span>Fast personal loans for bad credit</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className={styles.details}>
-              <div className={styles.detailscontent}>
-                <div className={styles.detailsanswers}>
-                  <h5>Prepayment penalty:</h5>
-                  <span>None</span>
-                </div>
-                <div className={styles.detailsanswers}>
-                  <h5>Origination Fee:</h5>
-                  <span>0% to 12%</span>
-                </div>
-                <div className={styles.detailsanswers}>
-                  <h5>Late fee:</h5>
-                  <span>5% of late payment or $15(whichever is greater) </span>
-                </div>
-              </div>
-              <div className={styles.detailscontent}>
-                <div className={styles.detailsanswers}>
-                  <h5>Unsuccessful payment fee:</h5>
-                  <span>$15</span>
-                </div>
-                <div className={styles.detailsanswers}>
-                  <h5>Check processing fee:</h5>
-                  <span>None</span>
-                </div>
-                <div className={styles.detailsanswers}>
-                  <h5>Time to fund:</h5>
-                  <span>As soon as 1 - 3 business days</span>
-                </div>
-              </div>
-              <div className={styles.detailscontent}>
-                <div className={styles.detailsanswers}>
-                  <h5>Minimum Credit Score:</h5>
-                  <span>620</span>
-                </div>
-                <div className={styles.detailsanswers}>
-                  <h5>Do they allow a cosigner:</h5>
-                  <span>No</span>
-                </div>
-                <div className={styles.detailsanswers}>
-                  <h5>Best for:</h5>
-                  <span>Fast personal loans for bad credit</span>
-                </div>
-              </div>
-            </div>
-          </div>}
+          )}
         </div>
       </div>
       <div className={styles.divs}>

@@ -1,5 +1,5 @@
 "use client";
-import { Link } from "react-scroll/modules";
+import { Link as ScrollLink} from "react-scroll/modules";
 import React, { useEffect, useState } from "react";
 import styles from "./navbar.module.css";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -7,6 +7,7 @@ import Backtotop from "@/components/backtoTopButton/backtotop";
 import OutsideClickHandler from "react-outside-click-handler";
 import { RxCross2 } from "react-icons/rx";
 import { FaPhone } from "react-icons/fa";
+import Link from "next/link";
 
 const Navbar = () => {
   const [currentSection, setCurrentSection] = useState("");
@@ -50,11 +51,11 @@ const Navbar = () => {
       <Backtotop />
       <section className={styles.headerwrapper}>
         <div className={styles.logo}>
-          <img src="./logo.png" alt="logo" />
+          <img src="../logo.png" alt="logo" />
         </div>
         <OutsideClickHandler onOutsideClick={() => setmenuopen(false)}>
           <div className={click? styles.headermenuu : styles.headermenu} style={getMenuStyles(menuOpen)}>
-            <Link
+            <ScrollLink
               activeClass="active"
               to="hero"
               spy={true}
@@ -71,8 +72,8 @@ const Navbar = () => {
               className={styles.menuLinks}
             >
               <span>Home</span>
-            </Link>
-            <Link
+            </ScrollLink>
+            <ScrollLink
               activeClass="active"
               to="savings"
               spy={true}
@@ -90,8 +91,8 @@ const Navbar = () => {
               }}
             >
               <span>Savings Calculator</span>
-            </Link>
-            <Link
+            </ScrollLink>
+            <ScrollLink
               activeClass="active"
               to="compare"
               spy={true}
@@ -109,8 +110,14 @@ const Navbar = () => {
               }}
             >
               <span>Compare Landers</span>
-            </Link>
+            </ScrollLink>
             <Link
+              href={"/screens/blogs"}
+              className={styles.menuLinks}
+            >
+              <span>Blogs</span>
+            </Link>
+            <ScrollLink
               activeClass="active"
               to="contact"
               spy={true}
@@ -128,7 +135,7 @@ const Navbar = () => {
               }}
             >
               <span>Contact Us</span>
-            </Link>
+            </ScrollLink>
           </div>
         </OutsideClickHandler>
         <div

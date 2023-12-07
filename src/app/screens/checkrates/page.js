@@ -12,6 +12,7 @@ import Screen7 from "@/components/savingCalculatorScreens/screen7/screen7";
 import Screen8 from "@/components/savingCalculatorScreens/screen8/screen8";
 import Screen9 from "@/components/savingCalculatorScreens/screen9/screen9";
 import Screen10 from "@/components/savingCalculatorScreens/screen10/screen10";
+import Navbar from "../navbar/page";
 
 const Screen1 = () => {
   const [inputvalue, setinputvalue] = useState("");

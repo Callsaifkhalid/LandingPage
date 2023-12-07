@@ -5,12 +5,12 @@ const Footer = () => {
     <div className={styles.footer}>
       <div className={styles.images}>
         <div className={styles.logo}>
-          <img src="./logo2.png" alt="" width={250} />
+          <img src="../logo2.png" alt="" width={250} />
         </div>
         <div className={styles.socials}>
-          <img src="./Facebook.svg" />
-          <img src="./Twitter.svg" />
-          <img src="./Instagram.svg" />
+          <img src="../Facebook.svg" />
+          <img src="../Twitter.svg" />
+          <img src="../Instagram.svg" />
         </div>
       </div>
 
