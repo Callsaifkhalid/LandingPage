@@ -1,0 +1,165 @@
+.headerwrapper {
+  position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c6f7ff;
+    width: 100%;
+    z-index: 1000;
+  }
+  .logo {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 0rem;
+    margin-left: 4rem;
+  }
+  
+  .headermenu {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: -5rem;
+  }
+  .menuLinks {
+    text-decoration: none;
+    color: #1a4048;
+    margin-left: 30px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  .menuLinks > span {
+    font-size: 16px;
+  }
+  .menuLinks > span:hover {
+    color: #05c8e8;
+  }
+  .menuicon {
+    display: none;
+  }
+  .loginbutton {
+    font-weight: 800;
+    height: 40px;
+    width: 170px;
+    color: #05c8e8;
+    background: #1a4048;
+    border-radius: 10.33px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 4rem;
+    transition: all ease-in 300ms;
+  }
+  .loginbutton:hover {
+    transform: scale(1.04);
+    box-shadow: 2px 2px 10px white;
+  }
+  
+  @media screen and (max-width: 540px) {
+    .headerwrapper {
+      position: fixed;
+      justify-content: space-between;
+    }
+    .headerwrapper > div > button {
+      display: none;
+    }
+  
+    .logo {
+      margin-right: 0;
+      margin-left: 1.5rem;
+    }
+    .logo > img {
+      width: 100px;
+      margin-left: 0rem;
+    }
+    .menuicon {
+      margin-top: 0.3rem;
+      margin-left: 9rem;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    .menuicon {
+      display: block;
+    }
+    .headermenu {
+      display: none;
+    }
+    .headermenuu {
+      position: absolute;
+      top: 4rem;
+      right: 2rem;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 0.5rem;
+      align-items: center;
+      font-weight: 800;
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      min-height: 200px;
+      width: 200px;
+      justify-content: center;
+      transition: all ease-in-out 300ms;
+    }
+    .menuLinks {
+      margin: 0;
+    }
+    .menuLinks > span {
+      font-size: 16px;
+    }
+    .menuLinks > span:hover {
+      color: #05c8e8;
+    }
+  }
+  @media screen and (min-width: 600px) and (max-width: 920px) {
+    .logo {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      margin-right: 2rem;
+      margin-left: 1rem;
+    }
+    .logo > img {
+      width: 120px;
+      margin-left: 0rem;
+    }
+    .loginbutton {
+      font-weight: 400;
+      height: 40px;
+      width: 130px;
+      color: #05c8e8;
+      background: #1a4048;
+      border-radius: 10.33px;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-right: 0.7rem;
+    }
+    .menuLinks {
+      margin-left: 15px;
+      font-size: 12px;
+    }
+    .menuLinks > span {
+      font-size: 12px;
+    }
+  }
+  @media screen and (min-width: 921px) and (max-width: 1200px) {
+    .logo {
+      margin-left: 2rem;
+    }
+    .loginbutton {
+      margin-right: 2rem;
+    }
+    .menuLinks > span {
+      font-size: 14px;
+    }
+  }
+  
+  @media screen and (min-width: 540px) and (max-width: 590px) {
+    .menuicon {
+      margin-left: 15rem;
+    }
+  }
+  

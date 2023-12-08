@@ -1,12 +1,12 @@
 "use client";
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import OutsideClickHandler from "react-outside-click-handler";
 import { RxCross2 } from "react-icons/rx";
 import { FaPhone } from "react-icons/fa";
 import Link from "next/link";
-import styles from "./blognavbar.module.css";
-const BlogNavbar = () => {
+import styles from "./calculatornavbar.module.css";
+const CalculatorNavbar = () => {
   const [menuOpen, setmenuopen] = useState(false);
   const [click, setClick] = useState(false);
   const getMenuStyles = (menuOpen) => {
@@ -28,18 +28,11 @@ const BlogNavbar = () => {
           className={click ? styles.headermenuu : styles.headermenu}
           style={getMenuStyles(menuOpen)}
         >
-          <Link href={"/#hero"} className={styles.menuLinks} >
+          <Link href={"/#hero"} className={styles.menuLinks}>
             <span>Home</span>
           </Link>
-          <Link href={"/#savings"} className={styles.menuLinks} >
-            <span>Savings Calculator</span>
-          </Link>
-          <Link href={"/#compare"} className={styles.menuLinks} >
-            <span>Compare Lenders</span>
-          </Link>
-         
           <Link
-            href={"/screens/blogs"}
+            href={"/#savings"}
             className={styles.menuLinks}
             style={{
               color: "#05c8e8",
@@ -48,9 +41,16 @@ const BlogNavbar = () => {
               fontWeight: "bolder",
             }}
           >
+            <span>Savings Calculator</span>
+          </Link>
+          <Link href={"/#compare"} className={styles.menuLinks}>
+            <span>Compare Lenders</span>
+          </Link>
+
+          <Link href={"/screens/blogs"} className={styles.menuLinks}>
             <span>Blogs</span>
           </Link>
-          <Link href={"/#contact"} className={styles.menuLinks} >
+          <Link href={"/#contact"} className={styles.menuLinks}>
             <span>Contact Us</span>
           </Link>
         </div>
@@ -78,4 +78,4 @@ const BlogNavbar = () => {
   );
 };
 
-export default BlogNavbar;
+export default CalculatorNavbar;

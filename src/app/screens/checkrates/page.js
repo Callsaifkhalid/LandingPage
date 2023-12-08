@@ -1,8 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import styles from "./checkrates.module.css";
-import Link from "next/link";
-import { FaRegArrowAltCircleLeft } from "react-icons/fa";
 import Screen2 from "@/components/savingCalculatorScreens/screen2/screen2";
 import Screen3 from "@/components/savingCalculatorScreens/screen3/screen3";
 import Screen4 from "@/components/savingCalculatorScreens/screen4/screen4";
@@ -12,7 +10,7 @@ import Screen7 from "@/components/savingCalculatorScreens/screen7/screen7";
 import Screen8 from "@/components/savingCalculatorScreens/screen8/screen8";
 import Screen9 from "@/components/savingCalculatorScreens/screen9/screen9";
 import Screen10 from "@/components/savingCalculatorScreens/screen10/screen10";
-import Navbar from "../navbar/page";
+import CalculatorNavbar from "@/components/calculatorNavbar/calulatorNavbar";
 
 const Screen1 = () => {
   const [inputvalue, setinputvalue] = useState("");
@@ -31,11 +29,7 @@ const Screen1 = () => {
   };
   return (
     <div className={styles.wrapper}>
-      <Link href={"/"}>
-        <FaRegArrowAltCircleLeft
-          style={{ fontSize: "2rem", color: "#1a4048", padding: "2rem" }}
-        />
-      </Link>
+      <CalculatorNavbar/>
       {currentView === 1 && (
         <div className={styles.calculator}>
           <div className={styles.calculatorScreens} >
