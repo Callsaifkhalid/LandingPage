@@ -11,15 +11,17 @@ import Screen8 from "@/components/savingCalculatorScreens/screen8/screen8";
 import Screen9 from "@/components/savingCalculatorScreens/screen9/screen9";
 import Screen10 from "@/components/savingCalculatorScreens/screen10/screen10";
 import CalculatorNavbar from "@/components/calculatorNavbar/calulatorNavbar";
+import { useContext } from "react";
+import { InputContext } from "@/app/context/inputContext";
 
 const Screen1 = () => {
-  const [inputvalue, setinputvalue] = useState("");
+  const { heroInput,heroSectionInput } = useContext(InputContext);
   const [currentView, setCurrentView] = useState(1);
   const totalScreens = 10;
   const progress = (currentView / totalScreens) * 100;
   const handleClick = (e) => {
     e.preventDefault();
-    setinputvalue(e.target.value);
+    heroSectionInput(e.target.value);
   };
   const handleContinueClick = () => {
     setCurrentView(currentView + 1);
@@ -48,9 +50,9 @@ const Screen1 = () => {
                 <span>Loan Amount</span>
                 <input
                   type="text"
-                  maxLength={5}
-                  value={inputvalue}
-                  onChange={(e) => setinputvalue(e.target.value)}
+                  maxLength={6}
+                  value={heroInput}
+                  onChange={(e) => heroSectionInput(e.target.value)}
                 />
               </div>
             </div>
@@ -78,7 +80,7 @@ const Screen1 = () => {
               <button onClick={handleClick} value={30000}>
                 $30,000
               </button>
-              <button onClick={handleClick} value={50000}>
+              <button onClick={handleClick} value={500000}>
                 $50,0000
               </button>
             </div>

@@ -6,7 +6,10 @@ import { IoCheckmark } from "react-icons/io5";
 import CurrencyInput from "react-currency-input-field";
 import { IoMdThumbsUp } from "react-icons/io";
 import Link from "next/link";
+import { useContext } from "react";
+import { InputContext } from "@/app/context/inputContext";
 const Hero = () => {
+  const { heroSectionInput } = useContext(InputContext);
   return (
     <section className={styles.herowrapper} id="hero">
       <div className={styles.flexCenter + " " + styles.herocontainer}>
@@ -30,22 +33,15 @@ const Hero = () => {
           </div>
           <div className={styles.findmyrate}>
             <CurrencyInput
-              id="input-example"
-              name="input-name"
               placeholder="Enter amount ($600 to $200,000)"
               prefix="$"
               decimalsLimit={2}
-              maxLength={5}
+              maxLength={6}
+              onChange={(e)=>heroSectionInput(e.target.value)}
             />
-
-        
-              <Link
-                href={"./screens/checkrates"}
-                className={styles.Link}
-              >
-             Find My Rate{" "}
-              </Link>
-   
+            <Link href={"./screens/checkrates"} className={styles.Link}>
+              Find My Rate{" "}
+            </Link>
           </div>
           <div className={styles.thumbsup}>
             <IoMdThumbsUp />
