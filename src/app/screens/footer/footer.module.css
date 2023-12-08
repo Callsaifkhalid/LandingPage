@@ -4,11 +4,12 @@
   border-top-right-radius: 50px;
 }
 .images {
-  width: 77%;
+  width: 78%;
   display: flex;
   justify-content: space-between;
-  margin-left: 4.5rem;
+  margin-left: 4.2rem;
 }
+
 .images > div > img {
   margin-left: 1rem;
   margin-top: 4rem;

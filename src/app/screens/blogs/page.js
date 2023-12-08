@@ -113,7 +113,7 @@ const Blogs = () => {
                 className={styles.BlogListingCardStyle}
               >
                 <div className={styles.OverImageContainerWrapper}>
-                 <BsArrowUpRightCircle className={item.id == hovered? styles.ArrowStyling1 : styles.ArrowStyling}/>
+                 <BsArrowUpRightCircle className={item.id == hovered? styles.ArrowStyling : styles.ArrowStyling1}/>
                   {item.id == hovered ? (
                     <>
                       <div className={styles.onHoverTitleStyle}>

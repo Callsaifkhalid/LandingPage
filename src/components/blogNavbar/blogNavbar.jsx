@@ -5,6 +5,7 @@ import OutsideClickHandler from "react-outside-click-handler";
 import { RxCross2 } from "react-icons/rx";
 import { FaPhone } from "react-icons/fa";
 import Link from "next/link";
+import { Link as ScrollLink } from "react-scroll";
 import styles from "./blognavbar.module.css";
 const BlogNavbar = () => {
   const [menuOpen, setmenuopen] = useState(false);
@@ -21,16 +22,23 @@ const BlogNavbar = () => {
   return (
     <section className={styles.headerwrapper}>
       <div className={styles.logo}>
-        <img src="../logo.png" alt="logo" />
+        <img src="../Credit.png" alt="logo" width={120} />
       </div>
       <OutsideClickHandler onOutsideClick={() => setmenuopen(false)}>
         <div
           className={click ? styles.headermenuu : styles.headermenu}
           style={getMenuStyles(menuOpen)}
         >
-          <Link href={"/"} className={styles.menuLinks}>
+          <Link href={"/#hero"} className={styles.menuLinks} >
             <span>Home</span>
           </Link>
+          <Link href={"/#savings"} className={styles.menuLinks} >
+            <span>Savings Calculator</span>
+          </Link>
+          <Link href={"/#compare"} className={styles.menuLinks} >
+            <span>Compare Lenders</span>
+          </Link>
+         
           <Link
             href={"/screens/blogs"}
             className={styles.menuLinks}
@@ -42,6 +50,9 @@ const BlogNavbar = () => {
             }}
           >
             <span>Blogs</span>
+          </Link>
+          <Link href={"/#contact"} className={styles.menuLinks} >
+            <span>Contact Us</span>
           </Link>
         </div>
       </OutsideClickHandler>

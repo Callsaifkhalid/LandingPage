@@ -51,7 +51,7 @@ const Navbar = () => {
       <Backtotop />
       <section className={styles.headerwrapper}>
         <div className={styles.logo}>
-          <img src="../logo.png" alt="logo" />
+          <img src="../Credit.png" alt="logo" width={120}/>
         </div>
         <OutsideClickHandler onOutsideClick={() => setmenuopen(false)}>
           <div className={click? styles.headermenuu : styles.headermenu} style={getMenuStyles(menuOpen)}>

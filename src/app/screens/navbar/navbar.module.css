@@ -68,7 +68,7 @@
     margin-left: 1.5rem;
   }
   .logo > img {
-    width: 160px;
+    width: 100px;
     margin-left: 0rem;
   }
   .menuicon {
@@ -85,7 +85,7 @@
   }
   .headermenuu {
     position: absolute;
-    top: 3rem;
+    top: 4rem;
     right: 2rem;
     background: white;
     display: flex;
