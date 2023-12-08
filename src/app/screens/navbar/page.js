@@ -71,7 +71,7 @@ const Navbar = () => {
               }}
               className={styles.menuLinks}
             >
-              <span>Home</span>
+              <span onClick={()=>setmenuopen(false)}>Home</span>
             </ScrollLink>
             <ScrollLink
               activeClass="active"
@@ -90,7 +90,7 @@ const Navbar = () => {
                 fontWeight: currentSection === "saving" ? "bolder" : "",
               }}
             >
-              <span>Savings Calculator</span>
+              <span onClick={()=>setmenuopen(false)}>Savings Calculator</span>
             </ScrollLink>
             <ScrollLink
               activeClass="active"
@@ -109,13 +109,13 @@ const Navbar = () => {
                 fontWeight: currentSection === "compare" ? "bolder" : "",
               }}
             >
-              <span>Compare Landers</span>
+              <span onClick={()=>setmenuopen(false)}>Compare Landers</span>
             </ScrollLink>
             <Link
               href={"/screens/blogs"}
               className={styles.menuLinks}
             >
-              <span>Blogs</span>
+              <span onClick={()=>setmenuopen(false)}>Blogs</span>
             </Link>
             <ScrollLink
               activeClass="active"
@@ -134,7 +134,7 @@ const Navbar = () => {
                 fontWeight: currentSection === "contact" ? "bolder" : "",
               }}
             >
-              <span>Contact Us</span>
+              <span onClick={()=>setmenuopen(false)}>Contact Us</span>
             </ScrollLink>
           </div>
         </OutsideClickHandler>
