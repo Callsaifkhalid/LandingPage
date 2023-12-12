@@ -113,16 +113,20 @@
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 15px;
+  color: #000000 !important;
   transition: all ease-in 100ms;
 }
 .number:hover {
   transform: scale(1.06);
 }
-.number > div {
-  color: #333;
+.number div {
+  
+  color: #000000 !important;
   font-size: 20px;
   font-weight: bolder;
+  text-decoration: none;
 }
+
 .checkingrates {
   display: flex;
   flex-direction: column;

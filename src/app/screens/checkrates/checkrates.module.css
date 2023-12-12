@@ -1,9 +1,7 @@
 .wrapper {
-  width: 100%;
   background-color: #e3fbff;
   
 }
-
 .calculator {
   display: flex;
   justify-content: center;
@@ -117,6 +115,7 @@
   .wrapper{
     width: 100%;
     min-height:930px ;
+   
   }
   .calculatorScreens {
     width: 65%;
