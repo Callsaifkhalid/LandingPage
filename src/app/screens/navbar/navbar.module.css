@@ -17,6 +17,7 @@
 .headermenu {
   margin-top: 1.05rem;
   margin-bottom: 1rem;
+  margin-left: -3rem;
 }
 .menuLinks {
   text-decoration: none;
@@ -155,6 +156,12 @@
   }
   .menuLinks > span {
     font-size: 14px;
+  }
+  .logo > img {
+    width: 200px;
+  }
+  .headermenu{
+    margin-left: -2rem;
   }
 }
 
