@@ -10,7 +10,7 @@ const HowItWorks = () => {
           style={{ marginTop: "-10rem" }}
         />
       </div>
-      <div className={styles.headings} id="about">
+      <div className={styles.headings}>
         <h3>Our process</h3>
         <h1>How Clear Credit AI Works</h1>
       </div>

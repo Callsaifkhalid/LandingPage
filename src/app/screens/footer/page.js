@@ -37,7 +37,7 @@ const Footer = () => {
           </span>
           <span>Careers</span>
           
-            <Link href={"/screens/blogs"} className={styles.Link}>
+            <Link href={"/blogs"} className={styles.Link}>
               Blogs
             </Link>
           
@@ -52,7 +52,7 @@ const Footer = () => {
               offset={10}
               duration={500}
             >
-              FAQ's
+              FAQs
             </ScrollLink>
           </span>
           <span>Terms and Conditions</span>

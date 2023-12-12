@@ -109,10 +109,10 @@ const Navbar = () => {
                 fontWeight: currentSection === "compare" ? "bolder" : "",
               }}
             >
-              <span onClick={()=>setmenuopen(false)}>Compare Landers</span>
+              <span onClick={()=>setmenuopen(false)}>Compare Lenders</span>
             </ScrollLink>
             <Link
-              href={"/screens/blogs"}
+              href={"/blogs"}
               className={styles.menuLinks}
             >
               <span onClick={()=>setmenuopen(false)}>Blogs</span>

@@ -23,9 +23,11 @@
   }
   .ImageContainerStyleBlogDetail {
     width: 90%;
+    display: flex;
+    justify-content: center;
   }
   .ImageStyleBlogDetail {
-    width: 100%;
+    width: 90%;
     margin-top: 5%;
   }
   .BlogDetailUnderImageText {

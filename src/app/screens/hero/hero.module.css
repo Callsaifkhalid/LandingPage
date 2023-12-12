@@ -139,12 +139,88 @@
 }
 .herogirl {
   height: 100%;
-  width: 100%;
+  margin-left: 4rem;
   margin-top: -31.7rem;
 }
-/* Responsivness */
 
-@media screen and (min-width: 600px) and (max-width: 920px) {
+/* Responsivness */
+@media screen and (min-width: 600px) and (max-width: 769px) {
+  .herowrapper {
+    width: 100%;
+  }
+  .imagecontainer {
+    width: 22rem;
+    height: 25.5rem;
+  }
+  .herogirl{
+    margin-left: 2rem;
+  }
+  .heroleft {
+    margin-right: -2rem;
+  }
+  .flexCenter {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  .herogirl {
+    margin-top: -28rem;
+  }
+  .herotitle > h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: #05c8e8;
+  }
+  .herodes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 238px;
+    color: #1a4048;
+    margin-bottom: 10px;
+  }
+  .herodes2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 274px;
+    color: #1a4048;
+  }
+  .herodes > span {
+    font-size: 14px;
+  }
+  .herodes2 > span {
+    font-size: 14px;
+  }
+  .findmyrate {
+    width: 350px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #05c8e8 1px solid;
+  }
+  .findmyrate > input {
+    width: 250px;
+    height: 58px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    padding-left: 0.8rem;
+  }
+  .Link {
+    width: 120px;
+    height: 60px;
+    border: none;
+    outline: none;
+    background-color: #1a4048;
+    color: #05c8e8;
+    font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
+  }
+}
+@media screen and (min-width: 770px) and (max-width: 920px) {
   .herowrapper {
     width: 100%;
   }

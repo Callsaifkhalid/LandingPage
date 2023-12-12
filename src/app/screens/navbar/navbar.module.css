@@ -43,7 +43,6 @@
   background: #1a4048;
   border-radius: 10.33px;
   border: none;
-  cursor: pointer;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -112,7 +111,7 @@
     color: #05c8e8;
   }
 }
-@media screen and (min-width: 600px) and (max-width: 920px) {
+@media screen and (min-width: 770px) and (max-width: 920px) {
   .headermenu{
     margin-left: -3rem;
   }
@@ -145,6 +144,40 @@
   }
   .menuLinks > span {
     font-size: 13px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 769px) {
+  .headermenu{
+    margin-left: -3rem;
+  }
+  .logo {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+    margin-left: 1rem;
+  }
+  .logo > img {
+    width: 150px;
+  }
+  .loginbutton {
+    font-weight: 400;
+    height: 40px;
+    width: 130px;
+    color: #05c8e8;
+    background: #1a4048;
+    border-radius: 10.33px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 0.7rem;
+  }
+  .menuLinks {
+    margin-left: 15px;
+  }
+  .menuLinks > span {
+    font-size: 11px;
   }
 }
 @media screen and (min-width: 921px) and (max-width: 1200px) {

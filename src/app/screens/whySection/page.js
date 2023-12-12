@@ -2,11 +2,11 @@ import React from "react";
 import styles from "./why.module.css";
 const WhySection = () => {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} id="about">
       <img src="./whycircle.png" width={300} />
       <div className={styles.headings}>
         <h3>EASY, SIMPLE, FREE</h3>
-        <h1>Why Choose Clear Credit AI for Your Debt Consolidation Needs?</h1>
+        <h1>Why Choose Clear Credit AI <br/>for Your Debt Consolidation Needs?</h1>
       </div>
       <div className={styles.cards}>
         <div className={styles.card}>

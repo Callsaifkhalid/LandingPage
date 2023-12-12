@@ -28,10 +28,10 @@ const BlogNavbar = () => {
           className={click ? styles.headermenuu : styles.headermenu}
           style={getMenuStyles(menuOpen)}
         >
-          <Link href={"/#hero"} className={styles.menuLinks} >
+          <Link href={"/#hero"} shallow className={styles.menuLinks} >
             <span>Home</span>
           </Link>
-          <Link href={"/#savings"} className={styles.menuLinks} >
+          <Link href={"/#savings"} as={""} className={styles.menuLinks} >
             <span>Savings Calculator</span>
           </Link>
           <Link href={"/#compare"} className={styles.menuLinks} >
@@ -39,7 +39,7 @@ const BlogNavbar = () => {
           </Link>
          
           <Link
-            href={"/screens/blogs"}
+            href={"/blogs"}
             className={styles.menuLinks}
             style={{
               color: "#05c8e8",

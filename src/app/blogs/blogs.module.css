@@ -30,7 +30,7 @@
   }
   .BlogListingCardStyle {
     width: 26%;
-    height: 35vh;
+    height: 36vh;
     margin: 2% 1%;
     background-position: center;
     background-repeat: no-repeat;
@@ -82,27 +82,27 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 38%;
+    width: 35%;
     font-weight: 500;
     color: white;
     font-size: 0.8rem;
   }
   .clockStyle {
     font-size: 1rem;
-    margin-top: 1%;
+    
   }
   .updateContainer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 28%;
+    width: 24%;
     font-weight: 500;
     color: white;
     font-size: 0.8rem;
   }
   .updateStyle {
     width: 18%;
-    margin-top: 1%;
+    
   }
   .onHoverTitleStyle {
     font-size: 1.2rem;

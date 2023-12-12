@@ -47,7 +47,7 @@ const CalculatorNavbar = () => {
             <span>Compare Lenders</span>
           </Link>
 
-          <Link href={"/screens/blogs"} className={styles.menuLinks}>
+          <Link href={"/blogs"} className={styles.menuLinks}>
             <span>Blogs</span>
           </Link>
           <Link href={"/#contact"} className={styles.menuLinks}>

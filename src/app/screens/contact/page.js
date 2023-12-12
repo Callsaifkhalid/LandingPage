@@ -41,7 +41,7 @@ const Contact = () => {
           <img
             src="./contactcircle1.png"
             height={200}
-            style={{ marginTop: "-2.8rem", marginLeft: "-8.3rem" }}
+            style={{ marginTop: "-2.8rem", marginLeft: "-8.8rem" }}
           />
           <div className={styles.findmyrate}>
             <span>
@@ -60,7 +60,7 @@ const Contact = () => {
           <img
             src="./contactcircle2.png"
             height={200}
-            style={{ marginTop: "-2.8rem", marginRight: "-8.3rem" }}
+            style={{ marginTop: "-2.8rem", marginRight: "-8.8rem" }}
           />
         </div>
       </div>

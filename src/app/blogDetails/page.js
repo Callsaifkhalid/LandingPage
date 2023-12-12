@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./blogdetails.module.css";
-import Footer from "../footer/page";
+import Footer from "../screens/footer/page";
 import Image from "next/image";
 import BlogNavbar from "@/components/blogNavbar/blogNavbar";
 export default function BlogDetail() {

@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { CiClock2} from "react-icons/ci";
 import { GrPowerCycle } from "react-icons/gr";
 import { BsArrowUpRightCircle } from "react-icons/bs";
-import Footer from "../footer/page";
+import Footer from "../screens/footer/page";
 import BlogNavbar from "@/components/blogNavbar/blogNavbar";
 
 const Blogs = () => {
@@ -99,7 +99,7 @@ const Blogs = () => {
             return (
               <div
                 onClick={() => {
-                  router.push("/screens/blogsDetails");
+                  router.push("/blogDetails");
                 }}
                 onMouseOver={() => {
                   sethovered((hovered = item.id));
