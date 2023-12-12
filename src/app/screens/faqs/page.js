@@ -10,7 +10,7 @@ const FAQS = () => {
   const [click5, setClick5] = useState(false);
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} id="faqs">
       <div className={styles.howcircle}>
         <img src="./howcircle.png" />
       </div>

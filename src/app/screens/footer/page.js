@@ -1,5 +1,8 @@
+"use client";
 import React from "react";
 import styles from "./footer.module.css";
+import { Link as ScrollLink } from "react-scroll"
+import Link from "next/link";
 const Footer = () => {
   return (
     <div className={styles.footer}>
@@ -20,12 +23,38 @@ const Footer = () => {
           <div>+1-800-123 4567</div>
         </div>
         <div className={styles.content1}>
-          <span>About</span>
+          <span>
+            <ScrollLink
+              activeClass="active"
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={10}
+              duration={500}
+            >
+              About
+            </ScrollLink>
+          </span>
           <span>Careers</span>
-          <span>Blog</span>
+          
+            <Link href={"/screens/blogs"} className={styles.Link}>
+              Blogs
+            </Link>
+          
         </div>
         <div className={styles.content1}>
-          <span>FAQ's</span>
+          <span>
+            <ScrollLink
+              activeClass="active"
+              to="faqs"
+              spy={true}
+              smooth={true}
+              offset={10}
+              duration={500}
+            >
+              FAQ's
+            </ScrollLink>
+          </span>
           <span>Terms and Conditions</span>
           <span>Privacy Policy</span>
         </div>

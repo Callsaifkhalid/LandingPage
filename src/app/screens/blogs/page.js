@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import styles from "./blogs.module.css";
-import Navbar from "../navbar/page";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { CiClock2} from "react-icons/ci";

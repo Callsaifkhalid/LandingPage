@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./how.module.css";
 const HowItWorks = () => {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} >
       <div className={styles.howcircle}>
         <img
           src="./howcircle.png"
@@ -10,7 +10,7 @@ const HowItWorks = () => {
           style={{ marginTop: "-10rem" }}
         />
       </div>
-      <div className={styles.headings}>
+      <div className={styles.headings} id="about">
         <h3>Our process</h3>
         <h1>How Clear Credit AI Works</h1>
       </div>
