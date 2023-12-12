@@ -21,7 +21,7 @@ const BlogNavbar = () => {
   return (
     <section className={styles.headerwrapper}>
       <div className={styles.logo}>
-        <img src="../Credit.png" alt="logo" width={120} />
+        <img src="../logo.svg" alt="logo" width={250} />
       </div>
       <OutsideClickHandler onOutsideClick={() => setmenuopen(false)}>
         <div

@@ -26,9 +26,11 @@ input::-webkit-inner-spin-button {
     outline: none;
     border: none;
   }
-@media screen and (max-width:540px){
+@media screen and (max-width:420px){
     .customSelect .select__control{
         width: 155px;
     }
-    
+    .main{
+        flex-direction: row;
+    }
 }
