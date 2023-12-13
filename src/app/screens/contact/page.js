@@ -51,7 +51,7 @@ const Contact = () => {
           </div>
           <div className={styles.checkingrates}>
             <button>
-              <Link href={"./screens/checkrates"} className={styles.Link}>
+              <Link href={"/checkrates"} className={styles.Link}>
                 Find My Rate{" "}
               </Link>
             </button>

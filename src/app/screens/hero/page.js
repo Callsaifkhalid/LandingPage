@@ -39,7 +39,7 @@ const Hero = () => {
               maxLength={6}
               onChange={(e)=>heroSectionInput(e.target.value)}
             />
-            <Link href={"./screens/checkrates"} className={styles.Link}>
+            <Link href={"/checkrates"} className={styles.Link}>
               Find My Rate{" "}
             </Link>
           </div>

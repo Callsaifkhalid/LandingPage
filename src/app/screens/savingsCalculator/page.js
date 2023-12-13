@@ -262,7 +262,7 @@ const SavingsCalculator = () => {
           <div className={styles.footer}>
             <button>
               <Link
-                href={"./screens/checkrates"}
+                href={"/checkrates"}
                 style={{ color: "white", textDecoration: "none" }}
               >
                 Check Rates
