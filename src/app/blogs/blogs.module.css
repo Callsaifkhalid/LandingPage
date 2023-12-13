@@ -108,12 +108,12 @@
     font-size: 1.2rem;
     color: white;
     font-weight: 500;
-    
-    
+    position: absolute;
+    top: 15px;
   }
   .onHoverDescription {
     color: white;
-    margin-top: 5%;
+    margin-top: 17%;
     font-size: 0.95rem;
   }
   
@@ -177,5 +177,21 @@
   @media  screen and (min-width: 800px) and (max-width: 1200px) {
     .BlogListingCardStyle {
         width: 35%;
+    }
+  }
+  @media  screen and (min-width: 1201px) and (max-width: 1298px) {
+    .BlogListingCardStyle {
+        width: 26%;
+    }
+    .onHoverTitleStyle {
+      font-size: 1.2rem;
+      color: white;
+      font-weight: 500;
+      margin-top: 10%;
+    }
+    .onHoverDescription {
+      color: white;
+      margin-top: 35%;
+      font-size: 0.8rem;
     }
   }
