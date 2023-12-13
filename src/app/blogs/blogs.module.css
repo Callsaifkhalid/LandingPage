@@ -30,7 +30,7 @@
   }
   .BlogListingCardStyle {
     width: 26%;
-    height: 40vh;
+    height: 36vh;
     margin: 2% 1%;
     background-position: center;
     background-repeat: no-repeat;
@@ -182,6 +182,7 @@
   @media  screen and (min-width: 1201px) and (max-width: 1298px) {
     .BlogListingCardStyle {
         width: 26%;
+        height: 40vh;
     }
     .onHoverTitleStyle {
       font-size: 1.2rem;
@@ -191,7 +192,7 @@
     }
     .onHoverDescription {
       color: white;
-      margin-top: 35%;
+      margin-top: 33%;
       font-size: 0.8rem;
     }
   }
