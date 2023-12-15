@@ -234,6 +234,10 @@
   }
   .herogirl {
     margin-top: -28rem;
+    margin-left: 1.7rem;
+  }
+  .herocircle{
+    margin-left: 5rem;
   }
   .herotitle > h2 {
     font-weight: 700;
@@ -374,6 +378,12 @@
   .imagecontainer {
     width: 25rem;
     height: 35rem;
+  }
+  .herocircle{
+    margin-left: 5rem;
+  }
+  .herogirl{
+    margin-left: 1.5rem;
   }
 }
 @media screen and (min-width: 540px) and (max-width: 590px) {

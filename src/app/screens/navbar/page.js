@@ -1,5 +1,5 @@
 "use client";
-import { Link as ScrollLink} from "react-scroll/modules";
+import { Link as ScrollLink } from "react-scroll/modules";
 import React, { useEffect, useState } from "react";
 import styles from "./navbar.module.css";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -29,9 +29,9 @@ const Navbar = () => {
 
       if (scrollPosition < 300) {
         setCurrentSection("home");
-      } else if (scrollPosition > 2800 && scrollPosition < 4200) {
+      } else if (scrollPosition > 1500 && scrollPosition < 3400) {
         setCurrentSection("saving");
-      } else if (scrollPosition > 4300 && scrollPosition < 7000) {
+      } else if (scrollPosition > 400 && scrollPosition < 1500) {
         setCurrentSection("compare");
       } else if (scrollPosition > 7800) {
         setCurrentSection("contact");
@@ -51,10 +51,13 @@ const Navbar = () => {
       <Backtotop />
       <section className={styles.headerwrapper}>
         <div className={styles.logo}>
-          <img src="../logo.svg" alt="logo" width={250}/>
+          <img src="../logo.svg" alt="logo" width={250} />
         </div>
         <OutsideClickHandler onOutsideClick={() => setmenuopen(false)}>
-          <div className={click? styles.headermenuu : styles.headermenu} style={getMenuStyles(menuOpen)}>
+          <div
+            className={click ? styles.headermenuu : styles.headermenu}
+            style={getMenuStyles(menuOpen)}
+          >
             <ScrollLink
               activeClass="active"
               to="hero"
@@ -71,26 +74,7 @@ const Navbar = () => {
               }}
               className={styles.menuLinks}
             >
-              <span onClick={()=>setmenuopen(false)}>Home</span>
-            </ScrollLink>
-            <ScrollLink
-              activeClass="active"
-              to="savings"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              className={styles.menuLinks}
-              style={{
-                color: currentSection === "saving" ? "#05c8e8" : "#1a4048",
-                textDecoration:
-                  currentSection === "saving" ? "underline" : "none",
-                textUnderlineOffset:
-                  currentSection === "saving" ? "5px" : "none",
-                fontWeight: currentSection === "saving" ? "bolder" : "",
-              }}
-            >
-              <span onClick={()=>setmenuopen(false)}>Savings Calculator</span>
+              <span onClick={() => setmenuopen(false)}>Home</span>
             </ScrollLink>
             <ScrollLink
               activeClass="active"
@@ -109,13 +93,30 @@ const Navbar = () => {
                 fontWeight: currentSection === "compare" ? "bolder" : "",
               }}
             >
-              <span onClick={()=>setmenuopen(false)}>Compare Lenders</span>
+              <span onClick={() => setmenuopen(false)}>Compare Lenders</span>
             </ScrollLink>
-            <Link
-              href={"/blogs"}
+            <ScrollLink
+              activeClass="active"
+              to="savings"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
               className={styles.menuLinks}
+              style={{
+                color: currentSection === "saving" ? "#05c8e8" : "#1a4048",
+                textDecoration:
+                  currentSection === "saving" ? "underline" : "none",
+                textUnderlineOffset:
+                  currentSection === "saving" ? "5px" : "none",
+                fontWeight: currentSection === "saving" ? "bolder" : "",
+              }}
             >
-              <span onClick={()=>setmenuopen(false)}>Blogs</span>
+              <span onClick={() => setmenuopen(false)}>Savings Calculator</span>
+            </ScrollLink>
+
+            <Link href={"/blogs"} className={styles.menuLinks}>
+              <span onClick={() => setmenuopen(false)}>Blogs</span>
             </Link>
             <ScrollLink
               activeClass="active"
@@ -134,7 +135,7 @@ const Navbar = () => {
                 fontWeight: currentSection === "contact" ? "bolder" : "",
               }}
             >
-              <span onClick={()=>setmenuopen(false)}>Contact Us</span>
+              <span onClick={() => setmenuopen(false)}>Contact Us</span>
             </ScrollLink>
           </div>
         </OutsideClickHandler>

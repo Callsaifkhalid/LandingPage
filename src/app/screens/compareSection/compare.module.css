@@ -1,5 +1,5 @@
 .wrapper {
-  background-color: #e3fbff;
+  
 }
 .howcontainer {
   justify-content: space-around;
@@ -11,7 +11,7 @@
   justify-content: center;
   align-items: start;
   margin-left: 16rem;
-  margin-top: 10rem;
+  margin-top: -39rem;
 }
 .headings > h3 {
   color: #05c8e8;
@@ -42,6 +42,7 @@
   margin: 30px auto 30px auto;
   padding: 3rem 0 3rem 0;
   border-radius: 50px;
+  position: relative;
 }
 .boxes {
   display: flex;
@@ -172,9 +173,12 @@
   .wrapper {
     width: 100%;
   }
+  .wrapper> img{
+    width: 200px;
+  }
   .headings {
     margin-left: 2rem;
-    margin-top: 0rem;
+    margin-top: -25rem;
     padding: 2rem;
   }
   .headings > h3 {
@@ -190,6 +194,7 @@
   }
   .boxesborder {
     width: 95%;
+    margin: 30px auto 80px auto;
   }
   .box1 {
     width: 95%;
@@ -218,9 +223,12 @@
   .wrapper {
     width: 100%;
   }
+  .wrapper> img{
+    width: 200px;
+  }
   .headings {
     margin-left: 2rem;
-    margin-top: 0rem;
+    margin-top: -25rem;
     padding: 2rem;
   }
   .headings > h3 {
@@ -236,6 +244,7 @@
   }
   .boxesborder {
     width: 92%;
+    margin: 30px auto 80px auto;
   }
   .box1 {
     width: 90%;
@@ -258,10 +267,12 @@
 }
 
 @media screen and (max-width: 540px) {
-  
+  .wrapper> img{
+    display: none;
+  }
   .headings {
     margin-left: 0rem;
-    margin-top: 5rem;
+    margin-top: 1rem;
     padding: 2rem;
   }
   .headings > h3 {
@@ -283,7 +294,7 @@
     min-height: 700px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    margin: 30px auto 30px auto;
+    margin: 30px auto 80px auto;
     padding: 3rem 0 3rem 0;
     border-radius: 50px;
   }
@@ -348,7 +359,7 @@
 @media  screen and (min-width: 921px) and (max-width: 1200px) {
   .headings {
     margin-left: 11rem;
-    margin-top: 0rem;
+    margin-top: -50rem;
     padding: 2rem;
   }
   .headings > h3 {
@@ -364,6 +375,7 @@
   }
   .boxesborder {
     width: 90%;
+    margin: 30px auto 70px auto;
   }
   .box1 {
     width: 90%;

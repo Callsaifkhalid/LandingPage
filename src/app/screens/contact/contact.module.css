@@ -192,14 +192,14 @@
     display: none;
   }
   .findmyrate > span {
-    margin-left: -5rem;
+    margin-left: -1rem;
     font-size: 2rem;
   }
   .findmyrate > span > span {
-    margin-left: -5rem;
+    margin-left: -1rem;
   }
   .checkingrates {
-    margin-right: -5rem;
+    margin-right: -1rem;
   }
   .checkingrates > span {
     color: #1a4048;

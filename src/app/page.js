@@ -14,10 +14,10 @@ export default function Home() {
     <main >
       <Navbar />
       <Hero />
+      <CompareSection />
+      <SavingsCalculator />
       <WhySection />
       <HowItWorks />
-      <SavingsCalculator />
-      <CompareSection />
       <TourGoals />
       <FAQS/>
       <Contact />

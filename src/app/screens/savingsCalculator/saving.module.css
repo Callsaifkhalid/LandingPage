@@ -1,6 +1,7 @@
 .wrapper {
-  background-color: #fff;
+  background-color: #e3fbff;
 }
+
 .headings {
   display: flex;
   flex-direction: column;
@@ -32,6 +33,7 @@
   margin-bottom: 3rem;
   border-radius: 30px;
   margin-top: 3rem;
+  margin-bottom: 10%;
   
 }
 .calculatorheading {
@@ -255,7 +257,7 @@
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     padding: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 7rem;
     border-radius: 30px;
     margin-top: 3rem;
   }
@@ -292,7 +294,7 @@
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     padding: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 7rem;
     border-radius: 30px;
     margin-top: 3rem;
   }
@@ -324,7 +326,7 @@
   .calculatorstuff {
     max-width: 300px;
     padding: 1rem;
-    margin-bottom: 0;
+    margin-bottom: 5rem;
   }
   .calculatorheading > h3 {
     font-size: 17px;

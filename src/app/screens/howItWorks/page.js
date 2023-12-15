@@ -90,7 +90,6 @@ const HowItWorks = () => {
           </div>
         </div>
       </div>
-      <img src="./whycircle.png" />
     </div>
   );
 };

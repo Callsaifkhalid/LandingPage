@@ -12,6 +12,7 @@ const CompareSection = () => {
 
   return (
     <div className={styles.wrapper} id="compare">
+      <img src="./whycircle.png" />
       <div className={styles.headings}>
         <h3>Top Lenders</h3>
         <h1>
@@ -391,25 +392,7 @@ const CompareSection = () => {
           )}
         </div>
       </div>
-      <div className={styles.divs}>
-        <span>rgrg</span>{" "}
-      </div>
-      <div className={styles.divs}>
-        {" "}
-        <span>rgrg</span>
-      </div>
-      <div className={styles.divs}>
-        {" "}
-        <span>rgrgrg</span>
-      </div>
-      <div className={styles.divs}>
-        {" "}
-        <span>rgrgrg</span>
-      </div>
-      <div className={styles.divs}>
-        {" "}
-        <span>rgrgrg</span>
-      </div>
+      {/* <iframe id="myIframe" src="https://csl.monevo.us/r/f40cdf52018a84d9538d9eb59698377e"></iframe> */}
     </div>
   );
 };
