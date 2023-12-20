@@ -1,0 +1,38 @@
+.wrapper {
+  height: 200px;
+  margin-bottom: 3%;
+}
+.wrapper h3 {
+  color: #1a4048;
+  display: flex;
+  justify-content: center;
+  margin: 7% 0 3% 0%;
+}
+.div {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.swiper {
+  background-color: #f7f7f7;
+  padding: 20px 20px 10px 20px;
+}
+
+.sliderbutton {
+  font-size: 1.3rem;
+  width: 40px;
+  height: 40px;
+  color: #05c8e8;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid #8b8b8b;
+  cursor: pointer;
+}
+.button {
+  display: flex;
+  row-gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  
+}

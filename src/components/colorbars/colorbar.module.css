@@ -1,0 +1,25 @@
+.colorbarscontainer {
+  width: 80%;
+  background-color: #d8d8d8;
+  height: 8px;
+  z-index: -1;
+  border-radius: 100px;
+  margin-left: 5rem;
+  margin-top: -0.7rem;
+}
+
+.colorbar {
+  background: #1a4048;
+  height: 8px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 100%;
+  transition: width 300ms ease-in-out;
+}
+@media screen and (max-width: 540px) {
+  .colorbarscontainer {
+    margin-left: 4rem;
+  }
+}

@@ -24,6 +24,8 @@
     "react-outside-click-handler": "^1.3.0",
     "react-scroll": "^1.9.0",
     "react-select": "^5.8.0",
+    "react-swiper": "^0.1.5",
+    "swiper": "^11.0.5",
     "vercel": "^32.5.6"
   }
 }
