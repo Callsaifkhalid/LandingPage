@@ -1,61 +1,321 @@
-.wrapper{
+.BlogDetailMainContainer {
   display: flex;
   flex-direction: column;
-  gap: 15%;
+  align-items: center;
+  padding: 0 20px;
+  padding-bottom: 10%;
 }
-.BlogDetailMainContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 20px;
-    padding-bottom: 10%;
+.blogDetailAndSideItemsContainer {
+  display: flex;
+  width: 95vw;
+  justify-content: space-evenly;
+  margin-top: 10%;
+}
+
+.BlogDetailCardContainer {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  align-items: center;
+  justify-content: center;
+}
+.BlogDetailContainerStyle {
+  width: 90%;
+  margin-left: 20%;
+
+}
+.HeadingStyleBlogDetail {
+  font-weight: 500;
+  font-size: 2.5rem;
+  color: #05c8e8;
+  max-width: 100%;
+  text-align: left;
+  margin-top: 10%;
+}
+.publishDateStyle {
+  margin: 3% 0 0.5% 0;
+  font-size: 0.8rem;
+}
+.socialIconContainer {
+  display: flex;
+  width: 30%;
+  margin-top: 0.5%;
+}
+.socialLogoStyle {
+  height: 9%;
+  width: 9%;
+  cursor: pointer;
+  margin: 0 2px 0 0;
+}
+.blogDetailDiscriptionAndImageContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+}
+.blogDetailDescriptionStyle {
+  width: 100%;
+  margin-top: 2%;
+}
+.readMoreButton {
+  font-weight: 500;
+  color: #05c8e8;
+  cursor: pointer;
+  margin-top: 3%;
+}
+.blogImageStyle {
+  width: 100%;
+  height: 100%;
+  margin-left: -6%;
+}
+.blogDetailTopicAndButtonContainer {
+  display: flex;
+}
+.creditCardDebtButton {
+  color: #05c8e8;
+  margin: 0 1%;
+  cursor: pointer;
+}
+.sideMenuMainContainer {
+  width: 15vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2%;
+}
+.BlogTopicHeadingStye {
+  font-size: 2rem;
+  color: black;
+  font-weight: 700;
+  /* margin-top: -5%; */
+}
+
+.blogTopicTextStyle {
+  color: #05c8e8;
+  margin-top: 8%;
+  width: 12vw;
+  cursor: pointer;
+}
+.blogTopicTextStyle:hover {
+  text-decoration: underline;
+}
+.testImageStyle {
+  margin-top: 12%;
+  cursor: pointer;
+  margin-left: 23%;
+}
+
+.blogDetailHeadingOne {
+  font-size: 1.5rem;
+  margin: 5% 0;
+}
+
+.relatedPostStyle {
+  color: black;
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 7% 0 0 0;
+}
+
+.blogViewRectangleContainerStyle {
+  position: relative;
+  border-radius: 21.81px;
+  background-color: #f8f8f8;
+  width: 46%;
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  box-sizing: border-box;
+  gap: 1.73rem;
+  text-align: left;
+  font-size: 1.6rem;
+  color: #000;
+  font-family: Inter;
+  margin-top: 15px;
+  transition: transform 0.2s;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.blogViewRectangleContainerStyle:hover {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+.blogViewRectangleImageImageStyle {
+  width: 35%;
+  height: 100%;
+}
+
+.blogViewRectangleTextContainerSTyle {
+  position: relative;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #000;
+  text-align: left;
+  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 60%;
+}
+.blogViewDescriptionInsideTextCOntainer {
+  position: relative;
+  font-size: 0.96rem;
+  font-family: Inter;
+  color: #8b8b8b;
+  text-align: left;
+  display: inline-block;
+  width: 16rem;
+  margin: 10px 0 10px 0;
+}
+.blogViewLearnMoreStyle {
+  position: relative;
+  font-size: 1.26rem;
+  text-decoration: underline;
+  font-family: "Inter";
+  color: #05c8e8;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.2s;
+  width: 50%;
+}
+.blogViewLearnMoreStyle:hover {
+  text-shadow: 0 0 15px rgba(48, 214, 99, 0.6);
+  transform: scale(1.01);
+}
+.arrMapHolderContainerStyle {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  align-self: center;
+  margin-top: 1%;
+}
+
+@media screen and (min-width: 800px) and (max-width: 920px) {
+  .logoContainerIndex {
+    padding: 7px 17px 7px 40px;
   }
-  .mobileNavBarWrapper {
-    display: none;
+  .getTsartedAndNumberContainer {
+    width: 42%;
+    justify-content: space-between;
   }
-  .HeadingStyleBlogDetail {
-    font-weight: 500;
-    font-size: 2.8rem;
-    color: #05c8e8;
-    max-width: 80%;
+  .TopNumStyle {
+    font-size: 0.7em;
+    width: 60%;
+  }
+
+  .getStartedButton {
+    font-size: 0.7rem;
+    margin-right: 0;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 921px) and (max-width: 1100px) {
+  .logoContainerIndex {
+    padding: 7px 58px;
+  }
+  .getTsartedAndNumberContainer {
+    width: 48%;
+    justify-content: space-between;
+  }
+  .TopNumStyle {
+    font-size: 0.8em;
+    width: 48%;
+  }
+
+  .getStartedButton {
+    font-size: 0.8rem;
+    width: 43%;
+  }
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1250px) {
+  .logoContainerIndex {
+    padding: 7px 70px;
+  }
+  .getTsartedAndNumberContainer {
+    width: 35%;
+    justify-content: space-between;
+  }
+  .TopNumStyle {
+    font-size: 0.9em;
+    width: 50%;
+  }
+
+  .getStartedButton {
+    padding: 7px 13px 7px 13px;
+    font-size: 0.9rem;
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1250px) and (max-width: 1400px) {
+  /* .logoContainerIndex {
+    padding: 7px 40px;
+  } */
+  .getTsartedAndNumberContainer {
+    width: 28%;
+    justify-content: space-between;
+  }
+  .TopNumStyle {
+    font-size: 0.9rem;
+    width: 46%;
     text-align: center;
-    margin-top: 10%;
   }
-  .ImageContainerStyleBlogDetail {
-    width: 90%;
-    display: flex;
-    justify-content: center;
+
+  .getStartedButton {
+    padding: 7px 13px 7px 13px;
+    font-size: 0.9rem;
+    width: 35%;
+    text-align: center;
   }
-  .ImageStyleBlogDetail {
-    width: 90%;
-    margin-top: 5%;
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1750px) {
+  .getTsartedAndNumberContainer {
+    width: 30%;
+    justify-content: space-between;
   }
-  .BlogDetailUnderImageText {
-    width: 80%;
-    margin-top: 3%;
+  .TopNumStyle {
+    font-size: 1rem;
+    width: 50%;
   }
-  
-  @media screen and (max-width: 787px) {
-    .wrapper{
-      gap: 5%;
-    }
-    .HeadingStyleBlogDetail {
-      font-size: 1.5rem;
-      max-width: 100%;
-      margin-top: 40%;
-    }
-    .ImageContainerStyleBlogDetail {
-      width: 100%;
-    }
-    .ImageStyleBlogDetail {
-      width: 100%;
-      margin-top: 10%;
-      height: 70%;
-    }
-    .BlogDetailUnderImageText {
-      width: 100%;
-      margin-top: 5%;
-      text-align: center;
-    }
+  .getStartedButton {
+    padding: 7px 13px 7px 13px;
+    font-size: 1rem;
+    width: 37%;
   }
-  
+}
+
+@media screen and (min-width: 1751px) and (max-width: 1920px) {
+  .getTsartedAndNumberContainer {
+    width: 25%;
+    justify-content: space-between;
+  }
+  .TopNumStyle {
+    font-size: 1rem;
+    width: 47%;
+  }
+
+  .getStartedButton {
+    padding: 7px 13px 7px 13px;
+    font-size: 1rem;
+    width: 37%;
+  }
+}
+
+@media screen and (min-width: 1920px) and (max-width: 2050px) {
+  .getTsartedAndNumberContainer {
+    width: 20%;
+    justify-content: space-between;
+  }
+  .TopNumStyle {
+    font-size: 1rem;
+    width: 45%;
+  }
+  .getStartedButton {
+    padding: 7px 13px 7px 13px;
+    font-size: 1rem;
+    width: 37%;
+  }
+}

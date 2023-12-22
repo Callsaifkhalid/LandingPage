@@ -1,195 +1,256 @@
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 15%;
-}
 .BlogListMainContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px 0px;
+  padding: 0px 20px;
+  margin-bottom: 5%;
 }
-
-.mobileNavBarWrapper {
-  display: none;
+.BlogContainerStyle {
+  width: 90%;
+  margin-left: 35%;
+  margin-top: 10%;
 }
 .HeadingStyleBlogList {
-  font-weight: 900;
-  font-size: 3rem;
-  color: #1a4048;
-  max-width: 80%;
-  text-align: center;
+  font-weight: 500;
+  font-size: 2.5rem;
+  color: #05c8e8;
+  max-width: 100%;
+  text-align: left;
   margin-top: 10%;
+  cursor: pointer;
+  display: inline;
+}
+.HeadingStyleBlogList:hover {
+  text-decoration: underline;
 }
 .BlogCardContainer {
   display: flex;
-  flex-wrap: wrap;
-  margin-top: 3%;
-  justify-content: center;
-  margin-bottom: 10%;
-}
-.BlogListingCardStyle {
-  width: 26%;
-  height: 36vh;
-  margin: 2% 1%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 20px;
-}
-.OverImageContainerWrapper {
-  position: relative;
-  display: flex;
   flex-direction: column;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
-  padding: 10px 20px;
-  border-radius: 20px;
+  width: 55vw;
+  align-items: center;
+  justify-content: center;
 }
-.OverImageContainerWrapper:hover {
-  background: rgba(48, 203, 214, 0.8);
+.navBarWrapperBlogList {
+  display: none;
 }
-.ArrowStyling {
-  font-size: 2rem;
-  color: #05c8e8;
-  background-color: white;
-  align-self: flex-end;
-  border-radius: 100%;
+.publishDateStyle {
+  margin: 3% 0 2% 0;
+  font-size: 0.8rem;
 }
-.ArrowStyling1 {
-  font-size: 2rem;
-  color: white;
-  background-color: #05c8e8;
-  align-self: flex-end;
-  border-radius: 100%;
+.socialIconContainer {
+  display: flex;
+  width: 30%;
+  margin-top: 0.5%;
 }
-.BlogCardsTitleStyle {
-  color: white;
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin-top: 20%;
+.socialLogoStyle {
+  height: 9%;
+  width: 9%;
+  cursor: pointer;
+  margin: 0 2px 0 0;
 }
-.TitleAndBottomContainer {
-  position: absolute;
+.blogDiscriptionAndImageContainer {
   display: flex;
   justify-content: space-between;
-  padding: 1% 5%;
-  bottom: 7px;
-  width: 80%;
-  left: 0;
 }
-.DtateTimeContainer {
+.blogImageStyle {
+  width: 50%;
+  height: 50%;
+}
+.blogDescriptionStyle {
+  width: 45%;
+  margin-top: 2%;
+}
+.readMoreButton {
+  font-weight: 500;
+  color: #05c8e8;
+  cursor: pointer;
+  margin-top: 3%;
+}
+.readMoreButton:hover{
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.blogTopicAndButtonContainer {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-width: 35%;
-  font-weight: 500;
-  color: white;
-  font-size: 0.8rem;
 }
-.clockStyle {
-  font-size: 1rem;
+.creditCardDebtButton {
+  color: #05c8e8;
+  margin: 0 1%;
+  cursor: pointer;
 }
-.updateContainer {
+.creditCardDebtButton:hover{
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.sideMenuMainContainer {
+  /* margin-top: 7%; */
+  width: 15vw;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
-  min-width: 24%;
-  font-weight: 500;
-  color: white;
-  font-size: 0.8rem;
 }
-.updateStyle {
-  width: 18%;
+.arrayAndSideItemsContainer {
+  display: flex;
+  width: 95vw;
+  justify-content: space-evenly;
+  margin-top: -3%;
 }
-.onHoverTitleStyle {
-  font-size: 1.18rem;
-  color: white;
-  font-weight: 500;
-  position: absolute;
-  top: 15px;
+.BlogHeadingStyle {
+  font-size: 2.5rem;
+  color: black;
+  font-weight: 700;
+  margin-top: 10%;
+  text-align: left;
+  margin-left: -3%;
+  width: 50vw;
 }
-.onHoverDescription {
-  color: white;
-  margin-top: 17%;
-  font-size: 0.95rem;
+.BlogTopicHeadingStye {
+  font-size: 2rem;
+  color: black;
+  font-weight: 700;
+  margin-top: -5%;
+}
+.blogTopicTextStyle {
+  color: #05c8e8;
+  margin-top: 8%;
+  width: 12vw;
+  cursor: pointer;
+}
+.blogTopicTextStyle:hover {
+  text-decoration: underline;
+}
+.testImageStyle {
+  margin-top: 12%;
+  cursor: pointer;
+  margin-left: 20%;
 }
 
-@media screen and (max-width: 787px) {
-  .wrapper {
-    gap: 5%;
+@media screen and (min-width: 800px) and (max-width: 920px) {
+  .logoContainerIndex {
+    padding: 7px 17px 7px 40px;
   }
-  .BlogListMainContainer {
-    padding: 20% 5%;
+  .getTsartedAndNumberContainer {
+    width: 42%;
+    justify-content: space-between;
   }
-  .HeadingStyleBlogList {
-    font-size: 1.5rem;
-    max-width: 100%;
-    margin-top: 3rem;
+  .TopNumStyle {
+    font-size: 0.7em;
+    width: 60%;
   }
-  .BlogCardContainer {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    width: 80vw;
-  }
-  .BlogListingCardStyle {
-    width: 100%;
-    margin: 5% 0;
-  }
-  .OverImageContainerWrapper {
-    padding: 2% 4%;
-  }
-  .ArrowStyling {
-  }
-  .BlogCardsTitleStyle {
-    font-size: 1.1rem;
-    margin-top: 30%;
-  }
-  .TitleAndBottomContainer {
-    width: 75%;
-  }
-  .DtateTimeContainer {
-    width: 52%;
-  }
-  .clockStyle {
-    margin-top: 0;
-  }
-  .updateContainer {
-    width: 36%;
-  }
-  .updateStyle {
-    margin-top: 0;
-  }
-  .onHoverTitleStyle {
-    font-size: 1.15rem;
-    width: 74%;
-  }
-  .onHoverDescription {
-    margin-top: 25%;
-    font-size: 0.95rem;
+
+  .getStartedButton {
+    font-size: 0.7rem;
+    margin-right: 0;
+    width: 50%;
   }
 }
-@media screen and (min-width: 800px) and (max-width: 1200px) {
-  .BlogListingCardStyle {
-    width: 35%;
+
+@media screen and (min-width: 921px) and (max-width: 1100px) {
+  .logoContainerIndex {
+    padding: 7px 58px;
   }
-}
-@media screen and (min-width: 1201px) and (max-width: 1298px) {
-  .BlogListingCardStyle {
-    width: 26%;
-    height: 40vh;
+  .getTsartedAndNumberContainer {
+    width: 48%;
+    justify-content: space-between;
   }
-  .onHoverTitleStyle {
-    font-size: 1.5rem;
-    color: white;
-    font-weight: 500;
-    position: absolute;
-    top: 15px;
+  .TopNumStyle {
+    font-size: 0.8em;
+    width: 48%;
   }
-  .onHoverDescription {
-    color: white;
-    margin-top: 33%;
+
+  .getStartedButton {
     font-size: 0.8rem;
+    width: 43%;
+  }
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1250px) {
+  .logoContainerIndex {
+    padding: 7px 70px;
+  }
+  .getTsartedAndNumberContainer {
+    width: 35%;
+    justify-content: space-between;
+  }
+  .TopNumStyle {
+    font-size: 0.9em;
+    width: 50%;
+  }
+
+  .getStartedButton {
+    padding: 7px 13px 7px 13px;
+    font-size: 0.9rem;
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1250px) and (max-width: 1400px) {
+  /* .logoContainerIndex {
+    padding: 7px 40px;
+  } */
+  .getTsartedAndNumberContainer {
+    width: 28%;
+    justify-content: space-between;
+  }
+  .TopNumStyle {
+    font-size: 0.9rem;
+    width: 46%;
+    text-align: center;
+  }
+
+  .getStartedButton {
+    padding: 7px 13px 7px 13px;
+    font-size: 0.9rem;
+    width: 35%;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1750px) {
+  .getTsartedAndNumberContainer {
+    width: 30%;
+    justify-content: space-between;
+  }
+  .TopNumStyle {
+    font-size: 1rem;
+    width: 50%;
+  }
+  .getStartedButton {
+    padding: 7px 13px 7px 13px;
+    font-size: 1rem;
+    width: 37%;
+  }
+}
+
+@media screen and (min-width: 1751px) and (max-width: 1920px) {
+  .getTsartedAndNumberContainer {
+    width: 25%;
+    justify-content: space-between;
+  }
+  .TopNumStyle {
+    font-size: 1rem;
+    width: 47%;
+  }
+
+  .getStartedButton {
+    padding: 7px 13px 7px 13px;
+    font-size: 1rem;
+    width: 37%;
+  }
+}
+
+@media screen and (min-width: 1920px) and (max-width: 2050px) {
+  .getTsartedAndNumberContainer {
+    width: 20%;
+    justify-content: space-between;
+  }
+  .TopNumStyle {
+    font-size: 1rem;
+    width: 45%;
+  }
+  .getStartedButton {
+    padding: 7px 13px 7px 13px;
+    font-size: 1rem;
+    width: 37%;
   }
 }
