@@ -1,6 +1,5 @@
 .wrapper {
   background-color: #e3fbff;
-  
 }
 .calculator {
   display: flex;
@@ -29,10 +28,32 @@
   font-size: 15px;
   margin-left: 7rem;
 }
+.errormsg{
+  margin-left: -29%;
+  margin-top: -2%;
+}
+.errormsg span {
+  font-size: 13px;
+  color: red;
+}
+.errormsg2{
+  margin-left: -12%;
+  margin-top: -2%;
+}
+.errormsg2 span {
+  font-size: 13px;
+  color: red;
+}
 .inputfield {
   height: 70px;
-  width: 270px;
+  width: 305px;
   border: 1px solid #05c8e8;
+  display: flex;
+}
+.inputfieldfocused {
+  height: 70px;
+  width: 305px;
+  border: 3px solid #05c8e8;
   display: flex;
 }
 .dollarsignbox {
@@ -82,6 +103,7 @@
   padding: 7px;
   width: 100px;
   font-size: 17px;
+  font-weight: 550;
 }
 .pricebuttons > button:hover {
   cursor: pointer;
@@ -96,6 +118,7 @@
   padding: 7px;
   width: 100px;
   font-size: 17px;
+  font-weight: 550;
 }
 .pricebuttons2 > button:hover {
   cursor: pointer;
@@ -112,11 +135,10 @@
   font-weight: 700;
   cursor: pointer;
 }
-@media (max-width: 540px) {
-  .wrapper{
+@media (max-width: 600px) {
+  .wrapper {
     width: 100%;
-    min-height:930px ;
-   
+    min-height: 930px;
   }
   .calculatorScreens {
     width: 65%;
@@ -144,7 +166,6 @@
   .pricebuttons {
     width: 320px;
     display: flex;
-    
   }
   .pricebuttons > button {
     padding: 7px;
@@ -166,27 +187,27 @@
     padding: 1rem 0rem;
   }
 }
-@media screen and (min-width: 600px) and (max-width: 920px) {
-  .wrapper{
+@media screen and (min-width: 601px) and (max-width: 920px) {
+  .wrapper {
     width: 100%;
-    min-height:1400px ;
+    min-height: 1400px;
   }
-  .calculatorScreens{
+  .calculatorScreens {
     margin-top: 20%;
   }
 }
 @media screen and (min-width: 921px) and (max-width: 1300px) {
-  .wrapper{
+  .wrapper {
     width: 100%;
-    min-height:1500px ;
+    min-height: 1500px;
   }
-  .calculatorScreens{
+  .calculatorScreens {
     margin-top: 20%;
   }
 }
 @media (min-width: 1400px) {
-  .wrapper{
+  .wrapper {
     width: 100%;
-    min-height:780px ;
+    min-height: 780px;
   }
 }

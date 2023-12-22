@@ -34,3 +34,8 @@ input::-webkit-inner-spin-button {
         display: flex;
     }
 }
+@media screen and (max-width:600px){
+    .customSelect .select__control{
+        width: 155px;
+    }
+}

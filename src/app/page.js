@@ -1,3 +1,4 @@
+import Modal from "@/components/Modal/Modal";
 import CompareSection from "./screens/compareSection/page";
 import Contact from "./screens/contact/page";
 import FAQS from "./screens/faqs/page";
@@ -13,6 +14,7 @@ import WhySection from "./screens/whySection/page";
 export default function Home() {
   return (
     <main >
+      <Modal/>
       <Navbar />
       <Hero />
       <ImageSwiper/>

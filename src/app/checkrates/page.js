@@ -13,9 +13,10 @@ import Screen10 from "@/components/savingCalculatorScreens/screen10/screen10";
 import CalculatorNavbar from "@/components/calculatorNavbar/calulatorNavbar";
 import { useContext } from "react";
 import { InputContext } from "@/app/context/inputContext";
+import CurrencyInput from "react-currency-input-field";
 
 const Screen1 = () => {
-  const { heroInput,heroSectionInput } = useContext(InputContext);
+  const { heroInput, heroSectionInput } = useContext(InputContext);
   const [currentView, setCurrentView] = useState(1);
   const totalScreens = 10;
   const progress = (currentView / totalScreens) * 100;
@@ -29,12 +30,20 @@ const Screen1 = () => {
   const handleback = () => {
     setCurrentView(currentView - 1);
   };
+  const [isInputFocused, setIsInputFocused] = useState(false);
+
+  const handleInputFocus = () => {
+    setIsInputFocused(true);
+  };
+  const handleInputBlur = () => {
+    setIsInputFocused(false);
+  };
   return (
     <div className={styles.wrapper}>
-      <CalculatorNavbar/>
+      <CalculatorNavbar />
       {currentView === 1 && (
         <div className={styles.calculator}>
-          <div className={styles.calculatorScreens} >
+          <div className={styles.calculatorScreens}>
             <div className={styles.calculatorScreensImg}>
               <img src="../dollarphoto.png" alt="" width={100} />
             </div>
@@ -42,22 +51,44 @@ const Screen1 = () => {
               <h1>How much do you want to borrow?</h1>
               <span>It’s okay to estimate how much you need</span>
             </div>
-            <div className={styles.inputfield}>
+            <div
+              className={
+                isInputFocused ? styles.inputfieldfocused : styles.inputfield
+              }
+              style={{border: heroInput === undefined ? "1px solid red" : ""}}
+            >
               <div className={styles.dollarsignbox}>
                 <span>$</span>
               </div>
               <div className={styles.inputfieldbox}>
                 <span>Loan Amount</span>
-                <input
+                {/* <input
                   type="text"
                   maxLength={6}
                   value={heroInput}
                   onChange={(e) => heroSectionInput(e.target.value)}
+                /> */}
+                <CurrencyInput
+                  value={heroInput}
+                  prefix="$"
+                  maxLength={6}
+                  onValueChange={(value) => heroSectionInput(value)}
+                  onFocus={handleInputFocus}
+                  onBlur={handleInputBlur}
                 />
               </div>
             </div>
+            {heroInput === undefined &&<div className={styles.errormsg}>
+              <span>Please fill this field</span>
+            </div>}
+            {heroInput <600 &&<div className={styles.errormsg2}>
+              <span>Enter amount ($600 to $200,000)</span>
+            </div>}
+            {heroInput >200000 &&<div className={styles.errormsg2}>
+              <span>Enter amount ($600 to $200,000)</span>
+            </div>}
             <span style={{ color: "black", fontSize: "14px" }}>
-              Or pick a common amount
+              Or pick a common amount:
             </span>
             <div className={styles.pricebuttons}>
               <button onClick={handleClick} value={5000}>
@@ -67,7 +98,7 @@ const Screen1 = () => {
                 $10,000
               </button>
               <button onClick={handleClick} value={15000}>
-                $15,0000
+                $15,000
               </button>
               <button onClick={handleClick} value={20000}>
                 $20,000
@@ -80,8 +111,8 @@ const Screen1 = () => {
               <button onClick={handleClick} value={30000}>
                 $30,000
               </button>
-              <button onClick={handleClick} value={500000}>
-                $50,0000
+              <button onClick={handleClick} value={50000}>
+                $50,000
               </button>
             </div>
             <button
@@ -90,7 +121,13 @@ const Screen1 = () => {
             >
               Continue
             </button>
-            <span style={{ color: "#8B8B8B", fontSize: "14px" ,textAlign:'center' }}>
+            <span
+              style={{
+                color: "#8B8B8B",
+                fontSize: "14px",
+                textAlign: "center",
+              }}
+            >
               Check rates won’t affect your credit score
             </span>
             <div

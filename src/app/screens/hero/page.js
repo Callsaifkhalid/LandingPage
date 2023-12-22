@@ -1,15 +1,28 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import styles from "./hero.module.css";
 import { motion } from "framer-motion";
 import { IoCheckmark } from "react-icons/io5";
 import CurrencyInput from "react-currency-input-field";
 import { IoMdThumbsUp } from "react-icons/io";
-import Link from "next/link";
 import { useContext } from "react";
 import { InputContext } from "@/app/context/inputContext";
+import { useRouter } from "next/navigation";
 const Hero = () => {
   const { heroSectionInput } = useContext(InputContext);
+  const [inputvalue,setinputvalue]=useState(600)
+  const router = useRouter()
+  const handlechange =(value)=>{
+    heroSectionInput(value)
+    setinputvalue(value)
+  }
+  const handleclick = ()=>{
+    if(inputvalue <600 ){
+      return
+    }else{
+      router.push('/checkrates')
+    }
+  }
   return (
     <section className={styles.herowrapper} id="hero">
       <div className={styles.flexCenter + " " + styles.herocontainer}>
@@ -31,18 +44,19 @@ const Hero = () => {
               <span>Loan amounts from $600 to $200,000</span>
             </div>
           </div>
-          <div className={styles.findmyrate}>
+          <div className={inputvalue <600 ? styles.findmyrateerror : styles.findmyrate}>
             <CurrencyInput
               placeholder="Enter amount ($600 to $200,000)"
               prefix="$"
-              decimalsLimit={2}
               maxLength={6}
-              onChange={(e)=>heroSectionInput(e.target.value)}
+              onValueChange={(value) => handlechange(value)}
             />
-            <Link href={"/checkrates"} className={styles.Link}>
+            <button className={styles.Link} onClick={handleclick}>
               Find My Rate{" "}
-            </Link>
+            </button>
           </div>
+          {inputvalue <600 && <span className={styles.errormsg}>Enter amount ($600 to $200,000)</span>}
+          {inputvalue >200000 && <span className={styles.errormsg}>Enter amount ($600 to $200,000)</span>}
           <div className={styles.thumbsup}>
             <IoMdThumbsUp />
             <span>Checking rates won’t affect your credit score</span>

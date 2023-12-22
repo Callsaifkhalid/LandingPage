@@ -67,7 +67,7 @@
   margin-top: -10rem;
   width: 200px;
 }
-@media screen and (min-width: 600px) and (max-width: 769px) {
+@media screen and (min-width: 601px) and (max-width: 769px) {
   .wrapper {
     width: 100%;
   }
@@ -170,7 +170,7 @@
   }
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 600px) {
   
   .wrapper > img {
     display: none;

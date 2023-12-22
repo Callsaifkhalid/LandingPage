@@ -56,13 +56,17 @@
 .herodes2 > span {
   font-size: 18px;
 }
+.errormsg {
+  font-size: 13px;
+  color: red;
+  margin-top: -8%;
+}
 .findmyrate {
   width: 500px;
   height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: #05c8e8 1px solid;
 }
 .findmyrate > input {
   width: 350px;
@@ -71,9 +75,33 @@
   border: none;
   font-size: 18px;
   padding-left: 1rem;
+  border: #05c8e8 1px solid;
+}
+.findmyrate input:focus {
+  border: 1px solid #1a4048;
+}
+.findmyrateerror {
+  width: 500px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.findmyrateerror > input {
+  width: 350px;
+  height: 58px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  padding-left: 1rem;
+  border: 1px solid red;
+}
+.findmyrateerror input:focus {
+  border: 1px solid red;
 }
 
 .Link {
+  border: #05c8e8 1px solid;
   text-decoration: none;
   width: 150px;
   height: 60px;
@@ -144,7 +172,7 @@
 }
 
 /* Responsivness */
-@media screen and (min-width: 600px) and (max-width: 769px) {
+@media screen and (min-width: 601px) and (max-width: 769px) {
   .herowrapper {
     width: 100%;
   }
@@ -152,7 +180,7 @@
     width: 22rem;
     height: 25.5rem;
   }
-  .herogirl{
+  .herogirl {
     margin-left: 2rem;
   }
   .heroleft {
@@ -236,7 +264,7 @@
     margin-top: -28rem;
     margin-left: 1.7rem;
   }
-  .herocircle{
+  .herocircle {
     margin-left: 5rem;
   }
   .herotitle > h2 {
@@ -294,7 +322,7 @@
     cursor: pointer;
   }
 }
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 600px) {
   .herowrapper {
     padding-left: 1rem;
   }
@@ -379,10 +407,10 @@
     width: 25rem;
     height: 35rem;
   }
-  .herocircle{
+  .herocircle {
     margin-left: 5rem;
   }
-  .herogirl{
+  .herogirl {
     margin-left: 1.5rem;
   }
 }

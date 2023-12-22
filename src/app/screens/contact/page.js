@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./contact.module.css";
 import Link from "next/link";
+import { PiLaptopFill } from "react-icons/pi";
+import { FaPhone } from "react-icons/fa";
 const Contact = () => {
   return (
     <div className={styles.wrapper} id="contact">
@@ -13,14 +15,20 @@ const Contact = () => {
       </div>
       <div className={styles.contactcenter}>
         <div className={styles.contactsection}>
+          <div className={styles.meetingcontainer}>
+            <div className={styles.meeting}>
+              <PiLaptopFill style={{ color: "#05c8e8", fontSize: "25px" }} />
+              <span>Schedule a Meeting</span>
+            </div>
+          </div>
           <div className={styles.mailandnumber}>
             <div className={styles.mail}>
               <img src="./housepic.png" alt="" width={20} />
               <span>support@clearcredit.com</span>
             </div>
             <div className={styles.number}>
-              <img src="./housepic.png" alt="" width={20} />
-              <div >111-222-333-444</div>
+              <FaPhone style={{ color: "#05c8e8", fontSize: "20px" }} />
+              <div>111-222-333-444</div>
             </div>
           </div>
           <div className={styles.contactcontent}>

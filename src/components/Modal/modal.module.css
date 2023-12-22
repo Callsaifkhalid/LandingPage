@@ -1,0 +1,65 @@
+.modalBackground {
+  min-width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 999;
+}
+
+.modalContainer {
+  width: 500px;
+  min-height: 120px;
+  border-radius: 12px;
+  background-color: #05c8e8;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-bottom: 9rem;
+  border: 8px solid white;
+}
+
+.titleCloseBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  color: white;
+}
+.body h1{
+    text-align: center;
+    font-weight: 900;
+    line-height: 1em;
+    font-size: 2.5rem;
+}
+.body span {
+    font-size: 19px;
+}
+.body button{
+    width: 60%;
+    height: 50px;
+    background-color: #1a4048;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    color: #05c8e8;
+    font-weight: 800;
+    transition: color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+    transition: all ease-in 300ms;
+}
+.Link{
+   color: white;
+}
+.body button:hover{
+    border: 3px solid #1a4048;
+    box-shadow: inset 300px 0 0 0 white;
+    color: #1a4048;
+
+}

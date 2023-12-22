@@ -10,63 +10,63 @@ const ImageSwiper = () => {
     <div className={styles.wrapper}>
       <h3>COMPARE TOP PERSONAL LOAN LENDERS</h3>
       <Swiper {...sliderSettings} className={styles.swiper}>
-        <SliderButtonPre />
-        <SwiperSlide>
+        <SliderButton />
+        <SwiperSlide className={styles.slide}>
           <div className={styles.div}>
             <img src="./upstartlogo.svg" width={150} />
           </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className={styles.slide}>
           <div className={styles.div}>
             <img src="./bestegglogo.svg" width={150} />
           </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className={styles.slide}>
           <div className={styles.div}>
             <img src="./lendingclublogo.svg" width={150} />
           </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className={styles.slide}>
           <div className={styles.div}>
             <img src="./onemainlogo.svg" width={150} />
           </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className={styles.slide}>
           <div className={styles.div}>
             <img src="./penfedlogo.svg" width={150} />
           </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className={styles.slide}>
           <div className={styles.div}>
             <img src="./sofilogo.svg" width={150} />
           </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className={styles.slide}>
           <div className={styles.div}>
             <img src="./discoverlogo.svg" width={150} />
           </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className={styles.slide}>
           <div className={styles.div}>
             <img src="./bhgmoneylogo.svg" width={150} />
           </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className={styles.slide}>
           <div className={styles.div}>
             <img src="./zablelogo.svg" width={150} />
           </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className={styles.slide}>
           <div className={styles.div}>
             <img src="./happymoneylogo.svg" width={150} />
           </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className={styles.slide}>
           <div className={styles.div}>
             <img src="./reachlogo.svg" width={150} />
           </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className={styles.slide}>
           <div className={styles.div}>
             <img src="./universallogo.svg" width={150} />
           </div>
@@ -77,7 +77,7 @@ const ImageSwiper = () => {
 };
 
 export default ImageSwiper;
-const SliderButtonPre = () => {
+const SliderButton = () => {
   const swiper = useSwiper();
   return (
     <div className={styles.button}>

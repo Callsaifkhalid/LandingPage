@@ -47,12 +47,41 @@
   display: flex;
   justify-content: space-around;
   padding: 5px;
-
+}
+.errormsgs{
+  display: flex;
+  padding: 5px;
+  margin-left: 1.5%;
+}
+.errormsgs span{
+  font-size: 13px;
+  color: red;
+  margin-bottom: -5%;
+}
+.errormsg{
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  margin-top: -1%;
+  margin-left: -15%;
+}
+.errormsg span{
+  font-size: 13px;
+  color: red;
+  margin-bottom: -5%;
 }
 .box {
   display: flex;
   width: 230px;
   border: 1px solid #8b8b8b;
+  border-radius: 5px;
+  padding: 5px;
+  justify-content: space-around;
+}
+.boxerror {
+  display: flex;
+  width: 230px;
+  border: 2px solid #1a4048;
   border-radius: 5px;
   padding: 5px;
   justify-content: space-around;
@@ -67,6 +96,16 @@
   padding: 5px;
   position: static;
 }
+.boxxerror {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 230px;
+  border: 2px solid #1a4048;
+  border-radius: 5px;
+  padding: 5px;
+  position: static;
+}
 .box > input {
   border: none;
   outline: none;
@@ -75,7 +114,7 @@
   height: 30%;
   margin-top: 22px;
 }
-.box > input:focus {
+.box > input:focus{
   border: none;
 }
 
@@ -89,6 +128,32 @@
 }
 
 .box > img {
+  height: 30%;
+  width: 10%;
+  margin-top: 22px;
+}
+.boxerror > input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  width: 29%;
+  height: 30%;
+  margin-top: 22px;
+}
+.boxerror > input:focus{
+  border: none;
+}
+
+.boxerror > span {
+  font-size: 25px;
+  margin-top: 16px;
+  color: #05c8e8;
+}
+.boxerror > h5 {
+  color: #05c8e8;
+}
+
+.boxerror > img {
   height: 30%;
   width: 10%;
   margin-top: 22px;
@@ -180,7 +245,7 @@
   transform: scale(1.1);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-@media screen and (min-width: 600px) and (max-width: 769px) {
+@media screen and (min-width: 601px) and (max-width: 769px) {
   .wrapper {
     
   }
@@ -254,7 +319,7 @@
     width: 190px;
   }
 }
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 600px) {
   
   .headings {
     margin-left: 0rem;

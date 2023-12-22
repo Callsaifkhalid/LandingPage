@@ -27,7 +27,7 @@
 }
 .contactsection {
   width: 65%;
-  height: 200px;
+  height: 300px;
   padding: 3rem;
   background-color: #f4fdff;
   border-radius: 20px;
@@ -84,12 +84,38 @@
   justify-content: center;
   margin-bottom: 3rem;
 }
+.meetingcontainer{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3%;
+}
+.meeting{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  width: 28%;
+  background-color: #1a4048;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 15px;
+  margin-right: 2rem;
+  transition: all ease-in 100ms;
+  cursor: pointer;
+}
+.meeting:hover {
+  transform: scale(1.06);
+}
+.meeting > span {
+  color: #05c8e8;
+  font-size: 20px;
+  font-weight: bolder;
+}
 .mail {
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 60px;
-  min-width: 33%;
+  width: 33%;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 15px;
@@ -109,7 +135,7 @@
   justify-content: space-around;
   align-items: center;
   height: 60px;
-  min-width: 26%;
+  width: 26%;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 15px;
@@ -152,7 +178,7 @@
   text-decoration: none;
   color: #05c8e8;
 }
-@media screen and (min-width: 600px) and (max-width: 769px) {
+@media screen and (min-width: 601px) and (max-width: 769px) {
   .footer {
     width: 100%;
   }
@@ -260,7 +286,7 @@
     font-size: 12px;
   }
 }
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 600px) {
  
   .headings {
     margin-left: 0rem;
@@ -287,24 +313,31 @@
   }
   .mail {
     height: 60px;
-    min-width: 100%;
+    width: 100%;
     margin: 0;
+    justify-content: flex-start;
+    gap: 20px;
   }
   .mail > span {
     font-size: 17px;
   }
+  .mail > img {
+    margin-left: 8px;
+    margin-right: 0px;
+  }
   .number {
     height: 60px;
-    min-width: 100%;
+    width: 100%;
     margin-left: 0rem;
     justify-content: flex-start;
+    gap: 20px;
   }
   .number > div {
     font-size: 17px;
   }
   .number > img {
     margin-left: 8px;
-    margin-right: 12px;
+    margin-right: 0px;
   }
   .contactcontent {
     display: flex;
@@ -414,9 +447,10 @@
   .checkingrates {
     margin-right: 0rem;
   }
+  .mail{
+    width: 40%;
+  }
+  .number{
+    width: 30%;
+  }
 }
-@media  screen and (min-width: 540px) and (max-width: 590px) {
-  .wrapper{
-    width: 100%;
-  }
-  }
