@@ -55,6 +55,7 @@
   font-size: 16px;
   height: 40px;
 }
+
 .inputfields > div > input:focus {
   outline: none;
 }

@@ -4,13 +4,34 @@ import { IoMdCheckmark } from "react-icons/io";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { FaLock } from "react-icons/fa";
 import Link from "next/link";
-const Screen6 = ({ onContinue,onBack, progress }) => {
+import Select from "react-select";
+import options from "@/utils/stateOptions";
+const Screen6 = ({ onContinue, onBack, progress }) => {
   const [address, setAddress] = useState("");
-  const [unit, setUnit] = useState("");
+  const [suite, setSuite] = useState("");
+  const [city, setCity] = useState("");
+  const [state, setState] = useState("");
+  const [zipCode, setZipCode] = useState("");
+  const Styles = {
+    control: (provided, state) => ({
+      display:'flex',
+      height:"38px",
+      border: "none",
+      marginLeft:'2%',
+      placeholder:'State'
+    }),
+    dropdownIndicator: (base) => ({
+      ...base,
+      color: "#05c8e8",
+      ":hover": {
+        color: "#05c8e8",
+      },
+    }),
+  };
   return (
     <div className={styles.calculator}>
       <div className={styles.calculatorScreens}>
-      <IoMdArrowRoundBack onClick={onBack} className={styles.backbutton}/>
+        <IoMdArrowRoundBack onClick={onBack} className={styles.backbutton} />
         <div className={styles.calculatorScreensImg}>
           <img src="../houseicon.png" alt="" width={100} />
         </div>
@@ -22,10 +43,10 @@ const Screen6 = ({ onContinue,onBack, progress }) => {
         </div>
         <div className={styles.inputfields}>
           <div className={styles.inputs}>
-            {address != "" && <span>Address</span>}
+            {address != "" && <span>Address (street)</span>}
             <input
               type="text"
-              placeholder="Address"
+              placeholder="Address (street)"
               className={styles.nameinput}
               value={address}
               onChange={(e) => setAddress(e.target.value)}
@@ -33,21 +54,48 @@ const Screen6 = ({ onContinue,onBack, progress }) => {
             {address != "" && <IoMdCheckmark style={{ color: "#05c8e8" }} />}
           </div>
           <div className={styles.inputs}>
-            {unit != "" && <span>Unit (Optional)</span>}
+            {suite != "" && <span>Suite / Apartment</span>}
             <input
               type="text"
-              placeholder="Unit (Optional)"
+              placeholder="Suite / Apartment"
               className={styles.nameinput}
-              value={unit}
-              onChange={(e) => setUnit(e.target.value)}
+              value={suite}
+              onChange={(e) => setSuite(e.target.value)}
             />
-            {unit != "" && <IoMdCheckmark style={{ color: "#05c8e8" }} />}
+            {suite != "" && <IoMdCheckmark style={{ color: "#05c8e8" }} />}
+          </div>
+          <div className={styles.inputs}>
+            {city != "" && <span>City</span>}
+            <input
+              type="text"
+              placeholder="City"
+              className={styles.nameinput}
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+            />
+            {city != "" && <IoMdCheckmark style={{ color: "#05c8e8" }} />}
+          </div>
+          <div className={styles.inputs}>
+            <Select options={options} styles={Styles} placeholder="State" />
+          </div>
+          <div className={styles.inputs}>
+            {zipCode != "" && <span>Zipcode</span>}
+            <input
+              type="number"
+              placeholder="Zipcode"
+              className={styles.nameinput}
+              value={zipCode}
+              onChange={(e) => setZipCode(e.target.value)}
+            />
+            {zipCode != "" && <IoMdCheckmark style={{ color: "#05c8e8" }} />}
           </div>
         </div>
         <button className={styles.continuebutton} onClick={onContinue}>
           Continue
         </button>
-        <span style={{ color: "#8B8B8B", fontSize: "14px", textAlign:'center'}}>
+        <span
+          style={{ color: "#8B8B8B", fontSize: "14px", textAlign: "center" }}
+        >
           Check rates won’t affect your credit score
         </span>
         <div className={styles.securityheading}>

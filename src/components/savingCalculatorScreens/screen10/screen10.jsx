@@ -6,24 +6,36 @@ import { IoMdArrowRoundBack } from "react-icons/io";
 import Link from "next/link";
 const Screen10 = ({ onBack, progress }) => {
   const [phonenumber, setphonenumber] = useState("");
+  const [email, setEmail] = useState("");
   return (
     <div className={styles.calculator}>
       <div className={styles.calculatorScreens}>
-      <IoMdArrowRoundBack onClick={onBack} className={styles.backbutton}/>
+        <IoMdArrowRoundBack onClick={onBack} className={styles.backbutton} />
         <div className={styles.calculatorScreensImg}>
           <img src="../telephone.png" alt="" width={100} />
         </div>
         <div className={styles.calculatorScreensheading}>
-          <h1>What is your phone number?</h1>
+          <h1>What is your contact detail?</h1>
         </div>
         <div className={styles.inputfields}>
           <div className={styles.inputs}>
+            {email != "" && <span>Email</span>}
+            <input
+              type="text"
+              placeholder="Email"
+              className={styles.nameinput}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />{" "}
+            {email != "" && <IoMdCheckmark style={{ color: "#05c8e8" }} />}
+          </div>
+        
+          <div className={styles.inputs}>
             {phonenumber != "" && <span>Phone Number</span>}
             <input
-              type="tel"
+              type="number"
               placeholder="Phone Number"
               className={styles.nameinput}
-              maxLength={11}
               value={phonenumber}
               onChange={(e) => setphonenumber(e.target.value)}
             />{" "}
@@ -33,7 +45,9 @@ const Screen10 = ({ onBack, progress }) => {
           </div>
         </div>
         <button className={styles.continuebutton}>Continue</button>
-        <span style={{ color: "#8B8B8B", fontSize: "14px", textAlign:'center'}}>
+        <span
+          style={{ color: "#8B8B8B", fontSize: "14px", textAlign: "center" }}
+        >
           Check rates won’t affect your credit score
         </span>
         <div className={styles.securityheading}>

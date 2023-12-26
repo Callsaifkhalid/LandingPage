@@ -10,19 +10,20 @@ import { InputContext } from "@/app/context/inputContext";
 import { useRouter } from "next/navigation";
 const Hero = () => {
   const { heroSectionInput } = useContext(InputContext);
-  const [inputvalue,setinputvalue]=useState(600)
-  const router = useRouter()
-  const handlechange =(value)=>{
-    heroSectionInput(value)
-    setinputvalue(value)
-  }
-  const handleclick = ()=>{
-    if(inputvalue <600 ){
-      return
-    }else{
-      router.push('/checkrates')
+  const [inputvalue, setinputvalue] = useState(600);
+  const router = useRouter();
+  const handlechange = (value) => {
+    heroSectionInput(value);
+    setinputvalue(value);
+  };
+  const handleclick = () => {
+    if (inputvalue < 600) {
+      return;
+    } else if (inputvalue > 200000) {
+    } else {
+      router.push("/checkrates");
     }
-  }
+  };
   return (
     <section className={styles.herowrapper} id="hero">
       <div className={styles.flexCenter + " " + styles.herocontainer}>
@@ -44,7 +45,11 @@ const Hero = () => {
               <span>Loan amounts from $600 to $200,000</span>
             </div>
           </div>
-          <div className={inputvalue <600 ? styles.findmyrateerror : styles.findmyrate}>
+          <div
+            className={
+              inputvalue < 600 ? styles.findmyrateerror : styles.findmyrate
+            }
+          >
             <CurrencyInput
               placeholder="Enter amount ($600 to $200,000)"
               prefix="$"
@@ -55,8 +60,16 @@ const Hero = () => {
               Find My Rate{" "}
             </button>
           </div>
-          {inputvalue <600 && <span className={styles.errormsg}>Enter amount ($600 to $200,000)</span>}
-          {inputvalue >200000 && <span className={styles.errormsg}>Enter amount ($600 to $200,000)</span>}
+          {inputvalue < 600 && (
+            <span className={styles.errormsg}>
+              Enter amount ($600 to $200,000)
+            </span>
+          )}
+          {inputvalue > 200000 && (
+            <span className={styles.errormsg}>
+              Enter amount ($600 to $200,000)
+            </span>
+          )}
           <div className={styles.thumbsup}>
             <IoMdThumbsUp />
             <span>Checking rates won’t affect your credit score</span>

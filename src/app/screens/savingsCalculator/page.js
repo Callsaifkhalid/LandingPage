@@ -8,6 +8,7 @@ import Link from "next/link";
 import ColorBars from "@/components/colorbars/colorbars";
 import ColorBars2 from "@/components/colobars2/colorbars2";
 import CurrencyInput from "react-currency-input-field";
+import { useRouter } from "next/navigation";
 const SavingsCalculator = () => {
   const [inputValueLoan, setInputValueLoan] = useState(1000);
   const [currentInterest, setCurrentInterest] = useState(10);
@@ -27,7 +28,7 @@ const SavingsCalculator = () => {
   const [isInputFocused2, setIsInputFocused2] = useState(false);
   const [isInputFocused3, setIsInputFocused3] = useState(false);
   const [isInputFocused4, setIsInputFocused4] = useState(false);
-
+  const router = useRouter()
   const options = [
     { value: "", label: "Loan Term", isDisabled: true },
     { value: "1", label: "1 Year" },
@@ -48,7 +49,13 @@ const SavingsCalculator = () => {
       },
     }),
   };
-
+  const handleclick = () => {
+    if (!inputValueLoan || inputValueLoan === 0 || inputValueLoan < 600 || inputValueLoan > 200000 || !currentInterest ||currentInterest === 0 || !compareInterest ||compareInterest === 0) {
+      return;
+    }else {
+      router.push("/checkrates");
+    }
+  };
   useEffect(() =>{
     if (inputValueLoan && inputValueLoan != 0 && inputValueLoan >= 600 && inputValueLoan <= 200000 && currentInterest && currentInterest != 0 && currentloanPeriod && compareInterest && compareInterest != 0 && compareloanPeriod)
     calculateLoanDetails();
@@ -302,11 +309,11 @@ const SavingsCalculator = () => {
                 </span>{" "}
                 , you will pay{" "}
                 <span style={{ color: "#1a4048", fontWeight: "600" }}>
-                  ${comapreMonthlyPaymentValue.toFixed(1)}
+                  ${Math.round( comapreMonthlyPaymentValue.toFixed(1))}
                 </span>{" "}
                 per month and{" "}
                 <span style={{ color: "#1a4048", fontWeight: "600" }}>
-                  ${payMonthlyInterestPaymentValue.toFixed(1)}
+                  ${Math.round( payMonthlyInterestPaymentValue.toFixed(1))}
                 </span>{" "}
                 in interest over the lifetime of your loan.
               </span>
@@ -316,7 +323,7 @@ const SavingsCalculator = () => {
               <div className={styles.moneysignbox}>
                   <div>
                     <span>
-                      ${Math.abs( interestboxvalue)}
+                      ${Math.abs(Math.floor( interestboxvalue))}
                       {interestboxvalue > 0 ? (
                         <FaArrowDown
                           style={{
@@ -348,14 +355,14 @@ const SavingsCalculator = () => {
                   <span>
                     Total interest savings:{" "}
                     <span style={{ color: "#1A4048", fontWeight: "bolder" }}>
-                      ${interestboxvalue}
+                      ${Math.abs(Math.floor( interestboxvalue))}
                     </span>
                   </span>
                 )}
                 <div className={styles.colorboxes}>
-                  <img src="./bluebox.png" alt="" width={20} />
+                  <img src="./blackbox.png" alt=""  height={17}/>
                   <span>New Loan</span>
-                  <img src="./blackbox.png" alt="" width={20} />
+                  <img src="./bluebox.png" alt="" height={17} />
                   <span>Current Loan</span>
                 </div>
                 <div className={styles.colorbarboxes}>
@@ -378,7 +385,7 @@ const SavingsCalculator = () => {
               <div className={styles.moneysignbox}>
                   <div>
                     <span>
-                      ${Math.abs(monthlyboxvalue)}
+                      ${Math.abs(Math.floor(monthlyboxvalue))}
                       {monthlyboxvalue > 0 ? (
                         <FaArrowDown
                           style={{
@@ -410,14 +417,14 @@ const SavingsCalculator = () => {
                   <span>
                     Monthly payment savings:{" "}
                     <span style={{ color: "#1A4048", fontWeight: "bolder" }}>
-                      ${monthlyboxvalue}
+                      ${Math.abs(Math.floor(monthlyboxvalue))}
                     </span>
                   </span>
                 )}
                 <div className={styles.colorboxes}>
-                  <img src="./bluebox.png" alt="" width={20} />
+                  <img src="./bluebox.png" alt="" height={17} />
                   <span>New Loan</span>
-                  <img src="./blackbox.png" alt="" width={20} />
+                  <img src="./blackbox.png" alt="" height={17} />
                   <span>Current Loan</span>
                 </div>
                 <div className={styles.colorbarboxes}>
@@ -436,13 +443,10 @@ const SavingsCalculator = () => {
             </div>
           </div>
           <div className={styles.footer}>
-            <button>
-              <Link
-                href={"/checkrates"}
-                style={{ color: "white", textDecoration: "none" }}
-              >
+            <button onClick={handleclick}>
+             
                 Check Rates
-              </Link>
+       
             </button>
             <span>
               Checking rates won’t affect your credit score. Calculator results

@@ -18,7 +18,7 @@ import CurrencyInput from "react-currency-input-field";
 const Screen1 = () => {
   const { heroInput, heroSectionInput } = useContext(InputContext);
   const [currentView, setCurrentView] = useState(1);
-  const totalScreens = 10;
+  const totalScreens = 8;
   const progress = (currentView / totalScreens) * 100;
   const handleClick = (e) => {
     e.preventDefault();
@@ -55,7 +55,7 @@ const Screen1 = () => {
               className={
                 isInputFocused ? styles.inputfieldfocused : styles.inputfield
               }
-              style={{border: heroInput === undefined ? "1px solid red" : ""}}
+              style={{ border: heroInput === undefined ? "1px solid red" : "" }}
             >
               <div className={styles.dollarsignbox}>
                 <span>$</span>
@@ -78,15 +78,21 @@ const Screen1 = () => {
                 />
               </div>
             </div>
-            {heroInput === undefined &&<div className={styles.errormsg}>
-              <span>Please fill this field</span>
-            </div>}
-            {heroInput <600 &&<div className={styles.errormsg2}>
-              <span>Enter amount ($600 to $200,000)</span>
-            </div>}
-            {heroInput >200000 &&<div className={styles.errormsg2}>
-              <span>Enter amount ($600 to $200,000)</span>
-            </div>}
+            {heroInput === undefined && (
+              <div className={styles.errormsg}>
+                <span>Please fill this field</span>
+              </div>
+            )}
+            {heroInput < 600 && (
+              <div className={styles.errormsg2}>
+                <span>Enter amount ($600 to $200,000)</span>
+              </div>
+            )}
+            {heroInput > 200000 && (
+              <div className={styles.errormsg2}>
+                <span>Enter amount ($600 to $200,000)</span>
+              </div>
+            )}
             <span style={{ color: "black", fontSize: "14px" }}>
               Or pick a common amount:
             </span>
@@ -185,28 +191,16 @@ const Screen1 = () => {
           progress={progress}
         />
       )}
+
       {currentView === 7 && (
-        <Screen7
-          onContinue={handleContinueClick}
-          onBack={handleback}
-          progress={progress}
-        />
-      )}
-      {currentView === 8 && (
         <Screen8
           onContinue={handleContinueClick}
           onBack={handleback}
           progress={progress}
         />
       )}
-      {currentView === 9 && (
-        <Screen9
-          onContinue={handleContinueClick}
-          onBack={handleback}
-          progress={progress}
-        />
-      )}
-      {currentView === 10 && (
+
+      {currentView === 8 && (
         <Screen10
           onContinue={handleContinueClick}
           onBack={handleback}
