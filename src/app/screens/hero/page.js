@@ -8,6 +8,7 @@ import { IoMdThumbsUp } from "react-icons/io";
 import { useContext } from "react";
 import { InputContext } from "@/app/context/inputContext";
 import { useRouter } from "next/navigation";
+import { MdMailOutline } from "react-icons/md";
 const Hero = () => {
   const { heroSectionInput } = useContext(InputContext);
   const [inputvalue, setinputvalue] = useState(600);
@@ -59,6 +60,10 @@ const Hero = () => {
             <button className={styles.Link} onClick={handleclick}>
               Find My Rate{" "}
             </button>
+          </div>
+          <div className={styles.respondtomail}>
+            <MdMailOutline style={{color:'#05c8e8', fontSize:'20px'}}/>
+            <button>Respond to Mail Offer</button>
           </div>
           {inputvalue < 600 && (
             <span className={styles.errormsg}>

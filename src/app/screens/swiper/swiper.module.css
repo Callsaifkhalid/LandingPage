@@ -44,11 +44,13 @@
   z-index: 500;
   position: relative;
 }
-@media screen and (max-width: 429px) {
-  .slide{
-    display: none;
-  }
-  .div{
-    display: block;
+@media screen and (max-width: 420px) {
+.slide{
+ display: none;
+}
+}
+@media  screen and (min-width: 421px) and (max-width: 600px) {
+  .sliderbutton{
+    margin-top: -18%;
   }
 }

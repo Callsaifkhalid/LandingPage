@@ -33,33 +33,95 @@
   gap: 30px;
   color: white;
 }
-.body h1{
-    text-align: center;
-    font-weight: 900;
-    line-height: 1em;
-    font-size: 2.5rem;
+.body h1 {
+  text-align: center;
+  font-weight: 900;
+  line-height: 1em;
+  font-size: 2.5rem;
 }
 .body span {
-    font-size: 19px;
+  font-size: 19px;
 }
-.body button{
+.body button {
+  width: 60%;
+  height: 50px;
+  background-color: #1a4048;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  color: #05c8e8;
+  font-weight: 800;
+  transition: color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+  transition: all ease-in 300ms;
+}
+.Link {
+  color: white;
+}
+.body button:hover {
+  border: 3px solid #1a4048;
+  box-shadow: inset 300px 0 0 0 white;
+  color: #1a4048;
+}
+@media screen and (max-width: 600px) {
+  .modalBackground {
+    align-items: center;
+  }
+  .modalContainer {
+    width: 300px;
+    min-height: 120px;
+    border-radius: 12px;
+    background-color: #05c8e8;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 9rem;
+    border: 8px solid white;
+  }
+  .body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    color: white;
+  }
+  .body h1 {
+    font-weight: 800;
+    line-height: 1.6em;
+    font-size: 1.5rem;
+  }
+  .body span {
+    font-size: 15px;
+  }
+  .body button {
     width: 60%;
     height: 50px;
     background-color: #1a4048;
     border: none;
     outline: none;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #05c8e8;
     font-weight: 800;
     transition: color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
     transition: all ease-in 300ms;
+  }
+  .Link {
+    color: white;
+    font-size: 13px;
+  }
 }
-.Link{
-   color: white;
+@media screen and (min-width: 601px) and (max-width: 769px) {
+  .modalBackground {
+    align-items: center;
+  }
 }
-.body button:hover{
-    border: 3px solid #1a4048;
-    box-shadow: inset 300px 0 0 0 white;
-    color: #1a4048;
-
+@media screen and (min-width: 770px) and (max-width: 920px) {
+  .modalBackground {
+    align-items: center;
+  }
+}
+@media  screen and (min-width: 921px) and (max-width: 1200px) {
+  .modalBackground {
+    align-items: center;
+  }
 }

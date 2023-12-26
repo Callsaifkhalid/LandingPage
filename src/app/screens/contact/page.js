@@ -17,7 +17,7 @@ const Contact = () => {
         <div className={styles.contactsection}>
           <div className={styles.meetingcontainer}>
             <div className={styles.meeting}>
-              <PiLaptopFill style={{ color: "#05c8e8", fontSize: "25px" }} />
+              <PiLaptopFill style={{ color: "#05c8e8", fontSize: "25px", marginLeft:'8px'}} />
               <span>Schedule a Meeting</span>
             </div>
           </div>
@@ -27,7 +27,7 @@ const Contact = () => {
               <span>support@clearcredit.com</span>
             </div>
             <div className={styles.number}>
-              <FaPhone style={{ color: "#05c8e8", fontSize: "20px" }} />
+              <FaPhone style={{ color: "#05c8e8", fontSize: "20px", marginLeft:'8px'}} />
               <div>111-222-333-444</div>
             </div>
           </div>

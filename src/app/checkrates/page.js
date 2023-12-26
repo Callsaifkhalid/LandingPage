@@ -14,6 +14,9 @@ import CalculatorNavbar from "@/components/calculatorNavbar/calulatorNavbar";
 import { useContext } from "react";
 import { InputContext } from "@/app/context/inputContext";
 import CurrencyInput from "react-currency-input-field";
+import AlmostThere from "@/components/savingCalculatorScreens/almostThereScreen/almostThere";
+import Dilaerpage from "@/components/savingCalculatorScreens/dialerpage/dilaerpage";
+import MissedcallPage from "@/components/savingCalculatorScreens/missedCallPage/missedcallPage";
 
 const Screen1 = () => {
   const { heroInput, heroSectionInput } = useContext(InputContext);
@@ -207,6 +210,10 @@ const Screen1 = () => {
           progress={progress}
         />
       )}
+
+      {currentView === 9 && <AlmostThere onContinue={handleContinueClick} />}
+      {currentView === 10 && <Dilaerpage onContinue={handleContinueClick} />}
+      {currentView === 10 && <MissedcallPage onContinue={handleContinueClick} />}
     </div>
   );
 };

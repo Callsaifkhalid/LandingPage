@@ -4,9 +4,8 @@ import { IoMdCheckmark } from "react-icons/io";
 import { FaLock } from "react-icons/fa";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import Link from "next/link";
-const Screen10 = ({ onBack, progress }) => {
-  const [phonenumber, setphonenumber] = useState("");
-  const [email, setEmail] = useState("");
+const Screen10 = ({ onBack, progress,onContinue }) => {
+  const [emailorphone, setEmailorphone] = useState("");
   return (
     <div className={styles.calculator}>
       <div className={styles.calculatorScreens}>
@@ -19,32 +18,17 @@ const Screen10 = ({ onBack, progress }) => {
         </div>
         <div className={styles.inputfields}>
           <div className={styles.inputs}>
-            {email != "" && <span>Email</span>}
             <input
               type="text"
-              placeholder="Email"
+              placeholder="Email or Phone"
               className={styles.nameinput}
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={emailorphone}
+              onChange={(e) => setEmailorphone(e.target.value)}
             />{" "}
-            {email != "" && <IoMdCheckmark style={{ color: "#05c8e8" }} />}
-          </div>
-        
-          <div className={styles.inputs}>
-            {phonenumber != "" && <span>Phone Number</span>}
-            <input
-              type="number"
-              placeholder="Phone Number"
-              className={styles.nameinput}
-              value={phonenumber}
-              onChange={(e) => setphonenumber(e.target.value)}
-            />{" "}
-            {phonenumber != "" && (
-              <IoMdCheckmark style={{ color: "#05c8e8" }} />
-            )}
+            {emailorphone != "" && <IoMdCheckmark style={{ color: "#05c8e8" }} />}
           </div>
         </div>
-        <button className={styles.continuebutton}>Continue</button>
+        <button className={styles.continuebutton} onClick={onContinue}>Continue</button>
         <span
           style={{ color: "#8B8B8B", fontSize: "14px", textAlign: "center" }}
         >
