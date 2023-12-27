@@ -23,7 +23,7 @@ const Contact = () => {
           </div>
           <div className={styles.mailandnumber}>
             <div className={styles.mail}>
-              <img src="./housepic.png" alt="" width={20} />
+              <img src="./housepic.svg" alt="" width={20} />
               <span>support@clearcredit.com</span>
             </div>
             <div className={styles.number}>

@@ -11,24 +11,36 @@ import CurrencyInput from "react-currency-input-field";
 import { useRouter } from "next/navigation";
 const SavingsCalculator = () => {
   const [inputValueLoan, setInputValueLoan] = useState(1000);
-  const [currentInterest, setCurrentInterest] = useState(10);
-  const [currentloanPeriod, setCurrentLoanPeriod] = useState({ value: "2 ", label: "2 Years" });
-  const [compareInterest, setCompareInterest] = useState(2);
-  const [compareloanPeriod, setCompareloanPeriod] = useState({ value: "3 ", label: "3 Years" });
+  const [currentInterest, setCurrentInterest] = useState("10.00");
+  const [currentloanPeriod, setCurrentLoanPeriod] = useState({
+    value: "2 ",
+    label: "2 Years",
+  });
+  const [compareInterest, setCompareInterest] = useState("2.00");
+  const [compareloanPeriod, setCompareloanPeriod] = useState({
+    value: "3 ",
+    label: "3 Years",
+  });
 
-  const [comapreMonthlyPaymentValue,setComapreMonthlyPaymentValue ] = useState(0);
-  const [currentMonthlyPaymentValue,setCurrentMonthlyPaymentValue ] = useState(0);
-  const [payMonthlyInterestPaymentValue,setPayMonthlyInterestPaymentValue ] = useState(0);
-  const [currentpayMonthlyInterestPaymentValue,setcurrentPayMonthlyInterestPaymentValue ] = useState(0);
-  const [interestboxvalue,setInterestBoxValue]=useState(0)
-  const [monthlyboxvalue,setMonthlyBoxValue]=useState(0)
+  const [comapreMonthlyPaymentValue, setComapreMonthlyPaymentValue] =
+    useState(0);
+  const [currentMonthlyPaymentValue, setCurrentMonthlyPaymentValue] =
+    useState(0);
+  const [payMonthlyInterestPaymentValue, setPayMonthlyInterestPaymentValue] =
+    useState(0);
+  const [
+    currentpayMonthlyInterestPaymentValue,
+    setcurrentPayMonthlyInterestPaymentValue,
+  ] = useState(0);
+  const [interestboxvalue, setInterestBoxValue] = useState(0);
+  const [monthlyboxvalue, setMonthlyBoxValue] = useState(0);
 
   const [isInputFocused, setIsInputFocused] = useState(false);
   const [isInputFocused1, setIsInputFocused1] = useState(false);
   const [isInputFocused2, setIsInputFocused2] = useState(false);
   const [isInputFocused3, setIsInputFocused3] = useState(false);
   const [isInputFocused4, setIsInputFocused4] = useState(false);
-  const router = useRouter()
+  const router = useRouter();
   const options = [
     { value: "", label: "Loan Term", isDisabled: true },
     { value: "1", label: "1 Year" },
@@ -50,25 +62,50 @@ const SavingsCalculator = () => {
     }),
   };
   const handleclick = () => {
-    if (!inputValueLoan || inputValueLoan === 0 || inputValueLoan < 600 || inputValueLoan > 200000 || !currentInterest ||currentInterest === 0 || !compareInterest ||compareInterest === 0) {
+    if (
+      !inputValueLoan ||
+      inputValueLoan === 0 ||
+      inputValueLoan < 600 ||
+      inputValueLoan > 200000 ||
+      !currentInterest ||
+      currentInterest === 0 ||
+      !compareInterest ||
+      compareInterest === 0
+    ) {
       return;
-    }else {
+    } else {
       router.push("/checkrates");
     }
   };
-  useEffect(() =>{
-    if (inputValueLoan && inputValueLoan != 0 && inputValueLoan >= 600 && inputValueLoan <= 200000 && currentInterest && currentInterest != 0 && currentloanPeriod && compareInterest && compareInterest != 0 && compareloanPeriod)
-    calculateLoanDetails();
-  else {
-    setComapreMonthlyPaymentValue(0);
-    setCurrentMonthlyPaymentValue(0);
-    setPayMonthlyInterestPaymentValue(0);
-    setcurrentPayMonthlyInterestPaymentValue(0);
-    setInterestBoxValue(0);
-    setMonthlyBoxValue(0);
-  }
-  },[inputValueLoan, currentInterest,currentloanPeriod,compareInterest, compareloanPeriod ])
- 
+  useEffect(() => {
+    if (
+      inputValueLoan &&
+      inputValueLoan != 0 &&
+      inputValueLoan >= 600 &&
+      inputValueLoan <= 200000 &&
+      currentInterest &&
+      currentInterest != 0 &&
+      currentloanPeriod &&
+      compareInterest &&
+      compareInterest != 0 &&
+      compareloanPeriod
+    )
+      calculateLoanDetails();
+    else {
+      setComapreMonthlyPaymentValue(0);
+      setCurrentMonthlyPaymentValue(0);
+      setPayMonthlyInterestPaymentValue(0);
+      setcurrentPayMonthlyInterestPaymentValue(0);
+      setInterestBoxValue(0);
+      setMonthlyBoxValue(0);
+    }
+  }, [
+    inputValueLoan,
+    currentInterest,
+    currentloanPeriod,
+    compareInterest,
+    compareloanPeriod,
+  ]);
 
   const handleInputFocus = () => {
     setIsInputFocused(true);
@@ -101,7 +138,7 @@ const SavingsCalculator = () => {
   const handleInputBlur3 = () => {
     setIsInputFocused3(false);
   };
-  
+
   const handleInputFocus4 = () => {
     setIsInputFocused4(true);
   };
@@ -119,46 +156,61 @@ const SavingsCalculator = () => {
   };
 
   const calculateLoanDetails = () => {
-    
     const comparemonthlyInterestRate = compareInterest / 12 / 100;
-    const comparenumberOfPayments = parseFloat( compareloanPeriod.value) * 12;
+    const comparenumberOfPayments = parseFloat(compareloanPeriod.value) * 12;
     const comparemonthlyPayment =
       (inputValueLoan * comparemonthlyInterestRate) /
       (1 - Math.pow(1 + comparemonthlyInterestRate, -comparenumberOfPayments));
-    console.log("comparemonthlyPayment",comparemonthlyPayment)
+    console.log("comparemonthlyPayment", comparemonthlyPayment);
     setComapreMonthlyPaymentValue(comparemonthlyPayment);
-    
 
     const currentmonthlyInterestRate = currentInterest / 12 / 100;
-    const currentnumberOfPayments = parseFloat( currentloanPeriod.value) * 12;
+    const currentnumberOfPayments = parseFloat(currentloanPeriod.value) * 12;
     const currentmonthlyPayment =
       (inputValueLoan * currentmonthlyInterestRate) /
       (1 - Math.pow(1 + currentmonthlyInterestRate, -currentnumberOfPayments));
-    console.log("currentmonthlyPayment",currentmonthlyPayment)
-    setCurrentMonthlyPaymentValue(currentmonthlyPayment)
+    console.log("currentmonthlyPayment", currentmonthlyPayment);
+    setCurrentMonthlyPaymentValue(currentmonthlyPayment);
 
+    const comparetotalPayments =
+      comparemonthlyPayment * compareloanPeriod.value * 12;
+    const payMonthlyInterestPaymentValue =
+      comparetotalPayments - inputValueLoan;
+    setPayMonthlyInterestPaymentValue(payMonthlyInterestPaymentValue);
 
-    const comparetotalPayments = comparemonthlyPayment * compareloanPeriod.value * 12;
-    const payMonthlyInterestPaymentValue = comparetotalPayments - inputValueLoan;
-    setPayMonthlyInterestPaymentValue(payMonthlyInterestPaymentValue)
-
-
-    const currenttotalPayments = currentmonthlyPayment * currentloanPeriod.value * 12;
-    const currentpayMonthlyInterestPaymentValue = currenttotalPayments - inputValueLoan;
-    setcurrentPayMonthlyInterestPaymentValue(currentpayMonthlyInterestPaymentValue)
- 
+    const currenttotalPayments =
+      currentmonthlyPayment * currentloanPeriod.value * 12;
+    const currentpayMonthlyInterestPaymentValue =
+      currenttotalPayments - inputValueLoan;
+    setcurrentPayMonthlyInterestPaymentValue(
+      currentpayMonthlyInterestPaymentValue
+    );
 
     const interestboxvalue = parseFloat(
       currentpayMonthlyInterestPaymentValue - payMonthlyInterestPaymentValue
-      ).toFixed(1);
-      setInterestBoxValue(interestboxvalue)
+    ).toFixed(1);
+    setInterestBoxValue(interestboxvalue);
 
     const monthlyboxvalue = parseFloat(
-        currentmonthlyPayment - comparemonthlyPayment
-      ).toFixed(1);
-      setMonthlyBoxValue(monthlyboxvalue)
-  }
+      currentmonthlyPayment - comparemonthlyPayment
+    ).toFixed(1);
+    setMonthlyBoxValue(monthlyboxvalue);
+  };
+  // const handlee = (value) => {
+  //   // Remove non-digit characters
+  //   if(!value) return
+  //   const cleanValue = value.replace(/[^\d]/g, '');
 
+  //   // Check if there are at least two digits
+  //   if (cleanValue.length >= 2) {
+  //     // Insert a decimal after the first two digits
+  //     const newValue = cleanValue.slice(0, 2) + '.' + cleanValue.slice(2);
+  //     setCurrentInterest(newValue);
+  //   } else {
+  //     setCurrentInterest(cleanValue);
+  //   }
+
+  // };
   return (
     <div className={styles.wrapper} id="savings">
       <div className={styles.headings}>
@@ -196,14 +248,18 @@ const SavingsCalculator = () => {
             <div
               className={isInputFocused1 ? styles.boxerror : styles.box}
               style={{
-                border: !currentInterest  ? "1px solid red" : "",
+                border: !currentInterest ? "1px solid red" : "",
               }}
             >
               <h5>Interest Rate</h5>
               <CurrencyInput
                 value={currentInterest}
-                maxLength={4}
-                onValueChange={(value) => setCurrentInterest(value)}
+                maxLength={6}
+                decimalsLimit={2}
+                onValueChange={(value) => {
+                  if (!value || value <= 100)
+                  setCurrentInterest(value);
+                }}
                 onFocus={handleInputFocus1}
                 onBlur={handleInputBlur1}
               />
@@ -231,20 +287,16 @@ const SavingsCalculator = () => {
             </div>
           </div>
           <div className={styles.errormsgs}>
-            {!inputValueLoan  && (
-              <span>Please fill this field</span>
-            )}
-            {inputValueLoan < 600  &&(
+            {!inputValueLoan && <span>Please fill this field</span>}
+            {inputValueLoan < 600 && (
               <span>Enter amount ($600 to $200,000)</span>
             )}
-            {inputValueLoan > 200000  &&(
+            {inputValueLoan > 200000 && (
               <span>Enter amount ($600 to $200,000)</span>
             )}
           </div>
           <div className={styles.errormsg}>
-            {!currentInterest  && (
-              <span>Please fill this field</span>
-            )}
+            {!currentInterest && <span>Please fill this field</span>}
           </div>
           <div className={styles.calculatorheading}>
             <h3 style={{ marginTop: "3rem" }}>2. Choose a rate to compare</h3>
@@ -258,14 +310,18 @@ const SavingsCalculator = () => {
             <div
               className={isInputFocused3 ? styles.boxerror : styles.box}
               style={{
-                border: !compareInterest  ? "1px solid red" : "",
+                border: !compareInterest ? "1px solid red" : "",
               }}
             >
               <h5>Interest Rate</h5>
               <CurrencyInput
                 value={compareInterest}
-                maxLength={4}
-                onValueChange={(value) => setCompareInterest(value)}
+                maxLength={6}
+                decimalsLimit={2}
+                onValueChange={(value) => {
+                  if (!value || value <= 100)
+                  setCompareInterest(value);
+                }}
                 onFocus={handleInputFocus3}
                 onBlur={handleInputBlur3}
               />
@@ -291,63 +347,61 @@ const SavingsCalculator = () => {
               />
             </div>
           </div>
-          <div className={styles.errormsgs}>
-            {!compareInterest  && (
-              <span>Please fill this field</span>
-            )}
+          <div className={styles.compareerrormsgs}>
+            {!compareInterest && <span>Please fill this field</span>}
           </div>
           <div className={styles.calculatorheading}>
             <h3 style={{ marginTop: "4rem" }}>3. Check the results</h3>
-              <span>
-                With an interest rate of{" "}
-                <span style={{ color: "#1a4048", fontWeight: "600" }}>
-                  {compareInterest}%
-                </span>{" "}
-                over{" "}
-                <span style={{ color: "#1a4048", fontWeight: "600" }}>
-                  {compareloanPeriod?.label}
-                </span>{" "}
-                , you will pay{" "}
-                <span style={{ color: "#1a4048", fontWeight: "600" }}>
-                  ${Math.round( comapreMonthlyPaymentValue.toFixed(1))}
-                </span>{" "}
-                per month and{" "}
-                <span style={{ color: "#1a4048", fontWeight: "600" }}>
-                  ${Math.round( payMonthlyInterestPaymentValue.toFixed(1))}
-                </span>{" "}
-                in interest over the lifetime of your loan.
-              </span>
+            <span>
+              With an interest rate of{" "}
+              <span style={{ color: "#1a4048", fontWeight: "600" }}>
+                {compareInterest}%
+              </span>{" "}
+              over{" "}
+              <span style={{ color: "#1a4048", fontWeight: "600" }}>
+                {compareloanPeriod?.label}
+              </span>{" "}
+              , you will pay{" "}
+              <span style={{ color: "#1a4048", fontWeight: "600" }}>
+                ${Math.round(comapreMonthlyPaymentValue.toFixed(1))}
+              </span>{" "}
+              per month and{" "}
+              <span style={{ color: "#1a4048", fontWeight: "600" }}>
+                ${Math.round(payMonthlyInterestPaymentValue.toFixed(1))}
+              </span>{" "}
+              in interest over the lifetime of your loan.
+            </span>
           </div>
           <div className={styles.barboxes}>
             <div className={styles.barbox}>
               <div className={styles.moneysignbox}>
-                  <div>
-                    <span>
-                      ${Math.abs(Math.floor( interestboxvalue))}
-                      {interestboxvalue > 0 ? (
-                        <FaArrowDown
-                          style={{
-                            color: "#1a4048",
-                            marginLeft: "0.5rem",
-                            marginBottom: "-0.4rem",
-                            color: "green",
-                          }}
-                        />
-                      ) : interestboxvalue < 0 ? (
-                        <FaArrowUp
-                          style={{
-                            color: "#1a4048",
-                            marginLeft: "0.5rem",
-                            marginBottom: "-0.2rem",
-                            color: "crimson",
-                          }}
-                        />
-                      ) : null}
-                    </span>
-                    {interestboxvalue > 0 && <p>Less in interest</p>}
-                    {interestboxvalue < 0 && <p>More in interest</p>}
-                    {interestboxvalue == 0 && <p>No change in interest</p>}
-                  </div>
+                <div>
+                  <span>
+                    ${Math.abs(Math.floor(interestboxvalue))}
+                    {interestboxvalue > 0 ? (
+                      <FaArrowDown
+                        style={{
+                          color: "#1a4048",
+                          marginLeft: "0.5rem",
+                          marginBottom: "-0.4rem",
+                          color: "green",
+                        }}
+                      />
+                    ) : interestboxvalue < 0 ? (
+                      <FaArrowUp
+                        style={{
+                          color: "#1a4048",
+                          marginLeft: "0.5rem",
+                          marginBottom: "-0.2rem",
+                          color: "crimson",
+                        }}
+                      />
+                    ) : null}
+                  </span>
+                  {interestboxvalue > 0 && <p>Less in interest</p>}
+                  {interestboxvalue < 0 && <p>More in interest</p>}
+                  {interestboxvalue == 0 && <p>No change in interest</p>}
+                </div>
               </div>
               <div className={styles.interestbox}>
                 {interestboxvalue <= 0 && <span>Total interest: </span>}
@@ -355,27 +409,49 @@ const SavingsCalculator = () => {
                   <span>
                     Total interest savings:{" "}
                     <span style={{ color: "#1A4048", fontWeight: "bolder" }}>
-                      ${Math.abs(Math.floor( interestboxvalue))}
+                      ${Math.abs(Math.floor(interestboxvalue))}
                     </span>
                   </span>
                 )}
                 <div className={styles.colorboxes}>
-                  <img src="./blackbox.png" alt=""  height={17}/>
+                  <img src="./blackbox.png" alt="" height={17} />
                   <span>New Loan</span>
                   <img src="./bluebox.png" alt="" height={17} />
                   <span>Current Loan</span>
                 </div>
                 <div className={styles.colorbarboxes}>
                   <span style={{ color: "#1A4048", fontWeight: "bolder" }}>
-                    {payMonthlyInterestPaymentValue ? `$${Math.round( payMonthlyInterestPaymentValue.toFixed(1))}` : `_`}
+                    {payMonthlyInterestPaymentValue
+                      ? `$${Math.round(
+                          payMonthlyInterestPaymentValue.toFixed(1)
+                        )}`
+                      : `_`}
                   </span>
-                  <ColorBars value={payMonthlyInterestPaymentValue ? payMonthlyInterestPaymentValue.toFixed(1) : 0} />
+                  <ColorBars
+                    value={
+                      payMonthlyInterestPaymentValue
+                        ? payMonthlyInterestPaymentValue.toFixed(1)
+                        : 0
+                    }
+                  />
                 </div>
                 <div className={styles.colorbarboxes}>
                   <span style={{ color: "#05c8e8", fontWeight: "bolder" }}>
-                    {currentpayMonthlyInterestPaymentValue ? `$${Math.round( currentpayMonthlyInterestPaymentValue.toFixed(1))}` : `_`}
+                    {currentpayMonthlyInterestPaymentValue
+                      ? `$${Math.round(
+                          currentpayMonthlyInterestPaymentValue.toFixed(1)
+                        )}`
+                      : `_`}
                   </span>
-                  <ColorBars2 value={currentpayMonthlyInterestPaymentValue ? Math.round( currentpayMonthlyInterestPaymentValue.toFixed(1)) : 0} />
+                  <ColorBars2
+                    value={
+                      currentpayMonthlyInterestPaymentValue
+                        ? Math.round(
+                            currentpayMonthlyInterestPaymentValue.toFixed(1)
+                          )
+                        : 0
+                    }
+                  />
                 </div>
               </div>
             </div>
@@ -383,33 +459,33 @@ const SavingsCalculator = () => {
           <div className={styles.barboxes}>
             <div className={styles.barbox}>
               <div className={styles.moneysignbox}>
-                  <div>
-                    <span>
-                      ${Math.abs(Math.floor(monthlyboxvalue))}
-                      {monthlyboxvalue > 0 ? (
-                        <FaArrowDown
-                          style={{
-                            color: "#1a4048",
-                            marginLeft: "0.5rem",
-                            marginBottom: "-0.4rem",
-                            color: "green",
-                          }}
-                        />
-                      ) : monthlyboxvalue < 0 ? (
-                        <FaArrowUp
-                          style={{
-                            color: "#1a4048",
-                            marginLeft: "0.5rem",
-                            marginBottom: "-0.2rem",
-                            color: "crimson",
-                          }}
-                        />
-                      ) : null}
-                    </span>
-                    {monthlyboxvalue > 0 && <p>Less per month</p>}
-                    {monthlyboxvalue < 0 && <p>More per month</p>}
-                    {monthlyboxvalue == 0 && <p>No change per month</p>}
-                  </div>
+                <div>
+                  <span>
+                    ${Math.abs(Math.floor(monthlyboxvalue))}
+                    {monthlyboxvalue > 0 ? (
+                      <FaArrowDown
+                        style={{
+                          color: "#1a4048",
+                          marginLeft: "0.5rem",
+                          marginBottom: "-0.4rem",
+                          color: "green",
+                        }}
+                      />
+                    ) : monthlyboxvalue < 0 ? (
+                      <FaArrowUp
+                        style={{
+                          color: "#1a4048",
+                          marginLeft: "0.5rem",
+                          marginBottom: "-0.2rem",
+                          color: "crimson",
+                        }}
+                      />
+                    ) : null}
+                  </span>
+                  {monthlyboxvalue > 0 && <p>Less per month</p>}
+                  {monthlyboxvalue < 0 && <p>More per month</p>}
+                  {monthlyboxvalue == 0 && <p>No change per month</p>}
+                </div>
               </div>
               <div className={styles.interestbox}>
                 {monthlyboxvalue <= 0 && <span>Monthly payment: </span>}
@@ -429,25 +505,37 @@ const SavingsCalculator = () => {
                 </div>
                 <div className={styles.colorbarboxes}>
                   <span style={{ color: "#1A4048", fontWeight: "bolder" }}>
-                    {comapreMonthlyPaymentValue ? `$${Math.round( comapreMonthlyPaymentValue.toFixed(1))}` : `_`}
+                    {comapreMonthlyPaymentValue
+                      ? `$${Math.round(comapreMonthlyPaymentValue.toFixed(1))}`
+                      : `_`}
                   </span>
-                  <ColorBars value={comapreMonthlyPaymentValue ? Math.round( comapreMonthlyPaymentValue.toFixed(1)) : 0} />
+                  <ColorBars
+                    value={
+                      comapreMonthlyPaymentValue
+                        ? Math.round(comapreMonthlyPaymentValue.toFixed(1))
+                        : 0
+                    }
+                  />
                 </div>
                 <div className={styles.colorbarboxes}>
                   <span style={{ color: "#05c8e8", fontWeight: "bolder" }}>
-                    {currentMonthlyPaymentValue ? `$${Math.round( currentMonthlyPaymentValue.toFixed(1))}` : "_"}
+                    {currentMonthlyPaymentValue
+                      ? `$${Math.round(currentMonthlyPaymentValue.toFixed(1))}`
+                      : "_"}
                   </span>
-                  <ColorBars2 value={currentMonthlyPaymentValue ? Math.round( currentMonthlyPaymentValue.toFixed(1)) : 0} />
+                  <ColorBars2
+                    value={
+                      currentMonthlyPaymentValue
+                        ? Math.round(currentMonthlyPaymentValue.toFixed(1))
+                        : 0
+                    }
+                  />
                 </div>
               </div>
             </div>
           </div>
           <div className={styles.footer}>
-            <button onClick={handleclick}>
-             
-                Check Rates
-       
-            </button>
+            <button onClick={handleclick}>Check Rates</button>
             <span>
               Checking rates won’t affect your credit score. Calculator results
               are for illustrative purposes only.

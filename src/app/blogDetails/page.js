@@ -49,17 +49,16 @@ export default function blogDetails() {
                 Published September 2021
               </div>
               <div className={styles.socialIconContainer}>
-                <div style={{ marginRight: "5px", textAlign: "center" }}>
-                  share this :
+                <div className={styles.sharethis}>
+                  Share this :
                 </div>
                 <img src="./linkedinn.png" className={styles.socialLogoStyle} />
-                <img src="./twitterr.png" height={20} />
-                <img src="./facebookk.png" className={styles.socialLogoStyle} />
                 <img
-                  src="./maill.png"
-                  height={23}
-                  style={{ marginLeft: "5px" }}
+                  src="./twitterr.png"
+                  className={styles.socialLogoStyletwitter}
                 />
+                <img src="./facebookk.png" className={styles.socialLogoStyle} />
+                <img src="./maill.png" className={styles.socialLogoStylemail} />
               </div>
               <div className={styles.blogDetailDiscriptionAndImageContainer}>
                 <div className={styles.blogDetailDescriptionStyle}>

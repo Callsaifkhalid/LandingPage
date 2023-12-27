@@ -48,7 +48,7 @@ const Hero = () => {
           </div>
           <div
             className={
-              inputvalue < 600 ? styles.findmyrateerror : styles.findmyrate
+              inputvalue < 600 || inputvalue > 200000 ? styles.findmyrateerror : styles.findmyrate
             }
           >
             <CurrencyInput
@@ -66,14 +66,14 @@ const Hero = () => {
             <button>Respond to Mail Offer</button>
           </div>
           {inputvalue < 600 && (
-            <span className={styles.errormsg}>
-              Enter amount ($600 to $200,000)
-            </span>
+            <div className={styles.errormsg}>
+              <span>Enter amount ($600 to $200,000)</span>
+            </div>
           )}
           {inputvalue > 200000 && (
-            <span className={styles.errormsg}>
-              Enter amount ($600 to $200,000)
-            </span>
+            <div className={styles.errormsg}>
+             <span>Enter amount ($600 to $200,000)</span> 
+            </div>
           )}
           <div className={styles.thumbsup}>
             <IoMdThumbsUp />

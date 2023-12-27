@@ -17,7 +17,6 @@
 .swiper {
   background-color: #f7f7f7;
   padding: 20px 20px 10px 20px;
-  position: inherit;
   z-index: 1;
 }
 .slide{
@@ -52,5 +51,10 @@
 @media  screen and (min-width: 421px) and (max-width: 600px) {
   .sliderbutton{
     margin-top: -18%;
+  }
+}
+@media  screen and (min-width: 601px) and (max-width: 1024px) {
+  .sliderbutton{
+    margin-top: -9%;
   }
 }

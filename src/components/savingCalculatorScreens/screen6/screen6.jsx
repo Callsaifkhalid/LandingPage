@@ -15,7 +15,7 @@ const Screen6 = ({ onContinue, onBack, progress }) => {
   const Styles = {
     control: (provided, state) => ({
       display:'flex',
-      height:"38px",
+      height:"60px",
       border: "none",
       marginLeft:'2%',
       placeholder:'State'
@@ -33,7 +33,7 @@ const Screen6 = ({ onContinue, onBack, progress }) => {
       <div className={styles.calculatorScreens}>
         <IoMdArrowRoundBack onClick={onBack} className={styles.backbutton} />
         <div className={styles.calculatorScreensImg}>
-          <img src="../houseicon.png" alt="" width={100} />
+          <img src="../houseicon.svg" alt="" width={100} />
         </div>
         <div className={styles.calculatorScreensheading}>
           <h1>What’s your home address?</h1>

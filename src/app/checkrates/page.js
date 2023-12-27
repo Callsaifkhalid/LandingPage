@@ -48,7 +48,7 @@ const Screen1 = () => {
         <div className={styles.calculator}>
           <div className={styles.calculatorScreens}>
             <div className={styles.calculatorScreensImg}>
-              <img src="../dollarphoto.png" alt="" width={100} />
+              <img src="../dollarphoto.svg" alt="" width={100} />
             </div>
             <div className={styles.calculatorScreensheading}>
               <h1>How much do you want to borrow?</h1>
@@ -65,12 +65,6 @@ const Screen1 = () => {
               </div>
               <div className={styles.inputfieldbox}>
                 <span>Loan Amount</span>
-                {/* <input
-                  type="text"
-                  maxLength={6}
-                  value={heroInput}
-                  onChange={(e) => heroSectionInput(e.target.value)}
-                /> */}
                 <CurrencyInput
                   value={heroInput}
                   prefix="$"

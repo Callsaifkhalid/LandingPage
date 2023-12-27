@@ -46,6 +46,7 @@
   width: 300px;
   border-radius: 10px;
   border: 1px solid #8b8b8b;
+  
 }
 .inputs > span {
   font-size: 14px;
@@ -58,7 +59,7 @@
   border-radius: 10px;
   border: none;
   font-size: 16px;
-  height: 40px;
+  height: 60px;
 }
 .inputfields > div > input:focus {
   outline: none;

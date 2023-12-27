@@ -100,12 +100,12 @@ export default function BlogList() {
                       src={"./linkedinn.png"}
                       className={styles.socialLogoStyle}
                     />
-                    <img src={"./twitterr.png"} height={20} />
+                    <img src={"./twitterr.png"} className={styles.socialLogoStyletwitter} />
                     <img
                       src={"./facebookk.png"}
                       className={styles.socialLogoStyle}
                     />
-                    <img src={"./maill.png"} height={23} style={{marginLeft:'5px'}}/>
+                    <img src={"./maill.png"} className={styles.socialLogoStylemail}/>
                   </div>
                   <div className={styles.blogDiscriptionAndImageContainer}>
                     <div className={styles.blogDescriptionStyle}>

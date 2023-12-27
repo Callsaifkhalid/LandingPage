@@ -15,7 +15,7 @@ const Screen3 = ({ onContinue, onBack, progress }) => {
       <div className={styles.calculatorScreens}>
         <IoMdArrowRoundBack onClick={onBack} className={styles.backbutton} />
         <div className={styles.calculatorScreensImg}>
-          <img src="../dollarphoto.png" alt="" width={100} />
+          <img src="../dollarphoto.svg" alt="" width={100} />
         </div>
         <div className={styles.calculatorScreensheading}>
           <h1>Tell us why you’re looking for a loan</h1>

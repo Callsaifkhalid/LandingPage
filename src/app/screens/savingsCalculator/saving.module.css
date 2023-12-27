@@ -70,6 +70,16 @@
   color: red;
   margin-bottom: -5%;
 }
+.compareerrormsgs{
+  display: flex;
+  padding: 5px;
+  margin-left: 1.5%;
+}
+.compareerrormsgs span{
+  font-size: 13px;
+  color: red;
+  margin-bottom: -5%;
+}
 .box {
   display: flex;
   width: 230px;
@@ -279,7 +289,13 @@
   .box {
     width: 190px;
   }
+  .boxerror{
+    width: 190px;
+  }
   .boxx {
+    width: 190px;
+  }
+  .boxerror{
     width: 190px;
   }
 }
@@ -316,8 +332,18 @@
   .box {
     width: 180px;
   }
+  .boxerror{
+    width: 180px;
+  }
   .boxx {
     width: 190px;
+  }
+  .boxxerror{
+    width: 190px;
+  }
+  .errormsg{
+    margin-left: -10%;
+    margin-top: -1.5%;
   }
 }
 @media screen and (max-width: 600px) {
@@ -352,21 +378,27 @@
   }
   .boxes {
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
   }
   .box {
+    width: 270px;
+  }
+  .boxerror {
     width: 270px;
   }
   .boxx {
     width: 270px;
     justify-content: space-between;
   }
+  .boxxerror{
+    width: 270px;
+  }
   .boxx > h5 {
     margin-left: 1rem;
   }
   .boxes2 {
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
   }
   .barboxes{
     margin-top: -12%;
@@ -396,6 +428,41 @@
   .footer > span {
     margin-left: 10px;
     font-size: 13px;
+  }
+  .errormsgs{
+    display: flex;
+    padding: 5px;
+    margin-left: 0%;
+  }
+  .errormsgs span{
+    font-size: 13px;
+    color: red;
+    margin-bottom: 0%;
+    margin-top: -69%;
+  }
+  .errormsg{
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px;
+    margin-top: 0%;
+    margin-left: 0%;
+  }
+  .errormsg span{
+    font-size: 13px;
+    color: red;
+    margin-bottom: 0%;
+    margin-top: -39%;
+  }
+  .compareerrormsgs{
+    display: flex;
+    padding: 5px;
+    margin-left: 2.9%;
+  }
+  .compareerrormsgs span{
+    font-size: 13px;
+    color: red;
+    margin-bottom: -5%;
+    margin-top: -36%;
   }
 }
 @media  screen and (min-width: 921px) and (max-width: 1200px) {

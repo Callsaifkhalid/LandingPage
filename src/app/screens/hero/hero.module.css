@@ -69,7 +69,7 @@
   align-items: center;
 }
 .respondtomail{
-  width: 500px;
+  width: 499px;
   height: 50px;
   display: flex;
   justify-content: center;
@@ -126,11 +126,10 @@
 }
 
 .Link {
-  border: #05c8e8 1px solid;
+  border: none;
   text-decoration: none;
   width: 150px;
   height: 60px;
-  border: none;
   outline: none;
   background-color: #1a4048;
   color: #05c8e8;
@@ -248,7 +247,7 @@
   .respondtomail{
     width: 350px;
     height: 50px;
-    margin-top: -9.2%;
+    margin-top: -13.7%;
     border: 1px solid #05c8e8;
   }
   .findmyrate {
@@ -266,6 +265,23 @@
     border: none;
     font-size: 15px;
     padding-left: 0.8rem;
+  }
+  .findmyrateerror {
+    width: 350px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #05c8e8 1px solid;
+  }
+  .findmyrateerror > input {
+    width: 250px;
+    height: 58px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    padding-left: 0.8rem;
+    border: 1px solid red;
   }
   .Link {
     width: 120px;
@@ -328,7 +344,7 @@
   .respondtomail{
     width: 350px;
     height: 50px;
-    margin-top: -9.2%;
+    margin-top: -13.7%;
     border: 1px solid #05c8e8;
   }
   .findmyrate {
@@ -346,6 +362,23 @@
     border: none;
     font-size: 15px;
     padding-left: 0.8rem;
+  }
+  .findmyrateerror {
+    width: 350px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #05c8e8 1px solid;
+  }
+  .findmyrateerror > input {
+    width: 250px;
+    height: 58px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    padding-left: 0.8rem;
+    border: 1px solid red;
   }
   .Link {
     width: 120px;
@@ -397,7 +430,7 @@
   .respondtomail{
     width: 300px;
     height: 50px;
-    margin-top: -9.2%;
+    margin-top: -11.2%;
     border: 1px solid #05c8e8;
   }
   .findmyrate {
@@ -416,6 +449,23 @@
     font-size: 16px;
     padding-left: 1rem;
     border: #05c8e8 1px solid;
+  }
+  .findmyrateerror {
+    width: 300px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.7rem;
+    border: none;
+  }
+  .findmyrateerror > input {
+    width: 280px;
+    height: 58px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    padding-left: 1rem;
+    border: 1px solid red;
   }
   .Link {
     width: 300px;
@@ -438,6 +488,13 @@
   .imagecontainer {
     display: none;
   }
+  .errormsg {
+    font-size: 13px;
+    color: red;
+    margin-top: -56%;
+    margin-bottom: 40%;
+  }
+
 }
 @media screen and (min-width: 921px) and (max-width: 1200px) {
   .herowrapper {

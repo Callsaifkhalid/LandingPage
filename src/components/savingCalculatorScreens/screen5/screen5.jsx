@@ -7,7 +7,7 @@ import { IoMdCheckmark } from "react-icons/io";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { FaLock } from "react-icons/fa";
 import Link from "next/link";
-const Screen5 = ({ onContinue,onBack, progress }) => {
+const Screen5 = ({ onContinue, onBack, progress }) => {
   let ValuePiece = Date | null;
   let Value = ValuePiece | [ValuePiece, ValuePiece];
   const [value, onChange] = useState(new Date());
@@ -16,7 +16,7 @@ const Screen5 = ({ onContinue,onBack, progress }) => {
       <div className={styles.calculatorScreens}>
         <IoMdArrowRoundBack onClick={onBack} className={styles.backbutton} />
         <div className={styles.calculatorScreensImg}>
-          <img src="../dob.png" alt="" width={100} />
+          <img src="../dob.svg" alt="" width={100} />
         </div>
         <div className={styles.calculatorScreensheading}>
           <h1>What’s your date of birth ?</h1>
@@ -25,7 +25,7 @@ const Screen5 = ({ onContinue,onBack, progress }) => {
           <DatePicker
             onChange={onChange}
             value={value}
-            className={styles.nameinput}
+            className={styles.calenderr}
             dayPlaceholder="DD"
             monthPlaceholder="M"
             yearPlaceholder="YYYY"
@@ -35,7 +35,9 @@ const Screen5 = ({ onContinue,onBack, progress }) => {
         <button className={styles.continuebutton} onClick={onContinue}>
           Continue
         </button>
-        <span style={{ color: "#8B8B8B", fontSize: "14px", textAlign:'center' }}>
+        <span
+          style={{ color: "#8B8B8B", fontSize: "14px", textAlign: "center" }}
+        >
           Check rates won’t affect your credit score
         </span>
         <div className={styles.securityheading}>

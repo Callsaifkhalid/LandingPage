@@ -4,6 +4,7 @@ import { IoMdCheckmark } from "react-icons/io";
 import { FaLock } from "react-icons/fa";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import Link from "next/link";
+import CurrencyInput from "react-currency-input-field";
 const Screen8 = ({ onContinue,onBack, progress }) => {
   const [inputvalue, setinputvalue] = useState("");
 
@@ -12,7 +13,7 @@ const Screen8 = ({ onContinue,onBack, progress }) => {
       <div className={styles.calculatorScreens}>
       <IoMdArrowRoundBack onClick={onBack} className={styles.backbutton}/>
         <div className={styles.calculatorScreensImg}>
-          <img src="../dollarphoto.png" alt="" width={100} />
+          <img src="../dollarphoto.svg" alt="" width={100} />
         </div>
         <div className={styles.calculatorScreensheading}>
           <h1>
@@ -29,12 +30,12 @@ const Screen8 = ({ onContinue,onBack, progress }) => {
           </div>
           <div className={styles.inputfieldbox}>
             <span>Housing Costs</span>
-            <input
-              type="text"
-              maxLength={5}
-              value={inputvalue}
-              onChange={(e) => setinputvalue(e.target.value)}
-            />
+            <CurrencyInput
+                  value={inputvalue}
+                  prefix="$"
+                  maxLength={5}
+                  onValueChange={(value) => setinputvalue(value)}
+                />
           </div>
         </div>
         <button className={styles.continuebutton} onClick={onContinue}>

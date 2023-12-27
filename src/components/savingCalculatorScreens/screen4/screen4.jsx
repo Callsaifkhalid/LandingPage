@@ -13,7 +13,7 @@ const Screen4 = ({onContinue,onBack,progress}) => {
       <div className={styles.calculatorScreens}>
       <IoMdArrowRoundBack onClick={onBack} className={styles.backbutton}/>
         <div className={styles.calculatorScreensImg}>
-          <img src="../infophoto.png" alt="" width={100} />
+          <img src="../infophoto.svg" alt="" width={100} />
         </div>
         <div className={styles.calculatorScreensheading}>
           <h1>Let’s us know a little more about you</h1>
