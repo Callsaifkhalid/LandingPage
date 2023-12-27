@@ -4,8 +4,10 @@ import { IoMdCheckmark } from "react-icons/io";
 import { FaLock } from "react-icons/fa";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import Link from "next/link";
+import CurrencyInput from "react-currency-input-field";
 const Screen10 = ({ onBack, progress,onContinue }) => {
-  const [emailorphone, setEmailorphone] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   return (
     <div className={styles.calculator}>
       <div className={styles.calculatorScreens}>
@@ -20,12 +22,23 @@ const Screen10 = ({ onBack, progress,onContinue }) => {
           <div className={styles.inputs}>
             <input
               type="text"
-              placeholder="Email or Phone"
+              placeholder="Email"
               className={styles.nameinput}
-              value={emailorphone}
-              onChange={(e) => setEmailorphone(e.target.value)}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />{" "}
-            {emailorphone != "" && <IoMdCheckmark style={{ color: "#05c8e8" }} />}
+            {email != "" && <IoMdCheckmark style={{ color: "#05c8e8" }} />}
+          </div>
+          <div className={styles.inputs}>
+            <input
+              placeholder="Phone"
+              type="number"
+              maxLength={4}
+              className={styles.nameinput}
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+            />{" "}
+            {phone != "" && <IoMdCheckmark style={{ color: "#05c8e8" }} />}
           </div>
         </div>
         <button className={styles.continuebutton} onClick={onContinue}>Continue</button>

@@ -8,7 +8,6 @@ import "swiper/css";
 const ImageSwiper = () => {
   return (
     <div className={styles.wrapper}>
-      <h3>COMPARE TOP PERSONAL LOAN LENDERS</h3>
       <Swiper {...sliderSettings} className={styles.swiper}>
         <SliderButton />
         <SwiperSlide className={styles.slide}>
