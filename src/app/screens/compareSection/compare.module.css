@@ -1,5 +1,4 @@
 .wrapper {
-  
 }
 .howcontainer {
   justify-content: space-around;
@@ -51,6 +50,12 @@
   align-items: center;
   gap: 2rem;
 }
+.lendersboxes {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 .box1 {
   display: flex;
   justify-content: center;
@@ -73,7 +78,7 @@
   justify-content: space-around;
   align-items: center;
   height: 100px;
-  width: 85%;
+  width: 100%;
   border: 1px solid #bdbdbd;
   border-radius: 23px;
   background-color: whitesmoke;
@@ -86,7 +91,7 @@
   flex-direction: column;
   gap: 1rem;
 }
-.div1 > button{
+.div1 > button {
   border: none;
   outline: none;
   color: #828282;
@@ -113,6 +118,7 @@
   padding: 7px;
   display: flex;
   flex-direction: column;
+  gap: 1rem;
 }
 .div3 > span {
   color: #1a4048;
@@ -143,38 +149,38 @@
   box-shadow: rgba(31, 229, 255, 0.2) 0px 7px 29px 0px;
   font-weight: 510;
 }
-.viewdetailsbox{
+.viewdetailsbox {
   border: 1px solid #bdbdbd;
   border-radius: 23px;
   background-color: whitesmoke;
-  width: 85%;
+  width: 97%;
   padding: 1rem;
-  margin-top: -2rem;
+  margin-top: -1rem;
 }
-.details{
+.details {
   display: flex;
   justify-content: space-between;
 }
-.detailscontent{
+.detailscontent {
   display: flex;
   flex-direction: column;
+  width: 50%;
+  justify-content: center;
 }
-.detailsanswers{
-  display: flex;
-  align-items: center;
-  gap: 0.2rem;
-  margin-top: -1.5rem;
- 
+.detailsanswers {
+  margin: 2% 5% 2% 0%;
 }
 .detailsanswers > span {
- 
   font-size: 13px;
+}
+.detailsanswers span span {
+  font-weight: 600;
 }
 @media screen and (min-width: 718px) and (max-width: 769px) {
   .wrapper {
     width: 100%;
   }
-  .wrapper> img{
+  .wrapper > img {
     width: 200px;
   }
   .headings {
@@ -214,17 +220,16 @@
     width: 90px;
     margin-left: 0.5rem;
   }
-  .details{
+  .details {
     flex-direction: column;
     gap: 2rem;
   }
-
 }
 @media screen and (min-width: 770px) and (max-width: 920px) {
   .wrapper {
     width: 100%;
   }
-  .wrapper> img{
+  .wrapper > img {
     width: 200px;
   }
   .headings {
@@ -260,15 +265,14 @@
     width: 90px;
     margin-left: 0.5rem;
   }
-  .details{
+  .details {
     flex-direction: column;
     gap: 2rem;
   }
-
 }
 
 @media screen and (max-width: 717px) {
-  .wrapper> img{
+  .wrapper > img {
     display: none;
   }
   .headings {
@@ -343,21 +347,20 @@
   .wrapper > span {
     margin: 3rem 3rem 2rem 0rem;
   }
-  .details{
+  .details {
     flex-direction: column;
   }
-  .detailsanswers{
+  .detailsanswers {
     flex-direction: column;
     align-items: flex-start;
     gap: 0rem;
     margin-top: 0rem;
   }
-  .detailsanswers > span{
+  .detailsanswers > span {
     margin-top: -1rem;
   }
-
 }
-@media  screen and (min-width: 921px) and (max-width: 1200px) {
+@media screen and (min-width: 921px) and (max-width: 1200px) {
   .headings {
     margin-left: 11rem;
     margin-top: -50rem;
@@ -384,12 +387,12 @@
   .box2 {
     width: 90%;
   }
-  .details{
+  .details {
     width: 100%;
   }
 }
-@media  screen and (min-width: 540px) and (max-width: 590px) {
-  .wrapper{
+@media screen and (min-width: 540px) and (max-width: 590px) {
+  .wrapper {
     width: 100%;
   }
-  }
+}

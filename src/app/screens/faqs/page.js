@@ -53,7 +53,7 @@ const FAQS = () => {
               </div>
             )}
           </div>
-          <div className={click2 && styles.paragraph}>
+          <div className={click2 && styles.paragraphh}>
             <div
               className={click2 ? styles.question : styles.questionn}
               onClick={() => setClick2((prev) => !prev)}
@@ -79,7 +79,7 @@ const FAQS = () => {
               </div>
             )}
           </div>
-          <div className={click3 && styles.paragraph}>
+          <div className={click3 && styles.paragraphh}>
             <div
               className={click3 ? styles.question : styles.questionn}
               onClick={() => setClick3((prev) => !prev)}
@@ -106,7 +106,7 @@ const FAQS = () => {
               </div>
             )}
           </div>
-          <div className={click4 && styles.paragraph}>
+          <div className={click4 && styles.paragraphh}>
             <div
               className={click4 ? styles.question : styles.questionn}
               onClick={() => setClick4((prev) => !prev)}
