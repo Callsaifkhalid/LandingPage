@@ -4,7 +4,9 @@ import styles from "./blogs.module.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import BlogNavbar from "@/components/blogNavbar/blogNavbar";
+import { Link as ScrollLink } from "react-scroll/modules";
 import Footer from "../screens/footer/page";
+import Navbar from "../screens/navbar/page";
 
 export default function BlogList() {
   const router = useRouter();
@@ -72,11 +74,10 @@ export default function BlogList() {
       datetime: "June 21, 2023",
     },
   ];
-  // console.log
 
   return (
     <>
-    <BlogNavbar/>
+   <BlogNavbar/>
       <div className={styles.BlogListMainContainer}>
         <div className={styles.BlogHeadingStyle}>Blog</div>
         <div className={styles.arrayAndSideItemsContainer}>

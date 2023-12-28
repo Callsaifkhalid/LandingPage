@@ -24,11 +24,11 @@ const Contact = () => {
           <div className={styles.mailandnumber}>
             <div className={styles.mail}>
               <img src="./housepic.svg" alt="" width={20} />
-              <span>support@clearcredit.com</span>
+              <span>Service@clearcredit.ai</span>
             </div>
             <div className={styles.number}>
               <FaPhone style={{ color: "#05c8e8", fontSize: "20px", marginLeft:'8px'}} />
-              <div>111-222-333-444</div>
+              <div>1-844-208-1100</div>
             </div>
           </div>
           <div className={styles.contactcontent}>

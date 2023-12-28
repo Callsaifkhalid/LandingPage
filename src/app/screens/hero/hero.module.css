@@ -195,7 +195,7 @@
 }
 
 /* Responsivness */
-@media screen and (min-width: 601px) and (max-width: 769px) {
+@media screen and (min-width: 718px) and (max-width: 769px) {
   .herowrapper {
     width: 100%;
   }
@@ -391,7 +391,7 @@
     cursor: pointer;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 717px) {
   .herowrapper {
     padding-left: 1rem;
   }

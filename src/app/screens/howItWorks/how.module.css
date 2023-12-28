@@ -85,7 +85,7 @@
   margin-top: -10rem;
   margin-bottom: -20rem;
 }
-@media screen and (min-width: 601px) and (max-width: 769px) {
+@media screen and (min-width: 718px) and (max-width: 769px) {
   .wrapper {
     width: 100%;
   }
@@ -189,7 +189,7 @@
     margin-left: 2rem;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 717px) {
   
   .howcontainer {
     margin-top: 3rem;

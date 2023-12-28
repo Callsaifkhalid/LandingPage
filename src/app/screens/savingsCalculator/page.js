@@ -161,7 +161,6 @@ const SavingsCalculator = () => {
     const comparemonthlyPayment =
       (inputValueLoan * comparemonthlyInterestRate) /
       (1 - Math.pow(1 + comparemonthlyInterestRate, -comparenumberOfPayments));
-    console.log("comparemonthlyPayment", comparemonthlyPayment);
     setComapreMonthlyPaymentValue(comparemonthlyPayment);
 
     const currentmonthlyInterestRate = currentInterest / 12 / 100;
@@ -169,7 +168,6 @@ const SavingsCalculator = () => {
     const currentmonthlyPayment =
       (inputValueLoan * currentmonthlyInterestRate) /
       (1 - Math.pow(1 + currentmonthlyInterestRate, -currentnumberOfPayments));
-    console.log("currentmonthlyPayment", currentmonthlyPayment);
     setCurrentMonthlyPaymentValue(currentmonthlyPayment);
 
     const comparetotalPayments =
@@ -257,8 +255,7 @@ const SavingsCalculator = () => {
                 maxLength={6}
                 decimalsLimit={2}
                 onValueChange={(value) => {
-                  if (!value || value <= 100)
-                  setCurrentInterest(value);
+                  if (!value || value <= 100) setCurrentInterest(value);
                 }}
                 onFocus={handleInputFocus1}
                 onBlur={handleInputBlur1}
@@ -319,8 +316,7 @@ const SavingsCalculator = () => {
                 maxLength={6}
                 decimalsLimit={2}
                 onValueChange={(value) => {
-                  if (!value || value <= 100)
-                  setCompareInterest(value);
+                  if (!value || value <= 100) setCompareInterest(value);
                 }}
                 onFocus={handleInputFocus3}
                 onBlur={handleInputBlur3}

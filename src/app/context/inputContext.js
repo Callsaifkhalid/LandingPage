@@ -9,7 +9,6 @@ const [heroInput,setHeroInput]=useState(10000)
 const heroSectionInput = (value)=>{
     setHeroInput(value)
 }
-console.log(heroInput)
 const value = {
 heroSectionInput,
 heroInput

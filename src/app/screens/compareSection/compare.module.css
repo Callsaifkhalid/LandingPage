@@ -170,7 +170,7 @@
  
   font-size: 13px;
 }
-@media screen and (min-width: 601px) and (max-width: 769px) {
+@media screen and (min-width: 718px) and (max-width: 769px) {
   .wrapper {
     width: 100%;
   }
@@ -267,7 +267,7 @@
 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 717px) {
   .wrapper> img{
     display: none;
   }

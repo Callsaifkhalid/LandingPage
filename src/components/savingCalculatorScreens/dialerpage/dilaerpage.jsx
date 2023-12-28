@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./dialerpage.module.css";
 import { FaPhoneVolume } from "react-icons/fa6";
+import PhoneIcon from "../AnimatedPhoneIcon/animatedphoneicon";
 const Dilaerpage = () => {
   return (
     <div className={styles.calculator}>
@@ -8,14 +9,15 @@ const Dilaerpage = () => {
         <div className={styles.calculatorScreensheading}>
           <h2>
             Please expect a call from <br />
-            111-222-333-444
+            1-844-208-1100
           </h2>
           <span>Keep an eye on your phone</span>
         </div>
         <div className={styles.dialericon}>
-          <FaPhoneVolume
+          {/* <FaPhoneVolume
             style={{ fontSize: "3rem", color: "#05c8e8", marginLeft: "9rem" }}
-          />
+          /> */}
+          <PhoneIcon/>
           <span>00:07:46</span>
         </div>
         <span style={{ color: "#1a4048" }}>
@@ -30,7 +32,7 @@ const Dilaerpage = () => {
           <span style={{ color: "#05c8e8" }}>Privacy Policy</span> and{" "}
           <span style={{ color: "#05c8e8" }}>Terms of Use</span>. If you do not
           consent to receive automated calls or text messages,please call{" "}
-          <span style={{ color: "#05c8e8" }}>111-222-333-444</span> to continue
+          <span style={{ color: "#05c8e8" }}>1-844-208-1100</span> to continue
           your application.
         </div>
       </div>

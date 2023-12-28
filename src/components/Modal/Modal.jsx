@@ -31,7 +31,7 @@ const Modal = () => {
             <div className={styles.body}>
               <h1>Reduce Your Credit Card Debt upto Half </h1>
               <span>Speak to a debt specialist today for free</span>
-              <button>111-222-333-444</button>
+              <button>1-844-208-1100</button>
               <Link href={"/checkrates"} className={styles.Link}>
                 or complete this form{" "}
               </Link>

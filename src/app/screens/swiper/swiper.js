@@ -2,13 +2,52 @@
 import React from "react";
 import styles from "./swiper.module.css";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import { sliderSettings } from "@/utils/swipersettings";
 import "swiper/css";
-
+import "swiper/css/autoplay";
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Autoplay } from 'swiper/modules';
 const ImageSwiper = () => {
   return (
     <div className={styles.wrapper}>
-      <Swiper {...sliderSettings} className={styles.swiper}>
+      <Swiper
+       spaceBetween={30}
+       centeredSlides={true}
+       slidesPerView={5}
+       loop={true}
+       autoplay={{
+         delay: 1000,
+         disableOnInteraction: false,
+       }}
+       modules={[Autoplay]}
+       breakpoints={{
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        421: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        480: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        717: {
+          slidesPerView: 3,
+          spaceBetween: -18,
+        },
+        1100: {
+          slidesPerView: 5,
+          spaceBetween: 10,
+        },
+      }}
+        className={styles.swiper}
+      >
         <SliderButton />
         <SwiperSlide className={styles.slide}>
           <div className={styles.div}>

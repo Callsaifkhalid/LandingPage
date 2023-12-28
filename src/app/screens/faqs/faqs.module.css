@@ -23,7 +23,7 @@
 }
 .paragraph {
   width: 67%;
-  min-height: 80px;
+  min-height: 280px;
   margin: 0 auto 0 auto;
   border: 1px solid #05c8e8;
   background-color: white;
@@ -84,7 +84,7 @@
   margin-top: -10rem;
   width: 200px;
 }
-@media screen and (min-width: 601px) and (max-width: 920px) {
+@media screen and (min-width: 718px) and (max-width: 920px) {
   .wrapper {
     width: 100%;
   }
@@ -112,7 +112,7 @@
     margin-bottom: 3rem;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 717px) {
   
   .wrapper > img {
     display: none;

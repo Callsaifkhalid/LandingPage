@@ -28,10 +28,10 @@ const BlogNavbar = () => {
           className={click ? styles.headermenuu : styles.headermenu}
           style={getMenuStyles(menuOpen)}
         >
-          <Link href={"/#hero"} shallow className={styles.menuLinks} >
+          <Link href={"/#hero"} className={styles.menuLinks} >
             <span>Home</span>
           </Link>
-          <Link href={"/#savings"} as={""} className={styles.menuLinks} >
+          <Link href={"/#savings"} as={"/"} className={styles.menuLinks} >
             <span>Savings Calculator</span>
           </Link>
           <Link href={"/#compare"} className={styles.menuLinks} >
@@ -71,7 +71,7 @@ const BlogNavbar = () => {
       <div>
         <button className={styles.loginbutton}>
           <FaPhone />
-          111-222-333-444
+          1-844-208-1100
         </button>
       </div>
     </section>

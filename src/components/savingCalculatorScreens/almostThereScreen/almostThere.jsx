@@ -39,7 +39,7 @@ const AlmostThere = ({ onContinue }) => {
           <span style={{ color: "#05c8e8" }}>Privacy Policy</span> and{" "}
           <span style={{ color: "#05c8e8" }}>Terms of Use</span>. If you do not
           consent to receive automated calls or text messages,please call{" "}
-          <span style={{ color: "#05c8e8" }}>111-222-333-444</span> to continue
+          <span style={{ color: "#05c8e8" }}>1-844-208-1100</span> to continue
           your application.
         </div>
       </div>
