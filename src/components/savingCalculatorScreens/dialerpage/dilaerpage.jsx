@@ -1,8 +1,26 @@
+"use client";
 import React from "react";
 import styles from "./dialerpage.module.css";
 import { FaPhoneVolume } from "react-icons/fa6";
-import PhoneIcon from "../AnimatedPhoneIcon/animatedphoneicon";
+import { useState, useEffect } from "react";
 const Dilaerpage = () => {
+  const [seconds, setSeconds] = useState(0);
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+    
+      setSeconds((prevSeconds) => prevSeconds + 1);
+
+
+      if (seconds === 29) {
+        clearInterval(intervalId);
+   
+        console.log("Timer reached 30 seconds");
+      }
+    }, 1000); 
+    return () => clearInterval(intervalId);
+  }, []);
+
+  const formattedTime = new Date(1000 * seconds).toISOString().substr(11, 8);
   return (
     <div className={styles.calculator}>
       <div className={styles.calculatorScreens}>
@@ -14,11 +32,10 @@ const Dilaerpage = () => {
           <span>Keep an eye on your phone</span>
         </div>
         <div className={styles.dialericon}>
-          {/* <FaPhoneVolume
-            style={{ fontSize: "3rem", color: "#05c8e8", marginLeft: "9rem" }}
-          /> */}
-          <PhoneIcon/>
-          <span>00:07:46</span>
+          <div className={styles.pulse}>
+            <FaPhoneVolume style={{ fontSize: "2rem" }} />
+          </div>
+          <span>{formattedTime}</span>
         </div>
         <span style={{ color: "#1a4048" }}>
           We are very excited to help you!

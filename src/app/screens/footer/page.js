@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import styles from "./footer.module.css";
-import { Link as ScrollLink } from "react-scroll"
+import { Link as ScrollLink } from "react-scroll";
 import Link from "next/link";
 const Footer = () => {
   return (
@@ -11,9 +11,15 @@ const Footer = () => {
           <img src="../logo2.png" alt="" width={250} />
         </div>
         <div className={styles.socials}>
-          <img src="../Facebook.svg" />
-          <img src="../Twitter.svg" />
-          <img src="../Instagram.svg" />
+          <a href="https://www.facebook.com/profile.php?id=61555093109862" target="_blank">
+            <img src="../Facebook.svg" />
+          </a>
+          <a>
+            <img src="../Twitter.svg" />
+          </a>
+          <a href="https://www.instagram.com/clearcreditai/" target="_blank">
+            <img src="../Instagram.svg" />
+          </a>
         </div>
       </div>
 
@@ -36,11 +42,10 @@ const Footer = () => {
             </ScrollLink>
           </span>
           <span>Careers</span>
-          
-            <Link href={"/blogs"} className={styles.Link}>
-              Blogs
-            </Link>
-          
+
+          <Link href={"/blogs"} className={styles.Link}>
+            Blogs
+          </Link>
         </div>
         <div className={styles.content1}>
           <span>

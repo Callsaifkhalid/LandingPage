@@ -80,19 +80,19 @@ const CompareSection = () => {
                         <div className={styles.detailscontent}>
                           <div className={styles.detailsanswers}>
                             <span>
-                              <span>Prepayment penalty:</span>
+                              <span>Prepayment penalty: </span>
                               {detail.Prepaymentpenalty}
                             </span>
                           </div>
                           <div className={styles.detailsanswers}>
                             <span>
-                              <span>Origination Fee:</span>
+                              <span>Origination Fee: </span>
                               {detail.OriginationFee}
                             </span>
                           </div>
                           <div className={styles.detailsanswers}>
                             <span>
-                              <span>Late Fee:</span>
+                              <span>Late Fee: </span>
                               {detail.Latefee}
                             </span>
                           </div>
@@ -100,19 +100,19 @@ const CompareSection = () => {
                         <div className={styles.detailscontent}>
                           <div className={styles.detailsanswers}>
                             <span>
-                              <span>Unsuccessful payment fee:</span>
+                              <span>Unsuccessful payment fee: </span>
                               {detail.Unsuccessfulpaymentfee}
                             </span>
                           </div>
                           <div className={styles.detailsanswers}>
                             <span>
-                              <span>Check processing fee:</span>
+                              <span>Check processing fee: </span>
                               {detail.Checkprocessingfee}
                             </span>
                           </div>
                           <div className={styles.detailsanswers}>
                             <span>
-                              <span>Time to fund:</span>
+                              <span>Time to fund: </span>
                               {detail.Timetofund}
                             </span>
                           </div>
@@ -120,19 +120,19 @@ const CompareSection = () => {
                         <div className={styles.detailscontent}>
                           <div className={styles.detailsanswers}>
                             <span>
-                              <span>Minimum Credit Score:</span>
+                              <span>Minimum Credit Score: </span>
                               {detail.MinimumCreditScore}
                             </span>
                           </div>
                           <div className={styles.detailsanswers}>
                             <span>
-                              <span>Do they allow a cosigner:</span>
+                              <span>Do they allow a cosigner: </span>
                               {detail.Dotheyallowacosigner}
                             </span>
                           </div>
                           <div className={styles.detailsanswers}>
                             <span>
-                              <span>Best for:</span>
+                              <span>Best for: </span>
                               {detail.Bestfor}
                             </span>
                           </div>
