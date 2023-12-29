@@ -6,22 +6,43 @@ import CurrencyInput from "react-currency-input-field";
 import Select from "react-select";
 const CompareSection = () => {
   const [click, setClick] = useState(false);
+  const [inputLoan,setInputLoan]=useState('20000')
+  // const [reactSelect,setReactSelect]=useState()
+  const [showFilteredLoanEnter, setShowFilteredLoanEnter] = useState(null);
+  // const [showFilteredLoanAmount, setShowFilteredLoanAmount] = useState([]);
+  const [filteredLenders, setFilteredLenders] = useState([]);
+
+  const handleFilter = (value) => {
+    setInputLoan(value)
+    const filteredResults = lenders.filter((lender) => lender.filterloanAmount >= value );
+    setFilteredLenders(filteredResults);
+    setShowFilteredLoanEnter(1);
+  };
+  // const handleSelect = ()=>{
+  //   const ascendingOrder = lenders.slice().sort((a, b) => b - a);
+  //   setShowFilteredLoanAmount(ascendingOrder)
+  //   setShowFilteredLoanEnter(2)
+  // }
+  // const handleReset = () => {
+  //   setShowFilteredLoanEnter(false);
+  // };
+  const lendersToDisplay = showFilteredLoanEnter === 1 ? filteredLenders : lenders;
 
   const options = [
     { value: "", label: "Order by", isDisabled: true },
     { value: "1", label: "A to Z" },
     { value: "2 ", label: "APR" },
-    { value: "3", label: "Loan Amount" },
+    { value: "LM", label: "Loan Amount" },
   ];
 
   const Styles = {
     control: (provided, state) => ({
       ...provided,
-      display:'flex',
-      height:"47px",
-      width:'200px',
-      marginLeft:'2%',
-      placeholder:'State'
+      display: "flex",
+      height: "47px",
+      width: "200px",
+      marginLeft: "2%",
+      placeholder: "State",
     }),
     dropdownIndicator: (base) => ({
       ...base,
@@ -31,6 +52,8 @@ const CompareSection = () => {
       },
     }),
   };
+
+  
   return (
     <div className={styles.wrapper} id="compare">
       <img src="./whycircle.png" />
@@ -52,14 +75,16 @@ const CompareSection = () => {
             </span>
           </div>
           <div className={styles.filterbox}>
-            <CurrencyInput prefix="$" maxLength={6} placeholder="Loan Amount"/>
-            <Select
-                options={options}
-                placeholder="Order by"
-                styles={Styles}
-              />
+            <CurrencyInput
+              prefix="$"
+              maxLength={6}
+              placeholder="Loan Amount"
+              value={inputLoan}
+              onValueChange={(value) => handleFilter(value)}
+            />
+            <Select options={options} placeholder="Order by" styles={Styles} />
           </div>
-          {lenders?.map((lender) => (
+          {lendersToDisplay?.map((lender) => (
             <div className={styles.lendersboxes}>
               <div className={styles.box2} key={lender.id}>
                 <div className={styles.div1}>

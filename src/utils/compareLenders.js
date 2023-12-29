@@ -6,6 +6,7 @@ const lenders = [
     APR: "6.40-35.99%",
     loanTerm: "3, 5 Years",
     loanAmount: "Up to $50,000",
+    filterloanAmount:50000,
     details: [
       {
         title: "Upstart",
@@ -28,6 +29,7 @@ const lenders = [
     APR: "9.57-35.99%",
     loanTerm: "2 - 5 years",
     loanAmount: "Up to $40,000",
+    filterloanAmount:40000,
     details: [
         {
           title: "LendingClub",
@@ -50,6 +52,7 @@ const lenders = [
     APR: "7.99-24.99%",
     loanTerm: "3-7 Years",
     loanAmount: "Up to $40,000",
+    filterloanAmount:40000,
     details: [
         {
           title: "Discover",
@@ -72,6 +75,7 @@ const lenders = [
     APR: "8.00-30.00%",
     loanTerm: "1-5 Years",
     loanAmount: "Up to $25,000",
+    filterloanAmount:25000,
     details: [
         {
           title: "Zable",
@@ -94,6 +98,7 @@ const lenders = [
     APR: "8.99-25.81%",
     loanTerm: "2-7 Years",
     loanAmount: "Up to $100,000",
+    filterloanAmount:100000,
     details: [
         {
           title: "Sofi",
@@ -116,6 +121,7 @@ const lenders = [
     APR: "8.99-35.99%",
     loanTerm: "2-5 Years",
     loanAmount: "Up to $50,000",
+    filterloanAmount:50000,
     details: [
         {
           title: "Best Egg",
@@ -138,6 +144,7 @@ const lenders = [
     APR: "11.69-35.99%",
     loanTerm: "3, 5, or 7 years",
     loanAmount: "Up to $50,000",
+    filterloanAmount:50000,
     details: [
         {
           title: "Universal Credit",
@@ -160,6 +167,7 @@ const lenders = [
     APR: "11.72-24.67%",
     loanTerm: "2-5 Years",
     loanAmount: "Up to $40,000",
+    filterloanAmount:40000,
     details: [
         {
           title: "Happy Money ",
@@ -182,6 +190,7 @@ const lenders = [
     APR: "13.39-21.38%",
     loanTerm: "3-10 Years",
     loanAmount: "Up to $200,000",
+    filterloanAmount:200000,
     details: [
         {
           title: "BHG Money",
@@ -204,6 +213,7 @@ const lenders = [
     APR: "14.30-35.99%",
     loanTerm: "2-5 Years",
     loanAmount: "Up to $40,000",
+    filterloanAmount:40000,
     details: [
         {
           title: "Reach Financial",
@@ -227,6 +237,7 @@ const lenders = [
     APR: "18.00-35.99%",
     loanTerm: "2-5 Years",
     loanAmount: "Up to $20,000",
+    filterloanAmount:20000,
     details: [
         {
           title: "OneMain Financial ",
@@ -243,5 +254,6 @@ const lenders = [
       ],
   },
 ];
+
 
 export default lenders;

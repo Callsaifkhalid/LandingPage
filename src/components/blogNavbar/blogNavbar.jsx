@@ -31,7 +31,7 @@ const BlogNavbar = () => {
           <Link href={"/#hero"} className={styles.menuLinks} >
             <span>Home</span>
           </Link>
-          <Link href={"/#savings"} as={"/"} className={styles.menuLinks} >
+          <Link href={"/#savings"} className={styles.menuLinks} >
             <span>Savings Calculator</span>
           </Link>
           <Link href={"/#compare"} className={styles.menuLinks} >
