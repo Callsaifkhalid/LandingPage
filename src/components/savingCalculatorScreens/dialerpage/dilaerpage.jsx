@@ -1,22 +1,25 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import styles from "./dialerpage.module.css";
 import { FaPhoneVolume } from "react-icons/fa6";
 import { useState, useEffect } from "react";
-const Dilaerpage = () => {
+const Dilaerpage = ({onContinue}) => {
   const [seconds, setSeconds] = useState(0);
+  const secondsRef = useRef(seconds);
+
   useEffect(() => {
     const intervalId = setInterval(() => {
-    
-      setSeconds((prevSeconds) => prevSeconds + 1);
+      setSeconds((prevSeconds) => {
+        secondsRef.current = prevSeconds + 1;
+        return prevSeconds + 1;
+      });
 
-
-      if (seconds === 29) {
+      if (secondsRef.current === 29) {
         clearInterval(intervalId);
-   
-        console.log("Timer reached 30 seconds");
+        onContinue()
       }
-    }, 1000); 
+    }, 1000);
+
     return () => clearInterval(intervalId);
   }, []);
 

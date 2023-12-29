@@ -194,21 +194,6 @@ const SavingsCalculator = () => {
     ).toFixed(1);
     setMonthlyBoxValue(monthlyboxvalue);
   };
-  // const handlee = (value) => {
-  //   // Remove non-digit characters
-  //   if(!value) return
-  //   const cleanValue = value.replace(/[^\d]/g, '');
-
-  //   // Check if there are at least two digits
-  //   if (cleanValue.length >= 2) {
-  //     // Insert a decimal after the first two digits
-  //     const newValue = cleanValue.slice(0, 2) + '.' + cleanValue.slice(2);
-  //     setCurrentInterest(newValue);
-  //   } else {
-  //     setCurrentInterest(cleanValue);
-  //   }
-
-  // };
   return (
     <div className={styles.wrapper} id="savings">
       <div className={styles.headings}>

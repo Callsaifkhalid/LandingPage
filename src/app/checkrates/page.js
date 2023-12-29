@@ -6,9 +6,7 @@ import Screen3 from "@/components/savingCalculatorScreens/screen3/screen3";
 import Screen4 from "@/components/savingCalculatorScreens/screen4/screen4";
 import Screen5 from "@/components/savingCalculatorScreens/screen5/screen5";
 import Screen6 from "@/components/savingCalculatorScreens/screen6/screen6";
-import Screen7 from "@/components/savingCalculatorScreens/screen7/screen7";
 import Screen8 from "@/components/savingCalculatorScreens/screen8/screen8";
-import Screen9 from "@/components/savingCalculatorScreens/screen9/screen9";
 import Screen10 from "@/components/savingCalculatorScreens/screen10/screen10";
 import CalculatorNavbar from "@/components/calculatorNavbar/calulatorNavbar";
 import { useContext } from "react";
@@ -207,7 +205,9 @@ const Screen1 = () => {
 
       {currentView === 9 && <AlmostThere onContinue={handleContinueClick} />}
       {currentView === 10 && <Dilaerpage onContinue={handleContinueClick} />}
-      {currentView === 10 && <MissedcallPage onContinue={handleContinueClick} />}
+      {currentView === 11 && (
+        <MissedcallPage onContinue={handleContinueClick} />
+      )}
     </div>
   );
 };

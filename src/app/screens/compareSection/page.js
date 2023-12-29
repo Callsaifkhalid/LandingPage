@@ -2,11 +2,35 @@
 import React, { useState } from "react";
 import styles from "./compare.module.css";
 import lenders from "@/utils/compareLenders";
+import CurrencyInput from "react-currency-input-field";
+import Select from "react-select";
 const CompareSection = () => {
   const [click, setClick] = useState(false);
-  const [click1, setClick1] = useState(false);
-  const [click2, setClick2] = useState(false);
-  const [click3, setClick3] = useState(false);
+
+  const options = [
+    { value: "", label: "Order by", isDisabled: true },
+    { value: "1", label: "A to Z" },
+    { value: "2 ", label: "APR" },
+    { value: "3", label: "Loan Amount" },
+  ];
+
+  const Styles = {
+    control: (provided, state) => ({
+      ...provided,
+      display:'flex',
+      height:"47px",
+      width:'200px',
+      marginLeft:'2%',
+      placeholder:'State'
+    }),
+    dropdownIndicator: (base) => ({
+      ...base,
+      color: "#05c8e8",
+      ":hover": {
+        color: "#05c8e8",
+      },
+    }),
+  };
   return (
     <div className={styles.wrapper} id="compare">
       <img src="./whycircle.png" />
@@ -26,6 +50,14 @@ const CompareSection = () => {
               Filter $20,000 loan amount and 700-749 credit score, ordered by
               APR
             </span>
+          </div>
+          <div className={styles.filterbox}>
+            <CurrencyInput prefix="$" maxLength={6} placeholder="Loan Amount"/>
+            <Select
+                options={options}
+                placeholder="Order by"
+                styles={Styles}
+              />
           </div>
           {lenders?.map((lender) => (
             <div className={styles.lendersboxes}>
@@ -71,7 +103,7 @@ const CompareSection = () => {
               </div>
               {lender.details.map((detail) => (
                 <div>
-                  {click === lender.id &&
+                  {click === lender.id && (
                     <div className={styles.viewdetailsbox}>
                       <div>
                         <h3>{detail.title} Personal Loans</h3>
@@ -139,7 +171,7 @@ const CompareSection = () => {
                         </div>
                       </div>
                     </div>
-                  }
+                  )}
                 </div>
               ))}
             </div>
