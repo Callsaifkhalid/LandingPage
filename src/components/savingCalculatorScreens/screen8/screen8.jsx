@@ -1,17 +1,18 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styles from "./screen8.module.css";
 import { IoMdCheckmark } from "react-icons/io";
 import { FaLock } from "react-icons/fa";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import Link from "next/link";
 import CurrencyInput from "react-currency-input-field";
-const Screen8 = ({ onContinue,onBack, progress }) => {
-  const [inputvalue, setinputvalue] = useState("");
+import { InputContext } from "@/app/context/inputContext";
+const Screen8 = ({ onContinue, onBack, progress }) => {
+  const { housing_cost, setHousingCost } = useContext(InputContext);
 
   return (
     <div className={styles.calculator}>
       <div className={styles.calculatorScreens}>
-      <IoMdArrowRoundBack onClick={onBack} className={styles.backbutton}/>
+        <IoMdArrowRoundBack onClick={onBack} className={styles.backbutton} />
         <div className={styles.calculatorScreensImg}>
           <img src="../dollarphoto.svg" alt="" width={100} />
         </div>
@@ -31,17 +32,19 @@ const Screen8 = ({ onContinue,onBack, progress }) => {
           <div className={styles.inputfieldbox}>
             <span>Housing Costs</span>
             <CurrencyInput
-                  value={inputvalue}
-                  prefix="$"
-                  maxLength={5}
-                  onValueChange={(value) => setinputvalue(value)}
-                />
+              value={housing_cost}
+              prefix="$"
+              maxLength={5}
+              onValueChange={(value) => setHousingCost(value)}
+            />
           </div>
         </div>
         <button className={styles.continuebutton} onClick={onContinue}>
           Continue
         </button>
-        <span style={{ color: "#8B8B8B", fontSize: "14px", textAlign:'center'}}>
+        <span
+          style={{ color: "#8B8B8B", fontSize: "14px", textAlign: "center" }}
+        >
           Check rates won’t affect your credit score
         </span>
         <div className={styles.securityheading}>

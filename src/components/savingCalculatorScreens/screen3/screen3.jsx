@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styles from "./screen3.module.css";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { FaCheckCircle } from "react-icons/fa";
+import { InputContext } from "@/app/context/inputContext";
 const Screen3 = ({ onContinue, onBack, progress }) => {
   const [selectedButton, setSelectedButton] = useState(null);
-  const handleClick = (key) => {
-    // e.preventDefault();
-    // setvalue(e.target.value);
-    setSelectedButton(key);
+  const { setemploymentvalue} = useContext(InputContext);
+  const handleClick = (employment, buttonId) => {
+    setSelectedButton(buttonId);
+    setemploymentvalue(employment)
   };
   return (
     <div className={styles.calculator}>
@@ -24,7 +25,7 @@ const Screen3 = ({ onContinue, onBack, progress }) => {
         <div className={styles.optionbuttons}>
           <button
             className={styles.button}
-            onClick={() => handleClick(1)}
+            onClick={() => handleClick("Full- time empolyed", 1)}
             style={{ border: selectedButton === 1 ? "1px solid #05c8e8" : "" }}
           >
             Full- time empolyed{" "}
@@ -36,7 +37,7 @@ const Screen3 = ({ onContinue, onBack, progress }) => {
           </button>
           <button
             className={styles.button}
-            onClick={() => handleClick(2)}
+            onClick={() => handleClick("Part-time employed", 2)}
             style={{ border: selectedButton === 2 ? "1px solid #05c8e8" : "" }}
           >
             Part-time employed{" "}
@@ -48,7 +49,7 @@ const Screen3 = ({ onContinue, onBack, progress }) => {
           </button>
           <button
             className={styles.button}
-            onClick={() => handleClick(3)}
+            onClick={() => handleClick("Self-employed", 3)}
             style={{ border: selectedButton === 3 ? "1px solid #05c8e8" : "" }}
           >
             Self-employed{" "}
@@ -60,7 +61,7 @@ const Screen3 = ({ onContinue, onBack, progress }) => {
           </button>
           <button
             className={styles.button}
-            onClick={() => handleClick(4)}
+            onClick={() => handleClick("Retired", 4)}
             style={{ border: selectedButton === 4 ? "1px solid #05c8e8" : "" }}
           >
             Retired{" "}

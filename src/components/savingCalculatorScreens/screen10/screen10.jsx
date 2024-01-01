@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styles from "./screen10.module.css";
 import { IoMdCheckmark } from "react-icons/io";
 import { FaLock } from "react-icons/fa";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import Link from "next/link";
 import CurrencyInput from "react-currency-input-field";
-const Screen10 = ({ onBack, progress,onContinue }) => {
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
+import { InputContext } from "@/app/context/inputContext";
+const Screen10 = ({ onBack, progress, onContinue }) => {
+  const { email, setEmail, phone, setPhone } = useContext(InputContext);
   return (
     <div className={styles.calculator}>
       <div className={styles.calculatorScreens}>
@@ -41,7 +41,9 @@ const Screen10 = ({ onBack, progress,onContinue }) => {
             {phone != "" && <IoMdCheckmark style={{ color: "#05c8e8" }} />}
           </div>
         </div>
-        <button className={styles.continuebutton} onClick={onContinue}>Continue</button>
+        <button className={styles.continuebutton} onClick={onContinue}>
+          Continue
+        </button>
         <span
           style={{ color: "#8B8B8B", fontSize: "14px", textAlign: "center" }}
         >

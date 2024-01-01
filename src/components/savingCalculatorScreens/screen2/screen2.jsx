@@ -5,13 +5,13 @@ import { FaCheckCircle } from "react-icons/fa";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { InputContext } from "@/app/context/inputContext";
 const Screen2 = ({ onContinue, onBack, progress }) => {
-  const { setmeme } = useContext(InputContext);
+  const {setloanreasonvalue} = useContext(InputContext);
   const [loanReason, setLoanReason] = useState("");
   const [selectedButton, setSelectedButton] = useState(null);
   const handleClick = (loanreason, buttonId) => {
     setLoanReason(loanreason);
     setSelectedButton(buttonId);
-    setmeme(loanreason)
+    setloanreasonvalue(loanreason)
   };
   return (
     <div className={styles.calculator}>

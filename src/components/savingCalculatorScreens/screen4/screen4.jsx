@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styles from "./screen4.module.css";
 import { IoMdCheckmark } from "react-icons/io";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { FaLock } from "react-icons/fa";
 import Link from "next/link";
+import { InputContext } from "@/app/context/inputContext";
 const Screen4 = ({onContinue,onBack,progress}) => {
-  const [firstname, setFirstName] = useState("");
-  const [lastname, setLastName] = useState("");
+  const {first_name,setFirstName,last_name,setlastName} = useContext(InputContext);
 
   return (
     <div className={styles.calculator}>
@@ -21,26 +21,26 @@ const Screen4 = ({onContinue,onBack,progress}) => {
         </div>
         <div className={styles.inputfields}>
           <div className={styles.inputs}>
-            {firstname != "" && <span>First Name</span>}
+            {first_name != "" && <span>First Name</span>}
             <input
               type="text"
               placeholder="First Name"
               className={styles.nameinput}
-              value={firstname}
+              value={first_name}
               onChange={(e) => setFirstName(e.target.value)}
             />{" "}
-            {firstname != "" && <IoMdCheckmark style={{ color: "#05c8e8" }} />}
+            {first_name != "" && <IoMdCheckmark style={{ color: "#05c8e8" }} />}
           </div>
           <div className={styles.inputs}>
-            {lastname != "" && <span>Last Name</span>}
+            {last_name != "" && <span>Last Name</span>}
             <input
               type="text"
               placeholder="Last Name"
               className={styles.nameinput}
-              value={lastname}
-              onChange={(e) => setLastName(e.target.value)}
+              value={last_name}
+              onChange={(e) => setlastName(e.target.value)}
             />
-            {lastname != "" && <IoMdCheckmark style={{ color: "#05c8e8" }} />}
+            {last_name != "" && <IoMdCheckmark style={{ color: "#05c8e8" }} />}
           </div>
         </div>
         <button className={styles.continuebutton} onClick={onContinue}>Continue</button>

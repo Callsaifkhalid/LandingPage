@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styles from "./screen5.module.css";
 import DatePicker from "react-date-picker";
 import "react-date-picker/dist/DatePicker.css";
@@ -7,10 +7,9 @@ import { IoMdCheckmark } from "react-icons/io";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { FaLock } from "react-icons/fa";
 import Link from "next/link";
+import { InputContext } from "@/app/context/inputContext";
 const Screen5 = ({ onContinue, onBack, progress }) => {
-  let ValuePiece = Date | null;
-  let Value = ValuePiece | [ValuePiece, ValuePiece];
-  const [value, onChange] = useState(new Date());
+  const {dob, setDOB} = useContext(InputContext);
   return (
     <div className={styles.calculator}>
       <div className={styles.calculatorScreens}>
@@ -23,8 +22,8 @@ const Screen5 = ({ onContinue, onBack, progress }) => {
         </div>
         <div>
           <DatePicker
-            onChange={onChange}
-            value={value}
+            onChange={(date) =>setDOB(date)}
+            value={dob}
             className={styles.calenderr}
             dayPlaceholder="DD"
             monthPlaceholder="M"

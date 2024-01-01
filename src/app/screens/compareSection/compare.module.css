@@ -73,6 +73,16 @@
   outline: none;
   border: 2px solid steelblue;
 }
+.resetButton{
+  background-color: #05c8e8;
+  color: white;
+  outline: none;
+  border: none;
+  width: 100px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
 .box1 {
   display: flex;
   justify-content: center;

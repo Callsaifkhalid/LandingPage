@@ -6,32 +6,83 @@ import CurrencyInput from "react-currency-input-field";
 import Select from "react-select";
 const CompareSection = () => {
   const [click, setClick] = useState(false);
-  const [inputLoan,setInputLoan]=useState('20000')
-  // const [reactSelect,setReactSelect]=useState()
+  const [inputLoan, setInputLoan] = useState("20000");
   const [showFilteredLoanEnter, setShowFilteredLoanEnter] = useState(null);
-  // const [showFilteredLoanAmount, setShowFilteredLoanAmount] = useState([]);
+  const [resentButton, setResetBtton] = useState(false);
+  const [reactselect, setreactselect] = useState({ value: "2", label: "APR" });
+  const [filterbox, setFilterBox] = useState(false);
   const [filteredLenders, setFilteredLenders] = useState([]);
-
+  const [filteredLendersDesc, setFilteredLendersDesc] = useState([]);
+  const [filteredLendersAsc, setFilteredLendersAsc] = useState([]);
+  const [filteredLendersAPR, setFilteredLendersAPR] = useState([]);
+  const defaultArray = [...lenders].sort((a, b) => {
+    const aprA = parseFloat(a.APR.replace("%", ""));
+    const aprB = parseFloat(b.APR.replace("%", ""));
+    return aprA - aprB;
+  });
   const handleFilter = (value) => {
-    setInputLoan(value)
-    const filteredResults = lenders.filter((lender) => lender.filterloanAmount >= value );
+    setInputLoan(value);
+    setResetBtton(true);
+    const filteredResults = [...lenders].filter(
+      (lender) =>
+        lender.filterloanAmount >= value && lender.filterloanAmount > "1000"
+    );
     setFilteredLenders(filteredResults);
     setShowFilteredLoanEnter(1);
   };
-  // const handleSelect = ()=>{
-  //   const ascendingOrder = lenders.slice().sort((a, b) => b - a);
-  //   setShowFilteredLoanAmount(ascendingOrder)
-  //   setShowFilteredLoanEnter(2)
-  // }
-  // const handleReset = () => {
-  //   setShowFilteredLoanEnter(false);
-  // };
-  const lendersToDisplay = showFilteredLoanEnter === 1 ? filteredLenders : lenders;
+  const handleSelect = (options) => {
+    setResetBtton(true);
+    if (options.value === "LM" && inputLoan < '200000') {
+      setreactselect({ value: "LM", label: "Loan Amount" });
+
+      const descendingOrder = [...lenders].sort(
+        (a, b) => b.filterloanAmount - a.filterloanAmount
+      );
+      setFilteredLendersDesc(descendingOrder);
+      setShowFilteredLoanEnter(2);
+    }
+    if (options.value === "1" && inputLoan < '200000') {
+      setreactselect({ value: "1", label: "A to Z" });
+
+      const ascendingOrder = [...lenders].sort((a, b) =>
+        a.details[0].title.localeCompare(b.details[0].title)
+      );
+      setFilteredLendersAsc(ascendingOrder);
+      setShowFilteredLoanEnter(3);
+    }
+    if (options.value === "2" && inputLoan < '200000') {
+      setreactselect({ value: "2", label: "APR" });
+
+      const sortedLendersByAPR = [...lenders].sort((a, b) => {
+        const aprA = parseFloat(a.APR.replace("%", ""));
+        const aprB = parseFloat(b.APR.replace("%", ""));
+        return aprA - aprB;
+      });
+      setFilteredLendersAPR(sortedLendersByAPR);
+      setShowFilteredLoanEnter(4);
+    }
+  };
+  const handleReset = () => {
+    setShowFilteredLoanEnter(null);
+    setInputLoan("20000");
+    setreactselect({ value: "2", label: "APR" });
+  };
+
+  const lendersToDisplay =
+    showFilteredLoanEnter === 1
+      ? filteredLenders
+      : showFilteredLoanEnter === 2
+      ? filteredLendersDesc
+      : showFilteredLoanEnter === 3
+      ? filteredLendersAsc
+      : showFilteredLoanEnter === 4
+      ? filteredLendersAPR
+      : defaultArray;
 
   const options = [
     { value: "", label: "Order by", isDisabled: true },
     { value: "1", label: "A to Z" },
-    { value: "2 ", label: "APR" },
+    { value: "2", label: "APR" },
     { value: "LM", label: "Loan Amount" },
   ];
 
@@ -53,7 +104,6 @@ const CompareSection = () => {
     }),
   };
 
-  
   return (
     <div className={styles.wrapper} id="compare">
       <img src="./whycircle.png" />
@@ -68,22 +118,39 @@ const CompareSection = () => {
       <div className={styles.boxesborder}>
         <span>Advertiser Disclosure</span>
         <div className={styles.boxes}>
-          <div className={styles.box1}>
+          <div
+            className={styles.box1}
+            onClick={() => setFilterBox((pre) => !pre)}
+          >
             <span>
-              Filter $20,000 loan amount and 700-749 credit score, ordered by
-              APR
+              Filter <span style={{ color: "#1a4048" }}>${inputLoan}</span> loan
+              amount, ordered by{" "}
+              <span style={{ color: "#1a4048" }}>{reactselect.label}</span>
             </span>
           </div>
-          <div className={styles.filterbox}>
-            <CurrencyInput
-              prefix="$"
-              maxLength={6}
-              placeholder="Loan Amount"
-              value={inputLoan}
-              onValueChange={(value) => handleFilter(value)}
-            />
-            <Select options={options} placeholder="Order by" styles={Styles} />
-          </div>
+          {filterbox && (
+            <div className={styles.filterbox}>
+              <CurrencyInput
+                prefix="$"
+                maxLength={6}
+                placeholder="Loan Amount"
+                value={inputLoan}
+                onValueChange={(value) => handleFilter(value)}
+              />
+              <Select
+                options={options}
+                value={reactselect}
+                styles={Styles}
+                placeholder="APR"
+                onChange={handleSelect}
+              />
+              {resentButton && (
+                <button onClick={handleReset} className={styles.resetButton}>
+                  Reset
+                </button>
+              )}
+            </div>
+          )}
           {lendersToDisplay?.map((lender) => (
             <div className={styles.lendersboxes}>
               <div className={styles.box2} key={lender.id}>

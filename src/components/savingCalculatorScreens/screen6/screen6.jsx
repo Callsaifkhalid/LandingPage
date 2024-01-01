@@ -8,20 +8,26 @@ import Select from "react-select";
 import options from "@/utils/stateOptions";
 import { InputContext } from "@/app/context/inputContext";
 const Screen6 = ({ onContinue, onBack, progress }) => {
-  const { calculatorInputs,loanreasonvalue } = useContext(InputContext);
-  const [address, setAddress] = useState("");
-  const [suite, setSuite] = useState("");
-  const [city, setCity] = useState("");
-  const [state, setState] = useState("");
-  const [zipCode, setZipCode] = useState("");
-  
+  const {
+    address,
+    setAddress,
+    suite,
+    setSuite,
+    city,
+    setCity,
+    state,
+    setState,
+    zipCode,
+    setZipCode,
+  } = useContext(InputContext);
+
   const Styles = {
     control: (provided, state) => ({
-      display:'flex',
-      height:"60px",
+      display: "flex",
+      height: "60px",
       border: "none",
-      marginLeft:'2%',
-      placeholder:'State'
+      marginLeft: "2%",
+      placeholder: "State",
     }),
     dropdownIndicator: (base) => ({
       ...base,
