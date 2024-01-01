@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "framer-motion": "^10.16.5",
+    "http-proxy-middleware": "^2.0.6",
     "next": "14.0.2",
     "postscribe": "^2.0.8",
     "react": "^18",

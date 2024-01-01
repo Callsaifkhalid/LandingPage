@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useState } from "react";
 import styles from "./almostThere.module.css";
 import { FaCheckCircle } from "react-icons/fa";
@@ -7,6 +7,7 @@ import { MdRadioButtonChecked } from "react-icons/md";
 const AlmostThere = ({ onContinue }) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
+  
   const handleClick = async () => {
     setLoading(true);
     try {
@@ -14,14 +15,10 @@ const AlmostThere = ({ onContinue }) => {
         `https://client.forthcrm.com/post/7d7608ca21470e510d0133cec99649d218661c5c/?fname=${"Henry"}&lname=${"Cavil"}&dob=${"22/03/2011"}&email=${"test2@gmail.com"}&phone=${"111222333555"}&address=${"dha pahse 3"}&apartment=${"apartment no. 35"}&city=${"London"}&zipcode=${"57385"}&borrow_amount=${40000}&loan_reason=${"Business"}&housing_cost=${3000}`,
         {
           method: "POST",
-          mode:"cors",
           headers: {
-            "Content-Type": "application/json",
+            
           },
-          body: JSON.stringify({
-            key1: "value1",
-            key2: "value2",
-          }),
+          body: JSON.stringify({}),
         }
       );
 
@@ -34,7 +31,7 @@ const AlmostThere = ({ onContinue }) => {
     }
     onContinue();
   };
-  console.log(data)
+  console.log(data);
   return (
     <div className={styles.calculator}>
       <div className={styles.calculatorScreens}>

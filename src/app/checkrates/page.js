@@ -19,6 +19,8 @@ import MissedcallPage from "@/components/savingCalculatorScreens/missedCallPage/
 const Screen1 = () => {
   const { heroInput, heroSectionInput } = useContext(InputContext);
   const [currentView, setCurrentView] = useState(1);
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(false);
   const totalScreens = 8;
   const progress = (currentView / totalScreens) * 100;
   const handleClick = (e) => {
@@ -38,6 +40,45 @@ const Screen1 = () => {
   };
   const handleInputBlur = () => {
     setIsInputFocused(false);
+  };
+  const handleClickk = async () => {
+    setLoading(true);
+    try {
+      const response = await fetch(
+        // `https://client.forthcrm.com/post/7d7608ca21470e510d0133cec99649d218661c5c/?fname=${"Henry"}&lname=${"Cavil"}&dob=${"22/03/2011"}&email=${"test2@gmail.com"}&phone=${"111222333555"}&address=${"dha pahse 3"}&apartment=${"apartment no. 35"}&city=${"London"}&zipcode=${"57385"}&borrow_amount=${40000}&loan_reason=${"Business"}&housing_cost=${3000}`,
+        `https://client.forthcrm.com/post/7d7608ca21470e510d0133cec99649d218661c5c`,
+        {
+          method: "POST",
+          headers: {
+            'Content-Type': 'application/json',
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "POST, GET, OPTIONS,DELETE",
+            "Access-Control-Allow-Headers": "Origin, Content-Type, Accept"
+          },
+          body: JSON.stringify({
+            fname: "Henry",
+            lname: "Cavil",
+            dob: "22/03/2011",
+            email: "test2@gmail.com",
+            phone: "111222333555",
+            address: "dha pahse 3",
+            apartment: "apartment no. 35",
+            city: "London",
+            zipcode: "57385",
+            borrow_amount: 40000,
+            loan_reason: "Business",
+            housing_cost: 3000,
+          }),
+        }
+      );
+
+      const result = await response.json();
+      setData(result);
+    } catch (error) {
+      console.error("Error making POST request:", error);
+    } finally {
+      setLoading(false);
+    }
   };
   return (
     <div className={styles.wrapper}>
@@ -131,6 +172,7 @@ const Screen1 = () => {
             >
               Check rates won’t affect your credit score
             </span>
+            <button onClick={handleClickk}>lala</button>
             <div
               style={{
                 width: "100%",

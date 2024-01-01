@@ -1,17 +1,18 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styles from "./screen2.module.css";
 import { IoIosArrowForward } from "react-icons/io";
 import { FaCheckCircle } from "react-icons/fa";
 import { IoMdArrowRoundBack } from "react-icons/io";
+import { InputContext } from "@/app/context/inputContext";
 const Screen2 = ({ onContinue, onBack, progress }) => {
-  const [value, setvalue] = useState("");
+  const { setmeme } = useContext(InputContext);
+  const [loanReason, setLoanReason] = useState("");
   const [selectedButton, setSelectedButton] = useState(null);
-  const handleClick = (key) => {
-    // e.preventDefault();
-    // setvalue(e.target.value);
-    setSelectedButton(key);
+  const handleClick = (loanreason, buttonId) => {
+    setLoanReason(loanreason);
+    setSelectedButton(buttonId);
+    setmeme(loanreason)
   };
-
   return (
     <div className={styles.calculator}>
       <div className={styles.calculatorScreens}>
@@ -28,8 +29,7 @@ const Screen2 = ({ onContinue, onBack, progress }) => {
         <div className={styles.optionbuttons}>
           <button
             className={styles.button}
-            value={"Debt Consolidation"}
-            onClick={() => handleClick(1)}
+            onClick={() => handleClick("Debt Consolidation", 1)}
             style={{ border: selectedButton === 1 ? "1px solid #05c8e8" : "" }}
           >
             Debt Consolidation{" "}
@@ -41,7 +41,7 @@ const Screen2 = ({ onContinue, onBack, progress }) => {
           </button>
           <button
             className={styles.button}
-            onClick={() => handleClick(2)}
+            onClick={() => handleClick("Pay off credit cards", 2)}
             style={{ border: selectedButton === 2 ? "1px solid #05c8e8" : "" }}
           >
             Pay off credit cards{" "}
@@ -53,7 +53,7 @@ const Screen2 = ({ onContinue, onBack, progress }) => {
           </button>
           <button
             className={styles.button}
-            onClick={() => handleClick(3)}
+            onClick={() => handleClick("Home improvement", 3)}
             style={{ border: selectedButton === 3 ? "1px solid #05c8e8" : "" }}
           >
             Home improvement{" "}
@@ -65,7 +65,7 @@ const Screen2 = ({ onContinue, onBack, progress }) => {
           </button>
           <button
             className={styles.button}
-            onClick={() => handleClick(4)}
+            onClick={() => handleClick("Major purchase", 4)}
             style={{ border: selectedButton === 4 ? "1px solid #05c8e8" : "" }}
           >
             Major purchase{" "}

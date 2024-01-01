@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styles from "./screen6.module.css";
 import { IoMdCheckmark } from "react-icons/io";
 import { IoMdArrowRoundBack } from "react-icons/io";
@@ -6,12 +6,15 @@ import { FaLock } from "react-icons/fa";
 import Link from "next/link";
 import Select from "react-select";
 import options from "@/utils/stateOptions";
+import { InputContext } from "@/app/context/inputContext";
 const Screen6 = ({ onContinue, onBack, progress }) => {
+  const { calculatorInputs,loanreasonvalue } = useContext(InputContext);
   const [address, setAddress] = useState("");
   const [suite, setSuite] = useState("");
   const [city, setCity] = useState("");
   const [state, setState] = useState("");
   const [zipCode, setZipCode] = useState("");
+  
   const Styles = {
     control: (provided, state) => ({
       display:'flex',
