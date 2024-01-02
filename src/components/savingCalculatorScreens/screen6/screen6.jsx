@@ -85,7 +85,12 @@ const Screen6 = ({ onContinue, onBack, progress }) => {
             {city != "" && <IoMdCheckmark style={{ color: "#05c8e8" }} />}
           </div>
           <div className={styles.inputs}>
-            <Select options={options} styles={Styles} placeholder="State" onChange={setState}/>
+            <Select
+              options={options}
+              styles={Styles}
+              placeholder="State"
+              onChange={setState}
+            />
           </div>
           <div className={styles.inputs}>
             {zipCode != "" && <span>Zipcode</span>}
@@ -99,7 +104,25 @@ const Screen6 = ({ onContinue, onBack, progress }) => {
             {zipCode != "" && <IoMdCheckmark style={{ color: "#05c8e8" }} />}
           </div>
         </div>
-        <button className={styles.continuebutton} onClick={onContinue}>
+        <button
+          className={styles.continuebutton}
+          onClick={onContinue}
+          disabled={
+            zipCode === null
+              ? true
+              : state === ""
+              ? true
+              : city === ""
+              ? true
+              : suite === ""
+              ? true
+              : address === ""
+              ? true
+              : suite === ""
+              ? true
+              : false
+          }
+        >
           Continue
         </button>
         <span

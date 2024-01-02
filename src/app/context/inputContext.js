@@ -6,14 +6,14 @@ export const InputContext = createContext();
 export const InputProvider = ({ children }) => {
   const [heroInput, setHeroInput] = useState(10000);
   const [loanreasonvalue, setloanreasonvalue] = useState("");
-  const [employmentvalue, setemploymentvalue] = useState();
+  const [employmentvalue, setemploymentvalue] = useState("");
   const [first_name, setFirstName] = useState("");
   const [last_name, setlastName] = useState("");
   const [dob, setDOB] = useState(new Date());
   const [address, setAddress] = useState("");
   const [suite, setSuite] = useState("");
   const [city, setCity] = useState("");
-  const [state, setState] = useState("Alabama");
+  const [state, setState] = useState("");
   const [zipCode, setZipCode] = useState(null);
   const [housing_cost, setHousingCost] = useState("");
   const [email, setEmail] = useState("");

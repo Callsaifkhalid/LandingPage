@@ -5,13 +5,14 @@ import { IoMdArrowRoundBack } from "react-icons/io";
 import { FaLock } from "react-icons/fa";
 import Link from "next/link";
 import { InputContext } from "@/app/context/inputContext";
-const Screen4 = ({onContinue,onBack,progress}) => {
-  const {first_name,setFirstName,last_name,setlastName} = useContext(InputContext);
+const Screen4 = ({ onContinue, onBack, progress }) => {
+  const { first_name, setFirstName, last_name, setlastName } =
+    useContext(InputContext);
 
   return (
     <div className={styles.calculator}>
       <div className={styles.calculatorScreens}>
-      <IoMdArrowRoundBack onClick={onBack} className={styles.backbutton}/>
+        <IoMdArrowRoundBack onClick={onBack} className={styles.backbutton} />
         <div className={styles.calculatorScreensImg}>
           <img src="../infophoto.svg" alt="" width={100} />
         </div>
@@ -43,8 +44,16 @@ const Screen4 = ({onContinue,onBack,progress}) => {
             {last_name != "" && <IoMdCheckmark style={{ color: "#05c8e8" }} />}
           </div>
         </div>
-        <button className={styles.continuebutton} onClick={onContinue}>Continue</button>
-        <span style={{ color: "#8B8B8B", fontSize: "14px", textAlign:'center'}}>
+        <button
+          className={styles.continuebutton}
+          onClick={onContinue}
+          disabled={first_name === "" ? true : last_name === "" ? true : false}
+        >
+          Continue
+        </button>
+        <span
+          style={{ color: "#8B8B8B", fontSize: "14px", textAlign: "center" }}
+        >
           Check rates won’t affect your credit score
         </span>
         <div className={styles.securityheading}>
@@ -55,8 +64,9 @@ const Screen4 = ({onContinue,onBack,progress}) => {
           <div className={styles.learnmore}>
             <IoMdCheckmark />
             <span>
-              We use TLS encryption, the same security protocols used by
-               top banks<br/> and lenders. <Link href={""}>Learn More</Link>
+              We use TLS encryption, the same security protocols used by top
+              banks
+              <br /> and lenders. <Link href={""}>Learn More</Link>
             </span>
           </div>
           <div className={styles.privacypolicy}>
@@ -68,22 +78,22 @@ const Screen4 = ({onContinue,onBack,progress}) => {
           </div>
         </div>
         <div
-              style={{
-                width: "100%",
-                height: "5px",
-                backgroundColor: "#b0b0b0",
-                marginBottom:'-3rem',
-                marginTop:'1rem'
-              }}
-            >
-              <div
-                style={{
-                  width: `${progress}%`,
-                  height: "100%",
-                  backgroundColor: "#05c8e8",
-                }}
-              />
-            </div>
+          style={{
+            width: "100%",
+            height: "5px",
+            backgroundColor: "#b0b0b0",
+            marginBottom: "-3rem",
+            marginTop: "1rem",
+          }}
+        >
+          <div
+            style={{
+              width: `${progress}%`,
+              height: "100%",
+              backgroundColor: "#05c8e8",
+            }}
+          />
+        </div>
       </div>
     </div>
   );

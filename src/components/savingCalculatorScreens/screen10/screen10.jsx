@@ -41,7 +41,11 @@ const Screen10 = ({ onBack, progress, onContinue }) => {
             {phone != "" && <IoMdCheckmark style={{ color: "#05c8e8" }} />}
           </div>
         </div>
-        <button className={styles.continuebutton} onClick={onContinue}>
+        <button
+          className={styles.continuebutton}
+          onClick={onContinue}
+          disabled={email === "" ? true : phone === "" ? true : false}
+        >
           Continue
         </button>
         <span

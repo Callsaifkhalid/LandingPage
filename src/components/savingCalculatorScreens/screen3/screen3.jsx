@@ -6,10 +6,10 @@ import { FaCheckCircle } from "react-icons/fa";
 import { InputContext } from "@/app/context/inputContext";
 const Screen3 = ({ onContinue, onBack, progress }) => {
   const [selectedButton, setSelectedButton] = useState(null);
-  const { setemploymentvalue} = useContext(InputContext);
+  const { setemploymentvalue, employmentvalue } = useContext(InputContext);
   const handleClick = (employment, buttonId) => {
     setSelectedButton(buttonId);
-    setemploymentvalue(employment)
+    setemploymentvalue(employment);
   };
   return (
     <div className={styles.calculator}>
@@ -72,7 +72,11 @@ const Screen3 = ({ onContinue, onBack, progress }) => {
             )}
           </button>
         </div>
-        <button className={styles.continuebutton} onClick={onContinue}>
+        <button
+          className={styles.continuebutton}
+          onClick={onContinue}
+          disabled={employmentvalue === "" ? true : false}
+        >
           Continue
         </button>
         <span

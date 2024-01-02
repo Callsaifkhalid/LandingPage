@@ -15,7 +15,6 @@ import CurrencyInput from "react-currency-input-field";
 import AlmostThere from "@/components/savingCalculatorScreens/almostThereScreen/almostThere";
 import Dilaerpage from "@/components/savingCalculatorScreens/dialerpage/dilaerpage";
 import MissedcallPage from "@/components/savingCalculatorScreens/missedCallPage/missedcallPage";
-import { checkRates } from "../api/checkRates/repo";
 
 const Screen1 = () => {
   const { heroInput, heroSectionInput } = useContext(InputContext);
@@ -27,7 +26,13 @@ const Screen1 = () => {
     heroSectionInput(e.target.value);
   };
   const handleContinueClick = () => {
-    setCurrentView(currentView + 1);
+    if (heroInput < 600) {
+      return;
+    } else if (heroInput > 200000) {
+    } else if (!heroInput) {
+    } else {
+      setCurrentView(currentView + 1);
+    }
   };
   const handleback = () => {
     setCurrentView(currentView - 1);
@@ -41,8 +46,6 @@ const Screen1 = () => {
     setIsInputFocused(false);
   };
 
- 
-  
   return (
     <div className={styles.wrapper}>
       <CalculatorNavbar />

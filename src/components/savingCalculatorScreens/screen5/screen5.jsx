@@ -29,9 +29,9 @@ const Screen5 = ({ onContinue, onBack, progress }) => {
             monthPlaceholder="M"
             yearPlaceholder="YYYY"
           />
-          <span></span>
+          
         </div>
-        <button className={styles.continuebutton} onClick={onContinue}>
+        <button className={styles.continuebutton} onClick={onContinue} disabled={!dob ? true : false}>
           Continue
         </button>
         <span
