@@ -4,7 +4,8 @@ import styles from "./blogdetails.module.css";
 
 import { useRouter } from "next/navigation";
 import BlogNavbar from "@/components/blogNavbar/blogNavbar";
-import Footer from "../screens/footer/page";
+
+import Footer2 from "@/components/footer2/footer2";
 
 export default function blogDetails() {
   const router = useRouter();
@@ -172,7 +173,7 @@ export default function blogDetails() {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer2 />
     </>
   );
 }
