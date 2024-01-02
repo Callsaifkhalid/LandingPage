@@ -42,7 +42,13 @@ const Screen10 = ({ onBack, progress, onContinue }) => {
           </div>
         </div>
         <button
-          className={styles.continuebutton}
+          className={
+            email === ""
+              ? styles.disabledbutton
+              : phone === ""
+              ? styles.disabledbutton
+              : styles.continuebutton
+          }
           onClick={onContinue}
           disabled={email === "" ? true : phone === "" ? true : false}
         >

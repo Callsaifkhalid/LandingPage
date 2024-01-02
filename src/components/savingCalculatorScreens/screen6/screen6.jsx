@@ -105,7 +105,21 @@ const Screen6 = ({ onContinue, onBack, progress }) => {
           </div>
         </div>
         <button
-          className={styles.continuebutton}
+          className={
+            zipCode === null
+              ? styles.disabledbutton
+              : state === ""
+              ? styles.disabledbutton
+              : city === ""
+              ? styles.disabledbutton
+              : suite === ""
+              ? styles.disabledbutton
+              : address === ""
+              ? styles.disabledbutton
+              : suite === ""
+              ? styles.disabledbutton
+              : styles.continuebutton
+          }
           onClick={onContinue}
           disabled={
             zipCode === null

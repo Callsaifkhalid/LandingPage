@@ -73,7 +73,7 @@ const Screen3 = ({ onContinue, onBack, progress }) => {
           </button>
         </div>
         <button
-          className={styles.continuebutton}
+          className={employmentvalue === "" ?styles.disabledbutton:styles.continuebutton}
           onClick={onContinue}
           disabled={employmentvalue === "" ? true : false}
         >

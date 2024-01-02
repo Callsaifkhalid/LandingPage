@@ -9,7 +9,7 @@ import { FaLock } from "react-icons/fa";
 import Link from "next/link";
 import { InputContext } from "@/app/context/inputContext";
 const Screen5 = ({ onContinue, onBack, progress }) => {
-  const {dob, setDOB} = useContext(InputContext);
+  const { dob, setDOB } = useContext(InputContext);
   return (
     <div className={styles.calculator}>
       <div className={styles.calculatorScreens}>
@@ -22,16 +22,20 @@ const Screen5 = ({ onContinue, onBack, progress }) => {
         </div>
         <div>
           <DatePicker
-            onChange={(date) =>setDOB(date)}
+            onChange={(date) => setDOB(date)}
             value={dob}
             className={styles.calenderr}
             dayPlaceholder="DD"
             monthPlaceholder="M"
             yearPlaceholder="YYYY"
+            maxDate={new Date()}
           />
-          
         </div>
-        <button className={styles.continuebutton} onClick={onContinue} disabled={!dob ? true : false}>
+        <button
+          className={!dob ? styles.disabledbutton : styles.continuebutton}
+          onClick={onContinue}
+          disabled={!dob ? true : false}
+        >
           Continue
         </button>
         <span

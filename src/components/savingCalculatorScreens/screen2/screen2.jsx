@@ -77,7 +77,7 @@ const Screen2 = ({ onContinue, onBack, progress }) => {
           </button>
         </div>
         <button
-          className={styles.continuebutton}
+          className={loanReason===""?styles.disabledbutton:styles.continuebutton}
           onClick={onContinue}
           disabled={loanReason === "" ? true : false}
         >

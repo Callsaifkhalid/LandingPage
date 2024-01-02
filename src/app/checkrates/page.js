@@ -124,7 +124,15 @@ const Screen1 = () => {
               </button>
             </div>
             <button
-              className={styles.continuebutton}
+              className={
+                heroInput < 600
+                  ? styles.disabledbutton
+                  : heroInput > 200000
+                  ? styles.disabledbutton
+                  : !heroInput
+                  ? styles.disabledbutton
+                  : styles.continuebutton
+              }
               onClick={handleContinueClick}
             >
               Continue

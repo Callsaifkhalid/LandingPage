@@ -1,0 +1,225 @@
+.headerwrapper {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c6f7ff;
+    width: 100%;
+    z-index: 888;
+  }
+  .logo {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 0rem;
+    margin-left: 3rem;
+  }
+  
+  .headermenu {
+    margin-top: 1.05rem;
+    margin-bottom: 1rem;
+    margin-left: -3rem;
+  }
+  .menuLinks {
+    text-decoration: none;
+    color: #1a4048;
+    margin-left: 30px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  .menuLinks > span {
+    font-size: 18px;
+  }
+  .menuLinks > span:hover {
+    color: #05c8e8;
+  }
+  .menuicon {
+    display: none;
+  }
+  .loginbutton {
+    font-weight: 700;
+    height: 40px;
+    width: 180px;
+    color: #05c8e8;
+    background: #1a4048;
+    border-radius: 10.33px;
+    border: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 4rem;
+    transition: all ease-in 300ms;
+    font-size: 17px;
+  }
+  .loginbutton:hover {
+    transform: scale(1.04);
+    box-shadow: 5px 5px 10px white;
+  }
+  
+  @media screen and (max-width: 717px) {
+    .headerwrapper {
+      position: fixed;
+      justify-content: space-between;
+    }
+    .headerwrapper > div > button {
+      display: none;
+    }
+  
+    .logo {
+      margin-right: 0;
+      margin-left: 0.6rem;
+    }
+    .logo > img {
+      width: 170px;
+      margin-left: 0rem;
+    }
+    .menuicon {
+      margin-top: 0.3rem;
+      margin-left: auto;
+    }
+  }
+  @media screen and (max-width: 717px) {
+    .menuicon {
+      display: block;
+    }
+    .headermenu {
+      display: none;
+    }
+    .headermenuu {
+      position: absolute;
+      top: 3rem;
+      right: 1rem;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 0.5rem;
+      align-items: center;
+      font-weight: 800;
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      min-height: 200px;
+      width: 200px;
+      justify-content: center;
+      transition: all ease-in-out 300ms;
+    }
+    .menuLinks {
+      margin: 0;
+    }
+    .menuLinks > span {
+      font-size: 16px;
+    }
+    .menuLinks > span:hover {
+      color: #05c8e8;
+    }
+  }
+  @media screen and (min-width: 770px) and (max-width: 920px) {
+    .headermenu {
+      margin-left: -3rem;
+    }
+    .logo {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      margin-right: 2rem;
+      margin-left: 1rem;
+    }
+    .logo > img {
+      width: 170px;
+    }
+    .loginbutton {
+      font-weight: 600;
+      height: 40px;
+      width: 150px;
+      color: #05c8e8;
+      background: #1a4048;
+      border-radius: 10.33px;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-right: 0.7rem;
+      font-size: 14px;
+    }
+    .menuLinks {
+      margin-left: 15px;
+      font-size: 12px;
+    }
+    .menuLinks > span {
+      font-size: 11.5px;
+    }
+  }
+  @media screen and (min-width: 718px) and (max-width: 769px) {
+    .headermenu {
+      margin-left: -3rem;
+    }
+    .logo {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      margin-right: 2rem;
+      margin-left: 1rem;
+    }
+    .logo > img {
+      width: 170px;
+    }
+    .loginbutton {
+      font-weight: 600;
+      height: 40px;
+      width: 140px;
+      color: #05c8e8;
+      background: #1a4048;
+      border-radius: 10.33px;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-right: 0.7rem;
+      font-size: 13px;
+    }
+    .menuLinks {
+      margin-left: 15px;
+    }
+    .menuLinks > span {
+      font-size: 10px;
+    }
+  }
+  @media screen and (min-width: 921px) and (max-width: 1100px) {
+    .logo {
+      margin-left: 1rem;
+    }
+    .loginbutton {
+      margin-right: 1rem;
+    }
+    .menuLinks > span {
+      font-size: 12px;
+    }
+    .logo > img {
+      width: 220px;
+    }
+    .headermenu {
+      margin-left: -2rem;
+    }
+  }
+  @media screen and (min-width: 1101px) and (max-width: 1250px) {
+    .logo {
+      margin-left: 1rem;
+    }
+    .loginbutton {
+      margin-right: 1rem;
+    }
+    .menuLinks > span {
+      font-size: 15px;
+    }
+    .logo > img {
+      width: 220px;
+    }
+    .headermenu {
+      margin-left: -2rem;
+    }
+  }
+  /* @media screen and (min-width: 540px) and (max-width: 590px) {
+    .menuicon {
+      margin-left: 15rem;
+    }
+  } */
+  
