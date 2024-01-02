@@ -135,7 +135,6 @@ const Screen1 = () => {
             >
               Check rates won’t affect your credit score
             </span>
-            <button>lala</button>
             <div
               style={{
                 width: "100%",

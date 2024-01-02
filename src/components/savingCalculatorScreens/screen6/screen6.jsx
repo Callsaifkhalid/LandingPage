@@ -85,7 +85,7 @@ const Screen6 = ({ onContinue, onBack, progress }) => {
             {city != "" && <IoMdCheckmark style={{ color: "#05c8e8" }} />}
           </div>
           <div className={styles.inputs}>
-            <Select options={options} styles={Styles} placeholder="State" />
+            <Select options={options} styles={Styles} placeholder="State" onChange={setState}/>
           </div>
           <div className={styles.inputs}>
             {zipCode != "" && <span>Zipcode</span>}

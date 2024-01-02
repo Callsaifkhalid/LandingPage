@@ -33,7 +33,7 @@ const AlmostThere = ({ onContinue }) => {
     "employment_type": employmentvalue,
     "housing_cost": housing_cost,
     "address": {
-      "state": state,
+      "state": state.label,
       "address": address,
       "apartment": suite,
       "city": city,
@@ -46,7 +46,7 @@ const AlmostThere = ({ onContinue }) => {
     checkRates(Dataa)
     onContinue()
   }
-    
+    console.log(state.label)
   return (
     <div className={styles.calculator}>
       <div className={styles.calculatorScreens}>

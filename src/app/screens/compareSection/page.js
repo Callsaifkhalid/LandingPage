@@ -15,6 +15,7 @@ const CompareSection = () => {
   const [filteredLendersDesc, setFilteredLendersDesc] = useState([]);
   const [filteredLendersAsc, setFilteredLendersAsc] = useState([]);
   const [filteredLendersAPR, setFilteredLendersAPR] = useState([]);
+  const [tooltip,showTooltip]=useState(false);
   const defaultArray = [...lenders].sort((a, b) => {
     const aprA = parseFloat(a.APR.replace("%", ""));
     const aprB = parseFloat(b.APR.replace("%", ""));
@@ -32,7 +33,7 @@ const CompareSection = () => {
   };
   const handleSelect = (options) => {
     setResetBtton(true);
-    if (options.value === "LM" && inputLoan < '200000') {
+    if (options.value === "LM" && inputLoan < "200000") {
       setreactselect({ value: "LM", label: "Loan Amount" });
 
       const descendingOrder = [...lenders].sort(
@@ -41,7 +42,7 @@ const CompareSection = () => {
       setFilteredLendersDesc(descendingOrder);
       setShowFilteredLoanEnter(2);
     }
-    if (options.value === "1" && inputLoan < '200000') {
+    if (options.value === "1" && inputLoan < "200000") {
       setreactselect({ value: "1", label: "A to Z" });
 
       const ascendingOrder = [...lenders].sort((a, b) =>
@@ -50,7 +51,7 @@ const CompareSection = () => {
       setFilteredLendersAsc(ascendingOrder);
       setShowFilteredLoanEnter(3);
     }
-    if (options.value === "2" && inputLoan < '200000') {
+    if (options.value === "2" && inputLoan < "200000") {
       setreactselect({ value: "2", label: "APR" });
 
       const sortedLendersByAPR = [...lenders].sort((a, b) => {
@@ -66,6 +67,7 @@ const CompareSection = () => {
     setShowFilteredLoanEnter(null);
     setInputLoan("20000");
     setreactselect({ value: "2", label: "APR" });
+    setClick(false);
   };
 
   const lendersToDisplay =
@@ -116,7 +118,15 @@ const CompareSection = () => {
       </div>
 
       <div className={styles.boxesborder}>
-        <span>Advertiser Disclosure</span>
+        {tooltip && <div className={styles.tooltip}>
+          The rates that appear are from companies which Clear Credit receives
+          compensation. This compensation does not impact how or where products
+          appear within the table. The rates and information shown do not
+          include all financial service providers or all of the displayed
+          lender's available services and product offerings.
+        </div>}
+        <span onClick={()=>showTooltip(!tooltip)}>Advertiser Disclosure</span>
+
         <div className={styles.boxes}>
           <div
             className={styles.box1}
@@ -183,7 +193,7 @@ const CompareSection = () => {
                 </div>
                 <div className={styles.div4}>
                   <span style={{ color: "#828282", fontSize: "13px" }}>
-                    Loan Term
+                    Loan Amount
                   </span>
                   <span style={{ fontWeight: "bolder" }}>
                     {lender.loanAmount}

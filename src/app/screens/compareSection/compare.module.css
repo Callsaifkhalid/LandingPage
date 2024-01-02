@@ -24,7 +24,20 @@
 .divs > span {
   visibility: hidden;
 }
-
+.tooltip {
+  transform: translateX(170%);
+  background-color: #f4f4f4;
+  color: #1a4048;
+  padding: 8px;
+  border-radius: 10px;
+  display: inline-block;
+  opacity: 1;
+  border: 1px solid #1a4048;
+  width: 35%;
+  font-size: 14px;
+  margin-top: -15%;
+  margin-bottom: 1%;
+}
 .boxesborder > span {
   display: flex;
   justify-content: flex-end;
@@ -32,6 +45,7 @@
   text-decoration: underline;
   text-underline-offset: 4px;
   font-weight: bold;
+  cursor: pointer;
 }
 .boxesborder {
   width: 80%;
@@ -56,7 +70,7 @@
   flex-direction: column;
   gap: 1rem;
 }
-.filterbox{
+.filterbox {
   width: 84%;
   display: flex;
   gap: 20px;
@@ -69,11 +83,11 @@
   border-radius: 5px;
   padding: 5px;
 }
-.filterbox > input:focus{
+.filterbox > input:focus {
   outline: none;
   border: 2px solid steelblue;
 }
-.resetButton{
+.resetButton {
   background-color: #05c8e8;
   color: white;
   outline: none;
@@ -227,9 +241,17 @@
     font-size: 2.5rem;
     margin-top: -0.3rem;
   }
+  .tooltip {
+    transform: translateX(80%);
+    width: 50%;
+    margin-top: -45%;
+  }
   .boxesborder {
     width: 95%;
     margin: 30px auto 80px auto;
+  }
+  .lendersboxes {
+    width: 95%;
   }
   .box1 {
     width: 95%;
@@ -239,7 +261,7 @@
     color: #828282;
   }
   .box2 {
-    width: 95%;
+    width: 100%;
   }
   .div5 > button {
     margin-right: 0.5rem;
@@ -276,15 +298,23 @@
     font-size: 2.5rem;
     margin-top: -0.3rem;
   }
+  .tooltip {
+    transform: translateX(80%);
+    width: 50%;
+    margin-top: -45%;
+  }
   .boxesborder {
     width: 92%;
     margin: 30px auto 80px auto;
   }
+  .lendersboxes {
+    width: 92%;
+  }
   .box1 {
-    width: 90%;
+    width: 95%;
   }
   .box2 {
-    width: 90%;
+    width: 100%;
   }
   .div5 > button {
     margin-right: 0.5rem;
@@ -322,6 +352,11 @@
   .headings > h1 > br {
     display: none;
   }
+  .tooltip {
+    transform: translateX(6%);
+    width: 85%;
+    margin-top: -45%;
+  }
   .boxesborder {
     width: 90%;
     min-height: 700px;
@@ -330,6 +365,28 @@
     margin: 30px auto 80px auto;
     padding: 3rem 0 3rem 0;
     border-radius: 50px;
+  }
+  .lendersboxes {
+    width: 92%;
+  }
+  .filterbox {
+    width: 90%;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+  .filterbox > input {
+    font-size: 16px;
+    width: 57%;
+    height: 35px;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 2%;
+  }
+  .resetButton {
+    margin-left: 2%;
+    height: 40px;
   }
   .box1 {
     width: 87%;
@@ -345,7 +402,7 @@
     justify-content: space-between;
     align-items: center;
     min-height: 100px;
-    width: 93%;
+    width: 100%;
     border: 1px solid #bdbdbd;
     border-radius: 23px;
     background-color: whitesmoke;
@@ -375,8 +432,17 @@
   .wrapper > span {
     margin: 3rem 3rem 2rem 0rem;
   }
+  .viewdetailsbox {
+    width: 90%;
+  }
   .details {
     flex-direction: column;
+  }
+  .detailscontent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
   }
   .detailsanswers {
     flex-direction: column;

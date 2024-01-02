@@ -51,17 +51,7 @@ export const InputProvider = ({ children }) => {
     phone,
     setPhone,
   };
-  console.log(
-    address,
-
-    suite,
-
-    city,
-
-    state,
-
-    zipCode
-  );
+  
   return (
     <InputContext.Provider value={value}>
       <div>{children}</div>
