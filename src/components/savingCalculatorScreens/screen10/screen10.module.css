@@ -92,6 +92,11 @@
   cursor: pointer;
   margin-right: 100%;
 }
+.errormsg{
+  color: red;
+  font-size: 13px;
+  margin-top: -3%;
+}
 @media (max-width: 600px) {
   .calculatorScreens {
     width: 65%;

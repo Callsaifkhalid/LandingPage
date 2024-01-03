@@ -4,12 +4,14 @@ import React, { createContext, useState } from "react";
 export const InputContext = createContext();
 
 export const InputProvider = ({ children }) => {
+  const minDate = new Date();
+  minDate.setFullYear(minDate.getFullYear() - 18);
   const [heroInput, setHeroInput] = useState(10000);
   const [loanreasonvalue, setloanreasonvalue] = useState("");
   const [employmentvalue, setemploymentvalue] = useState("");
   const [first_name, setFirstName] = useState("");
   const [last_name, setlastName] = useState("");
-  const [dob, setDOB] = useState(new Date());
+  const [dob, setDOB] = useState(minDate);
   const [address, setAddress] = useState("");
   const [suite, setSuite] = useState("");
   const [city, setCity] = useState("");
@@ -21,6 +23,7 @@ export const InputProvider = ({ children }) => {
   const heroSectionInput = (value) => {
     setHeroInput(value);
   };
+  
   const value = {
     heroSectionInput,
     heroInput,

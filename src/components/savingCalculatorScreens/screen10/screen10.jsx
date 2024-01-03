@@ -8,6 +8,49 @@ import CurrencyInput from "react-currency-input-field";
 import { InputContext } from "@/app/context/inputContext";
 const Screen10 = ({ onBack, progress, onContinue }) => {
   const { email, setEmail, phone, setPhone } = useContext(InputContext);
+  const [eemail, seteEmail] = useState("");
+  const [isValidEmail, setIsValidEmail] = useState(false);
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [isValidPhoneNumber, setIsValidPhoneNumber] = useState(false);
+
+  const handleInputChange = (event) => {
+    const inputValue = event.target.value;
+    seteEmail(inputValue);
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const isValid = emailRegex.test(inputValue);
+    setIsValidEmail(isValid);
+    setEmail(inputValue);
+  };
+  const formatPhoneNumber = (inputValue) => {
+    const cleanedNumber = inputValue.replace(/\D/g, '');
+    if (!cleanedNumber || cleanedNumber === '(') {
+      return '';
+    }
+    const firstTenDigits = cleanedNumber.slice(0, 10);
+    let formattedNumber = `(${firstTenDigits.slice(0, 3)}`;
+    if (firstTenDigits.length > 3) {
+      formattedNumber += `) ${firstTenDigits.slice(3, 6)}`;
+    }
+    if (firstTenDigits.length > 6) {
+      formattedNumber += `-${firstTenDigits.slice(6, 10)}`;
+    }
+    return formattedNumber;
+  };
+  const handleInputChangePhone = (event) => {
+    const inputValue = event.target.value;
+    const formattedNumber = formatPhoneNumber(inputValue);
+    const validInput = /^\d{0,10}$/;
+    if (!validInput.test(formattedNumber.replace(/\D/g, ''))) {
+      return;
+    }
+    setPhoneNumber(formattedNumber.slice(0, 14)); 
+    const phoneRegex = /^\d{10}$/;
+    const isValid = phoneRegex.test(formattedNumber.replace(/\D/g, ''));
+    setIsValidPhoneNumber(isValid);
+    setPhone(formattedNumber)
+  };
+  
+  console.log(phone);
   return (
     <div className={styles.calculator}>
       <div className={styles.calculatorScreens}>
@@ -24,28 +67,37 @@ const Screen10 = ({ onBack, progress, onContinue }) => {
               type="text"
               placeholder="Email"
               className={styles.nameinput}
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={eemail}
+              onChange={handleInputChange}
             />{" "}
-            {email != "" && <IoMdCheckmark style={{ color: "#05c8e8" }} />}
+            {isValidEmail && <IoMdCheckmark style={{ color: "#05c8e8" }} />}
           </div>
+          {!isValidEmail && (
+            <p className={styles.errormsg}>
+              Please enter a valid email address.
+            </p>
+          )}
           <div className={styles.inputs}>
             <input
               placeholder="Phone"
-              type="number"
-              maxLength={4}
+              type="text"
               className={styles.nameinput}
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
+              value={phoneNumber}
+              onChange={handleInputChangePhone}
             />{" "}
-            {phone != "" && <IoMdCheckmark style={{ color: "#05c8e8" }} />}
+            {isValidPhoneNumber && <IoMdCheckmark style={{ color: "#05c8e8" }} />}
           </div>
+          {!isValidPhoneNumber && (
+            <p className={styles.errormsg}>
+              Please enter a valid email address.
+            </p>
+          )}
         </div>
         <button
           className={
-            email === ""
+            !isValidPhoneNumber
               ? styles.disabledbutton
-              : phone === ""
+              : !isValidEmail
               ? styles.disabledbutton
               : styles.continuebutton
           }

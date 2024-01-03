@@ -12,6 +12,7 @@ const Screen5 = ({ onContinue, onBack, progress }) => {
   const { dob, setDOB } = useContext(InputContext);
   const minDate = new Date();
   minDate.setFullYear(minDate.getFullYear() - 18);
+  console.log(dob)
   return (
     <div className={styles.calculator}>
       <div className={styles.calculatorScreens}>
