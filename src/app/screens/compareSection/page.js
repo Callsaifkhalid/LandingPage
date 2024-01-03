@@ -208,7 +208,7 @@ const CompareSection = () => {
                   <span>Credible rating</span>
                   <div>
                     <span>{lender.rating}</span>
-                    <img src="./star.png" alt="" width={15} />
+                    <img src="/star.png" alt="" width={15} />
                   </div>
                 </div>
                 <div className={styles.div3}>
