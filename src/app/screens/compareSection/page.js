@@ -4,6 +4,7 @@ import styles from "./compare.module.css";
 import lenders from "@/utils/compareLenders";
 import CurrencyInput from "react-currency-input-field";
 import Select from "react-select";
+import { LuListFilter } from "react-icons/lu";
 const CompareSection = () => {
   const [click, setClick] = useState(false);
   const [inputLoan, setInputLoan] = useState("20000");
@@ -38,33 +39,59 @@ const CompareSection = () => {
   const handleSelect = (options) => {
     setResetBtton(true);
     if (options.value === "LM") {
-      setreactselect({ value: "LM", label: "Loan Amount" });
-
-      const descendingOrder = [...filteredLenders].sort(
-        (a, b) => b.filterloanAmount - a.filterloanAmount
-      );
-      setFilteredLendersDesc(descendingOrder);
-      setShowFilteredLoanEnter(2);
+      if (inputLoan === "20000") {
+        setreactselect({ value: "LM", label: "Loan Amount" });
+        const descendingOrder = [...lenders].sort(
+          (a, b) => b.filterloanAmount - a.filterloanAmount
+        );
+        setFilteredLendersDesc(descendingOrder);
+        setShowFilteredLoanEnter(2);
+      } else {
+        setreactselect({ value: "LM", label: "Loan Amount" });
+        const descendingOrder = [...filteredLenders].sort(
+          (a, b) => b.filterloanAmount - a.filterloanAmount
+        );
+        setFilteredLendersDesc(descendingOrder);
+        setShowFilteredLoanEnter(2);
+      }
     }
     if (options.value === "1") {
-      setreactselect({ value: "1", label: "A to Z" });
-
-      const ascendingOrder = [...filteredLenders].sort((a, b) =>
-        a.details[0].title.localeCompare(b.details[0].title)
-      );
-      setFilteredLendersAsc(ascendingOrder);
-      setShowFilteredLoanEnter(3);
+      if (inputLoan === "20000") {
+        setreactselect({ value: "1", label: "A to Z" });
+        const ascendingOrder = [...lenders].sort((a, b) =>
+          a.details[0].title.localeCompare(b.details[0].title)
+        );
+        setFilteredLendersAsc(ascendingOrder);
+        setShowFilteredLoanEnter(3);
+      } else {
+        setreactselect({ value: "1", label: "A to Z" });
+        const ascendingOrder = [...filteredLenders].sort((a, b) =>
+          a.details[0].title.localeCompare(b.details[0].title)
+        );
+        setFilteredLendersAsc(ascendingOrder);
+        setShowFilteredLoanEnter(3);
+      }
     }
     if (options.value === "2") {
-      setreactselect({ value: "2", label: "APR" });
-
-      const sortedLendersByAPR = [...filteredLenders].sort((a, b) => {
-        const aprA = parseFloat(a.APR.replace("%", ""));
-        const aprB = parseFloat(b.APR.replace("%", ""));
-        return aprA - aprB;
-      });
-      setFilteredLendersAPR(sortedLendersByAPR);
-      setShowFilteredLoanEnter(4);
+      if (inputLoan === "20000") {
+        setreactselect({ value: "2", label: "APR" });
+        const sortedLendersByAPR = [...lenders].sort((a, b) => {
+          const aprA = parseFloat(a.APR.replace("%", ""));
+          const aprB = parseFloat(b.APR.replace("%", ""));
+          return aprA - aprB;
+        });
+        setFilteredLendersAPR(sortedLendersByAPR);
+        setShowFilteredLoanEnter(4);
+      } else {
+        setreactselect({ value: "2", label: "APR" });
+        const sortedLendersByAPR = [...filteredLenders].sort((a, b) => {
+          const aprA = parseFloat(a.APR.replace("%", ""));
+          const aprB = parseFloat(b.APR.replace("%", ""));
+          return aprA - aprB;
+        });
+        setFilteredLendersAPR(sortedLendersByAPR);
+        setShowFilteredLoanEnter(4);
+      }
     }
   };
   const handleReset = () => {
@@ -138,6 +165,7 @@ const CompareSection = () => {
             className={styles.box1}
             onClick={() => setFilterBox((pre) => !pre)}
           >
+            <LuListFilter style={{ fontSize: "1.5rem", marginRight: "10px" }} />
             <span>
               Filter <span style={{ color: "#1a4048" }}>${inputLoan}</span> loan
               amount, ordered by{" "}

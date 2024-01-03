@@ -14,6 +14,9 @@
   justify-content: center;
   align-items: flex-end;
 }
+.zablelogo{
+  margin-top: 13px;
+}
 .swiper {
   background-color: #f7f7f7;
   padding: 20px 20px 10px 20px;
@@ -31,7 +34,7 @@
   cursor: pointer;
   border: 1px solid #8b8b8b;
   cursor: pointer;
-  margin-top: -4%;
+  margin-top: -4.2%;
   margin-bottom: 2%;
 }
 .button {
@@ -49,14 +52,45 @@
 .sliderbutton{
   margin-top: -19%;
 }
+.sliderbutton {
+  font-size: 1.3rem;
+  width: 50px;
+  height: 50px;
+  color: #05c8e8;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid #8b8b8b;
+  cursor: pointer;
+  margin-bottom: 2%;
+}
 }
 @media  screen and (min-width: 421px) and (max-width: 600px) {
   .sliderbutton{
     margin-top: -18%;
   }
 }
-@media  screen and (min-width: 601px) and (max-width: 1024px) {
+@media  screen and (min-width: 601px) and (max-width: 770px) {
   .sliderbutton{
     margin-top: -9%;
+  }
+  .zablelogo{
+    margin-top: 13px;
+  }
+}
+@media  screen and (min-width: 771px) and (max-width: 900px) {
+  .sliderbutton{
+    margin-top: -9%;
+  }
+  .zablelogo{
+    margin-top: 15px;
+  }
+}
+@media  screen and (min-width: 901px) and (max-width: 1200px) {
+  .sliderbutton{
+    margin-top: -7%;
+  }
+  .zablelogo{
+    margin-top: 15px;
   }
 }

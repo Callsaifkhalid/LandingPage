@@ -24,7 +24,7 @@ const TourGoals = () => {
           <div className={styles.card1}>
             <div className={styles.card1box1}>
               <div className={styles.card1box1img}>
-                <img src="./tourgoal1.png" />
+                <img src="./tourgoal1.svg" />
               </div>
               <div className={styles.card1box1content}>
                 <h3>
@@ -50,7 +50,7 @@ const TourGoals = () => {
             </div>
             <div className={styles.card1box1}>
               <div className={styles.card1box1img}>
-                <img src="./tourgoal2.png" />
+                <img src="./tourgoal2.svg" />
               </div>
               <div className={styles.card1box1content}>
                 <h3>
@@ -78,7 +78,7 @@ const TourGoals = () => {
           <div className={styles.card1}>
             <div className={styles.card1box1}>
               <div className={styles.card1box1img}>
-                <img src="./tourgoal4.png" />
+                <img src="./tourgoal4.svg" />
               </div>
               <div className={styles.card1box1content}>
                 <h3>
@@ -104,7 +104,7 @@ const TourGoals = () => {
             </div>
             <div className={styles.card1box1}>
               <div className={styles.card1box1img}>
-                <img src="./tourgoal5.png" />
+                <img src="./tourgoal5.svg" />
               </div>
               <div className={styles.card1box1content}>
                 <h3>

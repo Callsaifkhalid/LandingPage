@@ -91,7 +91,7 @@
 .boxerror {
   display: flex;
   width: 230px;
-  border: 2px solid #1a4048;
+  border: 1px solid steelblue;
   border-radius: 5px;
   padding: 5px;
   justify-content: space-around;
@@ -111,7 +111,7 @@
   justify-content: space-around;
   align-items: center;
   width: 230px;
-  border: 2px solid #1a4048;
+  border: 1px solid steelblue;
   border-radius: 5px;
   padding: 5px;
   position: static;
@@ -295,7 +295,7 @@
   .boxx {
     width: 190px;
   }
-  .boxerror{
+  .boxxerror{
     width: 190px;
   }
 }

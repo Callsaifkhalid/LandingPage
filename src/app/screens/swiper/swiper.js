@@ -91,7 +91,7 @@ const ImageSwiper = () => {
         </SwiperSlide>
         <SwiperSlide className={styles.slide}>
           <div className={styles.div}>
-            <img src="./zablelogo.svg" width={150} />
+            <img src="./zablelogo.svg" width={150} className={styles.zablelogo} />
           </div>
         </SwiperSlide>
         <SwiperSlide className={styles.slide}>

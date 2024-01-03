@@ -136,9 +136,10 @@
 .div1 > button {
   border: none;
   outline: none;
-  color: #828282;
+  color: #1a4048;
   text-decoration: underline;
   cursor: pointer;
+  background-color: whitesmoke;
 }
 .div2 {
   border-left: 1px solid #bdbdbd;
@@ -195,7 +196,7 @@
   border: 1px solid #bdbdbd;
   border-radius: 23px;
   background-color: whitesmoke;
-  width: 97%;
+  width: 96%;
   padding: 1rem;
   margin-top: -1rem;
 }
@@ -270,6 +271,13 @@
     width: 90px;
     margin-left: 0.5rem;
   }
+  .div1 button{
+    font-size: 11px;
+    margin-left: 3%;
+  }
+  .viewdetailsbox {
+    width: 95%;
+  }
   .details {
     flex-direction: column;
     gap: 2rem;
@@ -322,6 +330,9 @@
   .div1 > img {
     width: 90px;
     margin-left: 0.5rem;
+  }
+  .viewdetailsbox {
+    width: 95%;
   }
   .details {
     flex-direction: column;
@@ -479,14 +490,15 @@
     width: 90%;
   }
   .box2 {
-    width: 90%;
+    width: 100%;
   }
   .details {
     width: 100%;
   }
-}
-@media screen and (min-width: 540px) and (max-width: 590px) {
-  .wrapper {
-    width: 100%;
+  .lendersboxes {
+    width: 90%;
+  }
+  .viewdetailsbox {
+    width: 96%;
   }
 }

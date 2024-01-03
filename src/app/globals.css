@@ -41,6 +41,7 @@ input::-webkit-inner-spin-button {
   }
   .main {
     display: flex;
+    
   }
 }
 @media screen and (max-width: 600px) {

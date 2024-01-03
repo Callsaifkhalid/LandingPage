@@ -11,7 +11,7 @@ const WhySection = () => {
       <div className={styles.cards}>
         <div className={styles.card}>
           <div>
-            <img src="./card1.png" alt="" />
+            <img src="./card1.svg" alt="" />
           </div>
           <h3>Find a Loan from Reputable Lenders in Minutes</h3>
           <span>
@@ -24,7 +24,7 @@ const WhySection = () => {
         </div>
         <div className={styles.card}>
           <div>
-            <img src="./card3.png" alt="" />
+            <img src="./card3.svg" alt="" />
           </div>
           <h3>Your Data Is Safe & Secure</h3>
           <span>
@@ -37,7 +37,7 @@ const WhySection = () => {
         </div>
         <div className={styles.card}>
           <div>
-            <img src="./card2.png" alt="" />
+            <img src="./card2.svg" alt="" />
           </div>
           <h3>We Are Unbiased and Transparent</h3>
           <span>
