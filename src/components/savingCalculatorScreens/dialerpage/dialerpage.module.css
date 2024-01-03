@@ -116,4 +116,25 @@
     font-size: 15px;
     text-align: center;
   }
+  .dialericon{
+    display: flex;
+    flex-direction: column;
+  }
+  .dialericon span{
+    font-size: 20px;
+    color: #8b8b8b;
+    margin-right: 0rem;
+    margin-left: 0rem;
+    margin-top: 2rem;
+}
+}
+@media screen and (min-width: 601px) and (max-width: 920px) {
+  .calculatorScreens {
+    margin-top: 20%;
+  }
+}
+@media screen and (min-width: 921px) and (max-width: 1300px) {
+  .calculatorScreens {
+    margin-top: 20%;
+  }
 }

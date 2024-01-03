@@ -15,7 +15,7 @@ const CompareSection = () => {
   const [filteredLendersDesc, setFilteredLendersDesc] = useState([]);
   const [filteredLendersAsc, setFilteredLendersAsc] = useState([]);
   const [filteredLendersAPR, setFilteredLendersAPR] = useState([]);
-  const [tooltip,showTooltip]=useState(false);
+  const [tooltip, showTooltip] = useState(false);
   const defaultArray = [...lenders].sort((a, b) => {
     const aprA = parseFloat(a.APR.replace("%", ""));
     const aprB = parseFloat(b.APR.replace("%", ""));
@@ -24,37 +24,41 @@ const CompareSection = () => {
   const handleFilter = (value) => {
     setInputLoan(value);
     setResetBtton(true);
-    const filteredResults = [...lenders].filter(
-      (lender) =>
-        lender.filterloanAmount >= value && lender.filterloanAmount > "1000"
+
+    const filteredResults = [...defaultArray].filter(
+      (lender) => lender.filterloanAmount >= value
     );
     setFilteredLenders(filteredResults);
     setShowFilteredLoanEnter(1);
+
+    if (!value) {
+      setFilteredLenders(defaultArray);
+    }
   };
   const handleSelect = (options) => {
     setResetBtton(true);
-    if (options.value === "LM" && inputLoan < "200000") {
+    if (options.value === "LM") {
       setreactselect({ value: "LM", label: "Loan Amount" });
 
-      const descendingOrder = [...lenders].sort(
+      const descendingOrder = [...filteredLenders].sort(
         (a, b) => b.filterloanAmount - a.filterloanAmount
       );
       setFilteredLendersDesc(descendingOrder);
       setShowFilteredLoanEnter(2);
     }
-    if (options.value === "1" && inputLoan < "200000") {
+    if (options.value === "1") {
       setreactselect({ value: "1", label: "A to Z" });
 
-      const ascendingOrder = [...lenders].sort((a, b) =>
+      const ascendingOrder = [...filteredLenders].sort((a, b) =>
         a.details[0].title.localeCompare(b.details[0].title)
       );
       setFilteredLendersAsc(ascendingOrder);
       setShowFilteredLoanEnter(3);
     }
-    if (options.value === "2" && inputLoan < "200000") {
+    if (options.value === "2") {
       setreactselect({ value: "2", label: "APR" });
 
-      const sortedLendersByAPR = [...lenders].sort((a, b) => {
+      const sortedLendersByAPR = [...filteredLenders].sort((a, b) => {
         const aprA = parseFloat(a.APR.replace("%", ""));
         const aprB = parseFloat(b.APR.replace("%", ""));
         return aprA - aprB;
@@ -118,14 +122,16 @@ const CompareSection = () => {
       </div>
 
       <div className={styles.boxesborder}>
-        {tooltip && <div className={styles.tooltip}>
-          The rates that appear are from companies which Clear Credit receives
-          compensation. This compensation does not impact how or where products
-          appear within the table. The rates and information shown do not
-          include all financial service providers or all of the displayed
-          lender's available services and product offerings.
-        </div>}
-        <span onClick={()=>showTooltip(!tooltip)}>Advertiser Disclosure</span>
+        {tooltip && (
+          <div className={styles.tooltip}>
+            The rates that appear are from companies which Clear Credit receives
+            compensation. This compensation does not impact how or where
+            products appear within the table. The rates and information shown do
+            not include all financial service providers or all of the displayed
+            lender's available services and product offerings.
+          </div>
+        )}
+        <span onClick={() => showTooltip(!tooltip)}>Advertiser Disclosure</span>
 
         <div className={styles.boxes}>
           <div

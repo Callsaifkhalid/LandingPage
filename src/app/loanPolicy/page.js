@@ -1,6 +1,6 @@
 import PolicyNavbar from "@/components/policyNavbar/policynavbar";
 import React from "react";
-import styles from "./loanPolicy.module.css"
+import styles from "./loanPolicy.module.css";
 import Footer2 from "@/components/footer2/footer2";
 const LoanPolicy = () => {
   return (
@@ -29,25 +29,31 @@ const LoanPolicy = () => {
           you are authorizing us to make inquiries and obtain information about
           you as we deem appropriate for the purpose of evaluating you for this
           extension of credit, including but not limited to: credit reports,
-          income verification, and contacting your employer.<br/> <br/>Terms and
-          Conditions: To receive a loan, you must be a US citizen or permanent
-          resident, and currently reside in the US and at least 18 years old.
-          Clear Credit is not responsible for errors made by any credit
-          reporting agency. Not available in every state and loans may be
-          brokered.<br/><br/> *PRESCREEN & OPT-OUT NOTICE: This “prescreened” offer of
-          credit is based on information in your credit report indicating that
-          you meet certain criteria. This offer is not guaranteed if after
-          responding it is determined that you no longer meet this criteria. If
-          you do not want to receive prescreened offers of credit from this or
-          any other companies, call the consumer reporting agencies toll-free at
-          1-888-567-8688 or visit the website at
+          income verification, and contacting your employer.
+          <br /> <br />
+          <span style={{ fontWeight: "700" }}>Terms and Conditions:</span> To
+          receive a loan, you must be a US citizen or permanent resident, and
+          currently reside in the US and at least 18 years old. Clear Credit is
+          not responsible for errors made by any credit reporting agency. Not
+          available in every state and loans may be brokered.
+          <br />
+          <br />{" "}
+          <span style={{ fontWeight: "700" }}>
+            PRESCREEN & OPT-OUT NOTICE:
+          </span>{" "}
+          This “prescreened” offer of credit is based on information in your
+          credit report indicating that you meet certain criteria. This offer is
+          not guaranteed if after responding it is determined that you no longer
+          meet this criteria. If you do not want to receive prescreened offers
+          of credit from this or any other companies, call the consumer
+          reporting agencies toll-free at 1-888-567-8688 or visit the website at
           http://www.optoutprescreen.com/; or write TransUnion Opt-Out Request,
           P.O. Box 505 Woodlyn, PA 19094-0505, Equifax Operations, P.O. Box
           740123, Atlanta, GA 30374, Experian Information Systems, Inc., P.O.
           Box 919, Allen, TX 75013.
         </span>
       </div>
-      <Footer2/>
+      <Footer2 />
     </div>
   );
 };

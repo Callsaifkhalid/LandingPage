@@ -14,7 +14,7 @@ import WhySection from "./screens/whySection/page";
 export default function Home() {
   return (
     <main >
-      <Modal/>
+      {/* <Modal/> */}
       <Navbar />
       <Hero />
       <ImageSwiper/>

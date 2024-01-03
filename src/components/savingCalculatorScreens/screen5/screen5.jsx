@@ -10,6 +10,8 @@ import Link from "next/link";
 import { InputContext } from "@/app/context/inputContext";
 const Screen5 = ({ onContinue, onBack, progress }) => {
   const { dob, setDOB } = useContext(InputContext);
+  const minDate = new Date();
+  minDate.setFullYear(minDate.getFullYear() - 18);
   return (
     <div className={styles.calculator}>
       <div className={styles.calculatorScreens}>
@@ -28,7 +30,7 @@ const Screen5 = ({ onContinue, onBack, progress }) => {
             dayPlaceholder="DD"
             monthPlaceholder="M"
             yearPlaceholder="YYYY"
-            maxDate={new Date()}
+            maxDate={minDate}
           />
         </div>
         <button

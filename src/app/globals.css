@@ -48,6 +48,6 @@ input::-webkit-inner-spin-button {
     width: 155px;
   }
   .react-calendar {
-    width: 300px !important;
+    width: 280px !important;
   }
 }
