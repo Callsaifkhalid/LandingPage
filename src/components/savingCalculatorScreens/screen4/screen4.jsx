@@ -58,17 +58,9 @@ const Screen4 = ({ onContinue, onBack, progress }) => {
           Continue
         </button>
         <span
-          style={{ color: "#8B8B8B", fontSize: "12px", textAlign: "justify" }}
+          style={{ color: "#8B8B8B", fontSize: "14px", textAlign: "center" }}
         >
-          I certify I am at least 18 years of age and accept Clear Credit's
-          Terms of Use, Disclosure and Privacy Policy and/or California Privacy
-          Policy, and give Clear Credit and its approved partners express
-          written consent to contact me about financial service or credit
-          related offers via email, text message, and by phone at the number
-          above, including by automated dialer, even if your telephone number is
-          currently listed on any internal, corporate, state or federal
-          Do-Not-Call list. I understand this consent is not a condition of
-          receiving services from Clear Credit AI, LLC.
+          Check rates won’t affect your credit score
         </span>
         <div className={styles.securityheading}>
           <FaLock style={{ marginRight: "10px" }} />

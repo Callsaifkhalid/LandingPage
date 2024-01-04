@@ -209,6 +209,9 @@
   .calculatorScreens {
     margin-top: 20%;
   }
+  .calculatorScreens{
+    width: 450px;
+  }
 }
 @media screen and (min-width: 921px) and (max-width: 1300px) {
   .wrapper {

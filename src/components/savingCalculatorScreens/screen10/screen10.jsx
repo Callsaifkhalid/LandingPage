@@ -11,8 +11,8 @@ const Screen10 = ({ onBack, progress, onContinue }) => {
   const [isValidEmail, setIsValidEmail] = useState(true);
   const [phoneNumber, setPhoneNumber] = useState("");
   const [isValidPhoneNumber, setIsValidPhoneNumber] = useState(true);
-  const [checkemail,setcheckemail]=useState(false)
-  const [checkphone,setcheckphone]=useState(false)
+  const [checkemail, setcheckemail] = useState(false);
+  const [checkphone, setcheckphone] = useState(false);
 
   const handleInputChange = (event) => {
     const inputValue = event.target.value;
@@ -21,12 +21,12 @@ const Screen10 = ({ onBack, progress, onContinue }) => {
     const isValid = emailRegex.test(inputValue);
     setIsValidEmail(isValid);
     setEmail(inputValue);
-    setcheckemail(isValid)
+    setcheckemail(isValid);
   };
   const formatPhoneNumber = (inputValue) => {
-    const cleanedNumber = inputValue.replace(/\D/g, '');
-    if (!cleanedNumber || cleanedNumber === '(') {
-      return '';
+    const cleanedNumber = inputValue.replace(/\D/g, "");
+    if (!cleanedNumber || cleanedNumber === "(") {
+      return "";
     }
     const firstTenDigits = cleanedNumber.slice(0, 10);
     let formattedNumber = `(${firstTenDigits.slice(0, 3)}`;
@@ -42,17 +42,17 @@ const Screen10 = ({ onBack, progress, onContinue }) => {
     const inputValue = event.target.value;
     const formattedNumber = formatPhoneNumber(inputValue);
     const validInput = /^\d{0,10}$/;
-    if (!validInput.test(formattedNumber.replace(/\D/g, ''))) {
+    if (!validInput.test(formattedNumber.replace(/\D/g, ""))) {
       return;
     }
-    setPhoneNumber(formattedNumber.slice(0, 14)); 
+    setPhoneNumber(formattedNumber.slice(0, 14));
     const phoneRegex = /^\d{10}$/;
-    const isValid = phoneRegex.test(formattedNumber.replace(/\D/g, ''));
+    const isValid = phoneRegex.test(formattedNumber.replace(/\D/g, ""));
     setIsValidPhoneNumber(isValid);
-    setPhone(formattedNumber)
-    setcheckphone(isValid)
+    setPhone(formattedNumber);
+    setcheckphone(isValid);
   };
-  
+
   console.log(phone);
   return (
     <div className={styles.calculator}>
@@ -65,7 +65,10 @@ const Screen10 = ({ onBack, progress, onContinue }) => {
           <h1>What is your contact detail?</h1>
         </div>
         <div className={styles.inputfields}>
-          <div className={styles.inputs} style={{border:!isValidEmail ?'1px solid red':''}}>
+          <div
+            className={styles.inputs}
+            style={{ border: !isValidEmail ? "1px solid red" : "" }}
+          >
             <input
               type="text"
               placeholder="Email"
@@ -80,7 +83,10 @@ const Screen10 = ({ onBack, progress, onContinue }) => {
               Please enter a valid email address.
             </p>
           )}
-          <div className={styles.inputs} style={{border:!isValidPhoneNumber ?'1px solid red':''}}>
+          <div
+            className={styles.inputs}
+            style={{ border: !isValidPhoneNumber ? "1px solid red" : "" }}
+          >
             <input
               placeholder="Phone"
               type="text"
@@ -110,9 +116,17 @@ const Screen10 = ({ onBack, progress, onContinue }) => {
           Continue
         </button>
         <span
-          style={{ color: "#8B8B8B", fontSize: "14px", textAlign: "center" }}
+          style={{ color: "#8B8B8B", fontSize: "12px", textAlign: "center" }}
         >
-          Check rates won’t affect your credit score
+          I certify I am at least 18 years of age and accept Clear Credit's
+          Terms of Use, Disclosure and Privacy Policy and/or California Privacy
+          Policy, and give Clear Credit and its approved partners express
+          written consent to contact me about financial service or credit
+          related offers via email, text message, and by phone at the number
+          above, including by automated dialer, even if your telephone number is
+          currently listed on any internal, corporate, state or federal
+          Do-Not-Call list. I understand this consent is not a condition of
+          receiving services from Clear Credit AI, LLC.
         </span>
         <div className={styles.securityheading}>
           <FaLock style={{ marginRight: "10px" }} />

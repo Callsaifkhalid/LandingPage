@@ -5,6 +5,8 @@ import lenders from "@/utils/compareLenders";
 import CurrencyInput from "react-currency-input-field";
 import Select from "react-select";
 import { LuListFilter } from "react-icons/lu";
+import { Link as ScrollLink } from "react-scroll/modules";
+import OutsideClickHandler from "react-outside-click-handler";
 const CompareSection = () => {
   const [click, setClick] = useState(false);
   const [inputLoan, setInputLoan] = useState("20000");
@@ -136,7 +138,6 @@ const CompareSection = () => {
       },
     }),
   };
-
   return (
     <div className={styles.wrapper} id="compare">
       <img src="./whycircle.png" />
@@ -149,16 +150,18 @@ const CompareSection = () => {
       </div>
 
       <div className={styles.boxesborder}>
-        {tooltip && (
-          <div className={styles.tooltip}>
-            The rates that appear are from companies which Clear Credit receives
-            compensation. This compensation does not impact how or where
-            products appear within the table. The rates and information shown do
-            not include all financial service providers or all of the displayed
-            lender's available services and product offerings.
-          </div>
-        )}
-        <span onClick={() => showTooltip(!tooltip)}>Advertiser Disclosure</span>
+        <OutsideClickHandler onOutsideClick={() => showTooltip(false)}>
+          {tooltip && (
+            <div className={styles.tooltip}>
+              The rates that appear are from companies which Clear Credit
+              receives compensation. This compensation does not impact how or
+              where products appear within the table. The rates and information
+              shown do not include all financial service providers or all of the
+              displayed lender's available services and product offerings.
+            </div>
+          )}
+        </OutsideClickHandler>
+        <span onClick={() => showTooltip(pre=>!pre)}>Advertiser Disclosure</span>
 
         <div className={styles.boxes}>
           <div
@@ -167,8 +170,11 @@ const CompareSection = () => {
           >
             <LuListFilter style={{ fontSize: "1.5rem", marginRight: "10px" }} />
             <span>
-              Filter <span style={{ color: "#1a4048" }}>{!inputLoan?'$': `$${parseInt(inputLoan)}`}</span> loan
-              amount, ordered by{" "}
+              Filter{" "}
+              <span style={{ color: "#1a4048" }}>
+                {!inputLoan ? "$" : `$${parseInt(inputLoan)}`}
+              </span>{" "}
+              loan amount, ordered by{" "}
               <span style={{ color: "#1a4048" }}>{reactselect.label}</span>
             </span>
           </div>
@@ -234,7 +240,17 @@ const CompareSection = () => {
                   </span>
                 </div>
                 <div className={styles.div5}>
-                  <button>Find my Rate</button>
+                  <button>
+                    <ScrollLink
+                      to="hero"
+                      spy={true}
+                      smooth={true}
+                      offset={10}
+                      duration={500}
+                    >
+                      Find my Rate
+                    </ScrollLink>
+                  </button>
                 </div>
               </div>
               {lender.details.map((detail) => (

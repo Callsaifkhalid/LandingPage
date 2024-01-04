@@ -134,13 +134,13 @@
   }
   .socials{
     margin-right: 1rem;
-    margin-top: 0.3rem ;
+    margin-top: -0.5rem ;
   }
   .socials > a > img {
     width: 25px;
     transition: all ease-in 50ms;
     margin-left: 0rem;
-    margin-bottom: -2.5rem;
+    /* margin-bottom: -2.5rem; */
   }
   .logo > img {
     margin-left: 0rem;

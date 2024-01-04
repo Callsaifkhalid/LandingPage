@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./california.module.css";
 import PolicyNavbar from "@/components/policyNavbar/policynavbar";
 import Footer2 from "@/components/footer2/footer2";
+import Link from "next/link";
 const CaliforniaPrivacy = () => {
   return (
     <div>
@@ -206,7 +207,8 @@ const CaliforniaPrivacy = () => {
               Directly and indirectly from activity on our website (
               <a href="http://www.clearcredit.ai" target="_blank">
                 www.clearcredit.ai
-              </a>). For example, from submissions through our website portal or
+              </a>
+              ). For example, from submissions through our website portal or
               website usage details collected automatically.
             </li>
             <li>
@@ -425,8 +427,10 @@ const CaliforniaPrivacy = () => {
             <br />
             You have the right to request that Clear Credit no longer sell your
             personal information. To exercise that right, please click here:{" "}
-            <a href="">Do Not Sell my personal information</a> or Calling us
-            toll-free during business hours at: 1-844-208-1100
+            <Link href="/do-not-sell-my-personal-information">
+              Do Not Sell my personal information
+            </Link>{" "}
+            or Calling us toll-free during business hours at: 1-844-208-1100
             <br />
             <br />
           </span>
@@ -441,7 +445,11 @@ const CaliforniaPrivacy = () => {
             Calling: 1-844-208-1100
             <br /> Email: service@clearcredit.ai 
           </span>
-          <h2>Filling out the California Consumer Request form</h2>
+          <h2>
+            <Link href={"/california-consumer-request-form"}>
+              Filling out the California Consumer Request form
+            </Link>
+          </h2>
           <span>
             Only you or a person registered with the California Secretary of
             State that you authorize to act on your behalf, may make a
@@ -549,7 +557,11 @@ const CaliforniaPrivacy = () => {
           <span>
             May other parties collect personally identifiable information about
             an individual consumer’s online activities over time and across
-            different websites when they visit <a href="http://www.clearcredit.ai" target="_blank">www.clearcredit.ai</a> ?
+            different websites when they visit{" "}
+            <a href="http://www.clearcredit.ai" target="_blank">
+              www.clearcredit.ai
+            </a>{" "}
+            ?
           </span>
           <ul>
             <li style={{ color: "#8b8b8b" }}>No</li>
@@ -571,7 +583,10 @@ const CaliforniaPrivacy = () => {
             <br />
             <br /> Phone: 1-844-208-1100
             <br />
-            <br /> Website: <a href="http://www.clearcredit.ai" target="_blank">www.clearcredit.ai</a>
+            <br /> Website:{" "}
+            <a href="http://www.clearcredit.ai" target="_blank">
+              www.clearcredit.ai
+            </a>
             <br />
             <br /> Email: service@clearcredit.ai  <br />
             <br /> Postal Address:  Clear Credit AI, LLC. 1400 112TH Ave SE
