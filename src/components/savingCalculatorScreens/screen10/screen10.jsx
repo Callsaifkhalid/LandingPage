@@ -21,7 +21,7 @@ const Screen10 = ({ onBack, progress, onContinue }) => {
     const isValid = emailRegex.test(inputValue);
     setIsValidEmail(isValid);
     setEmail(inputValue);
-    setcheckemail(true)
+    setcheckemail(isValid)
   };
   const formatPhoneNumber = (inputValue) => {
     const cleanedNumber = inputValue.replace(/\D/g, '');
@@ -50,7 +50,7 @@ const Screen10 = ({ onBack, progress, onContinue }) => {
     const isValid = phoneRegex.test(formattedNumber.replace(/\D/g, ''));
     setIsValidPhoneNumber(isValid);
     setPhone(formattedNumber)
-    setcheckphone(true)
+    setcheckphone(isValid)
   };
   
   console.log(phone);
@@ -73,7 +73,7 @@ const Screen10 = ({ onBack, progress, onContinue }) => {
               value={eemail}
               onChange={handleInputChange}
             />{" "}
-            {isValidEmail && <IoMdCheckmark style={{ color: "#05c8e8" }} />}
+            {checkemail && <IoMdCheckmark style={{ color: "#05c8e8" }} />}
           </div>
           {!isValidEmail && (
             <p className={styles.errormsg}>
@@ -88,7 +88,7 @@ const Screen10 = ({ onBack, progress, onContinue }) => {
               value={phoneNumber}
               onChange={handleInputChangePhone}
             />{" "}
-            {isValidPhoneNumber && <IoMdCheckmark style={{ color: "#05c8e8" }} />}
+            {checkphone && <IoMdCheckmark style={{ color: "#05c8e8" }} />}
           </div>
           {!isValidPhoneNumber && (
             <p className={styles.errormsg}>
@@ -98,9 +98,9 @@ const Screen10 = ({ onBack, progress, onContinue }) => {
         </div>
         <button
           className={
-            !isValidPhoneNumber
+            !checkemail
               ? styles.disabledbutton
-              : !isValidEmail
+              : !checkphone
               ? styles.disabledbutton
               : styles.continuebutton
           }
