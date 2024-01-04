@@ -4,14 +4,15 @@ import { IoMdCheckmark } from "react-icons/io";
 import { FaLock } from "react-icons/fa";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import Link from "next/link";
-import CurrencyInput from "react-currency-input-field";
 import { InputContext } from "@/app/context/inputContext";
 const Screen10 = ({ onBack, progress, onContinue }) => {
   const { email, setEmail, phone, setPhone } = useContext(InputContext);
   const [eemail, seteEmail] = useState("");
-  const [isValidEmail, setIsValidEmail] = useState(false);
+  const [isValidEmail, setIsValidEmail] = useState(true);
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [isValidPhoneNumber, setIsValidPhoneNumber] = useState(false);
+  const [isValidPhoneNumber, setIsValidPhoneNumber] = useState(true);
+  const [checkemail,setcheckemail]=useState(false)
+  const [checkphone,setcheckphone]=useState(false)
 
   const handleInputChange = (event) => {
     const inputValue = event.target.value;
@@ -20,6 +21,7 @@ const Screen10 = ({ onBack, progress, onContinue }) => {
     const isValid = emailRegex.test(inputValue);
     setIsValidEmail(isValid);
     setEmail(inputValue);
+    setcheckemail(true)
   };
   const formatPhoneNumber = (inputValue) => {
     const cleanedNumber = inputValue.replace(/\D/g, '');
@@ -48,6 +50,7 @@ const Screen10 = ({ onBack, progress, onContinue }) => {
     const isValid = phoneRegex.test(formattedNumber.replace(/\D/g, ''));
     setIsValidPhoneNumber(isValid);
     setPhone(formattedNumber)
+    setcheckphone(true)
   };
   
   console.log(phone);
@@ -62,7 +65,7 @@ const Screen10 = ({ onBack, progress, onContinue }) => {
           <h1>What is your contact detail?</h1>
         </div>
         <div className={styles.inputfields}>
-          <div className={styles.inputs}>
+          <div className={styles.inputs} style={{border:!isValidEmail ?'1px solid red':''}}>
             <input
               type="text"
               placeholder="Email"
@@ -77,7 +80,7 @@ const Screen10 = ({ onBack, progress, onContinue }) => {
               Please enter a valid email address.
             </p>
           )}
-          <div className={styles.inputs}>
+          <div className={styles.inputs} style={{border:!isValidPhoneNumber ?'1px solid red':''}}>
             <input
               placeholder="Phone"
               type="text"
@@ -89,7 +92,7 @@ const Screen10 = ({ onBack, progress, onContinue }) => {
           </div>
           {!isValidPhoneNumber && (
             <p className={styles.errormsg}>
-              Please enter a valid email address.
+              Please enter a valid phone number.
             </p>
           )}
         </div>
