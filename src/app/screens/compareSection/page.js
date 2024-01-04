@@ -167,7 +167,7 @@ const CompareSection = () => {
           >
             <LuListFilter style={{ fontSize: "1.5rem", marginRight: "10px" }} />
             <span>
-              Filter <span style={{ color: "#1a4048" }}>${inputLoan}</span> loan
+              Filter <span style={{ color: "#1a4048" }}>{!inputLoan?'$': `$${parseInt(inputLoan)}`}</span> loan
               amount, ordered by{" "}
               <span style={{ color: "#1a4048" }}>{reactselect.label}</span>
             </span>
