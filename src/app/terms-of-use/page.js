@@ -5,7 +5,7 @@ import Footer2 from "@/components/footer2/footer2";
 const TermsofUse = () => {
   return (
     <div>
-        <PolicyNavbar/>
+      <PolicyNavbar />
       <div className={styles.mainHeading}>
         <h1>Terms of Use</h1>
         <span>Updated Dec, 2023</span>
@@ -30,7 +30,7 @@ const TermsofUse = () => {
       </div>
       <div className={styles.textSections}>
         <div>
-          <h2>LICENSE GRANT.</h2>
+          <h2>LICENSE GRANT</h2>
           <span>
             This Site is provided by Clear Credit. This TOU provides you, a
             “User”, with a personal, revocable, limited, non-exclusive,
@@ -201,9 +201,10 @@ const TermsofUse = () => {
             Accordingly, if you wish to access and use those areas of the Site,
             you acknowledge and agree that your use of this Site will constitute
             acceptance of Clear Credit’s PII collection and use practices.
-            Please review and familiarize yourself with Clear Credit’s Privacy
-            Policy, which provides a summary of Clear Credit’s PII collection
-            and use practices.
+            Please review and familiarize yourself with Clear Credit’s{" "}
+            <span style={{ fontWeight: "700" }}>Privacy Policy</span>, which
+            provides a summary of Clear Credit’s PII collection and use
+            practices.
           </span>
 
           <h2>FORWARD LOOKING STATEMENTS</h2>
@@ -247,13 +248,14 @@ const TermsofUse = () => {
           <h2>SUBMISSIONS</h2>
           <span>
             Clear Credit welcomes your feedback and suggestions about how to
-            improve this Site via email, with the subject line “Feedback,” at
-            Service@clearcredit.ai. You are solely responsible for the content
-            of any information that you submit to Clear Credit, and you agree
-            not to submit any defamatory, abusive, obscene, threatening, or
-            illegal material, or any other material that infringes the rights of
-            others. Clear Credit retains the right to deny access to the Clear
-            Credit website to anyone Clear Credit believes has violated these
+            improve this Site via email, with the subject line “Feedback,” at{" "}
+            <a href="mailto:Service@clearcredit.ai">Service@clearcredit.ai</a>{" "}
+           Contact. You are solely responsible for the content of any
+            information that you submit to Clear Credit, and you agree not to
+            submit any defamatory, abusive, obscene, threatening, or illegal
+            material, or any other material that infringes the rights of others.
+            Clear Credit retains the right to deny access to the Clear Credit
+            website to anyone Clear Credit believes has violated these
             conditions. Clear Credit will comply with all requirements of the
             law regarding disclosure of any submissions, including to law
             enforcement agencies and parties making civil legal requests. Clear
@@ -409,9 +411,9 @@ const TermsofUse = () => {
             imposed by this Indemnity provision survive termination of this TOU
             and the license granted to you to use the Site.
           </span>
-          <h2>GENERAL PROVISIONS.</h2>
+          <h2>GENERAL PROVISIONS.</h2>
           <span>
-            This TOU, Clear Credit’s Privacy Policy, and any related or
+            This TOU, Clear Credit’s <span style={{fontWeight:'700'}}>Privacy Policy</span>, and any related or
             associated service or software license agreements, which are all
             hereby incorporated by reference as if set forth fully herein,
             represent the entire agreement between you and Clear Credit with
@@ -464,7 +466,7 @@ const TermsofUse = () => {
           </span>
         </div>
       </div>
-      <Footer2/>
+      <Footer2 />
     </div>
   );
 };

@@ -29,9 +29,9 @@ const Navbar = () => {
 
       if (scrollPosition < 300) {
         setCurrentSection("home");
-      } else if (scrollPosition > 1500 && scrollPosition < 3400) {
+      } else if (scrollPosition > 2800 && scrollPosition < 4300) {
         setCurrentSection("saving");
-      } else if (scrollPosition > 400 && scrollPosition < 1500) {
+      } else if (scrollPosition > 400 && scrollPosition < 2800) {
         setCurrentSection("compare");
       } else if (scrollPosition > 7800) {
         setCurrentSection("contact");

@@ -137,7 +137,8 @@
   }
   .card1box1img > img {
     width: 140px;
-    height: 200px;
+   border: 1px solid red;
+   height: 200px; 
   }
   .viewmorebutton{
     margin-top: 0%;

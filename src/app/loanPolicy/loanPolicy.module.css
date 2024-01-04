@@ -31,3 +31,8 @@
     margin-bottom: 20%;
   }
 }
+@media screen and (min-width: 718px) and (max-width: 1024px) {
+  .mainHeading h1{
+    margin-top: 15%;
+  }
+}

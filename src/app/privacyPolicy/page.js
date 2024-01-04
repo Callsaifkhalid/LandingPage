@@ -5,7 +5,7 @@ import PolicyNavbar from "@/components/policyNavbar/policynavbar";
 const PrivacyPolicy = () => {
   return (
     <div>
-        <PolicyNavbar/>
+      <PolicyNavbar />
       <div className={styles.mainHeading}>
         <h1>Privacy Policy</h1>
         <span>Last updated: April 14, 2020</span>
@@ -14,7 +14,7 @@ const PrivacyPolicy = () => {
         <span>
           This Online Privacy Policy (hereinafter sometimes referred to as the
           “Notice” or “Privacy Policy”) applies to the 
-          <a href="www.clearcredit.ai" target="_blank">
+          <a href="http://www.clearcredit.ai" target="_blank">
             www.clearcredit.ai
           </a>{" "}
           online interface (i.e., website) owned and operated by Clear Credit
@@ -169,7 +169,7 @@ const PrivacyPolicy = () => {
           </span>
           <span>
             <span style={{ fontWeight: "700" }}>
-              Service Providers and Affiliates:
+              Service Providers and Affiliates:{" "}
             </span>
             Clear Credit may use other third parties to provide certain clerical
             and information processing services on our site. When you sign up
@@ -186,7 +186,7 @@ const PrivacyPolicy = () => {
             by third parties will be used to operate the site and to provide the
             services or products or carry out the transactions you have
             requested or authorized. Use of the information provided to service
-            providers for any other purpose than suggested is prohibited.
+            providers for any other purpose than suggested is prohibited.{" "}
             <span style={{ fontWeight: "700" }}>
               By submitting a request, you have agreed to be contacted by us or
               by our service providers through any means, based on the
@@ -197,7 +197,7 @@ const PrivacyPolicy = () => {
           </span>
           <span>
             <span style={{ fontWeight: "700" }}>
-              Third Parties and Business Partners:
+              Third Parties and Business Partners:{" "}
             </span>
             WE RESERVE THE RIGHT TO SELL, RENT OR TRANSFER YOUR PERSONAL
             INFORMATION TO THIRD PARTIES FOR ANY PURPOSE IN OUR SOLE DISCRETION.
@@ -223,19 +223,22 @@ const PrivacyPolicy = () => {
             form. If you no longer wish to receive emails from us and/or
             promotional communications, you may opt-out of receiving them by
             following the instructions included in each newsletter or
-            communication or by emailing us at Service@clearcredit.ai. Please
-            provide us with detailed email on communications you would like to
-            opt out of. If your information has been shared with a third party
-            has indicated above to provide you with promotional communications,
-            your opt-out will not apply to those third parties. If you do not
-            wish to be contacted by the third party after prior interaction, you
-            must make a specific request to that provider, NOT Clear Credit. We
-            may share information with third parties as indicated above. If you
-            do not wish to have your personal information shared, sold or
-            disclosed to a third party that is not our agent/service provider,
-            please contact to actively opt-out of having your personal
-            information shared. To do so, you can call or email Clear Credit to
-            opt out of sharing at: 1-844-208-1100 or service@clearcredit.ai.
+            communication or by emailing us at 
+            <a href="mailto:Service@clearcredit.ai">Service@clearcredit.ai</a> .
+            Please provide us with detailed email on communications you would
+            like to opt out of. If your information has been shared with a third
+            party has indicated above to provide you with promotional
+            communications, your opt-out will not apply to those third parties.
+            If you do not wish to be contacted by the third party after prior
+            interaction, you must make a specific request to that provider, NOT
+            Clear Credit. We may share information with third parties as
+            indicated above. If you do not wish to have your personal
+            information shared, sold or disclosed to a third party that is not
+            our agent/service provider, please contact to actively opt-out of
+            having your personal information shared. To do so, you can call or
+            email Clear Credit to opt out of sharing at:{" "}
+            <span style={{ fontWeight: "700" }}>1-844-208-1100</span> or 
+            <a href="mailto:Service@clearcredit.ai">Service@clearcredit.ai</a> .
           </span>
           <h2>SECURING THE TRANSMISSION AND STORAGE OF INFORMATION</h2>
           <span>
@@ -326,13 +329,15 @@ const PrivacyPolicy = () => {
           </span>
           <h2>CO-BRANDED SITES</h2>
           <span>
-            We may be co-branded with “partners and affiliates”. These business
-            to business relationships are helpful to us and to you as they
-            afford all concerned with greater product and service opportunities.
-            We always provide opt-out opportunities regarding the sharing of
-            your information with such partners and affiliates. Please note the
-            sites linked to our site are governed by their own privacy policies
-            which may or may not reach the standards set by Clear Credit
+            We may be co-branded with{" "}
+            <span style={{ fontWeight: "700" }}>“partners and affiliates”</span>
+            . These business to business relationships are helpful to us and to
+            you as they afford all concerned with greater product and service
+            opportunities. We always provide opt-out opportunities regarding the
+            sharing of your information with such partners and affiliates.
+            Please note the sites linked to our site are governed by their own
+            privacy policies which may or may not reach the standards set by
+            Clear Credit
           </span>
           <h2>UPDATES TO PERSONALLY IDENTIFIABLE INFORMATION</h2>
           <span>
@@ -390,9 +395,9 @@ const PrivacyPolicy = () => {
           <span>
             In response to Vermont regulations, we automatically treat accounts
             with Vermont billing addresses as if you requested that we not share
-            your information with nonaffiliated third parties, and that we limit
-            the information we share with our affiliates. If we disclose
-            information about you to nonaffiliated third parties with whom we
+            your information with non affiliated third parties, and that we
+            limit the information we share with our affiliates. If we disclose
+            information about you to non affiliated third parties with whom we
             have joint marketing agreements, we will only disclose your name,
             address, other contact information, and information about our
             transaction and experiences with you.
@@ -402,11 +407,13 @@ const PrivacyPolicy = () => {
             We are providing you this notice pursuant to state law. You may be
             placed on our internal Do Not Call List by requesting that we cease
             calling you by contacting us directly and making such request in
-            writing info@Clear Credit.com.  Nevada law requires that we also
-            provide you with the following contact information: Bureau of
-            Consumer Protection, Office of the Nevada Attorney General, 555 E.
-            Washington St., Suite 3900, Las Vegas, NV 89101; Phone number:
-            702-486-3132; e-mail: BCPINFO@ag.state.nv.us
+            writing{" "}
+            <a href="mailto:Service@clearcredit.ai">info@ClearCredit.com</a>.
+            Nevada law requires that we also provide you with the following
+            contact information: Bureau of Consumer Protection, Office of the
+            Nevada Attorney General, 555 E. Washington St., Suite 3900, Las
+            Vegas, NV 89101; Phone number: 702-486-3132; e-mail:{" "}
+            <a href="mailto:Service@clearcredit.ai">BCPINFO@ag.state.nv.us</a>{" "}
           </span>
           <h2>Notice to Users Outside of the United States</h2>
           <span>
@@ -471,14 +478,14 @@ const PrivacyPolicy = () => {
             <br /> Bellevue, WA 98004 1-844-208-1100
             <br /> service@clearcredit.ai
             <br />{" "}
-            <span style={{ fontWeight: "700"}}>
+            <span style={{ fontWeight: "700" }}>
               Please print and retain a copy of this privacy policy for your
               records.
             </span>
           </span>
         </div>
       </div>
-      <Footer2/>
+      <Footer2 />
     </div>
   );
 };

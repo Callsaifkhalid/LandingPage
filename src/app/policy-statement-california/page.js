@@ -42,19 +42,19 @@ const CaliforniaPrivacy = () => {
             </thead>
             <tbody>
               <tr>
-                <td className={styles.tablecol1}>A. Identifiers.</td>
+                <td className={styles.tablecol1}>Identifiers</td>
                 <td className={styles.tablecol2}>
                   A real name, alias, postal address, unique personal
                   identifier, online identifier, Internet Protocol address,
                   email address, account name, Social Security number, driver’s
-                  license number, passport number, or other similar identifiers.
+                  license number, passport number, or other similar identifiers
                 </td>
                 <td className={styles.tablecol3}>YES</td>
               </tr>
               <tr>
                 <td className={styles.tablecol1}>
-                  B. Personal information categories listed in the California
-                  Customer Records statute (Cal. Civ. Code § 1798.80(e)).
+                  Personal information categories listed in the California
+                  Customer Records statute (Cal. Civ. Code § 1798.80(e))
                 </td>
                 <td className={styles.tablecol2}>
                   A name, signature, Social Security number, physical
@@ -65,14 +65,14 @@ const CaliforniaPrivacy = () => {
                   debit card number, or any other financial information, medical
                   information, or health insurance information. Some personal
                   information included in this category may overlap with other
-                  categories.
+                  categories
                 </td>
                 <td className={styles.tablecol3}>YES</td>
               </tr>
               <tr>
                 <td className={styles.tablecol1}>
-                  C. Protected classification characteristics under California
-                  or federal law.
+                  Protected classification characteristics under California or
+                  federal law
                 </td>
                 <td className={styles.tablecol2}>
                   Age (40 years or older), race, color, ancestry, national
@@ -86,83 +86,83 @@ const CaliforniaPrivacy = () => {
                 <td className={styles.tablecol3}>YES</td>
               </tr>
               <tr>
-                <td className={styles.tablecol1}>D. Commercial information.</td>
+                <td className={styles.tablecol1}>Commercial information</td>
                 <td className={styles.tablecol2}>
                   Records of personal property, products or services purchased,
                   obtained, or considered, or other purchasing or consuming
-                  histories or tendencies.
+                  histories or tendencies
                 </td>
                 <td className={styles.tablecol3}>YES</td>
               </tr>
               <tr>
-                <td className={styles.tablecol1}>E. Biometric information.</td>
+                <td className={styles.tablecol1}>Biometric information</td>
                 <td className={styles.tablecol2}>
                   Genetic, physiological, behavioral, and biological
                   characteristics, or activity patterns used to extract a
                   template or other identifier or identifying information, such
                   as, fingerprints, faceprints, and voiceprints, iris or retina
                   scans, keystroke, gait, or other physical patterns, and sleep,
-                  health, or exercise data.
+                  health, or exercise data
                 </td>
                 <td className={styles.tablecol3}>NO</td>
               </tr>
               <tr>
                 <td className={styles.tablecol1}>
-                  F. Internet or other similar network activity.
+                  Internet or other similar network activity
                 </td>
                 <td className={styles.tablecol2}>
                   Browsing history, search history, information on a consumer’s
-                  interaction with a website, application, or advertisement.
+                  interaction with a website, application, or advertisement
                 </td>
                 <td className={styles.tablecol3}>YES</td>
               </tr>
               <tr>
-                <td className={styles.tablecol1}>G. Geolocation data</td>
+                <td className={styles.tablecol1}>Geolocation data</td>
                 <td className={styles.tablecol2}>
-                  Physical location or movements.
+                  Physical location or movements
                 </td>
                 <td className={styles.tablecol3}>NO</td>
               </tr>
               <tr>
-                <td className={styles.tablecol1}>H. Sensory data.</td>
+                <td className={styles.tablecol1}>Sensory data</td>
                 <td className={styles.tablecol2}>
                   Audio, electronic, visual, thermal, olfactory, or similar
-                  information.
+                  information
                 </td>
                 <td className={styles.tablecol3}>NO</td>
               </tr>
               <tr>
                 <td className={styles.tablecol1}>
-                  I. Professional or employment-related information.
+                  Professional or employment-related information
                 </td>
                 <td className={styles.tablecol2}>
-                  Current or past job history or performance evaluations..
+                  Current or past job history or performance evaluations
                 </td>
                 <td className={styles.tablecol3}>YES</td>
               </tr>
               <tr>
                 <td className={styles.tablecol1}>
-                  J. Non-public education information (per the Family
-                  Educational Rights and Privacy Act (20 U.S.C. Section 1232g,
-                  34 C.F.R. Part 99)).
+                  Non-public education information (per the Family Educational
+                  Rights and Privacy Act (20 U.S.C. Section 1232g, 34 C.F.R.
+                  Part 99))
                 </td>
                 <td className={styles.tablecol2}>
                   Education records directly related to a student maintained by
                   an educational institution or party acting on its behalf, such
                   as grades, transcripts, class lists, student schedules,
                   student identification codes, student financial information,
-                  or student disciplinary records.
+                  or student disciplinary records
                 </td>
                 <td className={styles.tablecol3}>NO</td>
               </tr>
               <tr>
                 <td className={styles.tablecol1}>
-                  K. Inferences drawn from other personal information.
+                  Inferences drawn from other personal information
                 </td>
                 <td className={styles.tablecol2}>
                   Profile reflecting a person’s preferences, characteristics,
                   psychological trends, predispositions, behavior, attitudes,
-                  intelligence, abilities, and aptitudes.
+                  intelligence, abilities, and aptitudes
                 </td>
                 <td className={styles.tablecol3}>NO</td>
               </tr>
@@ -203,9 +203,11 @@ const CaliforniaPrivacy = () => {
               customers/visitors in the course of providing services to them.
             </li>
             <li>
-              Directly and indirectly from activity on our website
-              ( www.clearcredit.ai ). For example, from submissions through our
-              website portal or website usage details collected automatically.
+              Directly and indirectly from activity on our website (
+              <a href="http://www.clearcredit.ai" target="_blank">
+                www.clearcredit.ai
+              </a>). For example, from submissions through our website portal or
+              website usage details collected automatically.
             </li>
             <li>
               From third-parties that interact with us in connection with the
@@ -354,11 +356,11 @@ const CaliforniaPrivacy = () => {
               purpose, two separate lists disclosing:
             </li>
             <li>
-              sales, identifying the personal information categories that each
+              Sales, identifying the personal information categories that each
               category of recipient purchased; and
             </li>
             <li>
-              disclosures for a business purpose, identifying the personal
+              Disclosures for a business purpose, identifying the personal
               information categories that each category of recipient obtained.
             </li>
           </ul>
@@ -422,7 +424,7 @@ const CaliforniaPrivacy = () => {
             <span style={{ fontWeight: "700" }}>Opt-out right</span> <br />
             <br />
             You have the right to request that Clear Credit no longer sell your
-            personal information. To exercise that right, please click here:
+            personal information. To exercise that right, please click here:{" "}
             <a href="">Do Not Sell my personal information</a> or Calling us
             toll-free during business hours at: 1-844-208-1100
             <br />
@@ -547,7 +549,7 @@ const CaliforniaPrivacy = () => {
           <span>
             May other parties collect personally identifiable information about
             an individual consumer’s online activities over time and across
-            different websites when they visit www.clearcredit.ai?
+            different websites when they visit <a href="http://www.clearcredit.ai" target="_blank">www.clearcredit.ai</a> ?
           </span>
           <ul>
             <li style={{ color: "#8b8b8b" }}>No</li>
@@ -565,9 +567,15 @@ const CaliforniaPrivacy = () => {
             Statement, the ways in which we collect and use your personal
             information, your choices and rights regarding such use, or wish to
             exercise your rights under California law, please do not hesitate to
-            contact us at:<br/><br/> Phone: 1-844-208-1100<br/><br/>  Website: www.clearcredit.ai
-            <br/><br/> Email: service@clearcredit.ai  <br/><br/> Postal Address:  Clear Credit AI,
-            LLC. 1400 112TH Ave SE Suite 100, Bellevue, WA 98004
+            contact us at:
+            <br />
+            <br /> Phone: 1-844-208-1100
+            <br />
+            <br /> Website: <a href="http://www.clearcredit.ai" target="_blank">www.clearcredit.ai</a>
+            <br />
+            <br /> Email: service@clearcredit.ai  <br />
+            <br /> Postal Address:  Clear Credit AI, LLC. 1400 112TH Ave SE
+            Suite 100, Bellevue, WA 98004
           </span>
         </div>
       </div>
