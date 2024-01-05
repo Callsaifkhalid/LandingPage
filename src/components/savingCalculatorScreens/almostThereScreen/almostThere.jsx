@@ -22,29 +22,31 @@ const AlmostThere = ({ onContinue }) => {
     email,
     phone,} = useContext(InputContext);
   const Dataa = {
-    "first_name": first_name,
-    "last_name": last_name,
-    "phone": phone,
-    "email": email,
-    "dob": dob,
-    "debt_or_credit": 1,
-    "borrow_amount": heroInput,
-    "loan_reason": loanreasonvalue,
-    "employment_type": employmentvalue,
-    "housing_cost": housing_cost,
-    "address": {
-      "state": state.label,
-      "address": address,
-      "apartment": suite,
-      "city": city,
-      "zipcode": zipCode,
-      "debt_or_credit": 1,
-      "user_id": 1  // Replace with the actual user ID
+    first_name: first_name,
+    last_name: last_name,
+    phone: phone,
+    email: email,
+    dob: dob,
+    debt_or_credit: 1,
+    borrow_amount: heroInput,
+    loan_reason: loanreasonvalue,
+    employment_type: employmentvalue,
+    housing_cost: housing_cost,
+    address: {
+      state: state.label,
+      address: address,
+      apartment: suite,
+      city: city,
+      zipcode: zipCode,
+      debt_or_credit: 1,
+      user_id: 1  
     }
   }
+  
   const handleClick=()=>{
     checkRates(Dataa)
     onContinue()
+    console.log(Dataa)
   }
     console.log(state.label)
   return (

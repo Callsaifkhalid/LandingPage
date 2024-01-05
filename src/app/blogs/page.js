@@ -1,12 +1,50 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./blogs.module.css";
 import { useRouter } from "next/navigation";
 import BlogNavbar from "@/components/blogNavbar/blogNavbar";
 import Footer2 from "@/components/footer2/footer2";
+import { ErrorCodes } from "@/utils/error-codes";
+import { getAllBlogs } from "../api/blogs/repo";
 
 export default function BlogList() {
   const router = useRouter();
+  const [BlogData, setBlogData] = useState([]);
+  const [ErrMsg, setErrMsg] = useState("");
+  const [IsLoading, setIsLoading] = useState(false);
+  useEffect(()=>{
+    fetchAllData()
+  },[])
+  function fetchAllData() {
+    setIsLoading(true);
+    getAllBlogs()
+      .then(({ data }) => {
+        console.log("data blog", data);
+        setIsLoading(false);
+        switch (data.error_code) {
+          case ErrorCodes.success:
+            setBlogData(data.result);
+            break;
+          case ErrorCodes.failed:
+            setErrMsg("Oops! Some server error occued.");
+
+            break;
+          case ErrorCodes.not_exist:
+            setBlogData([]);
+            break;
+
+          default:
+            setErrMsg("Oops! Some error occued. EC: " + data.error_code);
+
+            break;
+        }
+      })
+      .catch((err) => {
+        setIsLoading(false);
+        console.log(err)
+       
+      });
+  }
   let data = [
     {
       id: 1,
@@ -74,12 +112,12 @@ export default function BlogList() {
 
   return (
     <>
-   <BlogNavbar/>
+      <BlogNavbar />
       <div className={styles.BlogListMainContainer}>
         <div className={styles.BlogHeadingStyle}>Blog</div>
         <div className={styles.arrayAndSideItemsContainer}>
           <div className={styles.BlogCardContainer}>
-            {data.map((item) => {
+            {BlogData.map((blog) => {
               return (
                 <div className={styles.BlogContainerStyle}>
                   <div
@@ -88,7 +126,7 @@ export default function BlogList() {
                     }}
                     className={styles.HeadingStyleBlogList}
                   >
-                    Can Prepaid Credit Cards Raise Your Credit Score?
+                    {blog?.title}
                   </div>
                   <div className={styles.publishDateStyle}>
                     Published September 2021
@@ -98,19 +136,22 @@ export default function BlogList() {
                       src={"./linkedinn.png"}
                       className={styles.socialLogoStyle}
                     />
-                    <img src={"./twitterr.png"} className={styles.socialLogoStyletwitter} />
+                    <img
+                      src={"./twitterr.png"}
+                      className={styles.socialLogoStyletwitter}
+                    />
                     <img
                       src={"./facebookk.png"}
                       className={styles.socialLogoStyle}
                     />
-                    <img src={"./maill.png"} className={styles.socialLogoStylemail}/>
+                    <img
+                      src={"./maill.png"}
+                      className={styles.socialLogoStylemail}
+                    />
                   </div>
                   <div className={styles.blogDiscriptionAndImageContainer}>
                     <div className={styles.blogDescriptionStyle}>
-                      A prepaid credit card is a “credit” card in name only. It
-                      works similarly to a debit card, with the difference that
-                      it does not require the holder to have a bank account
-                      linked to it.
+                     {blog?.description}
                       <div
                         onClick={() => {
                           router.push("/blogDetails");
@@ -189,7 +230,7 @@ export default function BlogList() {
           </div>
         </div>
       </div>
-      <Footer2/>
+      <Footer2 />
     </>
   );
 }

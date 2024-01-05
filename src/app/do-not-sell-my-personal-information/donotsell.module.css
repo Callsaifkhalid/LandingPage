@@ -71,6 +71,11 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+ 
+}
+.checkboxes div{
+  display: flex;
+ align-items: center;
 }
 .submitButton {
   display: flex;
@@ -87,4 +92,60 @@
   color: white;
   border-radius: 10px;
   cursor: pointer;
+}
+@media (max-width:717px){
+  .mainHeading {
+    margin-top:15%;
+  }
+  .nameFields {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .nameFields input {
+    width: 90%;
+  }
+  .emailandphone {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 5%;
+  }
+  .fields {
+    width: 94%;
+  }
+  .submitButton{
+    margin: 7% 0px;
+  }
+  .checkboxes{
+    margin-top: 7%;
+  }
+}
+@media screen and (min-width: 718px) and (max-width: 920px) {
+  .mainHeading {
+    margin-top: 12%;
+  }
+  .nameFields {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .nameFields input {
+    width: 90%;
+  }
+  .emailandphone {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 5%;
+  }
+  .fields {
+    width: 94%;
+  }
+  .submitButton{
+    margin: 7% 0px;
+  }
+  .checkboxes{
+    margin-top: 7%;
+  }
 }

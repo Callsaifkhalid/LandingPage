@@ -1,0 +1,1 @@
+export const BASE_URL = "https://gateway-clear-debt-credit.dsmeglobal.com/";

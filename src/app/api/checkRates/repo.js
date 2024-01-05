@@ -1,12 +1,6 @@
-import axios from "axios";
+import { apiInstance } from "../middleware";
 
-
-export async function checkRates(data) {
-    let route = "https://gateway-clear-debt-credit.dsmeglobal.com/".concat("api/user/post");
-    console.log(data);
-    return axios.post(route, data, {
-      ["axios-retry"]: {
-        retries: 0,
-      },
-    });
-  }
+export const checkRates = (data) => {
+  const api = apiInstance();
+  return api.post("api/user/post", data);
+};
