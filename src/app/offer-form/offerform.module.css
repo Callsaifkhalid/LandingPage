@@ -1,0 +1,117 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mainHeading {
+  color: #1a4048;
+  margin-top: 10%;
+}
+.debtdetails {
+  width: 50%;
+}
+.debtdetails h3 {
+  color: #05c8e8;
+}
+.debtandcreditscore {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3%;
+}
+.fields {
+  display: flex;
+  flex-direction: column;
+  width: 46.5%;
+  gap: 10px;
+}
+.fields input {
+  height: 40px;
+  padding-left: 10px;
+  border: 1px solid #8b8b8b;
+  border-radius: 10px;
+  font-size: 16px;
+}
+.fields input:focus {
+  outline: 1px solid #05c8e8;
+  border: 1px solid #05c8e8;
+}
+.fields span {
+  font-size: 14px;
+}
+.reactselect {
+  height: 45px;
+  border: 1px solid #8b8b8b;
+  border-radius: 10px;
+}
+.reactselect2 {
+  height: 45px;
+  border: 1px solid #8b8b8b;
+  border-radius: 10px;
+  margin-top: 13%;
+}
+.name {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.personalDetails {
+  width: 50%;
+}
+.personalDetails h3 {
+  color: #05c8e8;
+}
+.dateandbusiness {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3%;
+}
+.dateandbusiness input {
+  border: none;
+  height: 40px;
+  padding-left: 0px;
+  border-radius: 0px;
+  font-size: 16px;
+}
+
+.datepicker {
+  height: 45px;
+  padding-left: 10px;
+  border: 1px solid #8b8b8b;
+  border-radius: 10px;
+  font-size: 16px;
+  width: 100%;
+}
+.Streetaddress {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+.submitButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 6% 0px;
+}
+.submitButton span{
+    font-size: 13px;
+}
+.submitButton button {
+  border: none;
+  outline: none;
+  width: 250px;
+  height: 40px;
+  background-color: #05c8e8;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+}
+.affect{
+    display: flex;
+    align-items: center;
+}

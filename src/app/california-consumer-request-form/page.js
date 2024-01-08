@@ -38,6 +38,7 @@ const CaliforniaRequestForm = () => {
       height: "40px",
       border: "none",
       placeholder: "State",
+      alignItems:'center'
     }),
     dropdownIndicator: (base) => ({
       ...base,

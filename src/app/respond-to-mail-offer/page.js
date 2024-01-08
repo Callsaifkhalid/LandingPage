@@ -1,9 +1,15 @@
+'use client'
 import PolicyNavbar from "@/components/policyNavbar/policynavbar";
 import styles from "./respondtomail.module.css";
 import { FaCheck } from "react-icons/fa";
 import Footer2 from "@/components/footer2/footer2";
+import { useRouter } from "next/navigation";
 
 export default function RespondtoMail() {
+  const router = useRouter();
+  const handleContinue=()=>{
+    router.push("/offer-form")
+  }
   return (
     <main className={styles.main}>
       <PolicyNavbar />
@@ -48,7 +54,7 @@ export default function RespondtoMail() {
               placeholder="Enter Mailer Code"
             ></input>
 
-            <button className={styles.btn2}>Continue</button>
+            <button className={styles.btn2} onClick={handleContinue}>Continue</button>
 
             <button className={styles.btn3}>I don't have a code</button>
           </div>

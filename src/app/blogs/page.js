@@ -6,6 +6,8 @@ import BlogNavbar from "@/components/blogNavbar/blogNavbar";
 import Footer2 from "@/components/footer2/footer2";
 import { ErrorCodes } from "@/utils/error-codes";
 import { getAllBlogs } from "../api/blogs/repo";
+import { BASE_URL } from "@/utils/constantVariables";
+
 
 export default function BlogList() {
   const router = useRouter();
@@ -86,7 +88,7 @@ export default function BlogList() {
                   </div>
                   <div className={styles.blogDiscriptionAndImageContainer}>
                     <div className={styles.blogDescriptionStyle}>
-                     {blog?.description}
+                     {blog?.description.substring(0, 200) + '...'}
                       <div
                         onClick={() => {
                           router.push("/blogDetails");
@@ -97,7 +99,7 @@ export default function BlogList() {
                       </div>
                     </div>
                     <img
-                      src="./prepaid.jpg"
+                      src={BASE_URL+blog?.thumbnail}
                       className={styles.blogImageStyle}
                     />
                   </div>

@@ -28,8 +28,8 @@ const Footer = () => {
 
       <div className={styles.content}>
         <div className={styles.contentt1}>
-          <div>hello@onirapp.com</div>
-          <div>+1-800-123 4567</div>
+          <div>Service@clearcredit.ai</div>
+          <div>+1-844-208-1100</div>
         </div>
         <div className={styles.content1}>
           <span>
