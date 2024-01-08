@@ -210,13 +210,13 @@ const CompareSection = () => {
                     View Details
                   </button>
                 </div>
-                <div className={styles.div2}>
+                {/* <div className={styles.div2}>
                   <span>Credible rating</span>
                   <div>
                     <span>{lender.rating}</span>
                     <img src="./Star.png" alt="" width={15} />
                   </div>
-                </div>
+                </div> */}
                 <div className={styles.div3}>
                   <span style={{ color: "#828282", fontSize: "13px" }}>
                     Rates from (APR)

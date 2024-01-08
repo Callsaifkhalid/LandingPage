@@ -369,7 +369,7 @@
     margin-top: -45%;
   }
   .boxesborder {
-    width: 90%;
+    width: 95%;
     min-height: 700px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -435,10 +435,21 @@
     display: none;
   }
   .div4 {
-    display: none;
+    display: flex;
+    margin-left: 10px;
   }
   .div5 > button {
     margin-right: 10px;
+    color: #fff;
+  background-color: #05c8e8;
+  font-weight: 0;
+  padding: 0.2rem 0.2rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  width: 90px;
+  height: 30px;
+  transition: all ease-in 200ms;
   }
   .wrapper > span {
     margin: 3rem 3rem 2rem 0rem;

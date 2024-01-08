@@ -25,6 +25,9 @@ const Hero = () => {
       router.push("/checkrates");
     }
   };
+  const handleRespondtoMail = () => {
+    router.push("/respond-to-mail-offer");
+  };
   return (
     <section className={styles.herowrapper} id="hero">
       <div className={styles.flexCenter + " " + styles.herocontainer}>
@@ -48,7 +51,9 @@ const Hero = () => {
           </div>
           <div
             className={
-              inputvalue < 600 || inputvalue > 200000 ? styles.findmyrateerror : styles.findmyrate
+              inputvalue < 600 || inputvalue > 200000
+                ? styles.findmyrateerror
+                : styles.findmyrate
             }
           >
             <CurrencyInput
@@ -62,8 +67,10 @@ const Hero = () => {
             </button>
           </div>
           <div className={styles.respondtomail}>
-            <MdMailOutline style={{color:'#05c8e8', fontSize:'20px'}}/>
-            <button>Respond to Mail Offer</button>
+            <MdMailOutline style={{ color: "#05c8e8", fontSize: "20px" }} />
+            <button onClick={handleRespondtoMail}>
+              Respond to Mail Offer
+            </button>
           </div>
           {inputvalue < 600 && (
             <div className={styles.errormsg}>
@@ -72,7 +79,7 @@ const Hero = () => {
           )}
           {inputvalue > 200000 && (
             <div className={styles.errormsg}>
-             <span>Enter amount ($600 to $200,000)</span> 
+              <span>Enter amount ($600 to $200,000)</span>
             </div>
           )}
           <div className={styles.thumbsup}>

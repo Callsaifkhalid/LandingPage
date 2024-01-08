@@ -1,6 +1,6 @@
 import { apiInstance } from "../middleware"
 
-export const getAllBlogs=(debt_or_credit=1)=>{
+export const getAllBlogs=(debt_or_credit=0)=>{
     let params ={};
     params.debt_or_credit=debt_or_credit;
     const api = apiInstance();
