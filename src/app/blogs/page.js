@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styles from "./blogs.module.css";
 import { useRouter } from "next/navigation";
 import BlogNavbar from "@/components/blogNavbar/blogNavbar";
@@ -7,16 +7,21 @@ import Footer2 from "@/components/footer2/footer2";
 import { ErrorCodes } from "@/utils/error-codes";
 import { getAllBlogs } from "../api/blogs/repo";
 import { BASE_URL } from "@/utils/constantVariables";
-
+import { InputContext } from "../context/inputContext";
 
 export default function BlogList() {
   const router = useRouter();
   const [BlogData, setBlogData] = useState([]);
   const [ErrMsg, setErrMsg] = useState("");
   const [IsLoading, setIsLoading] = useState(false);
-  useEffect(()=>{
-    fetchAllData()
-  },[])
+  const { setblogid } = useContext(InputContext);
+  const handleHeadingContinue = (id) => {
+    router.push("/blogDetails");
+    setblogid(id)
+  };
+  useEffect(() => {
+    fetchAllData();
+  }, []);
   function fetchAllData() {
     setIsLoading(true);
     getAllBlogs()
@@ -43,8 +48,7 @@ export default function BlogList() {
       })
       .catch((err) => {
         setIsLoading(false);
-        console.log(err)
-       
+        console.log(err);
       });
   }
   return (
@@ -59,7 +63,7 @@ export default function BlogList() {
                 <div className={styles.BlogContainerStyle}>
                   <div
                     onClick={() => {
-                      router.push("/blogDetails");
+                      handleHeadingContinue(blog?.id);
                     }}
                     className={styles.HeadingStyleBlogList}
                   >
@@ -88,7 +92,7 @@ export default function BlogList() {
                   </div>
                   <div className={styles.blogDiscriptionAndImageContainer}>
                     <div className={styles.blogDescriptionStyle}>
-                     {blog?.description.substring(0, 200) + '...'}
+                      {blog?.description.substring(0, 200) + "..."}
                       <div
                         onClick={() => {
                           router.push("/blogDetails");
@@ -99,7 +103,7 @@ export default function BlogList() {
                       </div>
                     </div>
                     <img
-                      src={BASE_URL+blog?.thumbnail}
+                      src={BASE_URL + blog?.thumbnail}
                       className={styles.blogImageStyle}
                     />
                   </div>

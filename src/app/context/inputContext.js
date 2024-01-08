@@ -20,6 +20,7 @@ export const InputProvider = ({ children }) => {
   const [housing_cost, setHousingCost] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [blogid,setblogid]=useState(0)
   const heroSectionInput = (value) => {
     setHeroInput(value);
   };
@@ -53,6 +54,8 @@ export const InputProvider = ({ children }) => {
     setEmail,
     phone,
     setPhone,
+    setblogid,
+    blogid
   };
   
   return (
