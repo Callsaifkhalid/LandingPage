@@ -7,6 +7,8 @@ import Select from "react-select";
 import { LuListFilter } from "react-icons/lu";
 import { Link as ScrollLink } from "react-scroll/modules";
 import OutsideClickHandler from "react-outside-click-handler";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 const CompareSection = () => {
   const [click, setClick] = useState(false);
   const [inputLoan, setInputLoan] = useState("20000");
@@ -19,6 +21,7 @@ const CompareSection = () => {
   const [filteredLendersAsc, setFilteredLendersAsc] = useState([]);
   const [filteredLendersAPR, setFilteredLendersAPR] = useState([]);
   const [tooltip, showTooltip] = useState(false);
+  const router = useRouter()
   const defaultArray = [...lenders].sort((a, b) => {
     const aprA = parseFloat(a.APR.replace("%", ""));
     const aprB = parseFloat(b.APR.replace("%", ""));
@@ -161,7 +164,9 @@ const CompareSection = () => {
             </div>
           )}
         </OutsideClickHandler>
-        <span onClick={() => showTooltip(pre=>!pre)}>Advertiser Disclosure</span>
+        <span onClick={() => showTooltip((pre) => !pre)}>
+          Advertiser Disclosure
+        </span>
 
         <div className={styles.boxes}>
           <div
@@ -240,17 +245,7 @@ const CompareSection = () => {
                   </span>
                 </div>
                 <div className={styles.div5}>
-                  <button>
-                    <ScrollLink
-                      to="hero"
-                      spy={true}
-                      smooth={true}
-                      offset={10}
-                      duration={500}
-                    >
-                      Find my Rate
-                    </ScrollLink>
-                  </button>
+                  <button onClick={()=>router.push('/checkrates')}>Find my Rate</button>
                 </div>
               </div>
               {lender.details.map((detail) => (

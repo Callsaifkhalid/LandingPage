@@ -1,9 +1,16 @@
+"use client";
 import React from "react";
 import styles from "./contact.module.css";
 import Link from "next/link";
 import { PiLaptopFill } from "react-icons/pi";
 import { FaPhone } from "react-icons/fa";
 const Contact = () => {
+  const handleScheduleClick = (event) => {
+    event.preventDefault();
+    Calendly.initPopupWidget({
+      url: "https://calendly.com/cleardebt?text_color=5bc4e4",
+    });
+  };
   return (
     <div className={styles.wrapper} id="contact">
       <div className={styles.headings}>
@@ -17,8 +24,27 @@ const Contact = () => {
         <div className={styles.contactsection}>
           <div className={styles.meetingcontainer}>
             <div className={styles.meeting}>
-              <PiLaptopFill style={{ color: "#05c8e8", fontSize: "25px", marginLeft:'8px'}} />
-              <span>Schedule a Meeting</span>
+              <PiLaptopFill
+                style={{
+                  color: "#05c8e8",
+                  fontSize: "25px",
+                  marginLeft: "8px",
+                }}
+              />
+              <span>
+                <link
+                  href="https://assets.calendly.com/assets/external/widget.css"
+                  rel="stylesheet"
+                />
+                <script
+                  src="https://assets.calendly.com/assets/external/widget.js"
+                  type="text/javascript"
+                  async
+                ></script>
+                <a href="#" onClick={handleScheduleClick}>
+                  Schedule a Meeting
+                </a>
+              </span>
             </div>
           </div>
           <div className={styles.mailandnumber}>
@@ -27,7 +53,13 @@ const Contact = () => {
               <span>Service@clearcredit.ai</span>
             </div>
             <div className={styles.number}>
-              <FaPhone style={{ color: "#05c8e8", fontSize: "20px", marginLeft:'8px'}} />
+              <FaPhone
+                style={{
+                  color: "#05c8e8",
+                  fontSize: "20px",
+                  marginLeft: "8px",
+                }}
+              />
               <div>1-844-208-1100</div>
             </div>
           </div>

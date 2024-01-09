@@ -11,12 +11,12 @@ export const InputProvider = ({ children }) => {
   const [employmentvalue, setemploymentvalue] = useState("");
   const [first_name, setFirstName] = useState("");
   const [last_name, setlastName] = useState("");
-  const [dob, setDOB] = useState(minDate);
+  const [dob, setDOB] = useState("");
   const [address, setAddress] = useState("");
   const [suite, setSuite] = useState("");
   const [city, setCity] = useState("");
   const [state, setState] = useState("");
-  const [zipCode, setZipCode] = useState(null);
+  const [zipCode, setZipCode] = useState("");
   const [housing_cost, setHousingCost] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");

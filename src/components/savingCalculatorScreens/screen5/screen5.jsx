@@ -29,7 +29,7 @@ const Screen5 = ({ onContinue, onBack, progress }) => {
             value={dob}
             className={styles.calenderr}
             dayPlaceholder="DD"
-            monthPlaceholder="M"
+            monthPlaceholder="MM"
             yearPlaceholder="YYYY"
             maxDate={minDate}
           />

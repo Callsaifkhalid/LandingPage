@@ -112,11 +112,7 @@ const Screen6 = ({ onContinue, onBack, progress }) => {
               ? styles.disabledbutton
               : city === ""
               ? styles.disabledbutton
-              : suite === ""
-              ? styles.disabledbutton
               : address === ""
-              ? styles.disabledbutton
-              : suite === ""
               ? styles.disabledbutton
               : styles.continuebutton
           }
@@ -128,11 +124,7 @@ const Screen6 = ({ onContinue, onBack, progress }) => {
               ? true
               : city === ""
               ? true
-              : suite === ""
-              ? true
               : address === ""
-              ? true
-              : suite === ""
               ? true
               : false
           }

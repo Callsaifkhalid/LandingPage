@@ -18,7 +18,7 @@ const Footer = () => {
             <img src="../Facebook.svg" />
           </a>
           <a>
-            <img src="../Twitter.svg" />
+            <img src="../linkedinfooter.p" />
           </a>
           <a href="https://www.instagram.com/clearcreditai/" target="_blank">
             <img src="../Instagram.svg" />

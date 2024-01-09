@@ -10,10 +10,11 @@ import SavingsCalculator from "./screens/savingsCalculator/page";
 import ImageSwiper from "./screens/swiper/swiper";
 import TourGoals from "./screens/tourGoals/page";
 import WhySection from "./screens/whySection/page";
+import Head from "next/head";
 
 export default function Home() {
   return (
-    <main >
+    <main>
       {/* <Modal/> */}
       <Navbar />
       <Hero />

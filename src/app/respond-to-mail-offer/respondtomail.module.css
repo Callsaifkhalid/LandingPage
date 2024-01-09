@@ -1,3 +1,6 @@
+.wrapper {
+  background-color: #c6f7ff;
+}
 .main {
   min-height: 100vh;
   background-color: #c6f7ff;
@@ -15,7 +18,7 @@
 }
 
 .firstChildOneHead {
-  font-weight: 300;
+  font-weight: 700;
   font-size: 35px;
   margin-bottom: 20px;
   color: #1a4048;
@@ -82,18 +85,21 @@
 .btn1:focus {
   border: none;
   outline: 1px solid #1a4048;
+  background-color: white;
+}
+.btn1:hover {
+  background-color: white;
 }
 
 .btn2:hover {
   background-color: #05c8e8;
   color: white;
-  
 }
 
 .btn3:hover {
   background-color: #05c8e8;
   color: white;
-  
+  transform: translateY(-5px);
 }
 
 .btn2 {
@@ -120,6 +126,7 @@
   margin-bottom: 15px;
   text-align: center;
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 .btnPara1 {
@@ -132,8 +139,89 @@
   margin-top: 10px;
   margin-bottom: 15px;
   cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a4048;
+  
 }
+.btnNum:hover{
+  color: #8492a6;
 
+}
+@media (max-width: 717px) {
+  .first {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .firstChildOneHead {
+    font-size: 25px;
+  }
+
+  .firstChildOne {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .para {
+    margin-left: 10px;
+    font-size: 11px;
+  }
+  .firstChildTwo {
+    width: 80%;
+    margin-bottom: 15%;
+  }
+  .btn2 {
+    width: 100%;
+    margin-top: 10px;
+    padding-left: 130px;
+    padding-right: 140px;
+  }
+  .btn3 {
+    width: 60%;
+    padding: 10px; 
+  }
+  
+}
+@media screen and (min-width: 718px) and (max-width: 1024px) {
+  .first {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .firstChildOneHead {
+    font-size: 25px;
+  }
+
+  .firstChildOne {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .para {
+    margin-left: 10px;
+    font-size: 13px;
+  }
+  .firstChildTwo {
+    width: 80%;
+  }
+  .btn2 {
+    width: 73%;
+    margin-top: 10px;
+    padding-left: 130px;
+    padding-right: 140px;
+  }
+  .btn3 {
+    width: 30%;
+    padding: 10px; 
+  }
+}
 /* Enable hover only on non-touch devices */
 /* @media (hover: hover) and (pointer: fine) {
   .card:hover {

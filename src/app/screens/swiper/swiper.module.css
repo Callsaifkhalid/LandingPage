@@ -45,7 +45,7 @@
   z-index: 500;
   position: relative;
 }
-@media screen and (max-width: 420px) {
+@media (max-width: 420px) {
 .swiper{
  width: 370px;
 }

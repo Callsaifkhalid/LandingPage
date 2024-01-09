@@ -14,7 +14,7 @@ const Dilaerpage = ({onContinue}) => {
         return prevSeconds + 1;
       });
 
-      if (secondsRef.current === 29) {
+      if (secondsRef.current === 6) {
         clearInterval(intervalId);
         onContinue()
       }

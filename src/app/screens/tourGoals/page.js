@@ -1,16 +1,23 @@
 'use client'
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styles from "./tour.module.css";
 import { useRouter } from "next/navigation";
 import { getAllBlogs } from "@/app/api/blogs/repo";
 import { ErrorCodes } from "@/utils/error-codes";
 import { BASE_URL } from "@/utils/constantVariables";
+import { InputContext } from "@/app/context/inputContext";
 const TourGoals = () => {
   const router = useRouter()
   const [BlogData, setBlogData] = useState([]);
   const [ErrMsg, setErrMsg] = useState("");
   const [IsLoading, setIsLoading] = useState(false);
+  const { setblogid } = useContext(InputContext);
   const FeaturedBlogs = BlogData.filter(blog=>blog.is_featured === 1);
+  const handleLearnMore = (id) => {
+    router.push("/blogDetails");
+    setblogid(id)
+
+  };
   useEffect(()=>{
     fetchAllData()
   },[])
@@ -80,6 +87,7 @@ const TourGoals = () => {
                     fontSize: "13px",
                     textDecoration: "underline",
                   }}
+                  onClick={()=>handleLearnMore(blog?.id)}
                 >
                   Learn More
                 </h4>
@@ -105,6 +113,7 @@ const TourGoals = () => {
                     fontSize: "13px",
                     textDecoration: "underline",
                   }}
+                  onClick={()=>handleLearnMore(blog?.id)}
                 >
                   Learn More
                 </h4>

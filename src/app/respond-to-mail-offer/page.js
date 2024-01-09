@@ -11,7 +11,7 @@ export default function RespondtoMail() {
     router.push("/offer-form");
   };
   return (
-    <>
+    <div className={styles.wrapper}>
       <main className={styles.main}>
         <PolicyNavbar />
         <div className={styles.first}>
@@ -63,6 +63,6 @@ export default function RespondtoMail() {
         </div>
       </main>
       <Footer2 />
-    </>
+    </div>
   );
 }

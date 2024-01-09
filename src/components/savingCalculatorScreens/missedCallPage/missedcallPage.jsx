@@ -1,7 +1,95 @@
-import React from "react";
+"use client";
+import React, { useContext, useEffect, useState } from "react";
 import styles from "./missed.module.css";
 import { FaPhoneVolume } from "react-icons/fa6";
+import { InputContext } from "@/app/context/inputContext";
+import { ytelCallBack } from "@/app/api/ytelCallback/repo";
 const MissedcallPage = () => {
+  const [callback_dateandtime,setcallback_dateandtime]=useState("")
+  const getCurrentDateTime = () => {
+    const now = new Date();
+    const formattedDateTime = now.toLocaleString('en-US', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+    });
+    setcallback_dateandtime(formattedDateTime);
+    console.log(callback_dateandtime)
+    ytelCallBack(Data)
+  };
+  const get15minute=()=>{
+    const now = new Date();
+      now.setMinutes(now.getMinutes() + 15);
+
+      const formattedDateTime = now.toLocaleString('en-US', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+      });
+      setcallback_dateandtime(formattedDateTime);
+      
+      ytelCallBack(Data)
+      console.log(callback_dateandtime)
+    };
+    const {
+    heroInput,
+    loanreasonvalue,
+    employmentvalue,
+    first_name,
+    last_name,
+    dob,
+    address,
+    suite,
+    city,
+    state,
+    zipCode,
+    housing_cost,
+    email,
+    phone,
+  } = useContext(InputContext);
+  const Data = {
+    user: "101",
+    pass: "SHwYP0c8Xe1U7v1",
+    source: "website leads",
+    phone_code: "1",
+    phone_number: phone,
+    search_method: "PHONE_NUMBER",
+    search_location: "SYSTEM",
+    insert_if_not_found: "Y",
+    custom_fields: "Y",
+    campaign_id: "1000",
+    add_to_hopper: "Y",
+    hopper_priority: "99",
+    hopper_local_call_time_check: "Y",
+    list_id: "1005",
+    first_name: first_name,
+    last_name: last_name,
+    address1: address,
+    city: city,
+    state: state,
+    postal_code: zipCode,
+    country_code: "US",
+    email: email,
+    borrow_amount: heroInput,
+    loan_reason: loanreasonvalue,
+    employment_type: employmentvalue,
+    housing_cost: housing_cost,
+    lead_source: "Clear Credit Website",
+    date_of_birth: dob,
+    callback: "Y",
+    callback_status: "CALLBK",
+    callback_datetime: callback_dateandtime,
+  };
+
+   
+ 
+
   return (
     <div className={styles.calculator}>
       <div className={styles.calculatorScreens}>
@@ -12,12 +100,14 @@ const MissedcallPage = () => {
           <h3>Please hold as we connect you with a Client Advocate!</h3>
         </div>
         <div className={styles.optionstext}>
-          <span style={{color:'#05c8e8'}}>If you've missed our call from 1-844-208-1100</span>, please
-          select one of the options below:{" "}
+          <span style={{ color: "#05c8e8" }}>
+            If you've missed our call from 1-844-208-1100
+          </span>
+          , please select one of the options below:{" "}
         </div>
         <div className={styles.buttons}>
-          <button className={styles.button1}>Call Me Now</button>
-          <button className={styles.button2}>Call in 15 Minutes</button>
+          <button className={styles.button1} onClick={getCurrentDateTime}>Call Me Now</button>
+          <button className={styles.button2} onClick={get15minute}>Call in 15 Minutes</button>
           <button className={styles.button2}>Schedule a Call</button>
         </div>
       </div>
