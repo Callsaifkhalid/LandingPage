@@ -70,7 +70,7 @@ export default function BlogList() {
                     {blog?.title}
                   </div>
                   <div className={styles.publishDateStyle}>
-                    Published September 2021
+                    Published {blog?.created_at}
                   </div>
                   <div className={styles.socialIconContainer}>
                     <img
@@ -95,7 +95,7 @@ export default function BlogList() {
                       {blog?.description.substring(0, 200) + "..."}
                       <div
                         onClick={() => {
-                          router.push("/blogDetails");
+                          handleHeadingContinue(blog?.id);
                         }}
                         className={styles.readMoreButton}
                       >

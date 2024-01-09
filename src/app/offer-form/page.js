@@ -15,6 +15,7 @@ import options from "@/utils/stateOptions";
 import { FaLock } from "react-icons/fa";
 import PolicyNavbar from "@/components/policyNavbar/policynavbar";
 import Footer2 from "@/components/footer2/footer2";
+import { useRouter } from "next/navigation";
 const OfferForm = () => {
   const [dob, setDOB] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -23,6 +24,7 @@ const OfferForm = () => {
   const [eemail, seteEmail] = useState("");
   const [isValidEmail, setIsValidEmail] = useState(true);
   const [checkemail, setcheckemail] = useState(false);
+  const router = useRouter();
   const minDate = new Date();
   minDate.setFullYear(minDate.getFullYear() - 18);
   const Styles = {
@@ -219,19 +221,34 @@ const OfferForm = () => {
               <FaLock style={{ marginRight: "10px" }} />{" "}
               <span>This will not affect your credit score</span>
             </div>
-            <span style={{ marginTop: "7%" }}>
-              By clicking ‘SEE MY OFFERS’ I consent to a Soft Inquiry, agree to
-              Clear Credit's Terms of Service and Privacy Policy and authorize
-              Clear Credit and these Partners to contact me by phone, email or
-              SMS text, which may include automated dialing, messaging and
-              prerecorded voice technology. SMS text and data rates may apply.
-              SMS text frequency varies. Text HELP for SMS text assistance or
-              STO
+            <span style={{ marginTop: "7%", lineHeight: "1.6em" }}>
+              By clicking ‘SEE MY OFFERS’ I consent to a{" "}
+              <span style={{ fontWeight: "700" }}>Soft Inquiry</span>, agree to
+              Clear Credit's{" "}
+              <span
+                style={{ fontWeight: "700", cursor: "pointer" }}
+                onClick={() => router.push("/terms-of-use")}
+              >
+                Terms of Service
+              </span>{" "}
+              and{" "}
+              <span
+                style={{ fontWeight: "700", cursor: "pointer" }}
+                onClick={() => router.push("/privacyPolicy")}
+              >
+                Privacy Policy
+              </span>{" "}
+              and authorize Clear Credit and these{" "}
+              <span style={{ fontWeight: "700" }}>Partners</span> to contact me
+              by phone, email or SMS text, which may include automated dialing,
+              messaging and prerecorded voice technology. SMS text and data
+              rates may apply. SMS text frequency varies. Text HELP for SMS text
+              assistance or STOP to cancel SMS texts.
             </span>
           </div>
         </div>
       </div>
-      <Footer2/>
+      <Footer2 />
     </div>
   );
 };

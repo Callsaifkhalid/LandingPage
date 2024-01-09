@@ -32,11 +32,10 @@
   margin-bottom: 10px;
 }
 .card1box1 {
-  /* display: flex;
   background-color: #f8f8f8;
   padding: 1rem;
   border-radius: 18px;
-  margin-bottom: 1rem; */
+  margin-bottom: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -48,11 +47,12 @@
 .card1box1img > img {
   width: 200px;
   height: 200px;
+  border-radius: 10px;
 }
 .card1box1content {
   display: flex;
   flex-direction: column;
-  margin-left: -3rem;
+  margin-left: -2rem;
 }
 .card1box1content > h3 {
   color: #333;
@@ -133,8 +133,11 @@
   .card1 {
     margin-left: 0.5rem;
   }
+  .card1box1content{
+    margin-left: -1.5rem;
+  }
   .card1box1content > h3 {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     margin-top: 7px;
   }
   .card1box1content > h3 > br {
@@ -189,10 +192,10 @@
     margin-left: 0.5rem;
   }
   .card1box1content {
-    margin-left:-1rem;
+    margin-left:-0.2rem;
   }
   .card1box1content > h3 {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     margin-top: 7px;
   }
   .card1box1content > h3 > br {
@@ -304,10 +307,10 @@
   }
   .card1box1content {
     gap: 0.5rem;
-    margin-left: 0rem;
+    margin-left: 1rem;
   }
   .card1box1content > h3 {
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin-top: 7px;
   }
   .card1box1content > h3 > br {
@@ -318,7 +321,7 @@
   }
   .card1box1img > img {
     width: 150px;
-    height: 220px;
+    height: 240px;
   }
 }
 @media screen and (min-width: 1012px) and (max-width: 1355px) {
@@ -348,14 +351,17 @@
   }
   .card1box1content {
     gap: 0.5rem;
-    margin-left: 0rem;
+    margin-left: 0.4rem;
   }
   .card1box1content > h3 {
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin-top: 7px;
   }
   .card1box1content > h3 > br {
     display: none;
+  }
+  .card1box1content > span {
+    font-size: 10px;
   }
   .card1box1content > span > br {
     display: none;

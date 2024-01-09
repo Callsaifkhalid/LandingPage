@@ -90,7 +90,7 @@ console.log(BlogData)
                   {BlogData.title}
                 </div>
                 <div className={styles.publishDateStyle}>
-                  Published September 2021
+                  Published {BlogData.created_at}
                 </div>
                 <div className={styles.socialIconContainer}>
                   <div className={styles.sharethis}>Share this :</div>
