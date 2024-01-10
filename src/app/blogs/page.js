@@ -15,6 +15,7 @@ export default function BlogList() {
   const [ErrMsg, setErrMsg] = useState("");
   const [IsLoading, setIsLoading] = useState(false);
   const { setblogid } = useContext(InputContext);
+  const [blogcat,setblogcat]=useState(0)
   const handleHeadingContinue = (id) => {
     router.push("/blogDetails");
     setblogid(id)
@@ -24,7 +25,7 @@ export default function BlogList() {
   }, []);
   function fetchAllData() {
     setIsLoading(true);
-    getAllBlogs()
+    getAllBlogs(blogcat)
       .then(({ data }) => {
         console.log("data blog", data);
         setIsLoading(false);
@@ -120,10 +121,10 @@ export default function BlogList() {
                     </div>
                   </div>
                 </div>
-              );
+              )
             })}
           </div>
-
+        
           <div className={styles.sideMenuMainContainer}>
             <div className={styles.BlogTopicHeadingStye}>Blog Topics</div>
             <div
@@ -143,9 +144,7 @@ export default function BlogList() {
               Credit Card Debt
             </div>
             <div
-              onClick={() => {
-                router.push("/blogDetails");
-              }}
+              onClick={()=>setblogcat(blog_category)}
               className={styles.blogTopicTextStyle}
             >
               Debt Consolidation
@@ -169,6 +168,7 @@ export default function BlogList() {
 
             <img src="./sideimage.png" className={styles.testImageStyle} />
           </div>
+          
         </div>
       </div>
       <Footer2 />

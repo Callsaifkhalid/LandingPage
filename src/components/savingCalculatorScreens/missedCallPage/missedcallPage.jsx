@@ -4,40 +4,31 @@ import styles from "./missed.module.css";
 import { FaPhoneVolume } from "react-icons/fa6";
 import { InputContext } from "@/app/context/inputContext";
 import { ytelCallBack } from "@/app/api/ytelCallback/repo";
+import { format, addMinutes } from "date-fns";
+import SchedulePopup from "@/components/schedulePopup/schedulepopup";
 const MissedcallPage = () => {
-  const [callback_dateandtime,setcallback_dateandtime]=useState("")
+  const [callback_dateandtime, setcallback_dateandtime] = useState("");
+
+  const [scheduleClick, setscheduleClick] = useState(false);
+
   const getCurrentDateTime = () => {
     const now = new Date();
-    const formattedDateTime = now.toLocaleString('en-US', {
-      year: 'numeric',
-      month: '2-digit',
-      day: '2-digit',
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit',
-    });
+    const formattedDateTime = format(now, "yyyy-MM-dd HH:mm:ss");
     setcallback_dateandtime(formattedDateTime);
-    console.log(callback_dateandtime)
-    ytelCallBack(Data)
+    ytelCallBack(Data);
   };
-  const get15minute=()=>{
+  const get15minute = () => {
     const now = new Date();
-      now.setMinutes(now.getMinutes() + 15);
+    const futureDate = addMinutes(now, 15);
 
-      const formattedDateTime = now.toLocaleString('en-US', {
-        year: 'numeric',
-        month: '2-digit',
-        day: '2-digit',
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit',
-      });
-      setcallback_dateandtime(formattedDateTime);
-      
-      ytelCallBack(Data)
-      console.log(callback_dateandtime)
-    };
-    const {
+    const formattedDateTime = format(futureDate, "yyyy-MM-dd HH:mm:ss");
+
+    setcallback_dateandtime(formattedDateTime);
+
+    ytelCallBack(Data);
+  };
+  console.log(callback_dateandtime);
+  const {
     heroInput,
     loanreasonvalue,
     employmentvalue,
@@ -87,31 +78,45 @@ const MissedcallPage = () => {
     callback_datetime: callback_dateandtime,
   };
 
-   
- 
-
   return (
-    <div className={styles.calculator}>
-      <div className={styles.calculatorScreens}>
-        <div>
-          <FaPhoneVolume style={{ fontSize: "3rem", color: "#05c8e8" }} />
-        </div>
-        <div className={styles.calculatorScreensheading}>
-          <h3>Please hold as we connect you with a Client Advocate!</h3>
-        </div>
-        <div className={styles.optionstext}>
-          <span style={{ color: "#05c8e8" }}>
-            If you've missed our call from 1-844-208-1100
-          </span>
-          , please select one of the options below:{" "}
-        </div>
-        <div className={styles.buttons}>
-          <button className={styles.button1} onClick={getCurrentDateTime}>Call Me Now</button>
-          <button className={styles.button2} onClick={get15minute}>Call in 15 Minutes</button>
-          <button className={styles.button2}>Schedule a Call</button>
+    <>
+      {scheduleClick && (
+        <SchedulePopup
+          setcallback_dateandtime={setcallback_dateandtime}
+          callback_dateandtime={callback_dateandtime}
+        />
+      )}
+      <div className={styles.calculator}>
+        <div className={styles.calculatorScreens}>
+          <div>
+            <FaPhoneVolume style={{ fontSize: "3rem", color: "#05c8e8" }} />
+          </div>
+          <div className={styles.calculatorScreensheading}>
+            <h3>Please hold as we connect you with a Client Advocate!</h3>
+          </div>
+          <div className={styles.optionstext}>
+            <span style={{ color: "#05c8e8" }}>
+              If you've missed our call from 1-844-208-1100
+            </span>
+            , please select one of the options below:{" "}
+          </div>
+          <div className={styles.buttons}>
+            <button className={styles.button1} onClick={getCurrentDateTime}>
+              Call Me Now
+            </button>
+            <button className={styles.button2} onClick={get15minute}>
+              Call in 15 Minutes
+            </button>
+            <button
+              className={styles.button2}
+              onClick={() => setscheduleClick((pre) => !pre)}
+            >
+              Schedule a Call
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

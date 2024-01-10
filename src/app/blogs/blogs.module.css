@@ -66,6 +66,7 @@
 .blogImageStyle {
   width: 50%;
   height: 50%;
+  border-radius: 10px;
 }
 .blogDescriptionStyle {
   width: 45%;

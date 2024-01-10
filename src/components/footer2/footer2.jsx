@@ -17,8 +17,11 @@ const Footer2 = () => {
           >
             <img src="../Facebook.svg" />
           </a>
-          <a>
-            <img src="../Twitter.svg" />
+          <a
+            href="https://www.linkedin.com/company/clear-credit-ai/"
+            target="_blank"
+          >
+            <img src="../linkedinfooter.png" />
           </a>
           <a href="https://www.instagram.com/clearcreditai/" target="_blank">
             <img src="../Instagram.svg" />
@@ -48,8 +51,8 @@ const Footer2 = () => {
           </Link>
         </div>
         <div className={styles.content1}>
-        <Link href={"/terms-of-use"} className={styles.Link}>
-           Terms of Use
+          <Link href={"/terms-of-use"} className={styles.Link}>
+            Terms of Use
           </Link>
           <Link href={"/privacyPolicy"} className={styles.Link}>
             Privacy Policy

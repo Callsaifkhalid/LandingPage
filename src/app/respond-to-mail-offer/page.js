@@ -17,7 +17,7 @@ export default function RespondtoMail() {
         <div className={styles.first}>
           <div className={styles.firstChildOne}>
             <h2 className={styles.firstChildOneHead}>
-              Discover the Perfect Loan Tailored Just for You!
+              <span>Discover the </span>Perfect Loan Tailored Just for You!
             </h2>
             <div className={styles.firstChildOnePoints}>
               <FaCheck size={20} fill="#05c8e8" />

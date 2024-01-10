@@ -18,10 +18,13 @@
 }
 
 .firstChildOneHead {
-  font-weight: 700;
-  font-size: 35px;
+  font-size: 3rem;
+  line-height: 4rem;
   margin-bottom: 20px;
   color: #1a4048;
+}
+.firstChildOneHead span{
+  font-weight: 10;
 }
 
 .firstChildOne {

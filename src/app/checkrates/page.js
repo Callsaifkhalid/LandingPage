@@ -15,6 +15,7 @@ import CurrencyInput from "react-currency-input-field";
 import AlmostThere from "@/components/savingCalculatorScreens/almostThereScreen/almostThere";
 import Dilaerpage from "@/components/savingCalculatorScreens/dialerpage/dilaerpage";
 import MissedcallPage from "@/components/savingCalculatorScreens/missedCallPage/missedcallPage";
+import Modal from "@/components/Modal/Modal";
 
 const Screen1 = () => {
   const { heroInput, heroSectionInput } = useContext(InputContext);
@@ -50,7 +51,9 @@ const Screen1 = () => {
     <div className={styles.wrapper}>
       <CalculatorNavbar />
       {currentView === 1 && (
+        
         <div className={styles.calculator}>
+           
           <div className={styles.calculatorScreens}>
             <div className={styles.calculatorScreensImg}>
               <img src="../dollarphoto.svg" alt="" width={100} />

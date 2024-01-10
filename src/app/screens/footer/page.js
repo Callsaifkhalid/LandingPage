@@ -17,8 +17,11 @@ const Footer = () => {
           >
             <img src="../Facebook.svg" />
           </a>
-          <a>
-            <img src="../linkedinfooter.p" />
+          <a
+            href="https://www.linkedin.com/company/clear-credit-ai/"
+            target="_blank"
+          >
+            <img src="../linkedinfooter.png" />
           </a>
           <a href="https://www.instagram.com/clearcreditai/" target="_blank">
             <img src="../Instagram.svg" />
