@@ -8,10 +8,18 @@ import { timeoptions } from "@/utils/timeoptions";
 import Select from "react-select";
 import { InputContext } from "@/app/context/inputContext";
 import { ytelCallBack } from "@/app/api/ytelCallback/repo";
-const SchedulePopup = ({callback_dateandtime, setcallback_dateandtime}) => {
+const SchedulePopup = ({
+  callback_dateandtime,
+  setcallback_dateandtime,
+  setcalltime,
+  setcalldate,
+  setcall,
+}) => {
   const [popup, setPopup] = useState(true);
   const [dateInput, setDateInput] = useState(null);
   const [time, settime] = useState("");
+  setcalltime(time.value);
+
   const {
     heroInput,
     loanreasonvalue,
@@ -63,12 +71,15 @@ const SchedulePopup = ({callback_dateandtime, setcallback_dateandtime}) => {
   };
   const minDate = new Date();
   minDate.setDate(minDate.getDate() + 1);
-  const formattedDate = dateInput?.toLocaleDateString('en-CA');
-  setcallback_dateandtime(formattedDate+time.value)
-    const handleSchedule=()=>{
-        ytelCallBack(Data)
-        console.log(Data)
-    }
+  const formattedDate = dateInput?.toLocaleDateString("en-CA");
+  setcalldate(formattedDate);
+  setcallback_dateandtime(formattedDate + time.value);
+  const handleSchedule = () => {
+    ytelCallBack(Data);
+    setcall(3);
+    setPopup(false);
+    console.log(Data);
+  };
   const Styles = {
     control: (provided, state) => ({
       display: "flex",
@@ -117,7 +128,6 @@ const SchedulePopup = ({callback_dateandtime, setcallback_dateandtime}) => {
                     monthPlaceholder="MM"
                     yearPlaceholder="YYYY"
                     minDate={minDate}
-                    format="y-MM-dd"
                   />
                 </div>
                 <div className={styles.datebox}>
@@ -130,7 +140,9 @@ const SchedulePopup = ({callback_dateandtime, setcallback_dateandtime}) => {
                     onChange={settime}
                   />
                 </div>
-                <button className={styles.button1} onClick={handleSchedule}>Schedule</button>
+                <button className={styles.button1} onClick={handleSchedule}>
+                  Schedule
+                </button>
               </div>
             </div>
           </motion.div>

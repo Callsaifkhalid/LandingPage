@@ -8,7 +8,7 @@ const TermsofUse = () => {
       <PolicyNavbar />
       <div className={styles.mainHeading}>
         <h1>Terms of Use</h1>
-        <span>Updated Dec, 2023</span>
+        <span>Updated Dec, 2024</span>
       </div>
       <div className={styles.text}>
         <span>

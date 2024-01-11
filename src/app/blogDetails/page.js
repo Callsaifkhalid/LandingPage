@@ -1,23 +1,25 @@
 "use client";
 import React, { useContext, useEffect, useState } from "react";
 import styles from "./blogdetails.module.css";
-
 import { useRouter } from "next/navigation";
 import BlogNavbar from "@/components/blogNavbar/blogNavbar";
-
 import Footer2 from "@/components/footer2/footer2";
 import { getBlogDetails } from "../api/blogDetails/repo";
 import { ErrorCodes } from "@/utils/error-codes";
 import { InputContext } from "../context/inputContext";
 import { BASE_URL } from "@/utils/constantVariables";
-
+import { format } from "date-fns";
+import { getCategoryBlogs } from "../api/blogCategory/repo";
+import dayjs from "dayjs";
 export default function blogDetails() {
-  const [BlogData, setBlogData] = useState([]);
+  const [BlogData, setBlogData] = useState({});
   const [ErrMsg, setErrMsg] = useState("");
   const [IsLoading, setIsLoading] = useState(false);
+  const [blogCategory, setBlogCategory] = useState([]);
   const { blogid } = useContext(InputContext);
   useEffect(() => {
     fetchData();
+    fetchAllCategory();
   }, []);
   function fetchData() {
     setIsLoading(true);
@@ -48,7 +50,35 @@ export default function blogDetails() {
         console.log(err);
       });
   }
-console.log(BlogData)
+  function fetchAllCategory() {
+    setIsLoading(true);
+    getCategoryBlogs()
+      .then(({ data }) => {
+        console.log("data blog", data);
+        setIsLoading(false);
+        switch (data.error_code) {
+          case ErrorCodes.success:
+            setBlogCategory(data.result);
+            break;
+          case ErrorCodes.failed:
+            setErrMsg("Oops! Some server error occued.");
+
+            break;
+          case ErrorCodes.not_exist:
+            setBlogCategory([]);
+            break;
+
+          default:
+            setErrMsg("Oops! Some error occued. EC: " + data.error_code);
+
+            break;
+        }
+      })
+      .catch((err) => {
+        setIsLoading(false);
+        console.log(err);
+      });
+  }
   const router = useRouter();
 
   let arr = [
@@ -77,22 +107,22 @@ console.log(BlogData)
       <BlogNavbar />
       <div className={styles.BlogDetailMainContainer}>
         <div className={styles.blogDetailAndSideItemsContainer}>
-          {/* {BlogData?.map((blog) => ( */}
-            <div className={styles.BlogDetailCardContainer}>
-              <div className={styles.BlogDetailContainerStyle}>
-                <div
-                  onClick={() => {
-                    router.push("/blogDetails");
-                  }}
-                  className={styles.HeadingStyleBlogDetail}
-                >
-                 
-                  {BlogData.title}
-                </div>
-                <div className={styles.publishDateStyle}>
-                  Published {BlogData.created_at}
-                </div>
-                <div className={styles.socialIconContainer}>
+          <div className={styles.BlogDetailCardContainer}>
+            <div className={styles.BlogDetailContainerStyle}>
+              <div
+                onClick={() => {
+                  router.push("/blogDetails");
+                }}
+                className={styles.HeadingStyleBlogDetail}
+              >
+                {BlogData.title}
+              </div>
+              <div className={styles.publishDateStyle}>
+                Published {" : "}
+                {/* {format(new Date(BlogData?.created_at),"yyyy-MM-dd HH:mm")} */}
+                {dayjs(BlogData?.created_at).format('MM-DD-YYYY HH:mm')}
+              </div>
+              {/* <div className={styles.socialIconContainer}>
                   <div className={styles.sharethis}>Share this :</div>
                   <img
                     src="./linkedinn.png"
@@ -110,66 +140,39 @@ console.log(BlogData)
                     src="./maill.png"
                     className={styles.socialLogoStylemail}
                   />
+                </div> */}
+              <div className={styles.blogDetailDiscriptionAndImageContainer}>
+                <div className={styles.blogDetailDescriptionStyle}>
+                  {BlogData.description}
                 </div>
-                <div className={styles.blogDetailDiscriptionAndImageContainer}>
-                  <div className={styles.blogDetailDescriptionStyle}>
-                    {BlogData.description}
-                  </div>
-                  <img src={BASE_URL + BlogData.thumbnail} className={styles.blogImageStyle} />
-                </div>
-               
-                <div className={styles.relatedPostStyle}>Related Posts</div>
-                <div className={styles.arrMapHolderContainerStyle}>
-                  {arr.map((item) => {
-                    return <BlogViewComponant item={item} />;
-                  })}
-                </div>
+                <img
+                  src={BASE_URL + BlogData.thumbnail}
+                  className={styles.blogImageStyle}
+                />
+              </div>
+
+              <div className={styles.relatedPostStyle}>Related Posts</div>
+              <div className={styles.arrMapHolderContainerStyle}>
+                {arr.map((item) => {
+                  return <BlogViewComponant item={item} />;
+                })}
               </div>
             </div>
-          {/* ))} */}
+          </div>
+          
 
           <div className={styles.sideMenuMainContainer}>
             <div className={styles.BlogTopicHeadingStye}>Blog Topics</div>
-            <div
-              onClick={() => {
-                router.push("/blogDetails");
-              }}
-              className={styles.blogTopicTextStyle}
-            >
-              Covid Debt Relief
-            </div>
-            <div
-              onClick={() => {
-                router.push("/blogDetails");
-              }}
-              className={styles.blogTopicTextStyle}
-            >
-              Credit Card Debt
-            </div>
-            <div
-              onClick={() => {
-                router.push("/blogDetails");
-              }}
-              className={styles.blogTopicTextStyle}
-            >
-              Debt Consolidation
-            </div>
-            <div
-              onClick={() => {
-                router.push("/blogDetails");
-              }}
-              className={styles.blogTopicTextStyle}
-            >
-              Financial Education
-            </div>
-            <div
-              onClick={() => {
-                router.push("/blogDetails");
-              }}
-              className={styles.blogTopicTextStyle}
-            >
-              Saving Money{" "}
-            </div>
+            {blogCategory.map((cat) => (
+              <div
+                onClick={() => {
+                  fetchData(cat?.id);
+                }}
+                className={styles.blogTopicTextStyle}
+              >
+                {cat?.name}
+              </div>
+            ))}
 
             <img src="./sideimage.png" className={styles.testImageStyle} />
           </div>

@@ -8,6 +8,8 @@ import { ErrorCodes } from "@/utils/error-codes";
 import { getAllBlogs } from "../api/blogs/repo";
 import { BASE_URL } from "@/utils/constantVariables";
 import { InputContext } from "../context/inputContext";
+import { getCategoryBlogs } from "../api/blogCategory/repo";
+import { format } from "date-fns";
 
 export default function BlogList() {
   const router = useRouter();
@@ -15,17 +17,19 @@ export default function BlogList() {
   const [ErrMsg, setErrMsg] = useState("");
   const [IsLoading, setIsLoading] = useState(false);
   const { setblogid } = useContext(InputContext);
-  const [blogcat,setblogcat]=useState(0)
+  const [blogcat, setblogcat] = useState(0);
+  const [blogCategory, setBlogCategory] = useState([]);
   const handleHeadingContinue = (id) => {
     router.push("/blogDetails");
-    setblogid(id)
+    setblogid(id);
   };
   useEffect(() => {
     fetchAllData();
+    fetchAllCategory();
   }, []);
-  function fetchAllData() {
+  function fetchAllData(id) {
     setIsLoading(true);
-    getAllBlogs(blogcat)
+    getAllBlogs(id)
       .then(({ data }) => {
         console.log("data blog", data);
         setIsLoading(false);
@@ -52,6 +56,37 @@ export default function BlogList() {
         console.log(err);
       });
   }
+
+  function fetchAllCategory() {
+    setIsLoading(true);
+    getCategoryBlogs()
+      .then(({ data }) => {
+        console.log("data blog", data);
+        setIsLoading(false);
+        switch (data.error_code) {
+          case ErrorCodes.success:
+            setBlogCategory(data.result);
+            break;
+          case ErrorCodes.failed:
+            setErrMsg("Oops! Some server error occued.");
+
+            break;
+          case ErrorCodes.not_exist:
+            setBlogCategory([]);
+            break;
+
+          default:
+            setErrMsg("Oops! Some error occued. EC: " + data.error_code);
+
+            break;
+        }
+      })
+      .catch((err) => {
+        setIsLoading(false);
+        console.log(err);
+      });
+  }
+
   return (
     <>
       <BlogNavbar />
@@ -71,9 +106,13 @@ export default function BlogList() {
                     {blog?.title}
                   </div>
                   <div className={styles.publishDateStyle}>
-                    Published {blog?.created_at}
+                    Published {" : "}
+                    {format(
+                      blog?.created_at ? blog?.created_at : null,
+                      "MM-dd-yyyy HH:mm"
+                    )}
                   </div>
-                  <div className={styles.socialIconContainer}>
+                  {/* <div className={styles.socialIconContainer}>
                     <img
                       src={"./linkedinn.png"}
                       className={styles.socialLogoStyle}
@@ -90,7 +129,7 @@ export default function BlogList() {
                       src={"./maill.png"}
                       className={styles.socialLogoStylemail}
                     />
-                  </div>
+                  </div> */}
                   <div className={styles.blogDiscriptionAndImageContainer}>
                     <div className={styles.blogDescriptionStyle}>
                       {blog?.description.substring(0, 200) + "..."}
@@ -112,63 +151,33 @@ export default function BlogList() {
                     <div>Topics:</div>
                     <div
                       onClick={() => {
-                        router.push("/blogDetails");
+                        fetchAllData(blog?.blog_category);
                       }}
                       className={styles.creditCardDebtButton}
                     >
-                      {" "}
-                      Credit Card Debt
+                      {blog?.blog_category_name}
                     </div>
                   </div>
                 </div>
-              )
+              );
             })}
           </div>
-        
+
           <div className={styles.sideMenuMainContainer}>
             <div className={styles.BlogTopicHeadingStye}>Blog Topics</div>
-            <div
-              onClick={() => {
-                router.push("/blogDetails");
-              }}
-              className={styles.blogTopicTextStyle}
-            >
-              Covid Debt Relief
-            </div>
-            <div
-              onClick={() => {
-                router.push("/blogDetails");
-              }}
-              className={styles.blogTopicTextStyle}
-            >
-              Credit Card Debt
-            </div>
-            <div
-              onClick={()=>setblogcat(blog_category)}
-              className={styles.blogTopicTextStyle}
-            >
-              Debt Consolidation
-            </div>
-            <div
-              onClick={() => {
-                router.push("/blogDetails");
-              }}
-              className={styles.blogTopicTextStyle}
-            >
-              Financial Education
-            </div>
-            <div
-              onClick={() => {
-                router.push("/blogDetails");
-              }}
-              className={styles.blogTopicTextStyle}
-            >
-              Saving Money{" "}
-            </div>
+            {blogCategory.map((cat) => (
+              <div
+                onClick={() => {
+                  fetchAllData(cat?.id);
+                }}
+                className={styles.blogTopicTextStyle}
+              >
+                {cat?.name}
+              </div>
+            ))}
 
             <img src="./sideimage.png" className={styles.testImageStyle} />
           </div>
-          
         </div>
       </div>
       <Footer2 />

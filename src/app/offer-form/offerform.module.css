@@ -96,8 +96,8 @@
   gap: 10px;
   margin: 6% 0px;
 }
-.submitButton span{
-    font-size: 13px;
+.submitButton span {
+  font-size: 13px;
 }
 .submitButton button {
   border: none;
@@ -111,7 +111,115 @@
   font-size: 18px;
   font-weight: 700;
 }
-.affect{
+.affect {
+  display: flex;
+  align-items: center;
+}
+.address {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  gap: 10px;
+}
+.address input {
+  height: 40px;
+  padding-left: 10px;
+  border: 1px solid #8b8b8b;
+  border-radius: 10px;
+  font-size: 16px;
+}
+.address input:focus {
+  outline: 1px solid #05c8e8;
+  border: 1px solid #05c8e8;
+}
+.address span {
+  font-size: 14px;
+}
+.suite {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  gap: 10px;
+}
+.suite input {
+  height: 40px;
+  padding-left: 10px;
+  border: 1px solid #8b8b8b;
+  border-radius: 10px;
+  font-size: 16px;
+}
+.suite input:focus {
+  outline: 1px solid #05c8e8;
+  border: 1px solid #05c8e8;
+}
+.suite span {
+  font-size: 14px;
+}
+.city {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  gap: 10px;
+}
+.city input {
+  height: 40px;
+  padding-left: 10px;
+  border: 1px solid #8b8b8b;
+  border-radius: 10px;
+  font-size: 16px;
+}
+.city input:focus {
+  outline: 1px solid #05c8e8;
+  border: 1px solid #05c8e8;
+}
+.city span {
+  font-size: 14px;
+}
+@media (max-width: 920px) {
+  .mainHeading {
+    color: #1a4048;
+    margin-top: 17%;
+    margin-left: 5%;
+  }
+  .debtdetails {
+    width: 90%;
+  }
+  .debtandcreditscore {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    margin-top: 4%;
+  }
+  .fields {
+    width: 90%;
+    gap: 5px;
+    margin-top: 5%;
+  }
+
+  .personalDetails {
+    width: 90%;
+  }
+  .dateandbusiness {
+    flex-direction: column;
+  }
+  .reactselect2 {
+    height: 45px;
+    border: 1px solid #8b8b8b;
+    border-radius: 10px;
+    margin-top: 1%;
+  }
+  .address{
+    width: 90%;
+    gap: 5px;
+    margin-top: 5%;
+  }
+  .suite{
+    width: 90%;
+    gap: 5px;
+    margin-top: 5%;
+  }
+  .city{
+    width: 90%;
+    gap: 5px;
+    margin-top: 5%;
+  }
 }

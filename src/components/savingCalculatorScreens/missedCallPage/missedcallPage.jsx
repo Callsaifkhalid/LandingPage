@@ -8,14 +8,17 @@ import { format, addMinutes } from "date-fns";
 import SchedulePopup from "@/components/schedulePopup/schedulepopup";
 const MissedcallPage = () => {
   const [callback_dateandtime, setcallback_dateandtime] = useState("");
-
   const [scheduleClick, setscheduleClick] = useState(false);
-
+  const [call, setcall] = useState(0);
+  const [calldate,setcalldate]=useState("");
+  const [calltime,setcalltime]=useState("");
+  console.log(calldate,calltime)
   const getCurrentDateTime = () => {
     const now = new Date();
     const formattedDateTime = format(now, "yyyy-MM-dd HH:mm:ss");
     setcallback_dateandtime(formattedDateTime);
     ytelCallBack(Data);
+    setcall(1);
   };
   const get15minute = () => {
     const now = new Date();
@@ -26,6 +29,7 @@ const MissedcallPage = () => {
     setcallback_dateandtime(formattedDateTime);
 
     ytelCallBack(Data);
+    setcall(2);
   };
   console.log(callback_dateandtime);
   const {
@@ -84,6 +88,9 @@ const MissedcallPage = () => {
         <SchedulePopup
           setcallback_dateandtime={setcallback_dateandtime}
           callback_dateandtime={callback_dateandtime}
+          setcalldate={setcalldate}
+          setcalltime={setcalltime}
+          setcall={setcall}
         />
       )}
       <div className={styles.calculator}>
@@ -114,6 +121,9 @@ const MissedcallPage = () => {
               Schedule a Call
             </button>
           </div>
+          {call === 1 && <span>Thanks, we will call you now!</span>}
+          {call === 2 && <span>Thanks, we will call you in 15 minutes!</span>}
+          {call === 3 && <span>Thanks, we will call you on {calldate} at {calltime}</span>}
         </div>
       </div>
     </>

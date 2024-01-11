@@ -186,21 +186,21 @@ const OfferForm = () => {
             </div>
           </div>
           <div className={styles.debtandcreditscore}>
-            <div className={styles.fields} style={{ width: "70%" }}>
+            <div className={styles.address} >
               <span>Street Address </span>
               <input placeholder="Street Address" type="text" />
             </div>
-            <div className={styles.fields} style={{ width: "25%" }}>
+            <div className={styles.suite} >
               <span>Suite/Apt </span>
               <input type="text" placeholder="Suite/Apt" />
             </div>
           </div>
           <div className={styles.debtandcreditscore}>
-            <div className={styles.fields} style={{ width: "40%" }}>
+            <div className={styles.city} >
               <span>City</span>
               <input placeholder="City" type="text" />
             </div>
-            <div className={styles.fields} style={{ width: "30%" }}>
+            <div className={styles.suite} >
               {" "}
               <Select
                 options={options}
@@ -210,7 +210,7 @@ const OfferForm = () => {
               />
             </div>
 
-            <div className={styles.fields} style={{ width: "25%" }}>
+            <div className={styles.suite} >
               <span>ZipCode </span>
               <input type="number" placeholder="zipcode" />
             </div>
@@ -221,7 +221,7 @@ const OfferForm = () => {
               <FaLock style={{ marginRight: "10px" }} />{" "}
               <span>This will not affect your credit score</span>
             </div>
-            <span style={{ marginTop: "7%", lineHeight: "1.6em" }}>
+            <span style={{ marginTop: "7%", lineHeight: "1.6em" ,marginBottom:'7%'}}>
               By clicking ‘SEE MY OFFERS’ I consent to a{" "}
               <span style={{ fontWeight: "700" }}>Soft Inquiry</span>, agree to
               Clear Credit's{" "}
