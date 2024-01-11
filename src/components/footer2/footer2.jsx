@@ -81,6 +81,13 @@ const Footer2 = () => {
         36-month life of the loan. For additional loan options, please call
         1tel:194999051621100
       </div>
+      <div className={styles.poweredby}>
+      <span>Powered by:</span>
+        <a href="https://www.dsmeglobal.com/" target="_blank">
+          {" "}
+          DSME GLOBAL LINKS
+        </a>
+      </div>
     </div>
   );
 };
