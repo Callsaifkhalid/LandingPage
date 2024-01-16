@@ -92,6 +92,8 @@
   color: white;
   border-radius: 10px;
   cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
 }
 @media (max-width:717px){
   .mainHeading {

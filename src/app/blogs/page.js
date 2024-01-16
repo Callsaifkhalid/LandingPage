@@ -97,7 +97,7 @@ export default function BlogList() {
         <div className={styles.arrayAndSideItemsContainer}>
           <div className={styles.BlogCardContainer}>
           {IsLoading ? (
-              <Skeleton height={150} count={3} />
+              <Skeleton  count={8} />
             ) : (
               BlogData.map((blog) => {
               return (
