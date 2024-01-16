@@ -14,6 +14,7 @@ const SchedulePopup = ({
   setcalltime,
   setcalldate,
   setcall,
+  calldate
 }) => {
   const [popup, setPopup] = useState(true);
   const [dateInput, setDateInput] = useState(null);
@@ -136,11 +137,21 @@ const SchedulePopup = ({
                     options={timeoptions}
                     styles={Styles}
                     placeholder="Time"
-                    className={styles.dateinput}
+                    className={styles.timeinput}
                     onChange={settime}
                   />
                 </div>
-                <button className={styles.button1} onClick={handleSchedule}>
+                <button
+                  className={
+                    !dateInput
+                      ? styles.disablebutton
+                      : time === ""
+                      ? styles.disablebutton
+                      : styles.button1
+                  }
+                  onClick={handleSchedule}
+                  disabled={!dateInput ? true : time === "" ? true : false}
+                >
                   Schedule
                 </button>
               </div>

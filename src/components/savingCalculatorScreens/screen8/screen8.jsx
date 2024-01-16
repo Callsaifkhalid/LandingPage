@@ -63,14 +63,14 @@ const Screen8 = ({ onContinue, onBack, progress }) => {
             <span>
               We use TLS encryption, the same security protocols used by top
               banks
-              <br /> and lenders. <Link href={""}>Learn More</Link>
+              <br /> and lenders.
             </span>
           </div>
           <div className={styles.privacypolicy}>
             <IoMdCheckmark />
             <span>
               We don’t sell your information to third parties. Read our{" "}
-              <Link href={""}>Privacy Policy</Link>
+              <Link href={"/privacyPolicy"}>Privacy Policy</Link>
             </span>
           </div>
         </div>

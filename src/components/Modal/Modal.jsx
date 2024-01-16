@@ -9,7 +9,7 @@ const Modal = () => {
   return (
     <div>
       {popup && (
-        <motion.div
+        <div
           className={styles.modalBackground}
           initial={{ x: "7rem", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -37,7 +37,7 @@ const Modal = () => {
               </Link>
             </div>
           </motion.div>
-        </motion.div>
+        </div>
       )}
     </div>
   );

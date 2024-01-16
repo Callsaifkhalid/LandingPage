@@ -58,7 +58,7 @@ export default function RespondtoMail() {
             </div>
             <p className={styles.btnPara1}>For immediate assistance, call:</p>
 
-            <button className={styles.btnNum}>(877) 851-1246</button>
+            <button className={styles.btnNum}>1-844-208-1100</button>
           </div>
         </div>
       </main>

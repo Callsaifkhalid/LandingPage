@@ -6,7 +6,9 @@ import { GoDash } from "react-icons/go";
 import { MdRadioButtonChecked } from "react-icons/md";
 import { checkRates } from "@/app/api/checkRates/repo";
 import { InputContext } from "@/app/context/inputContext";
+import { useRouter } from "next/navigation";
 const AlmostThere = ({ onContinue }) => {
+  const router = useRouter();
   const {  heroInput,
     loanreasonvalue,
     employmentvalue,
@@ -81,8 +83,8 @@ const AlmostThere = ({ onContinue }) => {
           contact you by phone, text, email, or mail or by artificial or
           pre-recorded voice, even if you listed yourself on any Do-Not-Call
           List. You also agree to our{" "}
-          <span style={{ color: "#05c8e8" }}>Privacy Policy</span> and{" "}
-          <span style={{ color: "#05c8e8" }}>Terms of Use</span>. If you do not
+          <span style={{ color: "#05c8e8" ,cursor:'pointer'}} onClick={()=>router.push('/privacyPolicy')}>Privacy Policy</span> and{" "}
+          <span style={{ color: "#05c8e8" ,cursor:'pointer'}} onClick={()=>router.push('/terms-of-use')}>Terms of Use</span>. If you do not
           consent to receive automated calls or text messages,please call{" "}
           <span style={{ color: "#05c8e8" }}>1-844-208-1100</span> to continue
           your application.

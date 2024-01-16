@@ -1,0 +1,10 @@
+.modalBackground {
+    min-width: 100%;
+    min-height: 100%;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 999;
+  }

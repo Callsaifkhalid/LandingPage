@@ -175,7 +175,7 @@
 .city span {
   font-size: 14px;
 }
-@media (max-width: 920px) {
+@media (max-width: 1024px) {
   .mainHeading {
     color: #1a4048;
     margin-top: 17%;

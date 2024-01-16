@@ -31,12 +31,13 @@ const BlogNavbar = () => {
           <Link href={"/#hero"} className={styles.menuLinks} >
             <span>Home</span>
           </Link>
-          <Link href={"/#savings"} className={styles.menuLinks} >
-            <span>Savings Calculator</span>
-          </Link>
           <Link href={"/#compare"} className={styles.menuLinks} >
             <span>Compare Lenders</span>
           </Link>
+          <Link href={"/#savings"} className={styles.menuLinks} >
+            <span>Savings Calculator</span>
+          </Link>
+         
          
           <Link
             href={"/blogs"}

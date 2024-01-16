@@ -46,7 +46,7 @@
 .fields {
   display: flex;
   flex-direction: column;
-  width: 46.5%;
+  width: 46%;
   gap: 10px;
 }
 .fields input {
@@ -140,7 +140,7 @@
     margin-top: 5%;
   }
   .fields {
-    width: 94%;
+    width: 92%;
   }
   .submitButton{
     margin: 7% 0px;

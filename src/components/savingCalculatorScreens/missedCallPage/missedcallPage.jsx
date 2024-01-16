@@ -91,6 +91,7 @@ const MissedcallPage = () => {
           setcalldate={setcalldate}
           setcalltime={setcalltime}
           setcall={setcall}
+          calldate={calldate}
         />
       )}
       <div className={styles.calculator}>

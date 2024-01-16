@@ -29,12 +29,14 @@ const Navbar = () => {
 
       if (scrollPosition < 300) {
         setCurrentSection("home");
-      } else if (scrollPosition > 2800 && scrollPosition < 4300) {
+      } else if (scrollPosition > 2800 && scrollPosition < 4700) {
         setCurrentSection("saving");
       } else if (scrollPosition > 400 && scrollPosition < 2800) {
         setCurrentSection("compare");
-      } else if (scrollPosition > 7800) {
+      } else if (scrollPosition > 7800 ) {
         setCurrentSection("contact");
+      } else if (scrollPosition > 6700 && scrollPosition < 7700) {
+        setCurrentSection("blogs");
       } else {
         setCurrentSection("nothing");
       }
@@ -115,7 +117,13 @@ const Navbar = () => {
               <span onClick={() => setmenuopen(false)}>Savings Calculator</span>
             </ScrollLink>
 
-            <Link href={"/blogs"} className={styles.menuLinks}>
+            <Link href={"/blogs"} className={styles.menuLinks} style={{
+                color: currentSection === "blogs" ? "#05c8e8" : "#1a4048",
+                textDecoration:
+                  currentSection === "blogs" ? "underline" : "none",
+                textUnderlineOffset: currentSection === "blogs" ? "5px" : "none",
+                fontWeight: currentSection === "blogs" ? "bolder" : "",
+              }}>
               <span onClick={() => setmenuopen(false)}>Blogs</span>
             </Link>
             <ScrollLink

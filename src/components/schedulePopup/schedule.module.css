@@ -31,7 +31,7 @@
   .Link {
     color: white;
   }
-  .body button:hover {
+  .body .button1:hover {
     border: 3px solid #1a4048;
     box-shadow: inset 300px 0 0 0 white;
     color: #1a4048;
@@ -65,6 +65,18 @@
     border: 1px solid #8b8b8b;
     padding-left: 10px;
   }
+  .timeinput{
+    width: 250px;
+    height: 40px;
+    outline: none;
+    background-color: white;
+    color: #1a4048;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid #8b8b8b;
+   
+  }
   .button1 {
     border: none;
     outline: none;
@@ -77,6 +89,20 @@
     font-weight: 600;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition: all ease-in 100ms;
+    cursor: pointer;
+    margin-left: 14%;
+    margin-top: 5%;
+  }
+  .disablebutton {
+    border: none;
+    outline: none;
+    background-color: #cae9f2;
+    color: white;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
     margin-left: 14%;
     margin-top: 5%;

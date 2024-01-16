@@ -23,7 +23,7 @@
   margin-bottom: 20px;
   color: #1a4048;
 }
-.firstChildOneHead span{
+.firstChildOneHead span {
   font-weight: 10;
 }
 
@@ -73,14 +73,13 @@
 }
 
 .btn1 {
-  width: 43%;
-  padding: 10px;
+  width: 79%;
+  height: 40px;
   border: 1px solid black;
   border-radius: 20px;
   background-color: transparent;
   margin-top: 15px;
-  padding-left: 90px;
-  padding-right: 90px;
+ 
   text-align: center;
   cursor: pointer;
 }
@@ -107,21 +106,20 @@
 
 .btn2 {
   width: 80%;
-  padding: 10px;
+  height: 45px;
   border: 1px solid #1a4048;
   border-radius: 20px;
   background-color: transparent;
   margin-top: 10px;
-  padding-left: 140px;
-  padding-right: 140px;
+
   text-align: center;
   font-size: 16px;
   cursor: pointer;
 }
 
 .btn3 {
-  width: 30%;
-  padding: 10px;
+  width: 40%;
+  height: 40px;
   border: 1px solid #1a4048;
   border-radius: 20px;
   background-color: transparent;
@@ -145,11 +143,9 @@
   font-size: 15px;
   font-weight: 700;
   color: #1a4048;
-  
 }
-.btnNum:hover{
+.btnNum:hover {
   color: #8492a6;
-
 }
 @media (max-width: 717px) {
   .first {
@@ -177,19 +173,9 @@
     width: 80%;
     margin-bottom: 15%;
   }
-  .btn2 {
-    width: 100%;
-    margin-top: 10px;
-    padding-left: 130px;
-    padding-right: 140px;
-  }
-  .btn3 {
-    width: 60%;
-    padding: 10px; 
-  }
-  
+ 
 }
-@media screen and (min-width: 718px) and (max-width: 1024px) {
+@media screen and (min-width: 718px) and (max-width: 1124px) {
   .first {
     display: flex;
     flex-direction: column;
@@ -214,135 +200,5 @@
   .firstChildTwo {
     width: 80%;
   }
-  .btn2 {
-    width: 73%;
-    margin-top: 10px;
-    padding-left: 130px;
-    padding-right: 140px;
-  }
-  .btn3 {
-    width: 30%;
-    padding: 10px; 
-  }
+  
 }
-/* Enable hover only on non-touch devices */
-/* @media (hover: hover) and (pointer: fine) {
-  .card:hover {
-    background: rgba(var(--card-rgb), 0.1);
-    border: 1px solid rgba(var(--card-border-rgb), 0.15);
-  }
-
-  .card:hover span {
-    transform: translateX(4px);
-  }
-}
-
-@media (prefers-reduced-motion) {
-  .card:hover span {
-    transform: none;
-  }
-} */
-
-/* Mobile */
-/* @media (max-width: 700px) {
-  .content {
-    padding: 4rem;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-    margin-bottom: 120px;
-    max-width: 320px;
-    text-align: center;
-  }
-
-  .card {
-    padding: 1rem 2.5rem;
-  }
-
-  .card h2 {
-    margin-bottom: 0.5rem;
-  }
-
-  .center {
-    padding: 8rem 0 6rem;
-  }
-
-  .center::before {
-    transform: none;
-    height: 300px;
-  }
-
-  .description {
-    font-size: 0.8rem;
-  }
-
-  .description a {
-    padding: 1rem;
-  }
-
-  .description p,
-  .description div {
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    width: 100%;
-  }
-
-  .description p {
-    align-items: center;
-    inset: 0 0 auto;
-    padding: 2rem 1rem 1.4rem;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
-    background: linear-gradient(
-      to bottom,
-      rgba(var(--background-start-rgb), 1),
-      rgba(var(--callout-rgb), 0.5)
-    );
-    background-clip: padding-box;
-    backdrop-filter: blur(24px);
-  }
-
-  .description div {
-    align-items: flex-end;
-    pointer-events: none;
-    inset: auto 0 0;
-    padding: 2rem;
-    height: 200px;
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgb(var(--background-end-rgb)) 40%
-    );
-    z-index: 1;
-  }
-} */
-
-/* Tablet and Smaller Desktop */
-/* @media (min-width: 701px) and (max-width: 1120px) {
-  .grid {
-    grid-template-columns: repeat(2, 50%);
-  }
-} */
-
-/* @media (prefers-color-scheme: dark) {
-  .vercelLogo {
-    filter: invert(1);
-  }
-
-  .logo {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(360deg);
-  }
-
-  to {
-    transform: rotate(0deg);
-  }
-} */

@@ -10,6 +10,8 @@ import { BASE_URL } from "@/utils/constantVariables";
 import { InputContext } from "../context/inputContext";
 import { getCategoryBlogs } from "../api/blogCategory/repo";
 import { format } from "date-fns";
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 export default function BlogList() {
   const router = useRouter();
@@ -94,9 +96,12 @@ export default function BlogList() {
         <div className={styles.BlogHeadingStyle}>Blog</div>
         <div className={styles.arrayAndSideItemsContainer}>
           <div className={styles.BlogCardContainer}>
-            {BlogData.map((blog) => {
+          {IsLoading ? (
+              <Skeleton height={150} count={3} />
+            ) : (
+              BlogData.map((blog) => {
               return (
-                <div className={styles.BlogContainerStyle}>
+                <div className={styles.BlogContainerStyle} key={blog?.id}>
                   <div
                     onClick={() => {
                       handleHeadingContinue(blog?.id);
@@ -160,7 +165,8 @@ export default function BlogList() {
                   </div>
                 </div>
               );
-            })}
+            })
+            )}
           </div>
 
           <div className={styles.sideMenuMainContainer}>
