@@ -12,7 +12,7 @@ const Screen5 = ({ onContinue, onBack, progress }) => {
   const { dob, setDOB } = useContext(InputContext);
   const minDate = new Date();
   minDate.setFullYear(minDate.getFullYear() - 18);
- 
+  const defaultDate = new Date(2000, 0, 1);
   return (
     <div className={styles.calculator}>
       <div className={styles.calculatorScreens}>
@@ -26,12 +26,13 @@ const Screen5 = ({ onContinue, onBack, progress }) => {
         <div>
           <DatePicker
             onChange={(date) => setDOB(date)}
-            value={dob}
+            value={dob || defaultDate}
             className={styles.calenderr}
             dayPlaceholder="DD"
             monthPlaceholder="MM"
             yearPlaceholder="YYYY"
             maxDate={minDate}
+            
           />
         </div>
         <button
