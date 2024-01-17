@@ -9,6 +9,7 @@ export const metadata = {
   title: "Debt Consolidation Loan | ClearCredit",
   description: "Consolidating debt can help you simplify and take control of your finances. Combine balances and make one set monthly payment with a debt consolidation loan.",
   metadata:"Debt consolidation, consolidate, consolidation loans, debt consolidation loan, debt, how to get out of debt, unsecured debt, debt, personal loans, personal loan"
+  
 };
 
 const clarityCode = `(function(c,l,a,r,i,t,y){
@@ -58,7 +59,7 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
 
-        <Script id="ms-clarity" strategy="afterInteractive" >
+        <Script id="clarity" strategy="worker" >
             {clarityCode}
         </Script>
 
