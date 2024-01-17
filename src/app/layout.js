@@ -90,8 +90,8 @@ export default function RootLayout({ children }) {
         
       </Head>
 
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P48NRBMV"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      {/* <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P48NRBMV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> */}
 
 
       <body className="main">
