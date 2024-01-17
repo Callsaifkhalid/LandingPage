@@ -11,7 +11,7 @@ export const InputProvider = ({ children }) => {
   const [employmentvalue, setemploymentvalue] = useState("");
   const [first_name, setFirstName] = useState("");
   const [last_name, setlastName] = useState("");
-  const [dob, setDOB] = useState(null);
+  const [dob, setDOB] = useState("");
   const [address, setAddress] = useState("");
   const [suite, setSuite] = useState("");
   const [city, setCity] = useState("");

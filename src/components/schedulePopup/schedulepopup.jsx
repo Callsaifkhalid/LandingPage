@@ -14,13 +14,15 @@ const SchedulePopup = ({
   setcalltime,
   setcalldate,
   setcall,
-  calldate
 }) => {
   const [popup, setPopup] = useState(true);
-  const [dateInput, setDateInput] = useState(null);
+  const [dateInput, setDateInput] = useState("");
   const [time, settime] = useState("");
   setcalltime(time.value);
+  const today = new Date();
+  today.setDate(today.getDate() + 1); // Set to the day after today
 
+  const minDate = today.toISOString().split("T")[0];
   const {
     heroInput,
     loanreasonvalue,
@@ -70,11 +72,9 @@ const SchedulePopup = ({
     callback_status: "CALLBK",
     callback_datetime: callback_dateandtime,
   };
-  const minDate = new Date();
-  minDate.setDate(minDate.getDate() + 1);
-  const formattedDate = dateInput?.toLocaleDateString("en-CA");
-  setcalldate(formattedDate);
-  setcallback_dateandtime(formattedDate + time.value);
+
+  setcalldate(dateInput);
+  setcallback_dateandtime(`${dateInput} ${time.value}`);
   const handleSchedule = () => {
     ytelCallBack(Data);
     setcall(3);
@@ -121,7 +121,7 @@ const SchedulePopup = ({
               <div className={styles.schedulebox}>
                 <div className={styles.datebox}>
                   <span>Enter Date</span>
-                  <DatePicker
+                  {/* <DatePicker
                     onChange={(date) => setDateInput(date)}
                     value={dateInput}
                     className={styles.dateinput}
@@ -129,6 +129,13 @@ const SchedulePopup = ({
                     monthPlaceholder="MM"
                     yearPlaceholder="YYYY"
                     minDate={minDate}
+                  /> */}
+                  <input
+                    type="date"
+                    onChange={(e) => setDateInput(e.target.value)}
+                    value={dateInput}
+                    className={styles.dateinput}
+                    min={minDate}
                   />
                 </div>
                 <div className={styles.datebox}>
@@ -143,14 +150,16 @@ const SchedulePopup = ({
                 </div>
                 <button
                   className={
-                    !dateInput
+                    dateInput === ""
                       ? styles.disablebutton
                       : time === ""
                       ? styles.disablebutton
                       : styles.button1
                   }
                   onClick={handleSchedule}
-                  disabled={!dateInput ? true : time === "" ? true : false}
+                  disabled={
+                    dateInput === "" ? true : time === "" ? true : false
+                  }
                 >
                   Schedule
                 </button>

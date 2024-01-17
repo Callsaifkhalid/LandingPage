@@ -114,7 +114,7 @@ export default function BlogList() {
                     Published {" : "}
                     {dayjs(
                       blog?.created_at ? blog?.created_at : null
-                    ).format("MM-dd-yyyy HH:mm")}
+                    ).format("MM-DD-YYYY HH:mm")}
                   </div>
                   {/* <div className={styles.socialIconContainer}>
                     <img

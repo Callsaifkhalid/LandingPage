@@ -15,7 +15,7 @@ const MissedcallPage = () => {
   console.log(calldate,calltime)
   const getCurrentDateTime = () => {
     const now = new Date();
-    const formattedDateTime = dayjs(now).format("yyyy-MM-dd HH:mm:ss");
+    const formattedDateTime = dayjs(now).format("YYYY-MM-DD HH:mm:ss");
     setcallback_dateandtime(formattedDateTime);
     ytelCallBack(Data);
     setcall(1);
@@ -24,7 +24,7 @@ const MissedcallPage = () => {
     const now = dayjs( new Date());
     const futureDate = now.add(15, "minutes");
 
-    const formattedDateTime = dayjs(futureDate).format("yyyy-MM-dd HH:mm:ss");
+    const formattedDateTime = dayjs(futureDate).format("YYYY-MM-DD  HH:mm:ss");
 
     setcallback_dateandtime(formattedDateTime);
 
@@ -91,7 +91,6 @@ const MissedcallPage = () => {
           setcalldate={setcalldate}
           setcalltime={setcalltime}
           setcall={setcall}
-          calldate={calldate}
         />
       )}
       <div className={styles.calculator}>

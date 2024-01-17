@@ -25,8 +25,14 @@ const OfferForm = () => {
   const [isValidEmail, setIsValidEmail] = useState(true);
   const [checkemail, setcheckemail] = useState(false);
   const router = useRouter();
-  const minDate = new Date();
-  minDate.setFullYear(minDate.getFullYear() - 18);
+  const today = new Date();
+  const maxDate = new Date(
+    today.getFullYear() - 18,
+    today.getMonth(),
+    today.getDate()
+  )
+    .toISOString()
+    .split("T")[0];
   const Styles = {
     control: (provided, state) => ({
       display: "flex",
@@ -143,17 +149,15 @@ const OfferForm = () => {
           <div className={styles.dateandbusiness}>
             <div className={styles.fields}>
               <span>Date of Birth (MM/DD/YYYY)</span>
-              <div>
-                <DatePicker
-                  className={styles.datepicker}
-                  dayPlaceholder="DD"
-                  monthPlaceholder="M"
-                  yearPlaceholder="YYYY"
-                  maxDate={minDate}
+          
+                <input
+                  type="date"
+                  onChange={(e) => setDOB(e.target.value)}
                   value={dob}
-                  onChange={(date) => setDOB(date)}
+                  max={maxDate}
+                  
                 />
-              </div>
+          
             </div>
             <div className={styles.fields}>
               <span>Are you a business owner?</span>
@@ -186,21 +190,21 @@ const OfferForm = () => {
             </div>
           </div>
           <div className={styles.debtandcreditscore}>
-            <div className={styles.address} >
+            <div className={styles.address}>
               <span>Street Address </span>
               <input placeholder="Street Address" type="text" />
             </div>
-            <div className={styles.suite} >
+            <div className={styles.suite}>
               <span>Suite/Apt </span>
               <input type="text" placeholder="Suite/Apt" />
             </div>
           </div>
           <div className={styles.debtandcreditscore}>
-            <div className={styles.city} >
+            <div className={styles.city}>
               <span>City</span>
               <input placeholder="City" type="text" />
             </div>
-            <div className={styles.suite} >
+            <div className={styles.suite}>
               {" "}
               <Select
                 options={options}
@@ -210,7 +214,7 @@ const OfferForm = () => {
               />
             </div>
 
-            <div className={styles.suite} >
+            <div className={styles.suite}>
               <span>ZipCode </span>
               <input type="number" placeholder="zipcode" />
             </div>
@@ -221,7 +225,13 @@ const OfferForm = () => {
               <FaLock style={{ marginRight: "10px" }} />{" "}
               <span>This will not affect your credit score</span>
             </div>
-            <span style={{ marginTop: "7%", lineHeight: "1.6em" ,marginBottom:'7%'}}>
+            <span
+              style={{
+                marginTop: "7%",
+                lineHeight: "1.6em",
+                marginBottom: "7%",
+              }}
+            >
               By clicking ‘SEE MY OFFERS’ I consent to a{" "}
               <span style={{ fontWeight: "700" }}>Soft Inquiry</span>, agree to
               Clear Credit's{" "}

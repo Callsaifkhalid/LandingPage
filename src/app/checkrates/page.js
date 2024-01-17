@@ -22,6 +22,8 @@ const Screen1 = () => {
   const [currentView, setCurrentView] = useState(1);
   const totalScreens = 8;
   const progress = (currentView / totalScreens) * 100;
+
+ 
   const handleClick = (e) => {
     e.preventDefault();
     heroSectionInput(e.target.value);
@@ -140,6 +142,7 @@ const Screen1 = () => {
             >
               Continue
             </button>
+            
             <span
               style={{
                 color: "#8B8B8B",

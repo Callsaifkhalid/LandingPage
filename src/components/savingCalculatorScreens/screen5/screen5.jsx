@@ -12,7 +12,14 @@ const Screen5 = ({ onContinue, onBack, progress }) => {
   const { dob, setDOB } = useContext(InputContext);
   const minDate = new Date();
   minDate.setFullYear(minDate.getFullYear() - 18);
-  const defaultDate = new Date(2000, 0, 1);
+  const today = new Date();
+  const maxDate = new Date(
+    today.getFullYear() - 18,
+    today.getMonth(),
+    today.getDate()
+  )
+    .toISOString()
+    .split("T")[0];
   return (
     <div className={styles.calculator}>
       <div className={styles.calculatorScreens}>
@@ -24,7 +31,7 @@ const Screen5 = ({ onContinue, onBack, progress }) => {
           <h1>What’s your date of birth ?</h1>
         </div>
         <div>
-          <DatePicker
+          {/* <DatePicker
             onChange={(date) => setDOB(date)}
             value={dob || defaultDate}
             className={styles.calenderr}
@@ -33,6 +40,13 @@ const Screen5 = ({ onContinue, onBack, progress }) => {
             yearPlaceholder="YYYY"
             maxDate={minDate}
             
+          /> */}
+          <input
+            type="date"
+            onChange={(e) => setDOB(e.target.value)}
+            value={dob}
+            className={styles.calenderr}
+            max={maxDate}
           />
         </div>
         <button
