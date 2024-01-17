@@ -8,7 +8,6 @@ import { getBlogDetails } from "../api/blogDetails/repo";
 import { ErrorCodes } from "@/utils/error-codes";
 import { InputContext } from "../context/inputContext";
 import { BASE_URL } from "@/utils/constantVariables";
-import { format } from "date-fns";
 import { getCategoryBlogs } from "../api/blogCategory/repo";
 import dayjs from "dayjs";
 export default function blogDetails() {
