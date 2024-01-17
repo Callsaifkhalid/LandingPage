@@ -21,6 +21,11 @@ const clarityCode = `(function(c,l,a,r,i,t,y){
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+
+      <Script id="clarity-script" strategy="lazyOnload" >
+            {clarityCode}
+        </Script>
+
       <Head>
         <title>Debt Consolidation Loan | ClearCredit</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -58,10 +63,6 @@ export default function RootLayout({ children }) {
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-
-        <Script id="clarity" strategy="worker" >
-            {clarityCode}
-        </Script>
 
         {/* <Script>
           {function (w, d, s, l, i) {
