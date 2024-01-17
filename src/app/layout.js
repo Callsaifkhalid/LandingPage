@@ -7,48 +7,49 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Debt Consolidation Loan | ClearCredit",
-  description: "Consolidating debt can help you simplify and take control of your finances. Combine balances and make one set monthly payment with a debt consolidation loan.",
-  metadata:"Debt consolidation, consolidate, consolidation loans, debt consolidation loan, debt, how to get out of debt, unsecured debt, debt, personal loans, personal loan"
-  
+  description:
+    "Consolidating debt can help you simplify and take control of your finances. Combine balances and make one set monthly payment with a debt consolidation loan.",
+  metadata:
+    "Debt consolidation, consolidate, consolidation loans, debt consolidation loan, debt, how to get out of debt, unsecured debt, debt, personal loans, personal loan",
 };
 
 const clarityCode = `(function(c,l,a,r,i,t,y){
   c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
   t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
   y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-})(window, document, "clarity", "script", "kj3s2qcy7x");`
+})(window, document, "clarity", "script", "kj3s2qcy7x");`;
 
 const googleTagManager = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-P48NRBMV');`
+})(window,document,'script','dataLayer','GTM-P48NRBMV');`;
 
-
-const googleTagManagerPushScript = 
-`window.dataLayer = window.dataLayer || [];
+const googleTagManagerPushScript = `window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'G-QGXCCHWWWS');`
-
+gtag('config', 'G-QGXCCHWWWS');`;
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-
-      <Script id="clarity-script" strategy="lazyOnload" >
-            {clarityCode}
-        </Script>
-
-      <Script id="google-tag-manager-script" strategy="lazyOnload" >
-          {googleTagManager}
+      <Script id="clarity-script" strategy="lazyOnload">
+        {clarityCode}
       </Script>
 
-      <Script id="google-tag-manager-script-second" strategy="lazyOnload" src="https://www.googletagmanager.com/gtag/js?id=G-QGXCCHWWWS" />
+      <Script id="google-tag-manager-script" strategy="lazyOnload">
+        {googleTagManager}
+      </Script>
 
-      {/* <Script id="google-tag-manager-push-script" strategy="lazyOnload" >
+      <Script
+        id="google-tag-manager-script-second"
+        strategy="lazyOnload"
+        src="https://www.googletagmanager.com/gtag/js?id=G-QGXCCHWWWS"
+      />
+
+      <Script id="google-tag-manager-push-script" strategy="lazyOnload">
         {googleTagManagerPushScript}
-      </Script> */}
+      </Script>
 
       <Head>
         <title>Debt Consolidation Loan | ClearCredit</title>
@@ -87,26 +88,16 @@ export default function RootLayout({ children }) {
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-
-        {/* <Script>
-          {function (w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-            var f = d.getElementsByTagName(s)[0],
-              j = d.createElement(s),
-              dl = l != "dataLayer" ? "&l=" + l : "";
-            j.async = true;
-            j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-            f.parentNode.insertBefore(j, f);
-          }}
-          (window,document,'script','dataLayer','GTM-P48NRBMV');
-        </Script> */}
-        
       </Head>
 
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P48NRBMV"
-height="0" width="0" style={{display:"none",visibility:"hidden"}}></iframe></noscript>
-
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-P48NRBMV"
+          height="0"
+          width="0"
+          style={{ display: "none", visibility: "hidden" }}
+        ></iframe>
+      </noscript>
 
       <body className="main">
         <InputProvider>{children}</InputProvider>
