@@ -24,6 +24,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-P48NRBMV');`
 
+
+const googleTagManagerPushScript = 
+`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-QGXCCHWWWS');`
+
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -35,6 +43,12 @@ export default function RootLayout({ children }) {
       <Script id="google-tag-manager-script" strategy="lazyOnload" >
           {googleTagManager}
       </Script>
+
+      <Script id="google-tag-manager-script-second" strategy="lazyOnload" src="https://www.googletagmanager.com/gtag/js?id=G-QGXCCHWWWS" />
+
+      {/* <Script id="google-tag-manager-push-script" strategy="lazyOnload" >
+        {googleTagManagerPushScript}
+      </Script> */}
 
       <Head>
         <title>Debt Consolidation Loan | ClearCredit</title>
@@ -91,7 +105,7 @@ export default function RootLayout({ children }) {
       </Head>
 
       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P48NRBMV"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+height="0" width="0" style={{display:"none",visibility:"hidden"}}></iframe></noscript>
 
 
       <body className="main">

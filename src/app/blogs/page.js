@@ -9,9 +9,9 @@ import { getAllBlogs } from "../api/blogs/repo";
 import { BASE_URL } from "@/utils/constantVariables";
 import { InputContext } from "../context/inputContext";
 import { getCategoryBlogs } from "../api/blogCategory/repo";
-import { format } from "date-fns";
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
+import dayjs from "dayjs";
 
 export default function BlogList() {
   const router = useRouter();
@@ -112,10 +112,9 @@ export default function BlogList() {
                   </div>
                   <div className={styles.publishDateStyle}>
                     Published {" : "}
-                    {format(
-                      blog?.created_at ? blog?.created_at : null,
-                      "MM-dd-yyyy HH:mm"
-                    )}
+                    {dayjs(
+                      blog?.created_at ? blog?.created_at : null
+                    ).format("MM-dd-yyyy HH:mm")}
                   </div>
                   {/* <div className={styles.socialIconContainer}>
                     <img

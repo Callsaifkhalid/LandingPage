@@ -4,8 +4,8 @@ import styles from "./missed.module.css";
 import { FaPhoneVolume } from "react-icons/fa6";
 import { InputContext } from "@/app/context/inputContext";
 import { ytelCallBack } from "@/app/api/ytelCallback/repo";
-import { format, addMinutes } from "date-fns";
 import SchedulePopup from "@/components/schedulePopup/schedulepopup";
+import dayjs from "dayjs";
 const MissedcallPage = () => {
   const [callback_dateandtime, setcallback_dateandtime] = useState("");
   const [scheduleClick, setscheduleClick] = useState(false);
@@ -15,16 +15,16 @@ const MissedcallPage = () => {
   console.log(calldate,calltime)
   const getCurrentDateTime = () => {
     const now = new Date();
-    const formattedDateTime = format(now, "yyyy-MM-dd HH:mm:ss");
+    const formattedDateTime = dayjs(now).format("yyyy-MM-dd HH:mm:ss");
     setcallback_dateandtime(formattedDateTime);
     ytelCallBack(Data);
     setcall(1);
   };
   const get15minute = () => {
-    const now = new Date();
-    const futureDate = addMinutes(now, 15);
+    const now = dayjs( new Date());
+    const futureDate = now.add(15, "minutes");
 
-    const formattedDateTime = format(futureDate, "yyyy-MM-dd HH:mm:ss");
+    const formattedDateTime = dayjs(futureDate).format("yyyy-MM-dd HH:mm:ss");
 
     setcallback_dateandtime(formattedDateTime);
 
