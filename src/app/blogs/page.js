@@ -19,7 +19,6 @@ export default function BlogList() {
   const [BlogData, setBlogData] = useState([]);
   const [ErrMsg, setErrMsg] = useState("");
   const [IsLoading, setIsLoading] = useState(false);
-  const { setblogid } = useContext(InputContext);
   const [blogcat, setblogcat] = useState(0);
   const [blogCategory, setBlogCategory] = useState([]);
  
