@@ -1,21 +1,23 @@
 "use client";
 import React, { useContext, useEffect, useState } from "react";
 import styles from "./blogdetails.module.css";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import BlogNavbar from "@/components/blogNavbar/blogNavbar";
 import Footer2 from "@/components/footer2/footer2";
 import { getBlogDetails } from "../api/blogDetails/repo";
 import { ErrorCodes } from "@/utils/error-codes";
-import { InputContext } from "../context/inputContext";
 import { BASE_URL } from "@/utils/constantVariables";
 import { getCategoryBlogs } from "../api/blogCategory/repo";
 import dayjs from "dayjs";
 export default function blogDetails() {
+
+  const searchParams = useSearchParams();
+  const blogid = searchParams.get("blogid");
   const [BlogData, setBlogData] = useState({});
   const [ErrMsg, setErrMsg] = useState("");
   const [IsLoading, setIsLoading] = useState(false);
   const [blogCategory, setBlogCategory] = useState([]);
-  const { blogid } = useContext(InputContext);
+
   useEffect(() => {
     fetchData();
     fetchAllCategory();

@@ -33,7 +33,7 @@ const Navbar = () => {
         setCurrentSection("saving");
       } else if (scrollPosition > 400 && scrollPosition < 2800) {
         setCurrentSection("compare");
-      } else if (scrollPosition > 7800 ) {
+      } else if (scrollPosition > 8100 ) {
         setCurrentSection("contact");
       } else if (scrollPosition > 6700 && scrollPosition < 7700) {
         setCurrentSection("blogs");
