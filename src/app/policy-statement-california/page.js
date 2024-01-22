@@ -3,6 +3,11 @@ import styles from "./california.module.css";
 import PolicyNavbar from "@/components/policyNavbar/policynavbar";
 import Footer2 from "@/components/footer2/footer2";
 import Link from "next/link";
+export const metadata = {
+  title: "Clear Credit California Policy Statement ",
+  description:
+    "Learn about Clear Credit's policy in compliance with California regulations.",
+};
 const CaliforniaPrivacy = () => {
   return (
     <div>
@@ -430,7 +435,7 @@ const CaliforniaPrivacy = () => {
             <Link href="/do-not-sell-my-personal-information">
               Do Not Sell my personal information
             </Link>{" "}
-            or Calling us toll-free during business hours at: 1-844-208-1100
+            or Calling us toll-free during business hours at: 
             <br />
             <br />
           </span>

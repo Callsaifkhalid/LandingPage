@@ -27,12 +27,15 @@
   display: flex;
   justify-content: space-between;
 }
-.nameFields input {
+.namesinputfields{
   width: 45%;
+}
+.namesinputfields input {
   height: 40px;
   padding-left: 10px;
   border: 1px solid #8b8b8b;
   border-radius: 10px;
+  width: 100%;
 }
 .nameFields input:focus {
   outline: 1px solid #05c8e8;
@@ -46,7 +49,7 @@
 .fields {
   display: flex;
   flex-direction: column;
-  width: 46%;
+  width: 45%;
   gap: 10px;
 }
 .fields input {
@@ -54,6 +57,7 @@
   padding-left: 10px;
   border: 1px solid #8b8b8b;
   border-radius: 10px;
+  width: 100%;
 }
 .fields input:focus {
   outline: 1px solid #05c8e8;
@@ -104,7 +108,7 @@
     flex-direction: column;
     gap: 20px;
   }
-  .nameFields input {
+  .namesinputfields{
     width: 90%;
   }
   .emailandphone {
@@ -114,7 +118,7 @@
     margin-top: 5%;
   }
   .fields {
-    width: 94%;
+    width: 90%;
   }
   .submitButton{
     margin: 7% 0px;
@@ -132,7 +136,7 @@
     flex-direction: column;
     gap: 20px;
   }
-  .nameFields input {
+  .namesinputfields{
     width: 90%;
   }
   .emailandphone {
@@ -142,7 +146,7 @@
     margin-top: 5%;
   }
   .fields {
-    width: 92%;
+    width: 90%;
   }
   .submitButton{
     margin: 7% 0px;

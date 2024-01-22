@@ -4,6 +4,11 @@ import styles from "./footer.module.css";
 import { Link as ScrollLink } from "react-scroll";
 import Link from "next/link";
 const Footer = () => {
+  const phoneNumber = "+1-844-208-1100";
+
+  const handleCall = () => {
+    window.location.href = `tel:${phoneNumber}`;
+  };
   return (
     <div className={styles.footer}>
       <div className={styles.images}>
@@ -31,8 +36,12 @@ const Footer = () => {
 
       <div className={styles.content}>
         <div className={styles.contentt1}>
-          <div>Service@clearcredit.ai</div>
-          <div>+1-844-208-1100</div>
+          <div>
+            <a href="mailto:Service@clearcredit.ai">Service@clearcredit.ai</a>
+          </div>
+          <div style={{ cursor: "pointer" }} onClick={handleCall}>
+            +1-844-208-1100
+          </div>
         </div>
         <div className={styles.content1}>
           <span>

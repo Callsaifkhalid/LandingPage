@@ -6,6 +6,7 @@ import Link from "next/link";
 import options from "@/utils/stateOptions";
 import Select from "react-select";
 import Footer2 from "@/components/footer2/footer2";
+
 const CaliforniaRequestForm = () => {
   const [selectedOptionaccount, setselectedOptionaccount] = useState(null);
   const [selectedOptionsend, setselectedOptionsend] = useState(null);
@@ -38,7 +39,7 @@ const CaliforniaRequestForm = () => {
       height: "40px",
       border: "none",
       placeholder: "State",
-      alignItems:'center'
+      alignItems: "center",
     }),
     dropdownIndicator: (base) => ({
       ...base,
@@ -107,8 +108,12 @@ const CaliforniaRequestForm = () => {
         <div className={styles.name}>
           <span>Name</span>
           <div className={styles.nameFields}>
-            <input type="text" placeholder="First Name" />
-            <input type="text" placeholder="Last Name" />
+            <div className={styles.namesinputfields}>
+              <input type="text" placeholder="First Name" />
+            </div>
+            <div className={styles.namesinputfields}>
+              <input type="text" placeholder="Last Name" />
+            </div>
           </div>
         </div>
         <div className={styles.emailandphoneandbirth}>
@@ -352,7 +357,7 @@ const CaliforniaRequestForm = () => {
       <div className={styles.submitButton}>
         <button>Submit</button>
       </div>
-      <Footer2/>
+      <Footer2 />
     </div>
   );
 };

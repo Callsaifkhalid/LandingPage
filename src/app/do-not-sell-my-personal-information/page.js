@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useState } from "react";
 import styles from "./donotsell.module.css";
 import Footer2 from "@/components/footer2/footer2";
@@ -27,8 +27,12 @@ const DonotSell = () => {
         <div className={styles.name}>
           <span>Name</span>
           <div className={styles.nameFields}>
-            <input type="text" placeholder="First Name" />
-            <input type="text" placeholder="Last Name" />
+            <div className={styles.namesinputfields}>
+              <input type="text" placeholder="First Name" />
+            </div>
+            <div className={styles.namesinputfields}>
+              <input type="text" placeholder="Last Name" />
+            </div>
           </div>
         </div>
         <div className={styles.emailandphone}>
@@ -43,9 +47,11 @@ const DonotSell = () => {
         </div>
         <div className={styles.zipcode}>
           <span>Zip Code</span>
-          <div className={styles.nameFields}>
-            <input type="number" placeholder="ZipCode" />
-          </div>
+         
+            <div className={styles.namesinputfields}>
+              <input type="number" placeholder="ZipCode" />
+            </div>
+         
         </div>
         <div className={styles.checkboxes}>
           <span>Confirm that you live in California?</span>
@@ -57,7 +63,9 @@ const DonotSell = () => {
               checked={selectedOption === "option1"}
               onChange={handleOptionChange}
             />
-            <span style={{marginLeft:'5px'}}>I am a resident of California</span>
+            <span style={{ marginLeft: "5px" }}>
+              I am a resident of California
+            </span>
           </div>
           <div>
             <input
@@ -67,7 +75,9 @@ const DonotSell = () => {
               checked={selectedOption === "option2"}
               onChange={handleOptionChange}
             />
-            <span style={{marginLeft:'5px'}}>I am a resident of another state</span>
+            <span style={{ marginLeft: "5px" }}>
+              I am a resident of another state
+            </span>
           </div>
         </div>
         <div className={styles.submitButton}>

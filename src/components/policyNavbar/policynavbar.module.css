@@ -12,6 +12,7 @@
     margin-bottom: 1rem;
     margin-right: 0rem;
     margin-left: 3rem;
+    cursor: pointer;
   }
   
   .headermenu {
@@ -49,6 +50,7 @@
     margin-right: 4rem;
     transition: all ease-in 300ms;
     font-size: 17px;
+    cursor: pointer;
   }
   .loginbutton:hover {
     transform: scale(1.04);

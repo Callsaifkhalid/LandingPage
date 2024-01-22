@@ -2,6 +2,11 @@ import PolicyNavbar from "@/components/policyNavbar/policynavbar";
 import React from "react";
 import styles from "./loanPolicy.module.css";
 import Footer2 from "@/components/footer2/footer2";
+export const metadata = {
+  title: "Clear Credit Loan Policy",
+  description:
+    "Understand Clear Credit's loan policy for a seamless borrowing experience.",
+};
 const LoanPolicy = () => {
   return (
     <div>

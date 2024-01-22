@@ -11,6 +11,11 @@ const Contact = () => {
       url: "https://calendly.com/cleardebt?text_color=5bc4e4",
     });
   };
+  const phoneNumber = "+1-844-208-1100";
+
+  const handleCall = () => {
+    window.location.href = `tel:${phoneNumber}`;
+  };
   return (
     <div className={styles.wrapper} id="contact">
       <div className={styles.headings}>
@@ -50,7 +55,11 @@ const Contact = () => {
           <div className={styles.mailandnumber}>
             <div className={styles.mail}>
               <img src="./housepic.svg" alt="" width={20} />
-              <span>Service@clearcredit.ai</span>
+              <span>
+                <a href="mailto:Service@clearcredit.ai">
+                  Service@clearcredit.ai
+                </a>
+              </span>
             </div>
             <div className={styles.number}>
               <FaPhone
@@ -60,7 +69,7 @@ const Contact = () => {
                   marginLeft: "8px",
                 }}
               />
-              <div>1-844-208-1100</div>
+              <div style={{cursor:'pointer'}} onClick={handleCall}>1-844-208-1100</div>
             </div>
           </div>
           <div className={styles.contactcontent}>

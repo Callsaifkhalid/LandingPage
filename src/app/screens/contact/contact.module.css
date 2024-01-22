@@ -2,7 +2,10 @@
   background-color: #fff;
   margin-bottom: 15rem;
 }
-
+.mail a{
+  text-decoration: none;
+  color: #1a4048;
+}
 .headings {
   display: flex;
   flex-direction: column;

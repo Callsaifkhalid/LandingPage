@@ -2,6 +2,11 @@ import React from "react";
 import styles from "./termsofuse.module.css";
 import PolicyNavbar from "@/components/policyNavbar/policynavbar";
 import Footer2 from "@/components/footer2/footer2";
+export const metadata = {
+  title: "Clear Credit Terms of Use ",
+  description:
+    "Explore Clear Credit's Terms of Use for a transparent financial journey",
+};
 const TermsofUse = () => {
   return (
     <div>
@@ -250,7 +255,7 @@ const TermsofUse = () => {
             Clear Credit welcomes your feedback and suggestions about how to
             improve this Site via email, with the subject line “Feedback,” at{" "}
             <a href="mailto:Service@clearcredit.ai">Service@clearcredit.ai</a>{" "}
-           Contact. You are solely responsible for the content of any
+            Contact. You are solely responsible for the content of any
             information that you submit to Clear Credit, and you agree not to
             submit any defamatory, abusive, obscene, threatening, or illegal
             material, or any other material that infringes the rights of others.
@@ -335,55 +340,55 @@ const TermsofUse = () => {
           </span>
           <h2>DISCLAIMER</h2>
           <span>
-            WHILE CLEAR CREDIT ENDEAVORS TO PROVIDE THE MOST ACCURATE, UP-TO-
-            DATE, AND RELIABLE INFORMATION, SERVICES, PROGRAMS, PRODUCTS,
-            SOFTWARE, SERVICES, AND MATERIALS AVAILABLE, THE INFORMATION,
-            SERVICES, PROGRAMS, PRODUCTS, SOFTWARE, SERVICES, AND MATERIALS
-            AVAILABLE ON OR THROUGH THIS SITE ARE PROVIDED ON AN “AS-IS,” “WITH
-            ALL FAULTS,” AND “AS AVAILABLE” BASIS AND MAY INCLUDE ERRORS,
-            OMISSIONS, OR OTHER INACCURACIES. MOREOVER, CLEAR CREDIT MAY MAKE
-            MODIFICATIONS AND/OR CHANGES IN THIS SITE OR IN THE INFORMATION,
-            SERVICES, PROGRAMS, PRODUCTS, SOFTWARE, SERVICES, AND MATERIALS
-            DESCRIBED IN OR AVAILABLE THROUGH THIS SITE AT ANY TIME AND FOR ANY
-            REASON. YOU AGREE THAT IN USING THIS SITE, YOU ASSUME THE SOLE RISK
-            OF MAKING USE OF AND/OR RELYING ON THE INFORMATION, SERVICES,
-            PROGRAMS, PRODUCTS, SERVICES, AND MATERIALS AVAILABLE ON OR THROUGH
-            THIS SITE. CLEAR CREDIT MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT
-            THE SUITABILITY, COMPLETENESS, TIMELINESS, RELIABILTY, LEGALITY, OR
-            ACCURACY OF THE INFORMATION, SERVICES, PROGRAMS, PRODUCTS, SERVICES,
-            AND MATERIALS DESCRIBED ON OR AVAILABLE THROUGH THIS SITE FOR ANY
-            PURPOSE. CLEAR CREDIT ALSO DOES NOT WARRANT THAT THE SITE WILL BE
-            UNINTERRUPTED OR ERROR-FREE, THAT DEFECTS WILL BE CORRECTED, OR THAT
-            THE SITE OR THE SERVER THAT MAKES IT AVAILABLE IS FREE OF VIRUSES OR
-            OTHER HARMFUL COMPONENTS.
+            While Clear Credit endeavors to provide the most accurate,
+            up-to-date, and reliable information, services, programs, products,
+            software, services, and materials available, the information,
+            services, programs, products, software, services, and materials
+            available on or through this site are provided on an "as-is," "with
+            all faults," and "as available" basis and may include errors,
+            omissions, or other inaccuracies. Moreover, Clear Credit may make
+            modifications and/or changes in this site or in the information,
+            services, programs, products, software, services, and materials
+            described in or available through this site at any time and for any
+            reason. You agree that in using this site, you assume the sole risk
+            of making use of and/or relying on the information, services,
+            programs, products, services, and materials available on or through
+            this site. Clear Credit makes no representations or warranties about
+            the suitability, completeness, timeliness, reliability, legality, or
+            accuracy of the information, services, programs, products, services,
+            and materials described on or available through this site for any
+            purpose. Clear Credit also does not warrant that the site will be
+            uninterrupted or error-free, that defects will be corrected, or that
+            the site or the server that makes it available is free of viruses or
+            other harmful components.
           </span>
           <h2>LIMITATION OF LIABILITY</h2>
           <span>
-            IN NO EVENT SHALL CLEAR CREDIT AND ITS PARENTS, SUBSIDIARIES, AND
-            AFFILIATES AND ALL OF THEIR EMPLOYEES, AGENTS, DIRECTORS, OFFICERS,
-            PROPRIETORS, PARTNERS, REPRESENTATIVES, SHAREHOLDERS, SERVANTS,
-            ATTORNEYS, PREDECESSORS, SUCCESSORS, AND ASSIGNS BE LIABLE FOR ANY
-            DAMAGES WHATSOEVER, INCLUDING, BUT NOT LIMITED TO, INDIRECT,
-            PUNITIVE, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR OTHER SIMILAR
-            DAMAGES ARISING OUT OF OR IN ANY WAY CONNECTED WITH THE USE OF THIS
-            SITE OR WITH THE DELAY OR INABILITY TO USE THIS SITE, OR FOR ANY
-            INFORMATION, SERVICES, PROGRAMS, PRODUCTS, SERVICES, AND MATERIALS
-            AVAILABLE THROUGH THIS SITE, OR FOR ANY LOST PROFITS, BUSINESS
-            INTERRUPTION, LOSS OF PROGRAMS OR OTHER DATA ON YOUR INFORMATION
-            HANDLING SYSTEM, OR OTHERWISE ARISING OUT OF UTILIZATION OF THIS
-            SITE, WHETHER BASED IN CONTRACT, TORT, STRICT LIABILITY, OR
-            OTHERWISE, EVEN IF CLEAR CREDIT HAS BEEN ADVISED OF THE POSSIBILITY
-            OF SUCH DAMAGES. SOME STATES DO NOT ALLOW THE EXCLUSION OF DAMAGES
-            OR LIMITATION OF LIABILITY SET FORTH ABOVE, SO THIS LIMITATION OF
-            LIABILITY MAY NOT APPLY TO YOU. IF ANY PART OF THIS LIMITATION OF
-            LIABILITY IS FOUND TO BE INVALID OR UNENFORCEABLE FOR ANY REASON,
-            THE REMAINDER OF THE LIMITATION OF LIABILITY SHALL REMAIN IN EFFECT,
-            AND THE AGGREGATE LIABILITY OF CLEAR CREDIT UNDER SUCH CIRCUMSTANCES
-            SHALL NOT EXCEED ONE HUNDRED ($100.00) DOLLARS IN THE AGGREGATE. IF
-            ANY REMEDY HEREUNDER IS DETERMINED TO HAVE FAILED OF ITS ESSENTIAL
-            PURPOSE, ALL LIMITATIONS OF LIABILITY, DISCLAIMERS AND EXCLUSIONS OF
-            WARRANTIES AND DAMAGES SET FORTH IN THIS AGREEMENT SHALL REMAIN IN
-            EFFECT.
+            In no event shall Clear Credit and its parents, subsidiaries, and
+            affiliates and all of their employees, agents, directors, officers,
+            proprietors, partners, representatives, shareholders, servants,
+            attorneys, predecessors, successors, and assigns be liable for any
+            damages whatsoever, including, but not limited to, indirect,
+            punitive, incidental, special, consequential, or other similar
+            damages arising out of or in any way connected with the use of this
+            site or with the delay or inability to use this site, or for any
+            information, services, programs, products, services, and materials
+            available through this site, or for any lost profits, business
+            interruption, loss of programs or other data on your information
+            handling system, or otherwise arising out of utilization of this
+            site, whether based in contract, tort, strict liability, or
+            otherwise, even if Clear Credit has been advised of the possibility
+            of such damages. Some states do not allow the exclusion of damages
+            or limitation of liability set forth above, so this limitation of
+            liability may not apply to you. If any part of this limitation of
+            liability is found to be invalid or unenforceable for any reason,
+            the remainder of the limitation of liability shall remain in effect,
+            and the aggregate liability of Clear Credit under such circumstances
+            shall not exceed one hundred ($100.00) dollars in the aggregate. If
+            any remedy hereunder is determined to have failed of its essential
+            purpose, all limitations of liability, disclaimers and exclusions of
+            warranties and damages set forth in this agreement shall remain in
+            effect.
           </span>
 
           <h2>INDEMNITY</h2>
@@ -413,11 +418,12 @@ const TermsofUse = () => {
           </span>
           <h2>GENERAL PROVISIONS.</h2>
           <span>
-            This TOU, Clear Credit’s <span style={{fontWeight:'700'}}>Privacy Policy</span>, and any related or
-            associated service or software license agreements, which are all
-            hereby incorporated by reference as if set forth fully herein,
-            represent the entire agreement between you and Clear Credit with
-            respect to use of the Site, and it supersedes all prior or
+            This TOU, Clear Credit’s{" "}
+            <span style={{ fontWeight: "700" }}>Privacy Policy</span>, and any
+            related or associated service or software license agreements, which
+            are all hereby incorporated by reference as if set forth fully
+            herein, represent the entire agreement between you and Clear Credit
+            with respect to use of the Site, and it supersedes all prior or
             contemporaneous communications and proposals, whether electronic,
             oral, or written between you and Clear Credit with respect to this
             Site. Please note that Clear Credit reserves the right to change the

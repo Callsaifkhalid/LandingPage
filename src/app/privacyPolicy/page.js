@@ -1,8 +1,22 @@
+
 import React from "react";
 import styles from "./privacypolicy.module.css";
 import Footer2 from "@/components/footer2/footer2";
 import PolicyNavbar from "@/components/policyNavbar/policynavbar";
+
+
+export const metadata = {
+  title: "Clear Credit Privacy Policy ",
+  description:
+    "Safeguard your information with Clear Credit's Privacy Policy details.",
+};
+
+
 const PrivacyPolicy = () => {
+ 
+   
+
+
   return (
     <div>
       <PolicyNavbar />

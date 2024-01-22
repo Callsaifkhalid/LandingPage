@@ -65,9 +65,39 @@ const TourGoals = () => {
           <br /> financial needs
         </h1>
       </div>
-      <div className={styles.Cards}>
+      <div className={styles.cardz}>
         <div className={styles.cards}>
-          {FeaturedBlogs.slice(0, 2).map((blog) => (
+          {FeaturedBlogs.map((blog) => (
+            <div className={styles.card1}>
+              <div className={styles.card1box1}>
+                <div className={styles.card1box1img}>
+                  <img src={BASE_URL + blog?.thumbnail} />
+                </div>
+                <div className={styles.card1box1content}>
+                  <h3>{blog?.title}</h3>
+                  <span>
+                    Description: {blog?.description.substring(0, 100) + "..."}
+                  </span>
+                  <h4>
+                    <Link
+                      href={{
+                        pathname: "/blogDetails",
+                        query: { blogid: blog?.id },
+                      }}
+                      style={{
+                        color: "#05C8E8",
+                        fontSize: "13px",
+                        textDecoration: "none",
+                      }}
+                    >
+                      Learn More
+                    </Link>
+                  </h4>
+                </div>
+              </div>
+            </div>
+          ))}
+          {/* {FeaturedBlogs.slice(2).map((blog) => (
             <div className={styles.card1}>
               <div className={styles.card1box1}>
                 <div className={styles.card1box1img}>
@@ -96,37 +126,7 @@ const TourGoals = () => {
                 </div>
               </div>
             </div>
-          ))}
-          {FeaturedBlogs.slice(2).map((blog) => (
-            <div className={styles.card1}>
-              <div className={styles.card1box1}>
-                <div className={styles.card1box1img}>
-                  <img src={BASE_URL + blog?.thumbnail} />
-                </div>
-                <div className={styles.card1box1content}>
-                  <h3>{blog?.title}</h3>
-                  <span style={{ color: "#8B8B8B", fontSize: "12px" }}>
-                    Description: {blog?.description.substring(0, 100) + "..."}
-                  </span>
-                  <h4>
-                    <Link
-                      href={{
-                        pathname: "/blogDetails",
-                        query: { blogid: blog?.id },
-                      }}
-                      style={{
-                        color: "#05C8E8",
-                        fontSize: "13px",
-                        textDecoration: "none",
-                      }}
-                    >
-                      Learn More
-                    </Link>
-                  </h4>
-                </div>
-              </div>
-            </div>
-          ))}
+          ))} */}
         </div>
       </div>
       <div className={styles.viewmorebutton}>

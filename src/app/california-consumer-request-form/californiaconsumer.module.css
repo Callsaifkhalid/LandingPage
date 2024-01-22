@@ -30,8 +30,11 @@
   display: flex;
   justify-content: space-between;
 }
-.nameFields input {
+.namesinputfields {
   width: 45%;
+}
+.namesinputfields input {
+  width: 98%;
   height: 40px;
   padding-left: 10px;
   border: 1px solid #8b8b8b;
@@ -63,7 +66,7 @@
   border: 1px solid #05c8e8;
 }
 .reactselect {
-  height: 40px;
+  height: 43px;
   border: 1px solid #8b8b8b;
   border-radius: 10px;
 }
@@ -98,7 +101,7 @@
   flex-direction: column;
   gap: 10px;
 }
-.checkboxe div{
+.checkboxe div {
   display: flex;
   align-items: center;
 }
@@ -142,7 +145,7 @@
     flex-direction: column;
     gap: 20px;
   }
-  .nameFields input {
+  .namesinputfields {
     width: 90%;
   }
   .emailandphoneandbirth {
@@ -152,10 +155,16 @@
     margin-top: 5%;
   }
   .fields {
-    width: 94%;
+    width: 90%;
+  }
+  .fields input {
+    width: 98%;
   }
   .address {
-    width: 95%;
+    width: 90%;
+  }
+  .address input {
+    width: 98%;
   }
   .submitButton {
     margin: 7% 0px;
@@ -197,9 +206,10 @@
     flex-direction: column;
     gap: 20px;
   }
-  .nameFields input {
+  .namesinputfields {
     width: 90%;
   }
+
   .emailandphoneandbirth {
     display: flex;
     flex-direction: column;
@@ -207,10 +217,16 @@
     margin-top: 5%;
   }
   .fields {
-    width: 94%;
+    width: 90%;
+  }
+  .fields input {
+    width: 98%;
   }
   .address {
-    width: 94%;
+    width: 90%;
+  }
+  .address input {
+    width: 98%;
   }
   .submitButton {
     margin: 7% 0px;

@@ -10,7 +10,10 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+input[type="date"] {
+  background-color: white;
 
+}
 .react-date-picker__wrapper {
   border: none !important;
 }

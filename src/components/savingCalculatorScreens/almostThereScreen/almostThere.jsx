@@ -9,6 +9,11 @@ import { InputContext } from "@/app/context/inputContext";
 import { useRouter } from "next/navigation";
 const AlmostThere = ({ onContinue }) => {
   const router = useRouter();
+  const phoneNumber = "+1-844-208-1100";
+
+  const handleCall = () => {
+    window.location.href = `tel:${phoneNumber}`;
+  };
   const {  heroInput,
     loanreasonvalue,
     employmentvalue,
@@ -86,7 +91,7 @@ const AlmostThere = ({ onContinue }) => {
           <span style={{ color: "#05c8e8" ,cursor:'pointer'}} onClick={()=>router.push('/privacyPolicy')}>Privacy Policy</span> and{" "}
           <span style={{ color: "#05c8e8" ,cursor:'pointer'}} onClick={()=>router.push('/terms-of-use')}>Terms of Use</span>. If you do not
           consent to receive automated calls or text messages,please call{" "}
-          <span style={{ color: "#05c8e8" }}>1-844-208-1100</span> to continue
+          <span style={{ color: "#05c8e8",cursor:'pointer' }} onClick={handleCall}>1-844-208-1100</span> to continue
           your application.
         </div>
       </div>

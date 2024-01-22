@@ -8,12 +8,18 @@ import OutsideClickHandler from "react-outside-click-handler";
 import { RxCross2 } from "react-icons/rx";
 import { FaPhone } from "react-icons/fa";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
   const [currentSection, setCurrentSection] = useState("");
   const [menuOpen, setmenuopen] = useState(false);
   const [click, setClick] = useState(false);
+  const router = useRouter();
+  const phoneNumber = "+1-844-208-1100";
 
+  const handleCall = () => {
+    window.location.href = `tel:${phoneNumber}`;
+  };
   const getMenuStyles = (menuOpen) => {
     if (typeof window !== "undefined") {
       if (document.documentElement.clientWidth <= 800) {
@@ -52,7 +58,7 @@ const Navbar = () => {
     <div>
       <Backtotop />
       <section className={styles.headerwrapper}>
-        <div className={styles.logo}>
+        <div className={styles.logo} onClick={()=>router.push('/')}>
           <img src="../logo.svg" alt="logo" width={270} />
         </div>
         <OutsideClickHandler onOutsideClick={() => setmenuopen(false)}>
@@ -161,7 +167,7 @@ const Navbar = () => {
           {menuOpen && <RxCross2 size={28} style={{ marginRight: "0.5rem" }} />}
         </div>
         <div>
-          <button className={styles.loginbutton}>
+          <button className={styles.loginbutton} onClick={handleCall}>
             <FaPhone />
             1-844-208-1100
           </button>

@@ -7,6 +7,11 @@ import { useRouter } from "next/navigation";
 
 export default function RespondtoMail() {
   const router = useRouter();
+  const phoneNumber = "+1-844-208-1100";
+
+  const handleCall = () => {
+    window.location.href = `tel:${phoneNumber}`;
+  };
   const handleContinue = () => {
     router.push("/offer-form");
   };
@@ -58,7 +63,7 @@ export default function RespondtoMail() {
             </div>
             <p className={styles.btnPara1}>For immediate assistance, call:</p>
 
-            <button className={styles.btnNum}>1-844-208-1100</button>
+            <button className={styles.btnNum} onClick={handleCall}>1-844-208-1100</button>
           </div>
         </div>
       </main>
