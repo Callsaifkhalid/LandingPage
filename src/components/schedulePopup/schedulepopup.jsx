@@ -3,7 +3,6 @@ import React, { useContext, useState } from "react";
 import styles from "./schedule.module.css";
 import { FaTimes } from "react-icons/fa";
 import { motion } from "framer-motion";
-import DatePicker from "react-date-picker";
 import { timeoptions } from "@/utils/timeoptions";
 import Select from "react-select";
 import { InputContext } from "@/app/context/inputContext";
@@ -20,8 +19,7 @@ const SchedulePopup = ({
   const [time, settime] = useState("");
   setcalltime(time.value);
   const today = new Date();
-  today.setDate(today.getDate() + 1); // Set to the day after today
-
+  today.setDate(today.getDate() + 1); 
   const minDate = today.toISOString().split("T")[0];
   const {
     heroInput,
@@ -121,15 +119,6 @@ const SchedulePopup = ({
               <div className={styles.schedulebox}>
                 <div className={styles.datebox}>
                   <span>Enter Date</span>
-                  {/* <DatePicker
-                    onChange={(date) => setDateInput(date)}
-                    value={dateInput}
-                    className={styles.dateinput}
-                    dayPlaceholder="DD"
-                    monthPlaceholder="MM"
-                    yearPlaceholder="YYYY"
-                    minDate={minDate}
-                  /> */}
                   <input
                     type="date"
                     onChange={(e) => setDateInput(e.target.value)}

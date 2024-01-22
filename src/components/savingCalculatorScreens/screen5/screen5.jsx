@@ -10,8 +10,8 @@ import Link from "next/link";
 import { InputContext } from "@/app/context/inputContext";
 const Screen5 = ({ onContinue, onBack, progress }) => {
   const { dob, setDOB } = useContext(InputContext);
-  const minDate = new Date();
-  minDate.setFullYear(minDate.getFullYear() - 18);
+  
+  
   const today = new Date();
   const maxDate = new Date(
     today.getFullYear() - 18,
@@ -50,9 +50,9 @@ const Screen5 = ({ onContinue, onBack, progress }) => {
           />
         </div>
         <button
-          className={!dob ? styles.disabledbutton : styles.continuebutton}
+          className={dob === "" ? styles.disabledbutton : styles.continuebutton}
           onClick={onContinue}
-          disabled={!dob ? true : false}
+          disabled={dob === "" ? true : false}
         >
           Continue
         </button>

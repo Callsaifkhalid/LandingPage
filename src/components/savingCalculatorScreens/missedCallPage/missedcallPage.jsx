@@ -81,6 +81,12 @@ const MissedcallPage = () => {
     callback_status: "CALLBK",
     callback_datetime: callback_dateandtime,
   };
+  
+const handlescheduleclick = ()=>{
+  setscheduleClick(!scheduleClick);
+  setcall(0);
+}
+
 
   return (
     <>
@@ -116,7 +122,7 @@ const MissedcallPage = () => {
             </button>
             <button
               className={styles.button2}
-              onClick={() => setscheduleClick((pre) => !pre)}
+              onClick={handlescheduleclick}
             >
               Schedule a Call
             </button>
