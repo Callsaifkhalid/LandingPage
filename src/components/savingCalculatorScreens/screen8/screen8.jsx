@@ -41,10 +41,10 @@ const Screen8 = ({ onContinue, onBack, progress }) => {
         </div>
         <button
           className={
-            housing_cost === "" ? styles.disabledbutton : styles.continuebutton
+            !housing_cost ? styles.disabledbutton : styles.continuebutton
           }
           onClick={onContinue}
-          disabled={housing_cost === "" ? true : false}
+          disabled={!housing_cost ? true : false}
         >
           Continue
         </button>

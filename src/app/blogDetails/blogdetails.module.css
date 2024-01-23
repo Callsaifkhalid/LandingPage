@@ -168,6 +168,7 @@
   flex-direction: column;
   justify-content: center;
   max-width: 60%;
+  font-size: 14px;
 }
 .blogViewDescriptionInsideTextCOntainer {
   position: relative;
@@ -366,93 +367,3 @@
   }
 }
 
-@media screen and (min-width: 1100px) and (max-width: 1250px) {
-  .logoContainerIndex {
-    padding: 7px 70px;
-  }
-  .getTsartedAndNumberContainer {
-    width: 35%;
-    justify-content: space-between;
-  }
-  .TopNumStyle {
-    font-size: 0.9em;
-    width: 50%;
-  }
-
-  .getStartedButton {
-    padding: 7px 13px 7px 13px;
-    font-size: 0.9rem;
-    width: 40%;
-  }
-}
-
-@media screen and (min-width: 1250px) and (max-width: 1400px) {
-  /* .logoContainerIndex {
-    padding: 7px 40px;
-  } */
-  .getTsartedAndNumberContainer {
-    width: 28%;
-    justify-content: space-between;
-  }
-  .TopNumStyle {
-    font-size: 0.9rem;
-    width: 46%;
-    text-align: center;
-  }
-
-  .getStartedButton {
-    padding: 7px 13px 7px 13px;
-    font-size: 0.9rem;
-    width: 35%;
-    text-align: center;
-  }
-}
-
-@media screen and (min-width: 1400px) and (max-width: 1750px) {
-  .getTsartedAndNumberContainer {
-    width: 30%;
-    justify-content: space-between;
-  }
-  .TopNumStyle {
-    font-size: 1rem;
-    width: 50%;
-  }
-  .getStartedButton {
-    padding: 7px 13px 7px 13px;
-    font-size: 1rem;
-    width: 37%;
-  }
-}
-
-@media screen and (min-width: 1751px) and (max-width: 1920px) {
-  .getTsartedAndNumberContainer {
-    width: 25%;
-    justify-content: space-between;
-  }
-  .TopNumStyle {
-    font-size: 1rem;
-    width: 47%;
-  }
-
-  .getStartedButton {
-    padding: 7px 13px 7px 13px;
-    font-size: 1rem;
-    width: 37%;
-  }
-}
-
-@media screen and (min-width: 1920px) and (max-width: 2050px) {
-  .getTsartedAndNumberContainer {
-    width: 20%;
-    justify-content: space-between;
-  }
-  .TopNumStyle {
-    font-size: 1rem;
-    width: 45%;
-  }
-  .getStartedButton {
-    padding: 7px 13px 7px 13px;
-    font-size: 1rem;
-    width: 37%;
-  }
-}

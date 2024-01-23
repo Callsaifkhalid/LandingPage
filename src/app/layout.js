@@ -6,9 +6,9 @@ import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Debt Consolidation Loan | ClearCredit",
+  title: "Best Company For Debt Consolidation Solution- Clear Credit",
   description:
-    "Consolidating debt can help you simplify and take control of your finances. Combine balances and make one set monthly payment with a debt consolidation loan.",
+    "Explore the best debt consolidation options with Clear Credit. Visit our site tocheck rates and discover tailored solutions to simplify your finances",
   metadata:
     "Debt consolidation, consolidate, consolidation loans, debt consolidation loan, debt, how to get out of debt, unsecured debt, debt, personal loans, personal loan",
 };

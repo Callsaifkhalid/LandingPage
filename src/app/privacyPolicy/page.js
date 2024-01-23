@@ -22,7 +22,7 @@ const PrivacyPolicy = () => {
       <PolicyNavbar />
       <div className={styles.mainHeading}>
         <h1>Privacy Policy</h1>
-        <span>Last updated: April 14, 2020</span>
+        <span>Last updated: Dec, 2023</span>
       </div>
       <div className={styles.text}>
         <span>

@@ -16,8 +16,8 @@ export const InputProvider = ({ children }) => {
   const [suite, setSuite] = useState("");
   const [city, setCity] = useState("");
   const [state, setState] = useState("");
-  const [zipCode, setZipCode] = useState("");
-  const [housing_cost, setHousingCost] = useState("");
+  const [zipCode, setZipCode] = useState(null);
+  const [housing_cost, setHousingCost] = useState(null);
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const heroSectionInput = (value) => {

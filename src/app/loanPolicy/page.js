@@ -16,32 +16,29 @@ const LoanPolicy = () => {
       </div>
       <div className={styles.text}>
         <span>
-          Clear Credit ai, LLC is a Utah licensed lending under the Utah
+          Clear Credit AI, LLC is a Utah licensed lending under the Utah
           Department of Financial Institutions and also provides loan referral
-          services. This offer is an estimate and loan amounts range between{" "}
+          services. Loan amounts range between{" "}
           <span style={{ fontWeight: "700" }}>$5,000 and $100,000</span>. The
           actual amount will be based on your current credit report. Loans may
           be brokered. APR will range from{" "}
           <span style={{ fontWeight: "700" }}>5.95% – 35.99%</span> depending on
           state. Not all applicants will qualify for{" "}
-          <span style={{ fontWeight: "700" }}>*5.95% APR</span>. To qualify you
+          <span style={{ fontWeight: "700" }}>*5.95% </span>APR. To qualify you
           must show proof of $18,000 in income, retirement, or other savings.
           Will it hurt my credit score to check my rate? No. Checking your rate
           does not impact your credit score and will only take a few minutes.
-          Unsecured Personal LoanPersonal Loan amounts vary to a maximum of
-          $100,000, but not all lenders provide up to $100,000. Clear Credit AI,
-          LLC does not guarantee that you will ultimately be approved for any
-          type of loan and the APR/Interest rate will vary depending on the
-          lender’s terms. This offer is subject to the expiration date listed on
-          the front page. By responding to this offer, you are authorizing us to
-          make inquiries and obtain information about you as we deem appropriate
-          for the purpose of evaluating you for this extension of credit,
-          including but not limited to: credit reports, income verification, and
-          contacting your employer.
+          Unsecured Personal Loan amounts vary to a maximum of $100,000, but not
+          all lenders provide up to $100,000. This is not a loan approval .This
+          offer is subject to the expiration date listed on the front page. By
+          responding to this offer, you are authorizing us to make inquiries and
+          obtain information about you as we deem appropriate for the purpose of
+          evaluating you for this extension of credit, including but not limited
+          to: credit reports, income verification, and contacting your employer.
           <br /> <br />
           <span style={{ fontWeight: "700" }}>Terms and Conditions:</span> To
           receive a loan, you must be a US citizen or permanent resident, and
-          currently reside in the US and at least 18 years old. Clear Credit is
+          currently reside in the US and at least 21 years old. Clear Credit is
           not responsible for errors made by any credit reporting agency. Not
           available in every state and loans may be brokered.
           <br />

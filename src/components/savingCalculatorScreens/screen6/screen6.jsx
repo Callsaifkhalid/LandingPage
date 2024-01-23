@@ -93,7 +93,7 @@ const Screen6 = ({ onContinue, onBack, progress }) => {
             />
           </div>
           <div className={styles.inputs}>
-            {zipCode != "" && <span>Zipcode</span>}
+            {zipCode && <span>Zipcode</span>}
             <input
               type="number"
               placeholder="Zipcode"
@@ -101,12 +101,12 @@ const Screen6 = ({ onContinue, onBack, progress }) => {
               value={zipCode}
               onChange={(e) => setZipCode(e.target.value)}
             />
-            {zipCode != "" && <IoMdCheckmark style={{ color: "#05c8e8" }} />}
+            {zipCode && <IoMdCheckmark style={{ color: "#05c8e8" }} />}
           </div>
         </div>
         <button
           className={
-            zipCode === null
+            !zipCode
               ? styles.disabledbutton
               : state === ""
               ? styles.disabledbutton

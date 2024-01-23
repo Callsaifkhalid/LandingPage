@@ -40,11 +40,31 @@ const Screen10 = ({ onBack, progress, onContinue }) => {
   };
   const handleInputChangePhone = (event) => {
     const inputValue = event.target.value;
+    const cursorPosition = event.target.selectionStart;
+    const isBackspacing = inputValue.length < phone.length;
+  
     const formattedNumber = formatPhoneNumber(inputValue);
+  
+    // Calculate adjusted cursor position
+    let adjustedCursorPosition;
+    if (isBackspacing) {
+      adjustedCursorPosition = cursorPosition;
+    } else {
+      adjustedCursorPosition =
+        cursorPosition === 4 ? cursorPosition : cursorPosition + 1;
+    }
+  
+    // Set the formatted number in the input
+    event.target.value = formattedNumber;
+  
+    // Set the cursor position
+    event.target.setSelectionRange(adjustedCursorPosition, adjustedCursorPosition);
+  
     const validInput = /^\d{0,10}$/;
     if (!validInput.test(formattedNumber.replace(/\D/g, ""))) {
       return;
     }
+  
     setPhoneNumber(formattedNumber.slice(0, 14));
     const phoneRegex = /^\d{10}$/;
     const isValid = phoneRegex.test(formattedNumber.replace(/\D/g, ""));

@@ -9,18 +9,22 @@ import { ErrorCodes } from "@/utils/error-codes";
 import { BASE_URL } from "@/utils/constantVariables";
 import { getCategoryBlogs } from "../api/blogCategory/repo";
 import dayjs from "dayjs";
+import { getAllBlogs } from "../api/blogs/repo";
 export default function blogDetails() {
 
   const searchParams = useSearchParams();
   const blogid = searchParams.get("blogid");
   const [BlogData, setBlogData] = useState({});
+  const [AllBlogData, setAllBlogData] = useState([]);
   const [ErrMsg, setErrMsg] = useState("");
   const [IsLoading, setIsLoading] = useState(false);
   const [blogCategory, setBlogCategory] = useState([]);
+  const FeaturedBlogs = AllBlogData.filter((blog) => blog.is_featured === 1);
 
   useEffect(() => {
     fetchData();
     fetchAllCategory();
+    fetchAllData();
   }, []);
   function fetchData() {
     setIsLoading(true);
@@ -80,24 +84,48 @@ export default function blogDetails() {
         console.log(err);
       });
   }
+  function fetchAllData() {
+    setIsLoading(true);
+    getAllBlogs()
+      .then(({ data }) => {
+        console.log("data blog", data);
+        setIsLoading(false);
+        switch (data.error_code) {
+          case ErrorCodes.success:
+            setAllBlogData(data.result);
+            break;
+          case ErrorCodes.failed:
+            setErrMsg("Oops! Some server error occued.");
+
+            break;
+          case ErrorCodes.not_exist:
+            setAllBlogData([]);
+            break;
+
+          default:
+            setErrMsg("Oops! Some error occued. EC: " + data.error_code);
+
+            break;
+        }
+      })
+      .catch((err) => {
+        setIsLoading(false);
+        console.log(err);
+      });
+  }
   const router = useRouter();
 
-  let arr = [
-    { id: 1, image: "./tourgoal1.png" },
-    { id: 2, image: "./tourgoal2.png" },
-    { id: 3, image: "./tourgoal3.png" },
-    { id: 4, image: "./tourgoal4.png" },
-  ];
+  
 
   const BlogViewComponant = ({ item }) => {
     return (
       <div className={styles.blogViewRectangleContainerStyle}>
         <img
-          src={item.image}
+          src={BASE_URL + item.thumbnail}
           className={styles.blogViewRectangleImageImageStyle}
         />
         <div className={styles.blogViewRectangleTextContainerSTyle}>
-          Find a Loan from Reputable Lenders in Minutes
+          {item?.title}
         </div>
       </div>
     );
@@ -154,7 +182,7 @@ export default function blogDetails() {
 
               <div className={styles.relatedPostStyle}>Related Posts</div>
               <div className={styles.arrMapHolderContainerStyle}>
-                {arr.map((item) => {
+                {FeaturedBlogs.map((item) => {
                   return <BlogViewComponant item={item} />;
                 })}
               </div>
