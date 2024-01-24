@@ -13,7 +13,7 @@
 }
 .herowrapper {
   color: rgb(83, 78, 78);
-  padding-bottom: 4.1rem;
+  padding-bottom: 4rem;
   background-color: #c6f7ff;
 }
 .herocontainer {
@@ -180,19 +180,23 @@
 .herocircle {
   height: 80%;
   width: 80%;
-
-  margin-top: 0rem;
+  margin-top: 10.8rem;
+  margin-left: 20%;
 }
 .herogirl {
   height: 100%;
-
   margin-top: -32.7rem;
+  margin-left: 20%;
 }
 .inputcontainerposition {
   display: flex;
   justify-content: center;
-  margin-top: -25rem;
-  margin-bottom: 0rem;
+  position: absolute;
+  bottom: 10%;
+  left: 50%; /* Adjust the left position as needed */
+  transform: translateX(-50%); /* Center the box horizontally */
+  margin-right: 5%;
+
 }
 .inputcontainer {
   width: 400px;
@@ -219,7 +223,7 @@
   border: 1px solid #05c8e8;
   outline: none;
 }
-.startnowbutton{
+.startnowbutton {
   width: 80%;
   border: none;
   outline: none;
@@ -231,7 +235,7 @@
   border-radius: 5px;
   cursor: pointer;
 }
-.startnowbuttonerror{
+.startnowbuttonerror {
   width: 80%;
   border: none;
   outline: none;

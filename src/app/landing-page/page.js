@@ -28,9 +28,7 @@ const LandingPage = () => {
       router.push("/checkrates");
     }
   };
-  const handleRespondtoMail = () => {
-    router.push("/respond-to-mail-offer");
-  };
+
   return (
     <section className={styles.herowrapper} id="hero">
       <div className={styles.flexCenter + " " + styles.herocontainer}>
@@ -42,13 +40,13 @@ const LandingPage = () => {
               <br /> Made Easy.
             </h2>
             <div className={styles.herodes}>
-              <IoCheckmark style={{ fontSize: "20px" }} />
+              <IoCheckmark style={{ fontSize: "20px", color: "#05c8e8" }} />
               <span>
                 Rates from 5.20% - 35.99% APR<sup>1</sup>
               </span>
             </div>
             <div className={styles.herodes2}>
-              <IoCheckmark style={{ fontSize: "20px" }} />
+              <IoCheckmark style={{ fontSize: "20px", color: "#05c8e8" }} />
               <span>Loan amounts from $600 to $200,000</span>
             </div>
           </div>
