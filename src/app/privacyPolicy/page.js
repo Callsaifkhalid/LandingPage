@@ -1,9 +1,7 @@
-
 import React from "react";
 import styles from "./privacypolicy.module.css";
 import Footer2 from "@/components/footer2/footer2";
 import PolicyNavbar from "@/components/policyNavbar/policynavbar";
-
 
 export const metadata = {
   title: "Clear Credit Privacy Policy ",
@@ -11,12 +9,7 @@ export const metadata = {
     "Safeguard your information with Clear Credit's Privacy Policy details.",
 };
 
-
 const PrivacyPolicy = () => {
- 
-   
-
-
   return (
     <div>
       <PolicyNavbar />
@@ -488,8 +481,8 @@ const PrivacyPolicy = () => {
             at:
             <br />{" "}
             <span style={{ fontWeight: "700" }}>Clear Credit AI, LLC</span>
-            <br /> 1400 112TH Ave SE Suite 100,
-            <br /> Bellevue, WA 98004 1-844-208-1100
+            <br /> 1400 112th Ave SE, Bellevue, WA 98004 <br />
+            1-844-208-1100
             <br /> service@clearcredit.ai
             <br />{" "}
             <span style={{ fontWeight: "700" }}>

@@ -1,0 +1,573 @@
+.flexCenter {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.flexColStart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.herowrapper {
+  color: rgb(83, 78, 78);
+  padding-bottom: 4.1rem;
+  background-color: #c6f7ff;
+}
+.herocontainer {
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+/* left side */
+.heroleft {
+  gap: 3rem;
+}
+.herotitle {
+}
+.herotitle > h2 {
+  font-weight: 900;
+  font-size: 3.3rem;
+  line-height: 4rem;
+  color: #05c8e8;
+}
+.herodes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 308px;
+  color: #1a4048;
+  margin-bottom: 10px;
+}
+.herodes2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 354px;
+  color: #1a4048;
+}
+.herodes > span {
+  font-size: 18px;
+}
+.herodes2 > span {
+  font-size: 18px;
+}
+.errormsg {
+  font-size: 13px;
+  color: red;
+  margin-top: -8%;
+}
+.findmyrate {
+  width: 500px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+}
+.respondtomail {
+  width: 499px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin-top: -9.2%;
+  border: 1px solid #05c8e8;
+  border-top: none;
+}
+
+.respondtomail button {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: white;
+  color: #05c8e8;
+  cursor: pointer;
+  transition: 300ms all ease-in;
+}
+.respondtomail button:hover {
+  transform: scale(1.03);
+}
+.findmyrate > input {
+  width: 350px;
+  height: 50px;
+  outline: none;
+  font-size: 18px;
+  padding-left: 1rem;
+  border: #05c8e8 1px solid;
+}
+.findmyrate input:focus {
+  border: 1px solid #1a4048;
+}
+.findmyrateerror {
+  width: 500px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+}
+.findmyrateerror > input {
+  width: 350px;
+  height: 50px;
+  outline: none;
+  font-size: 18px;
+  padding-left: 1rem;
+  border: 1px solid red;
+}
+.findmyrateerror input:focus {
+  border: 1px solid red;
+}
+
+.Link {
+  border: none;
+  text-decoration: none;
+  width: 370px;
+  height: 55px;
+  outline: none;
+  background-color: #1a4048;
+  color: #05c8e8;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all ease-in 300ms;
+  box-shadow: inset 0 0 0 0 #1a4048;
+  transition: color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Link:hover {
+  box-shadow: inset 370px 0 0 0 #05c8e8;
+  color: #1a4048;
+}
+.thumbsup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  color: #1a4048;
+  margin-top: -2.4rem;
+}
+.thumbsup > span {
+  font-size: 13px;
+}
+.ovals {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.ovals > img {
+  border-radius: 5px;
+  margin-left: -9px;
+  width: 12%;
+  height: 12%;
+}
+.ovals > span {
+  color: #8b8b8b;
+  font-size: 13px;
+  margin-left: 10px;
+}
+
+/* right side */
+
+.imagecontainer {
+  width: 35rem;
+  height: 35rem;
+}
+.herocircle {
+  height: 80%;
+  width: 80%;
+
+  margin-top: 0rem;
+}
+.herogirl {
+  height: 100%;
+
+  margin-top: -32.7rem;
+}
+.inputcontainerposition {
+  display: flex;
+  justify-content: center;
+  margin-top: -25rem;
+  margin-bottom: 0rem;
+}
+.inputcontainer {
+  width: 400px;
+  height: 390px;
+  box-shadow: rgba(12, 94, 36, 0.356) 0px 5px 15px;
+  background-color: white;
+  border-radius: 10px;
+}
+.inputfields {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 5%;
+  align-items: center;
+}
+.inputfields input {
+  height: 40px;
+  border: 1px solid #8b8b8b;
+  border-radius: 10px;
+  width: 80%;
+  padding-left: 5px;
+}
+.inputfields input:focus {
+  border: 1px solid #05c8e8;
+  outline: none;
+}
+.startnowbutton{
+  width: 80%;
+  border: none;
+  outline: none;
+  background-color: #05c8e8;
+  color: white;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.startnowbuttonerror{
+  width: 80%;
+  border: none;
+  outline: none;
+  background-color: #cae9f2;
+  color: white;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.inputfields span {
+  color: #1a4048;
+  font-weight: 700;
+}
+
+/* Responsivness */
+@media screen and (min-width: 718px) and (max-width: 769px) {
+  .herowrapper {
+    width: 100%;
+  }
+  .imagecontainer {
+    width: 22rem;
+    height: 25.5rem;
+  }
+  .herogirl {
+    margin-left: 2rem;
+  }
+  .heroleft {
+    margin-right: -2rem;
+  }
+  .flexCenter {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  .herogirl {
+    margin-top: -28rem;
+  }
+  .herotitle > h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: #05c8e8;
+  }
+  .herodes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 238px;
+    color: #1a4048;
+    margin-bottom: 10px;
+  }
+  .herodes2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 274px;
+    color: #1a4048;
+  }
+  .herodes > span {
+    font-size: 14px;
+  }
+  .herodes2 > span {
+    font-size: 14px;
+  }
+  .respondtomail {
+    width: 350px;
+    height: 50px;
+    margin-top: -13.7%;
+    border: 1px solid #05c8e8;
+  }
+  .findmyrate {
+    width: 350px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #05c8e8 1px solid;
+  }
+  .findmyrate > input {
+    width: 250px;
+    height: 58px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    padding-left: 0.8rem;
+  }
+  .findmyrateerror {
+    width: 350px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #05c8e8 1px solid;
+  }
+  .findmyrateerror > input {
+    width: 250px;
+    height: 58px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    padding-left: 0.8rem;
+    border: 1px solid red;
+  }
+  .Link {
+    width: 120px;
+    height: 60px;
+    border: none;
+    outline: none;
+    background-color: #1a4048;
+    color: #05c8e8;
+    font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
+  }
+}
+@media screen and (min-width: 770px) and (max-width: 920px) {
+  .herowrapper {
+    width: 100%;
+  }
+  .imagecontainer {
+    width: 21rem;
+    height: 30rem;
+  }
+  .flexCenter {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  .herogirl {
+    margin-top: -28rem;
+    margin-left: 1.7rem;
+  }
+  .herocircle {
+    margin-left: 5rem;
+  }
+  .herotitle > h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: #05c8e8;
+  }
+  .herodes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 238px;
+    color: #1a4048;
+    margin-bottom: 10px;
+  }
+  .herodes2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 274px;
+    color: #1a4048;
+  }
+  .herodes > span {
+    font-size: 14px;
+  }
+  .herodes2 > span {
+    font-size: 14px;
+  }
+  .respondtomail {
+    width: 350px;
+    height: 50px;
+    margin-top: -13.7%;
+    border: 1px solid #05c8e8;
+  }
+  .findmyrate {
+    width: 350px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #05c8e8 1px solid;
+  }
+  .findmyrate > input {
+    width: 250px;
+    height: 58px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    padding-left: 0.8rem;
+  }
+  .findmyrateerror {
+    width: 350px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #05c8e8 1px solid;
+  }
+  .findmyrateerror > input {
+    width: 250px;
+    height: 58px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    padding-left: 0.8rem;
+    border: 1px solid red;
+  }
+  .Link {
+    width: 120px;
+    height: 60px;
+    border: none;
+    outline: none;
+    background-color: #1a4048;
+    color: #05c8e8;
+    font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 717px) {
+  .herowrapper {
+    padding-left: 1rem;
+  }
+  .herotitle {
+    margin-top: 5rem;
+  }
+  .herotitle > h2 {
+    font-weight: 900;
+    font-size: 2.2rem;
+    line-height: 3rem;
+    color: #05c8e8;
+  }
+
+  .herodes {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 303px;
+    color: #1a4048;
+    margin-bottom: 10px;
+  }
+  .herodes2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 349px;
+    color: #1a4048;
+  }
+  .herodes > span {
+    font-size: 17px;
+  }
+  .herodes2 > span {
+    font-size: 17px;
+  }
+  .respondtomail {
+    width: 300px;
+    height: 50px;
+    margin-top: -11.2%;
+    border: 1px solid #05c8e8;
+  }
+  .findmyrate {
+    width: 300px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: none;
+  }
+  .findmyrate > input {
+    width: 280px;
+    height: 58px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    padding-left: 1rem;
+    border: #05c8e8 1px solid;
+  }
+  .findmyrateerror {
+    width: 300px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.7rem;
+    border: none;
+  }
+  .findmyrateerror > input {
+    width: 280px;
+    height: 58px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    padding-left: 1rem;
+    border: 1px solid red;
+  }
+  .Link {
+    width: 300px;
+    height: 60px;
+    border: none;
+    outline: none;
+    background-color: #1a4048;
+    color: #05c8e8;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .Link:hover {
+    box-shadow: inset 300px 0 0 0 #05c8e8;
+    color: #1a4048;
+  }
+  .heroright {
+    display: none;
+  }
+  .imagecontainer {
+    display: none;
+  }
+  .errormsg {
+    font-size: 13px;
+    color: red;
+    margin-top: -56%;
+    margin-bottom: 40%;
+  }
+}
+@media screen and (min-width: 921px) and (max-width: 1200px) {
+  .herowrapper {
+    width: 100%;
+  }
+  .flexCenter {
+    flex-wrap: nowrap;
+  }
+  .imagecontainer {
+    width: 25rem;
+    height: 35rem;
+  }
+  .herocircle {
+    margin-left: 5rem;
+  }
+  .herogirl {
+    margin-left: 1.5rem;
+  }
+}
+@media screen and (min-width: 540px) and (max-width: 590px) {
+  .herowrapper {
+    width: 100%;
+  }
+}
