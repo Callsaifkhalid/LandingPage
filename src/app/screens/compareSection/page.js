@@ -11,6 +11,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 const CompareSection = () => {
   const [click, setClick] = useState(false);
+  const [expandedIndex, setExpandedIndex] = useState(-1);
   const [inputLoan, setInputLoan] = useState("20000");
   const [showFilteredLoanEnter, setShowFilteredLoanEnter] = useState(null);
   const [resentButton, setResetBtton] = useState(false);
@@ -27,6 +28,10 @@ const CompareSection = () => {
     const aprB = parseFloat(b.APR.replace("%", ""));
     return aprA - aprB;
   });
+  const handleclick = (index) => {
+    setExpandedIndex((prevIndex) => (prevIndex === index ? -1 : index));
+  };
+
   const handleFilter = (value) => {
     setInputLoan(value);
     setResetBtton(true);
@@ -206,12 +211,12 @@ const CompareSection = () => {
               )}
             </div>
           )}
-          {lendersToDisplay?.map((lender) => (
+          {lendersToDisplay?.map((lender,index) => (
             <div className={styles.lendersboxes}>
               <div className={styles.box2} key={lender.id}>
                 <div className={styles.div1}>
                   <img src={lender.img} alt="" width={100} />
-                  <button onClick={() => setClick(lender.id)}>
+                  <button onClick={() => handleclick(index)}>
                     View Details
                   </button>
                 </div>
@@ -250,7 +255,7 @@ const CompareSection = () => {
               </div>
               {lender.details.map((detail) => (
                 <div>
-                  {click === lender.id && (
+                  {expandedIndex === index && (
                     <div className={styles.viewdetailsbox}>
                       <div>
                         <h3>{detail.title} Personal Loans</h3>

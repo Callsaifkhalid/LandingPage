@@ -67,6 +67,7 @@
   align-items: center;
   margin: 0px auto;
   margin-left: 3rem;
+  cursor: pointer;
 }
 .questionn:hover{
   background-color: #d6f6fc;

@@ -13,17 +13,17 @@
 }
 .herowrapper {
   color: rgb(83, 78, 78);
-  padding-bottom: 4rem;
+  overflow: hidden;
   background-color: #c6f7ff;
 }
 .herocontainer {
-  padding: 1rem;
+  padding: 0rem 1rem; 
   justify-content: space-between;
   align-items: flex-start;
 }
 /* left side */
 .heroleft {
-  gap: 3rem;
+  gap: 2rem;
 }
 .herotitle {
 }
@@ -57,7 +57,7 @@
 .errormsg {
   font-size: 13px;
   color: red;
-  margin-top: -8%;
+  margin-top: -6%;
 }
 .findmyrate {
   width: 500px;
@@ -147,7 +147,7 @@
   align-items: center;
   width: 300px;
   color: #1a4048;
-  margin-top: -2.4rem;
+  margin-top: -1.9rem;
 }
 .thumbsup > span {
   font-size: 13px;
@@ -180,7 +180,7 @@
 .herocircle {
   height: 80%;
   width: 80%;
-  margin-top: 10.8rem;
+  margin-top: 6rem;
   margin-left: 20%;
 }
 .herogirl {
@@ -189,14 +189,12 @@
   margin-left: 20%;
 }
 .inputcontainerposition {
-  display: flex;
-  justify-content: center;
   position: absolute;
-  bottom: 10%;
-  left: 50%; /* Adjust the left position as needed */
+  left: 50%;
+  bottom: 5%;
+  /* Adjust the left position as needed */
   transform: translateX(-50%); /* Center the box horizontally */
-  margin-right: 5%;
-
+  
 }
 .inputcontainer {
   width: 400px;
@@ -250,6 +248,31 @@
 .inputfields span {
   color: #1a4048;
   font-weight: 700;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.loginbutton {
+  font-weight: 700;
+  height: 40px;
+  width: 180px;
+  color: #05c8e8;
+  background: #1a4048;
+  border-radius: 10.33px;
+  border: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 4rem;
+  transition: all ease-in 300ms;
+  font-size: 17px;
+  cursor: pointer;
+}
+.loginbutton:hover {
+  transform: scale(1.04);
+  box-shadow: 5px 5px 10px white;
 }
 
 /* Responsivness */

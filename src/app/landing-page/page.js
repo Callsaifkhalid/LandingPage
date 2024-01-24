@@ -8,6 +8,7 @@ import { useContext } from "react";
 import { InputContext } from "@/app/context/inputContext";
 import { useRouter } from "next/navigation";
 import { MdMailOutline } from "react-icons/md";
+import { FaPhone } from "react-icons/fa";
 const LandingPage = () => {
   const { heroSectionInput } = useContext(InputContext);
   const [inputvalue, setinputvalue] = useState(600);
@@ -31,6 +32,13 @@ const LandingPage = () => {
 
   return (
     <section className={styles.herowrapper} id="hero">
+      <div className={styles.navbar}>
+        <img src="../logo.svg" alt="logo" width={270}/>
+        <button className={styles.loginbutton}>
+            <FaPhone />
+            1-844-208-1100
+          </button>
+      </div>
       <div className={styles.flexCenter + " " + styles.herocontainer}>
         {/* left side */}
         <div className={styles.flexColStart + " " + styles.heroleft}>
