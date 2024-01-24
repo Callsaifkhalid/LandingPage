@@ -12,26 +12,17 @@
     "axios": "^1.6.3",
     "dayjs": "^1.11.10",
     "framer-motion": "^10.16.5",
-    "http-proxy-middleware": "^2.0.6",
     "next": "14.0.2",
-    "postscribe": "^2.0.8",
     "react": "^18",
     "react-currency-input-field": "^3.6.12",
     "react-date-picker": "^10.5.2",
-    "react-date-range": "^1.4.0",
-    "react-datepicker": "^4.23.0",
     "react-dom": "^18",
-    "react-faq-component": "^1.3.4",
     "react-icons": "^4.12.0",
-    "react-iframe": "^1.8.5",
     "react-loading-skeleton": "^3.3.1",
-    "react-number-format": "^5.3.1",
     "react-outside-click-handler": "^1.3.0",
     "react-scroll": "^1.9.0",
     "react-select": "^5.8.0",
-    "react-swiper": "^0.1.5",
     "styled-components": "^6.1.6",
-    "swiper": "^11.0.5",
-    "vercel": "^32.5.6"
+    "swiper": "^11.0.5"
   }
 }
