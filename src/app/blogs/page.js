@@ -182,7 +182,7 @@ export default function BlogList() {
               </div>
             ))}
 
-            <img src="./sideimage.png" className={styles.testImageStyle} />
+            <img src="./sideimage.png" className={styles.testImageStyle} onClick={()=>router.push("/checkrates")}/>
           </div>
         </div>
       </div>

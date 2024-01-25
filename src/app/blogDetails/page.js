@@ -20,7 +20,6 @@ export default function blogDetails() {
   const [IsLoading, setIsLoading] = useState(false);
   const [blogCategory, setBlogCategory] = useState([]);
   const FeaturedBlogs = AllBlogData.filter((blog) => blog.is_featured === 1);
-
   useEffect(() => {
     fetchData();
     fetchAllCategory();
@@ -203,7 +202,7 @@ export default function blogDetails() {
               </div>
             ))}
 
-            <img src="./sideimage.png" className={styles.testImageStyle} />
+            <img src="./sideimage.png" className={styles.testImageStyle} onClick={()=>router.push("/checkrates")}/>
           </div>
         </div>
       </div>
