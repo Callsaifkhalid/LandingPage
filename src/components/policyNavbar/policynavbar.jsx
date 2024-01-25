@@ -28,7 +28,7 @@ const PolicyNavbar = () => {
   return (
     <section className={styles.headerwrapper}>
       <div className={styles.logo}>
-        <img src="../logo.svg" alt="logo" width={250} onClick={()=>router.push('/')}/>
+        <img src="../logo.svg" alt="logo" width={270} onClick={()=>router.push('/')}/>
       </div>
       <OutsideClickHandler onOutsideClick={() => setmenuopen(false)}>
         <div

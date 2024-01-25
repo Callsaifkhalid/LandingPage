@@ -1,173 +1,163 @@
 "use client";
-import React, { useState } from "react";
+import options from "@/utils/stateOptions";
 import styles from "./landingpage.module.css";
-import { IoCheckmark } from "react-icons/io5";
-import CurrencyInput from "react-currency-input-field";
-import { IoMdThumbsUp } from "react-icons/io";
-import { useContext } from "react";
-import { InputContext } from "@/app/context/inputContext";
-import { useRouter } from "next/navigation";
-import { MdMailOutline } from "react-icons/md";
-import { FaPhone } from "react-icons/fa";
+import { FaPhone, FaCheck } from "react-icons/fa";
+import Select from "react-select";
+import { useState } from "react";
 const LandingPage = () => {
-  const { heroSectionInput } = useContext(InputContext);
-  const [inputvalue, setinputvalue] = useState(600);
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const [click, setClick] = useState(false);
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const router = useRouter();
-  const handlechange = (value) => {
-    heroSectionInput(value);
-    setinputvalue(value);
-  };
-  const handleclick = () => {
-    if (inputvalue < 600) {
-      return;
-    } else if (inputvalue > 200000) {
-    } else {
-      router.push("/checkrates");
-    }
+  const [pincode, setPincode] = useState("");
+  const [isValidEmail, setIsValidEmail] = useState(true);
+  const [checkemail, setcheckemail] = useState(false);
+
+  const handleEmailChange = (event) => {
+    const inputValue = event.target.value;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const isValid = emailRegex.test(inputValue);
+    setIsValidEmail(isValid);
+    setEmail(inputValue);
+    setcheckemail(isValid);
   };
 
+  const phoneNumber = "+1-844-208-1100";
+
+  const handleCall = () => {
+    window.location.href = `tel:${phoneNumber}`;
+  };
+
+  const Styles = {
+    control: (provided, state) => ({
+      display: "flex",
+      height: "40px",
+      border: "none",
+      placeholder: "State",
+      alignItems: "center",
+    }),
+    dropdownIndicator: (base) => ({
+      ...base,
+      color: "#05c8e8",
+      ":hover": {
+        color: "#05c8e8",
+      },
+    }),
+  };
   return (
-    <section className={styles.herowrapper} id="hero">
+    <div className={styles.wrapper}>
       <div className={styles.navbar}>
         <img src="../logo.svg" alt="logo" />
-        <button className={styles.loginbutton}>
+        <div className={styles.callbutton} onClick={handleCall}>
           <FaPhone />
           1-844-208-1100
-        </button>
+        </div>
       </div>
-      <div className={styles.flexCenter + " " + styles.herocontainer}>
-        {/* left side */}
-        <div className={styles.flexColStart + " " + styles.heroleft}>
-          <div className={styles.herotitle}>
-            <h2>
-              Debt Consolidation
-              <br /> Made Easy.
-            </h2>
-            <div className={styles.herodes}>
-              <IoCheckmark style={{ fontSize: "20px", color: "#05c8e8" }} />
+      <div className={styles.content}>
+        <div className={styles.textcontent}>
+          <span className={styles.textcontentHeading}>
+            Everyone deserves the opportunity to start{" "}
+            <span className={styles.headingstylechange}>
+              Getting Out Of Debt!
+            </span>
+          </span>
+          <div className={styles.pointersbox}>
+            <div className={styles.pointers}>
+              <FaCheck size={20} fill="#05c8e8" />
+              <span>Unlock Financing Up To $100,000</span>
+            </div>
+            <div className={styles.pointers}>
+              <FaCheck size={20} fill="#05c8e8" />
+              <span>Pay down your high-interest debt</span>
+            </div>
+            <div className={styles.pointers}>
+              <FaCheck size={30} fill="#05c8e8" />
               <span>
-                Rates from 5.20% - 35.99% APR<sup>1</sup>
+                Explore Offers Without Any Impact on Your Credit Score
               </span>
             </div>
-            <div className={styles.herodes2}>
-              <IoCheckmark style={{ fontSize: "20px", color: "#05c8e8" }} />
-              <span>Loan amounts from $600 to $200,000</span>
-            </div>
           </div>
-          <div
-            className={
-              inputvalue < 600 || inputvalue > 200000
-                ? styles.findmyrateerror
-                : styles.findmyrate
-            }
-          >
-            <CurrencyInput
-              placeholder="Enter amount ($600 to $200,000)"
-              prefix="$"
-              maxLength={6}
-              onValueChange={(value) => handlechange(value)}
-            />
-            <button className={styles.Link} onClick={handleclick}>
-              Find My Rate{" "}
-            </button>
-          </div>
+        </div>
+        {!click && (
+          <div className={styles.inputcontainer}>
+            <div className={styles.inputfields}>
+              <span>
+                To redeem your mail offer, just enter your email and PIN below.
+              </span>
+              <input
+                type="text"
+                placeholder="Email"
+                value={email}
+                onChange={handleEmailChange}
+                style={{ border: !isValidEmail ? "1px solid red" : "" }}
+              />
+              <input
+                type="text"
+                placeholder="Mailer Code"
+                value={pincode}
+                onChange={(e) => setPincode(e.target.value)}
+              />
 
-          {inputvalue < 600 && (
-            <div className={styles.errormsg}>
-              <span>Enter amount ($600 to $200,000)</span>
+              <button
+                className={
+                  !checkemail
+                    ? styles.disabledbutton
+                    : pincode === ""
+                    ? styles.disabledbutton
+                    : styles.startnowbutton
+                }
+                onClick={() => setClick(true)}
+                disabled={email === "" ? true : pincode === "" ? true : false}
+              >
+                Redeem Offer
+              </button>
+              {/* <div className={styles.assistancebox}>
+                <p className={styles.assistance}>
+                  For immediate assistance, call:
+                </p>
+                <button className={styles.btnNum} onClick={handleCall}>1-844-208-1100</button>
+              </div> */}
             </div>
-          )}
-          {inputvalue > 200000 && (
-            <div className={styles.errormsg}>
-              <span>Enter amount ($600 to $200,000)</span>
+          </div>
+        )}
+        {click && (
+          <div className={styles.inputcontainer2}>
+            <div className={styles.inputfieldsform2}>
+              <span>Confirm your information</span>
+              <input type="text" placeholder="First name" />
+              <input type="text" placeholder="Last Name" />
+              <input type="text" placeholder="Address" />
+              <input type="text" placeholder="City" />
+              <Select
+                options={options}
+                styles={Styles}
+                placeholder="State"
+                className={styles.statedropdown}
+              />
+              <input type="text" placeholder="Email" />
+              <input type="text" placeholder="Phone Number" />
+
+              <button className={styles.startnowbutton}>Submit</button>
+              <div className={styles.assistancebox}>
+                <p className={styles.assistance}>
+                  By clicking submit I agree that I will be contacted by Clear
+                  Credit via text message, email, or phone call. Clear Credit{" "}
+                  <span style={{ fontWeight: "700" }}>IS NOT</span> a marketing
+                  agency and your contact info{" "}
+                  <span style={{ fontWeight: "700" }}>WILL NOT</span> be sold.
+                  Your contact information will{" "}
+                  <span style={{ fontWeight: "700" }}>ONLY</span> be used by
+                  Clear Credit for the express and sole purpose of offering a
+                  loan or other financial products.
+                </p>
+                {/* <button className={styles.btnNum} onClick={handleCall}>1-844-208-1100</button> */}
+              </div>
             </div>
-          )}
-          <div className={styles.thumbsup}>
-            <IoMdThumbsUp />
-            <span>Checking rates won’t affect your credit score</span>
           </div>
-          <div className={styles.ovals}>
-            <img src="./Oval1.png" alt="" />
-            <img src="./Oval3.png" alt="" />
-            <img src="./Oval2.png" alt="" />
-            <span>50,000+ clients around the world</span>
-          </div>
-        </div>
-        {/* right side */}
-        <div className={styles.flexCenter + " " + styles.heroright}>
-          <div
-            className={styles.imagecontainer}
-            initial={{ y: "7rem", opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 2, type: "spring" }}
-          >
-            <img src="./herocircle.png" alt="" className={styles.herocircle} />
-            <img src="./herogirl.png" alt="" className={styles.herogirl} />
-          </div>
+        )}
+        <div className={styles.imagebox}>
+          <img src="/herogirlwithcircle.svg" alt="herogirl" />
         </div>
       </div>
-      <div className={styles.inputcontainerposition}>
-        <div className={styles.inputcontainer}>
-          <div className={styles.inputfields}>
-            <span>Let's Get Started</span>
-            <input
-              type="text"
-              placeholder="First Name"
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
-            />
-            <input
-              type="text"
-              placeholder="Last Name"
-              value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
-            />
-            <input
-              type="number"
-              placeholder="Phone Number"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-            />
-            <input
-              type="text"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <button
-              className={
-                firstName === ""
-                  ? styles.startnowbuttonerror
-                  : lastName === ""
-                  ? styles.startnowbuttonerror
-                  : phone === ""
-                  ? styles.startnowbuttonerror
-                  : email === ""
-                  ? styles.startnowbuttonerror
-                  : styles.startnowbutton
-              }
-              disabled={
-                firstName === ""
-                  ? true
-                  : lastName === ""
-                  ? true
-                  : phone === ""
-                  ? true
-                  : email === ""
-                  ? true
-                  : false
-              }
-            >
-              Start now
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
   );
 };
 

@@ -1,210 +1,116 @@
-.flexCenter {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-.flexColStart {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-.herowrapper {
-  color: rgb(83, 78, 78);
-  overflow: hidden;
+.wrapper {
   background-color: #c6f7ff;
+  height: 100vh;
+  overflow: hidden;
 }
-.herocontainer {
-  padding: 0rem 1rem;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.heroleft {
-  gap: 2rem;
-}
-.herotitle {
-}
-.herotitle > h2 {
-  font-weight: 900;
-  font-size: 3.3rem;
-  line-height: 4rem;
-  color: #05c8e8;
-}
-.herodes {
+.navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 308px;
-  color: #1a4048;
-  margin-bottom: 10px;
-}
-.herodes2 {
-  display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 354px;
-  color: #1a4048;
+  padding: 1%;
 }
-.herodes > span {
-  font-size: 18px;
+.navbar img {
+  width: 270px;
 }
-.herodes2 > span {
-  font-size: 18px;
-}
-.errormsg {
-  font-size: 13px;
-  color: red;
-  margin-top: -6%;
-}
-.findmyrate {
-  width: 500px;
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-}
-.respondtomail {
-  width: 499px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  margin-top: -9.2%;
-  border: 1px solid #05c8e8;
-  border-top: none;
-}
-
-.respondtomail button {
-  border: none;
-  outline: none;
-  font-size: 14px;
-  font-weight: 600;
-  background-color: white;
-  color: #05c8e8;
-  cursor: pointer;
-  transition: 300ms all ease-in;
-}
-.respondtomail button:hover {
-  transform: scale(1.03);
-}
-.findmyrate > input {
-  width: 350px;
-  height: 50px;
-  outline: none;
-  font-size: 18px;
-  padding-left: 1rem;
-  border: #05c8e8 1px solid;
-}
-.findmyrate input:focus {
-  border: 1px solid #1a4048;
-}
-.findmyrateerror {
-  width: 500px;
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-}
-.findmyrateerror > input {
-  width: 350px;
-  height: 50px;
-  outline: none;
-  font-size: 18px;
-  padding-left: 1rem;
-  border: 1px solid red;
-}
-.findmyrateerror input:focus {
-  border: 1px solid red;
-}
-
-.Link {
-  border: none;
-  text-decoration: none;
-  width: 370px;
-  height: 55px;
-  outline: none;
-  background-color: #1a4048;
-  color: #05c8e8;
-  font-size: 18px;
+.callbutton {
   font-weight: 700;
-  cursor: pointer;
-  transition: all ease-in 300ms;
-  box-shadow: inset 0 0 0 0 #1a4048;
-  transition: color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+  height: 40px;
+  width: 180px;
+  color: #05c8e8;
+  background: #1a4048;
+  border-radius: 10.33px;
+  border: none;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  transition: all ease-in 300ms;
+  font-size: 17px;
+  cursor: pointer;
 }
-.Link:hover {
-  box-shadow: inset 370px 0 0 0 #05c8e8;
-  color: #1a4048;
+.callbutton:hover {
+  transform: scale(1.04);
+  box-shadow: 5px 5px 10px white;
 }
-.thumbsup {
+.content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 300px;
-  color: #1a4048;
-  margin-top: -1.9rem;
+  align-items: flex-end;
+  padding: 0% 1%;
+  height: 88vh;
 }
-.thumbsup > span {
-  font-size: 13px;
-}
-.ovals {
+.textcontent {
+  width: 35%;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  flex-direction: column;
+  gap: 60px;
+  align-self: center;
 }
-.ovals > img {
-  border-radius: 5px;
-  margin-left: -9px;
-  width: 12%;
-  height: 12%;
-}
-.ovals > span {
-  color: #8b8b8b;
-  font-size: 13px;
-  margin-left: 10px;
-}
+.textcontentHeading {
+  font-size: 2.5rem;
+  line-height: 4rem;
 
-.imagecontainer {
-  width: 35rem;
-  height: 35rem;
+  color: #1a4048;
 }
-.herocircle {
-  height: 80%;
-  width: 80%;
-  margin-top: 6rem;
-  margin-left: 20%;
+.headingstylechange {
+  color: #05c8e8;
+  font-weight: 700;
 }
-.herogirl {
-  height: 100%;
-  margin-top: -32.7rem;
-  margin-left: 20%;
+.pointersbox {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 65%;
 }
-.inputcontainerposition {
-  position: absolute;
-  left: 50%;
-  bottom: 5%;
-  transform: translateX(-50%);
+.pointers {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.imagebox img {
+  width: 500px;
 }
 .inputcontainer {
-  width: 400px;
-  height: 390px;
+  width: 320px;
+  min-height: 350px;
   box-shadow: rgba(12, 94, 36, 0.356) 0px 5px 15px;
   background-color: white;
   border-radius: 10px;
+  align-self: center;
+  margin-right: -3%;
+}
+.inputcontainer:hover {
+  box-shadow: rgba(12, 94, 36, 0.356) 0px 25px 25px;
+}
+.inputcontainer2 {
+  width: 350px;
+  min-height: 350px;
+  box-shadow: rgba(12, 94, 36, 0.356) 0px 5px 15px;
+  background-color: white;
+  border-radius: 10px;
+  align-self: center;
+  margin-right: -3%;
+  margin-bottom: 3%;
 }
 .inputfields {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
   padding-top: 5%;
   align-items: center;
+}
+.inputfieldsform2 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 5%;
+  align-items: center;
+}
+.inputfields span {
+  text-align: center;
+  font-weight: 600;
+  margin: 2%;
+  line-height: 2em;
+  color: #1a4048;
 }
 .inputfields input {
   height: 40px;
@@ -213,9 +119,35 @@
   width: 80%;
   padding-left: 5px;
 }
+
 .inputfields input:focus {
   border: 1px solid #05c8e8;
   outline: none;
+}
+.inputfieldsform2 span {
+  text-align: center;
+  font-weight: 600;
+  margin: 2%;
+  line-height: 2em;
+  color: #8b8b8b;
+}
+.inputfieldsform2 input {
+  height: 40px;
+  border: 1px solid #8b8b8b;
+  border-radius: 10px;
+  width: 80%;
+  padding-left: 5px;
+}
+
+.inputfieldsform2 input:focus {
+  border: 1px solid #05c8e8;
+  outline: none;
+}
+.statedropdown {
+  height: 40px;
+  border: 1px solid #8b8b8b;
+  border-radius: 10px;
+  width: 82%;
 }
 .startnowbutton {
   width: 80%;
@@ -227,476 +159,187 @@
   font-size: 16px;
   font-weight: 700;
   border-radius: 5px;
+  transition: transform 0.3s ease;
   cursor: pointer;
 }
-.startnowbuttonerror {
+.startnowbutton:hover {
+  transform: translateY(-5px);
+}
+.disabledbutton {
+  background-color: #cae9f2;
   width: 80%;
   border: none;
   outline: none;
-  background-color: #cae9f2;
   color: white;
   height: 40px;
   font-size: 16px;
   font-weight: 700;
   border-radius: 5px;
+  transition: transform 0.3s ease;
   cursor: pointer;
 }
-.inputfields span {
-  color: #1a4048;
-  font-weight: 700;
+.disabledbutton:hover {
+  transform: translateY(-5px);
 }
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-}
-.navbar img {
-  width: 270px;
-}
-.loginbutton {
-  font-weight: 700;
-  height: 40px;
-  width: 180px;
-  color: #05c8e8;
-  background: #1a4048;
-  border-radius: 10.33px;
+.btnNum {
+  background-color: transparent;
   border: none;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-right: 4rem;
-  transition: all ease-in 300ms;
-  font-size: 17px;
+  text-align: center;
+  margin-bottom: 15px;
   cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a4048;
 }
-.loginbutton:hover {
-  transform: scale(1.04);
-  box-shadow: 5px 5px 10px white;
+.btnNum:hover {
+  color: #8492a6;
+}
+.assistancebox {
+  display: flex;
+  flex-direction: column;
+}
+.assistance {
+  font-size: 8px;
+  text-align: left;
+  margin: 1%;
+  color: black;
+}
+.assistance span{
+  color: black;
+  margin: 0;
+}
+.errormsg{
+  color: red;
+  font-size: 13px;
 }
 
-@media screen and (min-width: 718px) and (max-width: 769px) {
-  .herowrapper {
-    width: 100%;
+@media (max-width: 717px) {
+  .wrapper{
+    overflow: scroll;
   }
-  .imagecontainer {
-    width: 22rem;
-    height: 25.5rem;
-  }
-  .herogirl {
-    margin-left: 2rem;
-  }
-  .heroleft {
-    margin-right: -2rem;
-  }
-  .flexCenter {
-    flex-wrap: nowrap;
-    justify-content: center;
-  }
-  .herogirl {
-    margin-top: -28rem;
-  }
-  .herotitle > h2 {
-    font-weight: 700;
-    font-size: 2rem;
-    line-height: 3rem;
-    color: #05c8e8;
-  }
-  .herodes {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 238px;
-    color: #1a4048;
-    margin-bottom: 10px;
-  }
-  .herodes2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 274px;
-    color: #1a4048;
-  }
-  .herodes > span {
-    font-size: 14px;
-  }
-  .herodes2 > span {
-    font-size: 14px;
-  }
-  .respondtomail {
-    width: 350px;
-    height: 50px;
-    margin-top: -13.7%;
-    border: 1px solid #05c8e8;
-  }
-  .findmyrate {
-    width: 350px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: #05c8e8 1px solid;
-  }
-  .findmyrate > input {
-    width: 250px;
-    height: 58px;
-    outline: none;
-    border: none;
-    font-size: 15px;
-    padding-left: 0.8rem;
-  }
-  .findmyrateerror {
-    width: 350px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: #05c8e8 1px solid;
-  }
-  .findmyrateerror > input {
-    width: 250px;
-    height: 58px;
-    outline: none;
-    border: none;
-    font-size: 15px;
-    padding-left: 0.8rem;
-    border: 1px solid red;
-  }
-  .Link {
-    width: 120px;
-    height: 60px;
-    border: none;
-    outline: none;
-    background-color: #1a4048;
-    color: #05c8e8;
-    font-size: 15px;
-    font-weight: 400;
-    cursor: pointer;
-  }
-}
-@media screen and (min-width: 770px) and (max-width: 920px) {
-  .herowrapper {
-    width: 100%;
-  }
-  .imagecontainer {
-    width: 21rem;
-    height: 30rem;
-  }
-  .flexCenter {
-    flex-wrap: nowrap;
-    justify-content: center;
-  }
-  .herogirl {
-    margin-top: -28rem;
-    margin-left: 1.7rem;
-  }
-  .herocircle {
-    margin-left: 5rem;
-  }
-  .herotitle > h2 {
-    font-weight: 700;
-    font-size: 2rem;
-    line-height: 3rem;
-    color: #05c8e8;
-  }
-  .herodes {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 238px;
-    color: #1a4048;
-    margin-bottom: 10px;
-  }
-  .herodes2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 274px;
-    color: #1a4048;
-  }
-  .herodes > span {
-    font-size: 14px;
-  }
-  .herodes2 > span {
-    font-size: 14px;
-  }
-  .respondtomail {
-    width: 350px;
-    height: 50px;
-    margin-top: -13.7%;
-    border: 1px solid #05c8e8;
-  }
-  .findmyrate {
-    width: 350px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: #05c8e8 1px solid;
-  }
-  .findmyrate > input {
-    width: 250px;
-    height: 58px;
-    outline: none;
-    border: none;
-    font-size: 15px;
-    padding-left: 0.8rem;
-  }
-  .findmyrateerror {
-    width: 350px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: #05c8e8 1px solid;
-  }
-  .findmyrateerror > input {
-    width: 250px;
-    height: 58px;
-    outline: none;
-    border: none;
-    font-size: 15px;
-    padding-left: 0.8rem;
-    border: 1px solid red;
-  }
-  .Link {
-    width: 120px;
-    height: 60px;
-    border: none;
-    outline: none;
-    background-color: #1a4048;
-    color: #05c8e8;
-    font-size: 15px;
-    font-weight: 400;
-    cursor: pointer;
-  }
-}
-@media screen and (max-width: 717px) {
-  .herowrapper {
-    
-  }
-  .herocontainer {
-    padding: 0rem 1rem;
-    justify-content: center;
-    align-items: center;
-  }
-  .herotitle {
-    margin-top: 5rem;
-  }
-  .herotitle > h2 {
-    font-weight: 900;
-    font-size: 2.2rem;
-    line-height: 3rem;
-    color: #05c8e8;
-  }
-
-  .herodes {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 303px;
-    color: #1a4048;
-    margin-bottom: 10px;
-  }
-  .herodes2 {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 349px;
-    color: #1a4048;
-  }
-  .herodes > span {
-    font-size: 17px;
-  }
-  .herodes2 > span {
-    font-size: 17px;
-  }
-  .respondtomail {
-    width: 300px;
-    height: 50px;
-    margin-top: -11.2%;
-    border: 1px solid #05c8e8;
-  }
-  .findmyrate {
-    width: 300px;
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    border: none;
-  }
-  .findmyrate > input {
-    width: 280px;
-    height: 58px;
-    outline: none;
-    border: none;
-    font-size: 16px;
-    padding-left: 1rem;
-    border: #05c8e8 1px solid;
-  }
-  .findmyrateerror {
-    width: 300px;
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-    gap: 1.7rem;
-    border: none;
-  }
-  .findmyrateerror > input {
-    width: 280px;
-    height: 58px;
-    outline: none;
-    border: none;
-    font-size: 16px;
-    padding-left: 1rem;
-    border: 1px solid red;
-  }
-  .thumbsup {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 300px;
-    color: #1a4048;
-    margin-top: -1rem;
-  }
-  .Link {
-    width: 300px;
-    height: 60px;
-    border: none;
-    outline: none;
-    background-color: #1a4048;
-    color: #05c8e8;
-    font-size: 17px;
-    font-weight: 600;
-    cursor: pointer;
-  }
-  .Link:hover {
-    box-shadow: inset 300px 0 0 0 #05c8e8;
-    color: #1a4048;
-  }
-  .heroright {
+  .imagebox {
     display: none;
-  }
-  .imagecontainer {
-    display: none;
-  }
-  .errormsg {
-    font-size: 13px;
-    color: red;
-    margin-top: -58%;
-    margin-bottom: 40%;
-  }
-  .inputcontainerposition {
-    position: static;
-    left: 0%;
-    bottom: 0%;
-    transform: translateX(0%);
-    display: flex;
-    justify-content: center;
-    margin: 5% 0%;
-  }
-  .inputcontainer {
-    width: 350px;
-    height: 390px;
-    box-shadow: rgba(12, 94, 36, 0.356) 0px 5px 15px;
-    background-color: white;
-    border-radius: 10px;
-  }
-  .inputfields {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding-top: 5%;
-    align-items: center;
-  }
-  .inputfields input {
-    height: 40px;
-    border: 1px solid #8b8b8b;
-    border-radius: 10px;
-    width: 80%;
-    padding-left: 5px;
-  }
-  .inputfields input:focus {
-    border: 1px solid #05c8e8;
-    outline: none;
-  }
-  .startnowbutton {
-    width: 80%;
-    border: none;
-    outline: none;
-    background-color: #05c8e8;
-    color: white;
-    height: 40px;
-    font-size: 16px;
-    font-weight: 700;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .startnowbuttonerror {
-    width: 80%;
-    border: none;
-    outline: none;
-    background-color: #cae9f2;
-    color: white;
-    height: 40px;
-    font-size: 16px;
-    font-weight: 700;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .inputfields span {
-    color: #1a4048;
-    font-weight: 700;
   }
   .navbar {
     display: flex;
-    width: 109%;
-    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2%;
   }
   .navbar img {
     width: 170px;
   }
-  .loginbutton {
-    font-weight: 700;
-    height: 40px;
-    width: 180px;
-    color: #05c8e8;
-    background: #1a4048;
-    border-radius: 10.33px;
-    border: none;
+  .callbutton {
+    height: 30px;
+    width: 150px;
+
+    font-size: 14px;
+  }
+  .content {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    margin-right: 4rem;
-    transition: all ease-in 300ms;
-    font-size: 17px;
-    cursor: pointer;
-   
+    padding: 0% 1%;
+    height: fit-content;
+    margin-top: 10%;
   }
-  .loginbutton:hover {
-    transform: scale(1.04);
-    box-shadow: 5px 5px 10px white;
+  .textcontent {
+    width: 90%;
+    gap: 20px;
+    margin-bottom: 10%;
+  }
+  .textcontentHeading {
+    font-size: 2rem;
+  }
+  .inputcontainer {
+    width: 350px;
+    min-height: 410px;
+    margin-right: 0%;
+    margin-bottom: 10%;
+  }
+  .inputcontainer2 {
+    width: 350px;
+    min-height: 570px;
+    margin-right: 0%;
+    margin-bottom: 10%;
+  }
+  .inputfields {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 5%;
+    align-items: center;
+  }
+  .inputfieldsform2 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 5%;
+    align-items: center;
   }
 }
-@media screen and (min-width: 921px) and (max-width: 1200px) {
-  .herowrapper {
-    width: 100%;
+@media screen and (min-width: 718px) and (max-width: 1200px) {
+  .wrapper{
+    overflow: scroll;
   }
-  .flexCenter {
-    flex-wrap: nowrap;
+  .imagebox {
+    display: none;
   }
-  .imagecontainer {
-    width: 25rem;
-    height: 35rem;
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1%;
   }
-  .herocircle {
-    margin-left: 5rem;
+  .navbar img {
+    width: 230px;
   }
-  .herogirl {
-    margin-left: 1.5rem;
+  .callbutton {
+    height: 30px;
+    width: 150px;
+
+    font-size: 14px;
   }
-}
-@media screen and (min-width: 540px) and (max-width: 590px) {
-  .herowrapper {
-    width: 100%;
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0% 1%;
+    height: fit-content;
+    margin-top: 10%;
+  }
+  .textcontent {
+    width: 90%;
+    gap: 20px;
+    margin-bottom: 10%;
+  }
+  .textcontentHeading {
+    font-size: 2.5rem;
+  }
+  .inputcontainer {
+    width: 650px;
+    min-height: 410px;
+    margin-right: 0%;
+    margin-bottom: 10%;
+  }
+  .inputcontainer2 {
+    width: 650px;
+    min-height: 570px;
+    margin-right: 0%;
+    margin-bottom: 10%;
+  }
+  .inputfields {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 5%;
+    align-items: center;
+  }
+  .inputfieldsform2 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 5%;
+    align-items: center;
   }
 }
