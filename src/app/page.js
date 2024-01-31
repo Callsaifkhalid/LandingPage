@@ -1,5 +1,5 @@
-'use client'
-import styles from "./page.module.css"
+"use client";
+import styles from "./page.module.css";
 import Modal from "@/components/Modal/Modal";
 import CompareSection from "./screens/compareSection/page";
 import Contact from "./screens/contact/page";
@@ -31,21 +31,19 @@ export default function Home() {
   }, []);
   return (
     <main>
-      
-        { isLoading && <Loader/>}
+      {isLoading && <Loader />}
 
-          <Navbar />
-          <Hero />
-          <ImageSwiper />
-          <CompareSection />
-          <SavingsCalculator />
-          <WhySection />
-          <HowItWorks />
-          <TourGoals />
-          <FAQS />
-          <Contact />
-          <Footer />
-        
+      <Navbar />
+      <Hero />
+      <ImageSwiper />
+      <CompareSection />
+      <SavingsCalculator />
+      <WhySection />
+      <HowItWorks />
+      <TourGoals />
+      <FAQS />
+      <Contact />
+      <Footer />
     </main>
   );
 }
