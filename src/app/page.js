@@ -6,9 +6,10 @@ import { IoMdUnlock } from "react-icons/io";
 import { BiSolidDollarCircle } from "react-icons/bi";
 import { BsCreditCardFill } from "react-icons/bs";
 import { FaArrowRight } from "react-icons/fa";
-import options from "../../utils/stateOptons";
+import { options } from "../utils/stateOptions";
 import Select from "react-select";
 import { useState } from "react";
+
 const OfferPage = () => {
   const [click, setClick] = useState(false);
   const [email, setEmail] = useState("");
@@ -18,9 +19,16 @@ const OfferPage = () => {
   const [isValidEmail, setIsValidEmail] = useState(true);
   const [checkemail, setcheckemail] = useState(false);
 
-export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
-
+  const handleEmailChange = (event) => {
+    const inputValue = event.target.value;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const isValid = emailRegex.test(inputValue);
+    setIsValidEmail(isValid);
+    setEmail(inputValue);
+    setcheckemail(isValid);
+  };
+  const phoneNumber = "+1-844-208-1100";
   const handleCall = () => {
     window.location.href = `tel:${phoneNumber}`;
   };
@@ -62,8 +70,6 @@ export default function Home() {
     }),
   };
 
-    return () => clearTimeout(timeoutId);
-  }, []);
   return (
     <div className={styles.wrapper}>
       <div className={styles.navbar}>
@@ -202,7 +208,7 @@ export default function Home() {
             </div>
             {/* )} */}
 
-            {click && (
+            {/* {click && (
               <div className={styles.inputcontainer2}>
                 <div className={styles.inputfieldsform2}>
                   <span style={{ fontSize: "1.5rem" }}>
@@ -237,7 +243,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            )}
+            )} */}
             {/* {!click && (
           <div className={styles.callbox} onClick={handleCall}>
             <div className={styles.phoneandtext}>
@@ -489,4 +495,6 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
+
+export default OfferPage;

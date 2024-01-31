@@ -1,4 +1,4 @@
-const options = [
+export const options = [
   { value: "", label: "State", isDisabled: true },
   { value: "1", label: "Alabama" },
   { value: "2 ", label: "Alaska" },
@@ -51,7 +51,4 @@ const options = [
   { value: "50", label: "West Virginia" },
   { value: "51", label: "Wisconsin" },
   { value: "52", label: "Wyoming" },
-
 ];
-
-export default options;
