@@ -15,7 +15,6 @@ const OfferPage = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [pincode, setPincode] = useState("");
   const [isValidEmail, setIsValidEmail] = useState(true);
   const [checkemail, setcheckemail] = useState(false);
 
