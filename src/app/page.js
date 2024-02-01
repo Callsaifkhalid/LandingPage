@@ -211,8 +211,8 @@ const OfferPage = () => {
                 </div>
               </div>
             )}
-            {click === 2 && <Dilaerpage click={setClick} />};
-            {click === 3 && <MissedcallPage click={setClick} />};
+            {click === 2 && <Dilaerpage click={setClick} />}
+            {click === 3 && <MissedcallPage click={setClick} />}
             {/* {click && (
               <div className={styles.inputcontainer2}>
                 <div className={styles.inputfieldsform2}>
