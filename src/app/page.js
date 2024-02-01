@@ -9,9 +9,11 @@ import { FaArrowRight } from "react-icons/fa";
 import { options } from "../utils/stateOptions";
 import Select from "react-select";
 import { useState } from "react";
+import Dilaerpage from "@/components/dialerpage/dilaerpage";
+import MissedcallPage from "@/components/missedCallPage/missedcallPage";
 
 const OfferPage = () => {
-  const [click, setClick] = useState(false);
+  const [click, setClick] = useState(1);
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -72,7 +74,7 @@ const OfferPage = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.navbar}>
-        <img src="../logo.svg" alt="logo" />
+        <img src="../logo.svg" alt="logo" className={styles.mainLogo} />
         <div className={styles.callbutton} onClick={handleCall}>
           <FaPhone />
           1-844-208-1100
@@ -80,8 +82,11 @@ const OfferPage = () => {
       </div>
       <div className={styles.main}>
         <div className={styles.mainChild}>
-          <div style={{ width: "40%" }}>
-            <h1> Cut Your Credit Card Debt in Half - Start Saving Now!</h1>
+          <div className={styles.divWidth}>
+            <h1 className={styles.headingTop}>
+              {" "}
+              Cut Your Credit Card Debt in Half - Start Saving Now!
+            </h1>
             <p>
               Consolidate your debts into one manageable payment and save up to
               50% on your current credit card balances
@@ -97,7 +102,7 @@ const OfferPage = () => {
                 <FaArrowRight size={12} />
               </div>
               <div>
-                <p style={{ marginLeft: "10px" }}>Simple, fast all online</p>
+                <p className={styles.para}>Simple, fast all online</p>
               </div>
             </div>
             <div
@@ -111,7 +116,7 @@ const OfferPage = () => {
                 <FaArrowRight size={12} />
               </div>
               <div>
-                <p style={{ marginLeft: "10px" }}>
+                <p className={styles.para}>
                   Sorted by an accredited accountant
                 </p>
               </div>
@@ -127,86 +132,87 @@ const OfferPage = () => {
                 <FaArrowRight size={12} />
               </div>
               <div>
-                <p style={{ marginLeft: "10px" }}>HMRC-authorised</p>
+                <p className={styles.para}>HMRC-authorised</p>
               </div>
             </div>
           </div>
-          <div style={{ width: "" }}>
+          <div className={styles.imgHide}>
             <img src="/mainImageFront.jpg" className={styles.familyphoto} />
           </div>
           {/* <img src="/family-home.png" className={styles.familyphoto} /> */}
           <div className={styles.content}>
-            {/* {!click && ( */}
-            <div className={styles.inputcontainer}>
-              <div className={styles.inputfields}>
-                {/* <span>You're Pre-Selected up to $80,000</span> */}
-                <p style={{}}>Let's get started</p>
+            {click === 1 && (
+              <div className={styles.inputcontainer}>
+                <div className={styles.inputfields}>
+                  {/* <span>You're Pre-Selected up to $80,000</span> */}
+                  <p style={{}}>Let's get started</p>
 
-                <input
-                  type="text"
-                  placeholder="First Name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  style={{
-                    // border: !isValidEmail ? "2px solid red" : "",
-                    paddingLeft: "10px",
-                  }}
-                />
-                <input
-                  type="text"
-                  placeholder="Last Name"
-                  value={lastName}
-                  onChange={(e) => setLastName(e.target.value)}
-                  style={{
-                    // border: !isValidEmail ? "2px solid red" : "",
-                    paddingLeft: "10px",
-                  }}
-                />
-                <input
-                  type="text"
-                  placeholder="Email"
-                  value={email}
-                  onChange={handleEmailChange}
-                  style={{
-                    border: !isValidEmail ? "2px solid red" : "",
-                    paddingLeft: "10px",
-                  }}
-                />
-                {/* <input
+                  <input
+                    type="text"
+                    placeholder="First Name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    style={{
+                      // border: !isValidEmail ? "2px solid red" : "",
+                      paddingLeft: "10px",
+                    }}
+                  />
+                  <input
+                    type="text"
+                    placeholder="Last Name"
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
+                    style={{
+                      // border: !isValidEmail ? "2px solid red" : "",
+                      paddingLeft: "10px",
+                    }}
+                  />
+                  <input
+                    type="text"
+                    placeholder="Email"
+                    value={email}
+                    onChange={handleEmailChange}
+                    style={{
+                      border: !isValidEmail ? "2px solid red" : "",
+                      paddingLeft: "10px",
+                    }}
+                  />
+                  {/* <input
                   type="text"
                   placeholder="Mailer Code"
                   value={pincode}
                   onChange={(e) => setPincode(e.target.value)}
                 /> */}
 
-                <button
-                  className={
-                    !checkemail
-                      ? styles.disabledbutton
-                      : name === ""
-                      ? styles.disabledbutton
-                      : lastName === ""
-                      ? styles.disabledbutton
-                      : styles.startnowbutton
-                  }
-                  onClick={() => setClick(true)}
-                  disabled={
-                    !checkemail
-                      ? true
-                      : name === ""
-                      ? true
-                      : lastName === ""
-                      ? true
-                      : false
-                  }
-                >
-                  Start Now
-                </button>
-                {/* <h4>This will not affect your Credit Score</h4> */}
+                  <button
+                    className={
+                      !checkemail
+                        ? styles.disabledbutton
+                        : name === ""
+                        ? styles.disabledbutton
+                        : lastName === ""
+                        ? styles.disabledbutton
+                        : styles.startnowbutton
+                    }
+                    onClick={() => setClick(2)}
+                    disabled={
+                      !checkemail
+                        ? true
+                        : name === ""
+                        ? true
+                        : lastName === ""
+                        ? true
+                        : false
+                    }
+                  >
+                    Start Now
+                  </button>
+                  {/* <h4>This will not affect your Credit Score</h4> */}
+                </div>
               </div>
-            </div>
-            {/* )} */}
-
+            )}
+            {click === 2 && <Dilaerpage click={setClick} />};
+            {click === 3 && <MissedcallPage click={setClick} />};
             {/* {click && (
               <div className={styles.inputcontainer2}>
                 <div className={styles.inputfieldsform2}>
@@ -277,124 +283,102 @@ const OfferPage = () => {
 
       <div className={styles.mainContent}>
         <div className={styles.mainContentChild}>
-          <div>
-            <img src="/oneImage.png" className={styles.imgStyle} />
+          <div className={styles.mainContentChildSub}>
+            <div>
+              <img src="/oneImage.png" className={styles.imgStyle} />
+            </div>
+            <div className={styles.divChild}>
+              <h2 className={styles.oneHeading}>
+                Drowning in Multiple Debt Payments?
+              </h2>
+              <p className={styles.onePara}>
+                Struggling to keep track of numerous debts? Our consolidation
+                plan simplifies your finances into one easy payment, giving you
+                peace of mind and financial control.
+              </p>
+            </div>
           </div>
-          <div className={styles.divChild}>
-            <h2>Drowning in Multiple Debt Payments?</h2>
-            <p>
-              Struggling to keep track of numerous debts? Our consolidation plan
-              simplifies your finances into one easy payment, giving you peace
-              of mind and financial control.
-            </p>
-          </div>
-          <div>
+
+          <div className={styles.imgSide}>
             <img src="/textRowImage.jpg" className={styles.imgStyle} />
           </div>
         </div>
+
         <div className={styles.mainContentChild2}>
-          <div>
-            <img src="/mainSideImage3.jpg" className={styles.imgStyle2} />
+          <div className={styles.imgSide}>
+            <img src="/mainSideImage3.jpg" className={styles.imgStyle} />
           </div>
-          <div>
-            <img src="/twoImage.jpg" className={styles.imgStyle3} />
-          </div>
-          <div className={styles.divSecond}>
-            <h2>Feel Like Debt Freedom is a Distant Dream?</h2>
-            <p>
-              Accelerate your journey to a debt-free life. With our strategies,
-              you could be free of debt up to 5X faster, avoiding years of
-              stress and high interest.
-            </p>
+
+          <div className={styles.mainContentChildSub}>
+            <div className={styles.midDiv}>
+              <img src="/twoImage.jpg" className={styles.imgStyle3} />
+            </div>
+            <div className={styles.divSecond}>
+              <h2>Feel Like Debt Freedom is a Distant Dream?</h2>
+              <p>
+                Accelerate your journey to a debt-free life. With our
+                strategies, you could be free of debt up to 5X faster, avoiding
+                years of stress and high interest.
+              </p>
+            </div>
           </div>
         </div>
-        <div className={styles.mainContentChild2}>
-          <div>
-            <img src="/threeImage.png" className={styles.imgStyle} />
+
+        <div className={styles.mainContentChild3}>
+          <div className={styles.mainContentChildSub}>
+            <div>
+              <img src="/threeImage.png" className={styles.imgStyle} />
+            </div>
+            <div className={styles.divChild2}>
+              <h2>Join Thousands Who Trust Us - A+ BBB Rated</h2>
+              <p>
+                We've earned the trust of thousands by delivering real debt
+                relief solutions. Our A+ BBB rating reflects our commitment to
+                integrity and customer satisfaction.
+              </p>
+            </div>
           </div>
-          <div className={styles.divChild2}>
-            <h2>Join Thousands Who Trust Us - A+ BBB Rated</h2>
-            <p>
-              We've earned the trust of thousands by delivering real debt relief
-              solutions. Our A+ BBB rating reflects our commitment to integrity
-              and customer satisfaction.
-            </p>
-          </div>
-          <div>
+
+          <div className={styles.imgSide}>
             <img src="/textRowImage3.jpg" className={styles.imgStyle} />
           </div>
         </div>
       </div>
 
       <div className={styles.mainContainer}>
-        <h1 style={{ fontSize: "20px", fontWeight: "bolder" }}>
+        <h1 className={styles.mainContainerHead}>
           Let's get your Self Assessment sorted today
         </h1>
         <p style={{ fontSize: "14px" }}>Taxes as they should be done</p>
-        <button
-          style={{
-            cursor: "pointer",
-            backgroundColor: "white",
-            color: "black",
-            fontWeight: "bold",
-            borderLeft: "1px solid black",
-            borderTop: "1px solid black",
-            borderRight: "2px solid black",
-            borderBottom: "2px solid black",
-            padding: "10px 20px",
-            marginTop: "20px",
-          }}
-        >
-          Get Started
-        </button>
+        <button className={styles.btn}>Get Started</button>
       </div>
 
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          width: "80%",
-          marginLeft: "auto",
-          marginRight: "auto",
-          marginBottom: "5%",
-        }}
-      >
-        <div style={{ width: "45%" }}>
-          <h1> Overwhelmed by Debt and Don't Know Where to Start?</h1>
+      <div className={styles.container}>
+        <div className={styles.divWidth}>
+          <h1 className={styles.headingMid}>
+            {" "}
+            Overwhelmed by Debt and Don't Know Where to Start?
+          </h1>
           <p>
             Our free, no-obligation consultation will guide you through your
             options and help you understand the best path to financial freedom.
           </p>
         </div>
-        <div>
+        <div className={styles.imgDiv}>
           {" "}
-          <img
-            src="/bottomSideImage.jpg"
-            style={{ height: "300px", borderRadius: "20px" }}
-          />{" "}
+          <img src="/bottomSideImage.jpg" className={styles.imgStyle4} />{" "}
         </div>
       </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          width: "80%",
-          marginLeft: "auto",
-          marginRight: "auto",
-          marginBottom: "5%",
-        }}
-      >
-        <div>
+
+      <div className={styles.containerMid}>
+        <div className={styles.imgDiv}>
           {" "}
-          <img
-            src="/bottomSideImage2.jpg"
-            style={{ height: "300px", borderRadius: "20px" }}
-          />{" "}
+          <img src="/bottomSideImage2.jpg" className={styles.imgStyle4} />{" "}
         </div>
-        <div style={{ width: "45%" }}>
-          <h1>Your Debt Relief, Personalized for You</h1>
+        <div className={styles.divWidth}>
+          <h1 className={styles.headingMid}>
+            Your Debt Relief, Personalized for You
+          </h1>
           <p>
             Every financial situation is unique. We'll create a tailored plan
             that fits your budget and lifestyle, ensuring a stress-free debt
@@ -402,56 +386,26 @@ const OfferPage = () => {
           </p>
         </div>
       </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          width: "80%",
-          marginLeft: "auto",
-          marginRight: "auto",
-          marginBottom: "5%",
-        }}
-      >
-        <div style={{ width: "45%" }}>
-          <h1>Feeling Trapped in Endless Debt Cycles?</h1>
+
+      <div className={styles.container}>
+        <div className={styles.divWidth}>
+          <h1 className={styles.headingMid}>
+            Feeling Trapped in Endless Debt Cycles?
+          </h1>
           <p>
             Break free from the endless cycle of debt. Our proven methods can
             help you regain financial independence in as little as 24-48 months.
           </p>
         </div>
-        <div>
-          <img
-            src="/bottomSideImage3.jpg"
-            style={{ height: "300px", borderRadius: "20px" }}
-          />
+        <div className={styles.imgDiv}>
+          <img src="/bottomSideImage3.jpg" className={styles.imgStyle4} />
         </div>
       </div>
 
-      <div
-        style={{
-          backgroundColor: "#E0FFFF",
-          display: "flex",
-          paddingTop: "3%",
-          paddingBottom: "3%",
-          alignItems: "center",
-          marginTop: "6%",
-          marginBottom: "6%",
-        }}
-      >
-        <div
-          style={{
-            width: "80%",
-            marginLeft: "auto",
-            marginRight: "auto",
-            display: "flex",
-
-            alignItems: "center",
-            justifyContent: "space-between",
-          }}
-        >
-          <div style={{ width: "45%" }}>
-            <h1 style={{ fontSize: "20px", fontWeight: "bolder" }}>
+      <div className={styles.containerSecond}>
+        <div className={styles.containerSecondChild}>
+          <div className={styles.divWidth}>
+            <h1 className={styles.headingSecond}>
               Take the First Step Towards a Debt-Free Life
             </h1>
             <p style={{ fontSize: "14px" }}>
@@ -459,30 +413,12 @@ const OfferPage = () => {
               now for your free, no-obligation consultation and start your
               journey today
             </p>
-            <button
-              style={{
-                backgroundColor: "white",
-                color: "black",
-                fontWeight: "bold",
-                borderLeft: "1px solid black",
-                borderTop: "1px solid black",
-                borderRight: "2px solid black",
-                borderBottom: "2px solid black",
-                padding: "10px 20px",
-                marginTop: "20px",
-                cursor: "pointer",
-              }}
-            >
-              Get Started Now
-            </button>
+            <button className={styles.btn}>Get Started Now</button>
           </div>
 
-          <div>
+          <div className={styles.imgDiv}>
             {" "}
-            <img
-              src="/bottomLastImage.jpg"
-              style={{ height: "300px", borderRadius: "20px" }}
-            />
+            <img src="/bottomLastImage.jpg" className={styles.imgStyle4} />
           </div>
         </div>
       </div>
