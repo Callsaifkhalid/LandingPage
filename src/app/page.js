@@ -1,24 +1,33 @@
 "use client";
-import styles from "./page.module.css";
+import styles from "./landingpage.module.css";
 import { FaPhone, FaCheck } from "react-icons/fa";
 import { FaPhoneVolume } from "react-icons/fa6";
 import { IoMdUnlock } from "react-icons/io";
 import { BiSolidDollarCircle } from "react-icons/bi";
 import { BsCreditCardFill } from "react-icons/bs";
 import { FaArrowRight } from "react-icons/fa";
-import { options } from "../utils/stateOptions";
-import Select from "react-select";
+
 import { useState } from "react";
-import Dilaerpage from "@/components/dialerpage/dilaerpage";
-import MissedcallPage from "@/components/missedCallPage/missedcallPage";
+import WaitingPage from "@/components/waitingPage/waitingPage";
+import ApplyCallPage from "@/components/applyCallPage/applyCallPage";
+import CallSchedule from "@/components/callSchedule/callSchedule";
 
 const OfferPage = () => {
+  const handleScrollToTop = () => {
+    // Scroll to the top of the page
+    window.scrollTo({
+      top: 200,
+      behavior: "smooth", // Adds smooth scrolling animation
+    });
+  };
+
   const [click, setClick] = useState(1);
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
   const [isValidEmail, setIsValidEmail] = useState(true);
   const [checkemail, setcheckemail] = useState(false);
+  const [phone, setPhone] = useState("");
 
   const [isLoading, setIsLoading] = useState(true);
   const handleEmailChange = (event) => {
@@ -74,7 +83,7 @@ const OfferPage = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.navbar}>
-        <img src="../logo.svg" alt="logo" className={styles.mainLogo} />
+        <img src="/logo.png" alt="logo" className={styles.mainLogo} />
         <div className={styles.callbutton} onClick={handleCall}>
           <FaPhone />
           1-844-208-1100
@@ -139,12 +148,10 @@ const OfferPage = () => {
           <div className={styles.imgHide}>
             <img src="/mainImageFront.jpg" className={styles.familyphoto} />
           </div>
-          {/* <img src="/family-home.png" className={styles.familyphoto} /> */}
           <div className={styles.content}>
             {click === 1 && (
               <div className={styles.inputcontainer}>
                 <div className={styles.inputfields}>
-                  {/* <span>You're Pre-Selected up to $80,000</span> */}
                   <p style={{}}>Let's get started</p>
 
                   <input
@@ -153,7 +160,6 @@ const OfferPage = () => {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     style={{
-                      // border: !isValidEmail ? "2px solid red" : "",
                       paddingLeft: "10px",
                     }}
                   />
@@ -163,7 +169,6 @@ const OfferPage = () => {
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
                     style={{
-                      // border: !isValidEmail ? "2px solid red" : "",
                       paddingLeft: "10px",
                     }}
                   />
@@ -177,12 +182,15 @@ const OfferPage = () => {
                       paddingLeft: "10px",
                     }}
                   />
-                  {/* <input
-                  type="text"
-                  placeholder="Mailer Code"
-                  value={pincode}
-                  onChange={(e) => setPincode(e.target.value)}
-                /> */}
+                  <input
+                    type="number"
+                    placeholder="Phone Number"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    style={{
+                      paddingLeft: "10px",
+                    }}
+                  />
 
                   <button
                     className={
@@ -191,6 +199,8 @@ const OfferPage = () => {
                         : name === ""
                         ? styles.disabledbutton
                         : lastName === ""
+                        ? styles.disabledbutton
+                        : phone === ""
                         ? styles.disabledbutton
                         : styles.startnowbutton
                     }
@@ -202,17 +212,20 @@ const OfferPage = () => {
                         ? true
                         : lastName === ""
                         ? true
+                        : phone === ""
+                        ? true
                         : false
                     }
                   >
                     Start Now
                   </button>
-                  {/* <h4>This will not affect your Credit Score</h4> */}
                 </div>
               </div>
             )}
-            {click === 2 && <Dilaerpage click={setClick} />}
-            {click === 3 && <MissedcallPage click={setClick} />}
+            {click === 2 && <WaitingPage click={setClick} />}
+            {click === 3 && <ApplyCallPage click={setClick} />}
+            {click === 4 && <CallSchedule click={setClick} />}
+
             {/* {click && (
               <div className={styles.inputcontainer2}>
                 <div className={styles.inputfieldsform2}>
@@ -285,7 +298,7 @@ const OfferPage = () => {
         <div className={styles.mainContentChild}>
           <div className={styles.mainContentChildSub}>
             <div>
-              <img src="/oneImage.png" className={styles.imgStyle} />
+              <img src="/oneImage.png" className={styles.imgStyle6} />
             </div>
             <div className={styles.divChild}>
               <h2 className={styles.oneHeading}>
@@ -311,11 +324,13 @@ const OfferPage = () => {
 
           <div className={styles.mainContentChildSub}>
             <div className={styles.midDiv}>
-              <img src="/twoImage.jpg" className={styles.imgStyle3} />
+              <img src="/twoImage.jpg" className={styles.imgStyle7} />
             </div>
             <div className={styles.divSecond}>
-              <h2>Feel Like Debt Freedom is a Distant Dream?</h2>
-              <p>
+              <h2 className={styles.oneHeading}>
+                Feel Like Debt Freedom is a Distant Dream?
+              </h2>
+              <p className={styles.onePara}>
                 Accelerate your journey to a debt-free life. With our
                 strategies, you could be free of debt up to 5X faster, avoiding
                 years of stress and high interest.
@@ -327,11 +342,13 @@ const OfferPage = () => {
         <div className={styles.mainContentChild3}>
           <div className={styles.mainContentChildSub}>
             <div>
-              <img src="/threeImage.png" className={styles.imgStyle} />
+              <img src="/threeImage.png" className={styles.imgStyle8} />
             </div>
             <div className={styles.divChild2}>
-              <h2>Join Thousands Who Trust Us - A+ BBB Rated</h2>
-              <p>
+              <h2 className={styles.oneHeading}>
+                Join Thousands Who Trust Us - A+ BBB Rated
+              </h2>
+              <p className={styles.onePara}>
                 We've earned the trust of thousands by delivering real debt
                 relief solutions. Our A+ BBB rating reflects our commitment to
                 integrity and customer satisfaction.
@@ -350,13 +367,14 @@ const OfferPage = () => {
           Let's get your Self Assessment sorted today
         </h1>
         <p style={{ fontSize: "14px" }}>Taxes as they should be done</p>
-        <button className={styles.btn}>Get Started</button>
+        <button className={styles.btn} onClick={handleScrollToTop}>
+          Get Started
+        </button>
       </div>
 
       <div className={styles.container}>
         <div className={styles.divWidth}>
           <h1 className={styles.headingMid}>
-            {" "}
             Overwhelmed by Debt and Don't Know Where to Start?
           </h1>
           <p>
@@ -364,9 +382,9 @@ const OfferPage = () => {
             options and help you understand the best path to financial freedom.
           </p>
         </div>
+        {/* i am here  */}
         <div className={styles.imgDiv}>
-          {" "}
-          <img src="/bottomSideImage.jpg" className={styles.imgStyle4} />{" "}
+          <img src="/bottomSideImage.jpg" className={styles.imgStyle4} />
         </div>
       </div>
 
@@ -413,7 +431,9 @@ const OfferPage = () => {
               now for your free, no-obligation consultation and start your
               journey today
             </p>
-            <button className={styles.btn}>Get Started Now</button>
+            <button className={styles.btn} onClick={handleScrollToTop}>
+              Get Started Now
+            </button>
           </div>
 
           <div className={styles.imgDiv}>

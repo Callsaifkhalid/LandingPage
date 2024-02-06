@@ -1,0 +1,155 @@
+.modalBackground {
+  min-width: 100%;
+  min-height: 100%;
+  /* backdrop-filter: blur(10px); */
+  position: absolute;
+  top: 10%;
+  right: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modalContainer {
+  width: 320px;
+  min-height: 120px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-bottom: 9rem;
+  border: 8px solid white;
+}
+
+.titleCloseBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Link {
+  color: white;
+}
+
+.body .button1:hover {
+  border: 3px solid #1a4048;
+  box-shadow: inset 300px 0 0 0 white;
+  color: #1a4048;
+}
+
+.schedulebox {
+
+  padding: 30px;
+  width: 400px;
+
+}
+
+.datebox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 5%;
+}
+
+.datebox span {
+  color: #1a4048;
+  font-size: 15px;
+}
+
+.dateinput {
+  width: 235px;
+  height: 40px;
+  outline: none;
+  background-color: white;
+  color: #1a4048;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid #8b8b8b;
+  padding-left: 10px;
+  padding-right: 5px;
+}
+
+.timeinput {
+  width: 250px;
+  height: 40px;
+  outline: none;
+  background-color: white;
+  color: #1a4048;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid #8b8b8b;
+
+}
+
+.button1 {
+  border: none;
+  outline: none;
+  background-color: #05c8e8;
+  color: white;
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: all ease-in 100ms;
+  cursor: pointer;
+  margin-left: 14%;
+  margin-top: 5%;
+}
+
+.disablebutton {
+  border: none;
+  outline: none;
+  background-color: #cae9f2;
+  color: white;
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 14%;
+  margin-top: 5%;
+}
+
+@media screen and (max-width: 600px) {
+  .modalBackground {
+    align-items: center;
+  }
+
+  .modalContainer {
+    width: 280px;
+  }
+
+  .schedulebox {
+
+    padding: 10px;
+    width: 400px;
+
+  }
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 769px) {
+  .modalBackground {
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 770px) and (max-width: 920px) {
+  .modalBackground {
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 921px) and (max-width: 1200px) {
+  .modalBackground {
+    align-items: center;
+  }
+}

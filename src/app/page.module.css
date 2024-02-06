@@ -53,7 +53,7 @@
   position: absolute;
   /* top: 43%; */
   bottom: -50%;
-  left: 37%;
+  left: 33%;
 }
 
 .inputcontainer {
@@ -62,7 +62,7 @@
   box-shadow: rgba(12, 94, 36, 0.356) 0px 5px 15px;
   /* background-color: #1a4048; */
   background-color: #1a4048;
-  border-radius: 5px;
+  border-radius: 15px;
   /* border: 3px solid white; */
 
 }
@@ -410,6 +410,10 @@
   border-radius: 20px;
 }
 
+.imgStyle8 {
+  height: 200px;
+}
+
 .divChild {
   /* margin-left: 5%;
   margin-right: 5%; */
@@ -449,6 +453,11 @@
   /* margin-right: 7%; */
   height: 200px;
   /* // borderRadius: "20px", */
+}
+
+.imgStyle7 {
+  height: 200px;
+
 }
 
 .divChild {
@@ -560,6 +569,11 @@
   font-weight: bolder
 }
 
+.imgStyle6 {
+  height: 100px;
+  aspect-ratio: 1.7;
+}
+
 
 
 
@@ -568,91 +582,41 @@
 
 
 @media(max-width:320px) {
+  .inputcontainer {
+    width: 300px;
+  }
+
   .containerSecondChild {
-    flex-direction: column-reverse;
+    flex-direction: column;
+  }
+
+  .mainContentChildSub {
+    /* flex-direction: column; */
+  }
+
+  .imgStyle7 {
+    width: 100px;
+
+  }
+
+  .imgStyle8 {
+    width: 120px;
   }
 
   .mainContainerHead {
     font-size: 15px;
   }
 
-  /* .oneHeading {
-    font-size: 1px;
-  } */
-
-
   .divWidth {
     width: auto;
-    /* margin-top: 10px; */
-  }
-
-  .container {
-    flex-direction: column;
-  }
-
-  .containerMid {
-    flex-direction: column-reverse;
-  }
-
-  .imgStyle4 {
-    margin-top: 20px;
-  }
-
-  .mainContentChild {
-    flex-direction: column;
-  }
-
-  .mainContentChild2 {
-    flex-direction: column-reverse;
-  }
-
-  .divSecond {
-    width: 60%;
-  }
-
-  .imgStyle {
     margin-top: 40px;
-  }
-
-  .mainContentChild3 {
-    flex-direction: column;
-  }
-
-  .imgHide {
-    display: none;
-  }
-
-  .content {
-    bottom: -60%;
-    left: 25%;
-  }
-
-  .heading {
-    /* margin-top: 8000px; */
-  }
-
-  /* .imgStyle4 {
-        margin-top: 40px;
-      } */
-
-}
-
-@media (min-width:321px) and (max-width: 480px) {
-  .containerSecondChild {
-    flex-direction: column;
-  }
-
-  .mainContainerHead {
-    font-size: 15px;
-  }
-
-  .divWidth {
-    width: auto;
-    /* margin-top: 40px; */
   }
 
   .imgDiv {
     margin-top: 40px;
+    /* width: 80%; */
+    /* margin-left: auto;
+      margin-right: auto; */
   }
 
   .container {
@@ -664,7 +628,32 @@
   }
 
   .imgStyle4 {
-    margin-top: 20px;
+    height: 200px;
+    aspect-ratio: 1.7;
+    /* margin-top: 20px; */
+
+
+  }
+
+  .divChild {
+    /* width: auto; */
+  }
+
+  .divChild2 {
+    width: 40%;
+    margin-left: 30px;
+  }
+
+  .headingMid {
+    font-size: 20px;
+  }
+
+  .oneHeading {
+    font-size: 15px;
+  }
+
+  .onePara {
+    font-size: 13px;
   }
 
   .mainContentChild {
@@ -676,11 +665,13 @@
   }
 
   .divSecond {
-    width: 60%;
+    width: 40%;
+    margin-left: 40px;
   }
 
   .imgStyle {
     margin-top: 40px;
+    /* width: 150px; */
   }
 
   .mainContentChild3 {
@@ -693,19 +684,140 @@
 
   .content {
     bottom: -60%;
-    left: 10%;
+    left: 5%;
   }
 
   .heading {
-    margin-top: 50%;
+    margin-top: 85%;
   }
 
-  /* .imgStyle4 {
-        margin-top: 40px;
-      } */
 
   .mainLogo {
-    width: 150px;
+    width: 160px;
+  }
+
+  .callbutton {
+    width: 180px;
+    font-size: 17px;
+    height: 40px;
+
+  }
+}
+
+@media (min-width:321px) and (max-width: 480px) {
+
+  .inputcontainer {
+    width: 300px;
+  }
+
+  .containerSecondChild {
+    flex-direction: column;
+  }
+
+  .mainContentChildSub {
+    /* flex-direction: column; */
+  }
+
+  .imgStyle7 {
+    width: 100px;
+
+  }
+
+  .imgStyle8 {
+    width: 120px;
+  }
+
+  .mainContainerHead {
+    font-size: 15px;
+  }
+
+  .divWidth {
+    width: auto;
+    margin-top: 40px;
+  }
+
+  .imgDiv {
+    margin-top: 40px;
+    /* width: 80%; */
+    /* margin-left: auto;
+    margin-right: auto; */
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .containerMid {
+    flex-direction: column-reverse;
+  }
+
+  .imgStyle4 {
+    height: 200px;
+    aspect-ratio: 1.7;
+    /* margin-top: 20px; */
+
+
+  }
+
+  .divChild {
+    /* width: auto; */
+  }
+
+  .divChild2 {
+    width: 40%;
+    margin-left: 30px;
+  }
+
+  .headingMid {
+    font-size: 20px;
+  }
+
+  .oneHeading {
+    font-size: 15px;
+  }
+
+  .onePara {
+    font-size: 13px;
+  }
+
+  .mainContentChild {
+    flex-direction: column;
+  }
+
+  .mainContentChild2 {
+    flex-direction: column-reverse;
+  }
+
+  .divSecond {
+    width: 40%;
+    margin-left: 40px;
+  }
+
+  .imgStyle {
+    margin-top: 40px;
+    /* width: 150px; */
+  }
+
+  .mainContentChild3 {
+    flex-direction: column;
+  }
+
+  .imgHide {
+    display: none;
+  }
+
+  .content {
+    bottom: -60%;
+    left: 15%;
+  }
+
+  .heading {
+    margin-top: 85%;
+  }
+
+
+  .mainLogo {
+    width: 160px;
   }
 
   .callbutton {
@@ -720,6 +832,11 @@
 @media(min-width:481px) and (max-width:576px) {
 
 
+
+  .mainLogo {
+    width: 200px;
+  }
+
   .containerSecondChild {
     flex-direction: column;
   }
@@ -770,24 +887,40 @@
   }
 
   .content {
-    bottom: -60%;
-    left: 25%;
+    bottom: -57%;
+    left: 18%;
   }
 
   .heading {
-    margin-top: 50%;
+    margin-top: 63%;
   }
 
   /* .imgStyle4 {
       margin-top: 40px;
     } */
 
+  .imgStyle7 {
+    width: 100px;
 
+  }
+
+  .divSecond {
+    margin-left: 30px;
+  }
 
 }
 
 
 @media(min-width:576px) and (max-width:768px) {
+
+  .imgStyle7 {
+    width: 100px;
+
+  }
+
+  .divSecond {
+    margin-left: 30px;
+  }
 
 
   .containerSecondChild {
@@ -801,6 +934,10 @@
 
   .imgDiv {
     margin-top: 40px;
+  }
+
+  .mainLogo {
+    width: 200px;
   }
 
   .container {
@@ -845,7 +982,7 @@
   }
 
   .heading {
-    margin-top: 50%;
+    margin-top: 57%;
   }
 
   /* .imgStyle4 {
